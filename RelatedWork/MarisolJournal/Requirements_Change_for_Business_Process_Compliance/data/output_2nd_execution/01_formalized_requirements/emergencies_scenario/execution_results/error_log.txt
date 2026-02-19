@@ -1,2 +1,0 @@
-Error for ID r3 (v2): Schema validation error: Additional properties are not allowed ('achievement', 'persistent' were unexpected)
-
