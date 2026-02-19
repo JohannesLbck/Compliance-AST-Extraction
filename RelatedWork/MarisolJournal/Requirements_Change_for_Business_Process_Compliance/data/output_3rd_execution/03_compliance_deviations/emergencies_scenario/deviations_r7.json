@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r7",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r7_d1",
+        "deviation_type": "over-compliance",
+        "description": "The process model enforces that anesthesia is applied immediately after patient preparation, as indicated by the direct sequence between 'Prepare Patient' and 'Administer Anaesthesia' in the process diagram on page 1. Version 2 relaxes this requirement, allowing anesthesia to be applied at any point after patient preparation. The process unnecessarily restricts behavior by not permitting any delay or intervening activities between preparation and anesthesia.",
+        "process_model_reference": [
+          "'Prepare Patient', 'Administer Anaesthesia'"
+        ],
+        "change_id": "r7_c1"
+      },
+      {
+        "deviation_id": "r7_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process model uses the specific activities 'prepare_patient' and 'apply_anesthesia', which directly correspond to the stricter Version 1 requirement. Version 2 generalizes these to 'patient_preparation' and 'anesthesia', potentially allowing for broader interpretations or additional activities. The process continues to enforce the narrower, outdated activity definitions, restricting flexibility introduced in Version 2.",
+        "process_model_reference": [
+          "'prepare_patient', 'apply_anesthesia'"
+        ],
+        "change_id": "r7_c2"
+      }
+    ]
+  }
+]

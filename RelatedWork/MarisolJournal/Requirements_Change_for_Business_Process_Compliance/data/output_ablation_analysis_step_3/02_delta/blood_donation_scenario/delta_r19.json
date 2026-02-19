@@ -1,0 +1,34 @@
+{
+  "requirement_id": "r19",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "obligation -> permission",
+      "element": "modality",
+      "old": "obligation",
+      "new": "permission",
+      "change_id": "r19_c1"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "A_requires_B",
+      "new": "absence_of_A",
+      "change_id": "r19_c2"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "determine_donor_eligibility",
+        "measure_blood_pressure_and_pulse"
+      ],
+      "new": [
+        "measure_blood_pressure",
+        "measure_pulse"
+      ],
+      "change_id": "r19_c3"
+    }
+  ]
+}

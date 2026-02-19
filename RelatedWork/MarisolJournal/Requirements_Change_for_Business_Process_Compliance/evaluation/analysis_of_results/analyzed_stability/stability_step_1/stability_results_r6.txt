@@ -1,0 +1,37 @@
+Below is a detailed comparison table for your five JSON arrays (1st_r6, 2nd_r6, 3rd_r6, 4th_r6, 5th_r6):
+
+---
+
+### Grouping of Identical JSON Arrays
+
+- **1st_r6, 4th_r6, and 5th_r6 are fully identical.**
+
+---
+
+### Pairwise Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                 |
+|------------------------|---------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1st_r6 vs 2nd_r6       | No                  | r6_2.precondition.and[0].data_values[0].element          | 1st_r6: "patient.age" vs 2nd_r6: "patient_age"                                                                |
+| 1st_r6 vs 3rd_r6       | No                  | r6_2.precondition.and[0].data_values[0].domain[0]        | 1st_r6: "adult" vs 3rd_r6: ">=18"                                                                             |
+| 1st_r6 vs 4th_r6       | Yes                 |                                                          | No differences                                                                                                |
+| 1st_r6 vs 5th_r6       | Yes                 |                                                          | No differences                                                                                                |
+| 2nd_r6 vs 3rd_r6       | No                  | r6_2.precondition.and[0].data_values[0].element          | 2nd_r6: "patient_age" vs 3rd_r6: "patient.age"                                                                |
+| 2nd_r6 vs 3rd_r6       | No                  | r6_2.precondition.and[0].data_values[0].domain[0]        | 2nd_r6: "adult" vs 3rd_r6: ">=18"                                                                             |
+| 2nd_r6 vs 4th_r6       | No                  | r6_2.precondition.and[0].data_values[0].element          | 2nd_r6: "patient_age" vs 4th_r6: "patient.age"                                                                |
+| 2nd_r6 vs 5th_r6       | No                  | r6_2.precondition.and[0].data_values[0].element          | 2nd_r6: "patient_age" vs 5th_r6: "patient.age"                                                                |
+| 3rd_r6 vs 4th_r6       | No                  | r6_2.precondition.and[0].data_values[0].domain[0]        | 3rd_r6: ">=18" vs 4th_r6: "adult"                                                                             |
+| 3rd_r6 vs 5th_r6       | No                  | r6_2.precondition.and[0].data_values[0].domain[0]        | 3rd_r6: ">=18" vs 5th_r6: "adult"                                                                             |
+| 4th_r6 vs 5th_r6       | Yes                 |                                                          | No differences                                                                                                |
+
+---
+
+### Summary
+
+- **Identical arrays:** 1st_r6, 4th_r6, 5th_r6
+- **Differences between arrays** are always in the `r6_2.precondition.and[0].data_values[0]` object, specifically in the `element` or `domain` fields.
+- **No arrays are missing or have extra entries**; all have two entries with ids `r6_1` and `r6_2`.
+
+---
+
+If you need a more detailed breakdown or a different format, let me know!

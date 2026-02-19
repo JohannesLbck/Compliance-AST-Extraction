@@ -1,0 +1,90 @@
+[
+  {
+    "requirement_id": "r17",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r17_d1",
+        "deviation_type": "non-compliance",
+        "description": "The minimum waiting time before donor assessment for ongoing bleeding has increased from 15 to 20 minutes, but the process model on page 1 enforces a 15-minute timeout for post-donation monitoring. This results in the process assessing the donor too early, violating the new 20-minute requirement.",
+        "process_model_reference": [
+          "15 Minutes Timeout (Event based gateway), Patient Monitoring"
+        ],
+        "change_id": "r17_c1"
+      },
+      {
+        "deviation_id": "r17_d2",
+        "deviation_type": "no impact",
+        "description": "The change from 'donation' to 'bleeding' as the activity for the time constraint does not affect compliance, as the process model already monitors for bleeding after donation.",
+        "process_model_reference": [
+          "Patient Monitoring"
+        ],
+        "change_id": "r17_c2"
+      },
+      {
+        "deviation_id": "r17_d3",
+        "deviation_type": "non-compliance",
+        "description": "The process model triggers assessment and recording after 15 minutes, but the new requirement only obligates assessment after 20 minutes of continued bleeding. The process does not wait the required 20 minutes, violating the stricter temporal constraint.",
+        "process_model_reference": [
+          "15 Minutes Timeout (Event based gateway), Patient Monitoring"
+        ],
+        "change_id": "r17_c3"
+      },
+      {
+        "deviation_id": "r17_d4",
+        "deviation_type": "over-compliance",
+        "description": "The process model continues to check for both 'bleeding' and 'more pain', but the new requirement only considers 'bleeding'. This results in unnecessary assessments for 'more pain', exceeding the new requirement.",
+        "process_model_reference": [
+          "Patient Monitoring, Assess donor"
+        ],
+        "change_id": "r17_c4"
+      },
+      {
+        "deviation_id": "r17_d5",
+        "deviation_type": "over-compliance",
+        "description": "The process model still records the reason for bleeding or pain, but the new requirement no longer obligates this data recording. This results in unnecessary data collection.",
+        "process_model_reference": [
+          "Record observations"
+        ],
+        "change_id": "r17_c5"
+      },
+      {
+        "deviation_id": "r17_d6",
+        "deviation_type": "non-compliance",
+        "description": "The process model uses a 15-minute elapsed time since donation, but the new requirement specifies a 20-minute minimum duration of bleeding. The process does not enforce the new temporal threshold, violating the updated requirement.",
+        "process_model_reference": [
+          "15 Minutes Timeout (Event based gateway), Patient Monitoring"
+        ],
+        "change_id": "r17_c6"
+      },
+      {
+        "deviation_id": "r17_d7",
+        "deviation_type": "no impact",
+        "description": "Switching from 'activity_completed' to 'activity_occurrence' for the assessment does not affect compliance, as the process model already includes the assessment activity.",
+        "process_model_reference": [
+          "Assess donor"
+        ],
+        "change_id": "r17_c7"
+      },
+      {
+        "deviation_id": "r17_d8",
+        "deviation_type": "no impact",
+        "description": "The change from 'assess_donor' to 'assess donor' is a naming convention update and does not affect compliance.",
+        "process_model_reference": [
+          "Assess donor"
+        ],
+        "change_id": "r17_c8"
+      },
+      {
+        "deviation_id": "r17_d9",
+        "deviation_type": "over-compliance",
+        "description": "The process model continues to record the reason for bleeding or pain, but the new requirement no longer obligates this. This results in unnecessary data recording.",
+        "process_model_reference": [
+          "Record observations"
+        ],
+        "change_id": "r17_change_9"
+      }
+    ]
+  }
+]

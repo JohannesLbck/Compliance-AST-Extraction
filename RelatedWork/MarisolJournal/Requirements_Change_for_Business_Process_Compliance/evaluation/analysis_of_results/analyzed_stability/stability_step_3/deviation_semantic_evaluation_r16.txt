@@ -1,0 +1,104 @@
+### Ground Truth Deviation:
+> "x1 over-compliant (it is no longer enforced "Patient Monitoring" during bleeding)"
+
+---
+
+## Per-JSON Assessment
+
+---
+
+### r16 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution precisely captures the over-compliance: the process still enforces donor monitoring during bleeding, even though the requirement no longer mandates it. The process model reference is specific and matches the ground truth. No extraneous or missing deviations.
+
+---
+
+### r16 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes (for both deviations)
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Equivalent (slightly less specific in d1, but d2 adds detail)
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  Both deviations correctly identify over-compliance. The first is slightly less specific ("donor monitoring"), but the second clarifies the sequence and unnecessary restriction. The combination covers the ground truth meaning fully, though with some redundancy.
+
+---
+
+### r16 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Equivalent (uses "Patient Monitoring" instead of "donor monitoring")
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The deviation is semantically equivalent to the ground truth, using "Patient Monitoring" (which matches the ground truth wording). All aspects are correct and aligned.
+
+---
+
+### r16 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This is nearly identical to output_1st_execution, with precise alignment to the ground truth in all respects.
+
+---
+
+### r16 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes (for all deviations)
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned (with extra granularity)
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution provides a detailed breakdown: the main deviation (monitoring during bleeding) plus two more granular deviations (sequence and duration). All are correct and aligned, though the extra deviations are more detailed than the ground truth, not less.
+
+---
+
+## Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Equivalent      | 5/5   | No                        | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Equivalent      | 5/5   | No                        | No                            |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+
+---
+
+### 1. Closest and Furthest from Ground Truth
+
+- **All executions are equally closest to the ground truth** (score 5/5).  
+  Each captures the correct deviation meaning, with some providing more granularity or slightly different terminology, but all are semantically equivalent.
+
+### 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**: No executions missed a meaningful deviation.
+- **Non-impacting Changes Present?**: No executions included non-impacting changes.
+
+### 3. Non-impacting Changes Observed
+
+- None. All changes reported are semantically relevant to the compliance deviation.
+
+---
+
+**Conclusion:**  
+All executions correctly and fully capture the semantic meaning of the ground truth deviation. Some provide more detail (output_5th_execution), and some use slightly different but equivalent terminology (output_3rd_execution), but none miss or misinterpret the core compliance issue. No non-impacting or undetected changes are present.

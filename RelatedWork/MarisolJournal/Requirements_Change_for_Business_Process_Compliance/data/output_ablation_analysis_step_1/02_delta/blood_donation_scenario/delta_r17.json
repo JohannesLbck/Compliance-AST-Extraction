@@ -1,0 +1,106 @@
+{
+  "requirement_id": "r17",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "modify",
+      "element": "action.dimension",
+      "old": "control_flow",
+      "new": "time",
+      "change_id": "r17_c1"
+    },
+    {
+      "change": "modify_activities",
+      "element": "action.activities",
+      "old": [
+        "donation"
+      ],
+      "new": [
+        "bleeding"
+      ],
+      "change_id": "r17_c2"
+    },
+    {
+      "change": "modify_temporal_constraints",
+      "element": "action.temporal_constraints",
+      "old": null,
+      "new": [
+        {
+          "min_duration_minutes": 20
+        }
+      ],
+      "change_id": "r17_c3"
+    },
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "data",
+        "compliance_pattern": "data_in_domain",
+        "data_values": [
+          {
+            "element": "donor_status",
+            "domain": [
+              "bleeding",
+              "more_pain"
+            ]
+          }
+        ]
+      },
+      "change_id": "r17_c4"
+    },
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "time",
+        "compliance_pattern": "elapsed_time_since_activity",
+        "activities": [
+          "donation"
+        ],
+        "temporal_constraints": [
+          {
+            "interval_minutes": 15
+          }
+        ]
+      },
+      "change_id": "r17_c5"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "activity_completed",
+      "new": "activity_occurrence",
+      "change_id": "r17_c6"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "assess_donor"
+      ],
+      "new": [
+        "assess donor"
+      ],
+      "change_id": "r17_c7"
+    },
+    {
+      "change": "delete",
+      "element": "norm",
+      "old": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "data",
+          "compliance_pattern": "data_recorded",
+          "data_values": [
+            {
+              "element": "reason_for_bleeding_or_pain"
+            }
+          ]
+        }
+      },
+      "change_id": "r17_c8"
+    }
+  ]
+}

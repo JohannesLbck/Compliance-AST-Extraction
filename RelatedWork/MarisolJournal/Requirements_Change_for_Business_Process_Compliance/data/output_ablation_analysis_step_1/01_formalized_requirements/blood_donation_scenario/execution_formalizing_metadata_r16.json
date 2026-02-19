@@ -1,0 +1,11 @@
+{
+    "model": "gpt-4.1",
+    "provider": "openai",
+    "prompt_file": "formalize_requirements_prompt_no_patterns.txt",
+    "temperature": 0,
+    "execution_timestamp": "2025-12-11 23:15:43",
+    "execution_time_seconds": 5.23,
+    "input_file": "blood_donation_scenario.json",
+    "output_file": "formalized_requirements_r16.json",
+    "error_log": "error_log.txt"
+}

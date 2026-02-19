@@ -1,0 +1,41 @@
+Here is the requested comparison of your JSON arrays:
+
+### Step 1: Pairwise Comparison
+
+#### Arrays to compare:
+- 1st_r18
+- 2nd_r18
+- 3rd_r18
+- 4th_r18
+- 5th_r18
+
+---
+
+### Step 2: Table of Differences
+
+| Compared JSONs                | Are they identical? | Field or path where the difference occurs | Description of the difference         |
+|-------------------------------|---------------------|------------------------------------------|---------------------------------------|
+| 1st_r18 vs 2nd_r18            | Yes                | N/A                                      | No differences found                  |
+| 1st_r18 vs 3rd_r18            | Yes                | N/A                                      | No differences found                  |
+| 1st_r18 vs 4th_r18            | Yes                | N/A                                      | No differences found                  |
+| 1st_r18 vs 5th_r18            | Yes                | N/A                                      | No differences found                  |
+| 2nd_r18 vs 3rd_r18            | Yes                | N/A                                      | No differences found                  |
+| 2nd_r18 vs 4th_r18            | Yes                | N/A                                      | No differences found                  |
+| 2nd_r18 vs 5th_r18            | Yes                | N/A                                      | No differences found                  |
+| 3rd_r18 vs 4th_r18            | Yes                | N/A                                      | No differences found                  |
+| 3rd_r18 vs 5th_r18            | Yes                | N/A                                      | No differences found                  |
+| 4th_r18 vs 5th_r18            | Yes                | N/A                                      | No differences found                  |
+
+---
+
+### Step 3: Grouping Identical Arrays
+
+All arrays are fully identical.  
+**Group:** 1st_r18, 2nd_r18, 3rd_r18, 4th_r18, 5th_r18
+
+---
+
+### Summary
+
+- **All provided JSON arrays are fully identical.**
+- **No differences in any field, entry, or value were found across all arrays.**

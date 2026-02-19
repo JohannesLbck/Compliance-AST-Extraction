@@ -1,0 +1,78 @@
+Below is a comprehensive comparison of the five provided JSON arrays (1st_r17, 2nd_r17, 3rd_r17, 4th_r17, 5th_r17). Each pair is compared for differences in content, structure, and field values. Identical arrays are grouped together.
+
+---
+
+### Table: Pairwise Comparison of JSON Arrays
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                   |
+|------------------------|---------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| 1st_r17 vs 2nd_r17     | No                  | r17_2.precondition                                       | 1st_r17 uses `not` with a time duration; 2nd_r17 uses `and` with a time duration.                               |
+| 1st_r17 vs 2nd_r17     | No                  | r17_2.precondition.not / and                             | 1st_r17: `not` contains time duration; 2nd_r17: `and` contains time duration, `not` is empty.                   |
+| 1st_r17 vs 2nd_r17     | No                  | r17_2.precondition.and / not                             | 1st_r17: `and` is empty, `not` is not empty; 2nd_r17: `and` is not empty, `not` is empty.                       |
+| 1st_r17 vs 3rd_r17     | No                  | r17_1.precondition.and[0].activities[0]                  | 1st_r17: "bleeding_or_pain_observed"; 3rd_r17: "bleeding_or_pain_present".                                      |
+| 1st_r17 vs 3rd_r17     | No                  | r17_1.precondition.and[1]                                | 1st_r17 has a second `and` condition (data check); 3rd_r17 does not.                                            |
+| 1st_r17 vs 3rd_r17     | No                  | r17_2.precondition                                       | 1st_r17: `not` with time duration; 3rd_r17: all empty.                                                          |
+| 1st_r17 vs 3rd_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 1st_r17: "existence_of_A"; 3rd_r17: "A_followed_by_B".                                                          |
+| 1st_r17 vs 3rd_r17     | No                  | r17_2.norms[0].action.activities                         | 1st_r17: ["assess_donor"]; 3rd_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"].                  |
+| 1st_r17 vs 4th_r17     | No                  | r17_2.precondition                                       | 1st_r17: `not` with time duration; 4th_r17: all empty.                                                          |
+| 1st_r17 vs 4th_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 1st_r17: "existence_of_A"; 4th_r17: "A_followed_by_B".                                                          |
+| 1st_r17 vs 4th_r17     | No                  | r17_2.norms[0].action.activities                         | 1st_r17: ["assess_donor"]; 4th_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"].                  |
+| 1st_r17 vs 5th_r17     | No                  | r17_1.precondition.and[1]                                | 1st_r17 has a second `and` condition (data check); 5th_r17 does not.                                            |
+| 1st_r17 vs 5th_r17     | No                  | r17_1.norms[1].action                                    | 1st_r17: control_flow/existence_of_A/record_reason_in_system; 5th_r17: data/data_available/reason_recorded.     |
+| 1st_r17 vs 5th_r17     | No                  | r17_2.precondition                                       | 1st_r17: `not` with time duration; 5th_r17: `and` with time duration.                                           |
+| 1st_r17 vs 5th_r17     | No                  | r17_2.precondition.not / and                             | 1st_r17: `not` contains time duration; 5th_r17: `and` contains time duration, `not` is empty.                   |
+| 1st_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.activities[0]                      | 1st_r17: "assess_donor"; 5th_r17: "assess donor" (space difference).                                            |
+| 1st_r17 vs 5th_r17     | No                  | r17_2.precondition.and[0].activities[0]                  | 1st_r17: n/a; 5th_r17: "bleeding".                                                                              |
+| 2nd_r17 vs 3rd_r17     | No                  | r17_1.precondition.and[0].activities[0]                  | 2nd_r17: "bleeding_or_pain_observed"; 3rd_r17: "bleeding_or_pain_present".                                      |
+| 2nd_r17 vs 3rd_r17     | No                  | r17_1.precondition.and[1]                                | 2nd_r17 has a second `and` condition (data check); 3rd_r17 does not.                                            |
+| 2nd_r17 vs 3rd_r17     | No                  | r17_2.precondition                                       | 2nd_r17: `and` with time duration; 3rd_r17: all empty.                                                          |
+| 2nd_r17 vs 3rd_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 2nd_r17: "existence_of_A"; 3rd_r17: "A_followed_by_B".                                                          |
+| 2nd_r17 vs 3rd_r17     | No                  | r17_2.norms[0].action.activities                         | 2nd_r17: ["assess_donor"]; 3rd_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"].                  |
+| 2nd_r17 vs 4th_r17     | No                  | r17_2.precondition                                       | 2nd_r17: `and` with time duration; 4th_r17: all empty.                                                          |
+| 2nd_r17 vs 4th_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 2nd_r17: "existence_of_A"; 4th_r17: "A_followed_by_B".                                                          |
+| 2nd_r17 vs 4th_r17     | No                  | r17_2.norms[0].action.activities                         | 2nd_r17: ["assess_donor"]; 4th_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"].                  |
+| 2nd_r17 vs 5th_r17     | No                  | r17_1.precondition.and[1]                                | 2nd_r17 has a second `and` condition (data check); 5th_r17 does not.                                            |
+| 2nd_r17 vs 5th_r17     | No                  | r17_1.norms[1].action                                    | 2nd_r17: control_flow/existence_of_A/record_reason_in_system; 5th_r17: data/data_available/reason_recorded.     |
+| 2nd_r17 vs 5th_r17     | No                  | r17_2.precondition.and[0].activities[0]                  | 2nd_r17: "donor_bleeding"; 5th_r17: "bleeding".                                                                 |
+| 2nd_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.activities[0]                      | 2nd_r17: "assess_donor"; 5th_r17: "assess donor" (space difference).                                            |
+| 3rd_r17 vs 4th_r17     | No                  | r17_1.precondition.and[0].activities[0]                  | 3rd_r17: "bleeding_or_pain_present"; 4th_r17: "bleeding_or_pain_observed".                                      |
+| 3rd_r17 vs 4th_r17     | No                  | r17_1.precondition.and[1]                                | 4th_r17 has a second `and` condition (data check); 3rd_r17 does not.                                            |
+| 3rd_r17 vs 5th_r17     | No                  | r17_1.precondition.and[0].activities[0]                  | 3rd_r17: "bleeding_or_pain_present"; 5th_r17: "bleeding_or_pain_observed".                                      |
+| 3rd_r17 vs 5th_r17     | No                  | r17_1.norms[1].action                                    | 3rd_r17: control_flow/existence_of_A/record_reason_in_system; 5th_r17: data/data_available/reason_recorded.     |
+| 3rd_r17 vs 5th_r17     | No                  | r17_2.precondition                                       | 3rd_r17: all empty; 5th_r17: `and` with time duration.                                                          |
+| 3rd_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 3rd_r17: "A_followed_by_B"; 5th_r17: "existence_of_A".                                                          |
+| 3rd_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.activities                         | 3rd_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"]; 5th_r17: ["assess donor"].                  |
+| 4th_r17 vs 5th_r17     | No                  | r17_1.precondition.and[0].activities[0]                  | 4th_r17: "bleeding_or_pain_observed"; 5th_r17: "bleeding_or_pain_observed". (identical)                         |
+| 4th_r17 vs 5th_r17     | No                  | r17_1.precondition.and[1]                                | 4th_r17 has a second `and` condition (data check); 5th_r17 does not.                                            |
+| 4th_r17 vs 5th_r17     | No                  | r17_1.norms[1].action                                    | 4th_r17: control_flow/existence_of_A/record_reason_in_system; 5th_r17: data/data_available/reason_recorded.     |
+| 4th_r17 vs 5th_r17     | No                  | r17_2.precondition                                       | 4th_r17: all empty; 5th_r17: `and` with time duration.                                                          |
+| 4th_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.compliance_pattern                 | 4th_r17: "A_followed_by_B"; 5th_r17: "existence_of_A".                                                          |
+| 4th_r17 vs 5th_r17     | No                  | r17_2.norms[0].action.activities                         | 4th_r17: ["donor_still_bleeding_after_20_minutes", "assess_donor"]; 5th_r17: ["assess donor"].                  |
+
+---
+
+### Grouping of Identical Arrays
+
+**None of the arrays are fully identical.**  
+Every pair has at least one difference in field values, structure, or content.
+
+---
+
+### Summary of Key Differences
+
+- **Precondition Structure:**  
+  - Some arrays use `and`, some use `not`, some have both empty, for the same `id`.
+- **Activities Naming:**  
+  - Variations like "bleeding_or_pain_observed" vs "bleeding_or_pain_present" vs "bleeding".
+  - "assess_donor" vs "assess donor" (space difference).
+- **Norms Action:**  
+  - Some use "existence_of_A", others "A_followed_by_B".
+  - Some record reason as a control flow activity, others as a data availability check.
+- **Presence/Absence of Data Checks:**  
+  - Some arrays include a data check in preconditions, others do not.
+- **Norms Activities:**  
+  - Some have two activities, others one; some have different activity names or order.
+
+---
+
+If you need a more detailed, field-by-field diff for a specific pair, let me know!

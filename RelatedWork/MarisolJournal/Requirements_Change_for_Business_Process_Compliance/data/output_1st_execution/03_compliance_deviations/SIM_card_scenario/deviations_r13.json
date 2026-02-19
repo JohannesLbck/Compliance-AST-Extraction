@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r13",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r13_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process allows issuing a SIM card to customers with outstanding debt between 50.01 € and 100 €, which is now prohibited by the updated requirement in Version 2. The process only restricts issuance when debt exceeds 100 €, failing to enforce the stricter threshold of 50.01 €.",
+        "process_model_reference": [
+          "issue SIM card"
+        ],
+        "change_id": "r13_c1"
+      },
+      {
+        "deviation_id": "r13_d2",
+        "deviation_type": "no impact",
+        "description": "The change from 'issue_new_SIM_card' to 'issue_SIM_card' in the formalization does not affect compliance, as the process model activity is labeled 'Activate SIM card' and the context clearly refers to the issuance of SIM cards in general. There is no distinction in the process model that would cause a deviation based on this terminology change.",
+        "process_model_reference": [
+          "issue SIM card"
+        ],
+        "change_id": "r13_c2"
+      }
+    ]
+  }
+]

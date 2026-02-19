@@ -1,0 +1,143 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> "x1 non-compliant deviation (wrong_role executing "Approve Patient Discharge", it should be the doctor)  
+> x1 non-compliant deviation (XOR should be extended to "patient < 65 years or has more than 5 medications")  
+> x1 over-compliant (the time constraint "Max. 24h" should be removed)"
+
+---
+
+## r3 - output_1st_execution
+
+- **Deviation Type Match:** Yes  
+- **Root Cause Match:** Partial  
+- **Updated Requirement Interpretation:** Partially Correct  
+- **Process Behavior Interpretation:** Partially Correct  
+- **Process Model Reference:** Equivalent  
+- **Semantic Alignment Score:** 3/5  
+- **Summary Comment:**  
+  - Correctly identifies non-compliance for missing doctor approval and medication count, and over-compliance for retaining the 24h constraint.
+  - However, splits the "wrong role" and "missing medication count" into two separate non-compliances, which is reasonable but not exactly as in the ground truth (which combines them).
+  - Also includes "no impact" deviations for technical/temporal validity changes, which are not in the ground truth but do not affect compliance.
+  - The over-compliance for nurse approval is present, but the distinction between "nurse approval" and "time constraint" is clear.
+  - **Partial** on root cause and updated requirement because the XOR logic extension is not explicitly called out as a single deviation.
+
+---
+
+## r3 - output_2nd_execution
+
+- **Deviation Type Match:** No  
+- **Root Cause Match:** No  
+- **Updated Requirement Interpretation:** Incorrect  
+- **Process Behavior Interpretation:** Incorrect  
+- **Process Model Reference:** Not Aligned  
+- **Semantic Alignment Score:** 1/5  
+- **Summary Comment:**  
+  - Only reports over-compliance for nurse approval, missing all non-compliance deviations (wrong role, missing medication count, time constraint).
+  - Fails to capture the main requirement changes and their impact on process compliance.
+  - No mention of the doctor role or medication count.
+  - Model reference is too narrow.
+
+---
+
+## r3 - output_3rd_execution
+
+- **Deviation Type Match:** Yes  
+- **Root Cause Match:** Yes  
+- **Updated Requirement Interpretation:** Correct  
+- **Process Behavior Interpretation:** Correct  
+- **Process Model Reference:** Aligned  
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  - Captures both non-compliance (missing doctor approval, missing medication count) and over-compliance (nurse approval, time constraint).
+  - The "Approve Patient Discharge" step is referenced, matching the ground truth.
+  - The logic of the updated requirement (doctor approval for >65 or >5 meds, no time constraint) is correctly interpreted.
+  - All deviations are present and semantically aligned.
+
+---
+
+## r3 - output_4th_execution
+
+- **Deviation Type Match:** Yes  
+- **Root Cause Match:** Yes  
+- **Updated Requirement Interpretation:** Correct  
+- **Process Behavior Interpretation:** Correct  
+- **Process Model Reference:** Aligned  
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  - Fully captures the non-compliance (missing doctor approval, missing medication count) and over-compliance (nurse approval, time constraint).
+  - The process model reference is precise.
+  - The XOR logic and role change are both explicitly addressed.
+  - Matches the ground truth in both content and structure.
+
+---
+
+## r3 - output_5th_execution
+
+- **Deviation Type Match:** Yes  
+- **Root Cause Match:** Yes  
+- **Updated Requirement Interpretation:** Correct  
+- **Process Behavior Interpretation:** Correct  
+- **Process Model Reference:** Aligned  
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  - All deviations in the ground truth are present: non-compliance for missing doctor approval and medication count, over-compliance for nurse approval and time constraint.
+  - "No impact" deviations are included for technical/temporal changes, but these do not affect the main compliance logic.
+  - The process model reference is accurate.
+  - The updated requirement and process behavior are interpreted correctly.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                        | Yes                           |
+| output_2nd_execution  | No            | No         | Incorrect          | Incorrect        | Not Aligned     | 1/5   | Yes                       | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | Yes                           |
+
+---
+
+## Closest and Furthest from Ground Truth
+
+- **Closest:**  
+  - **output_3rd_execution, output_4th_execution, output_5th_execution** (all 5/5):  
+    - These executions fully capture the semantic meaning of the ground truth deviations, including both non-compliance and over-compliance, and interpret the updated requirement and process behavior correctly.
+
+- **Furthest:**  
+  - **output_2nd_execution (1/5):**  
+    - Misses all non-compliance deviations and does not interpret the requirement or process changes correctly.
+
+---
+
+## Executions with Extra Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**
+  - **output_2nd_execution:** Yes  
+    - Fails to detect meaningful non-compliance deviations (doctor approval, medication count, time constraint).
+
+- **Non-impacting Changes Present?**
+  - **output_1st_execution:** Yes  
+    - Includes "no impact" deviations for technical rewording and temporal validity, which do not affect compliance.
+  - **output_5th_execution:** Yes  
+    - Also includes "no impact" deviations for technical/temporal changes.
+
+---
+
+## Types of Non-impacting Changes Observed
+
+- **Technical rewording:**  
+  - E.g., changing "[66,)" to ">65" for age, which is semantically equivalent.
+- **Temporal validity period:**  
+  - E.g., changing the dates during which the rule applies, not affecting compliance logic.
+- **Formatting/metadata:**  
+  - Not explicitly present, but could be inferred from the "no impact" deviations.
+
+---
+
+**In summary:**  
+- **Executions 3, 4, and 5** are fully aligned with the ground truth.  
+- **Execution 1** is partially aligned, with some over-splitting and inclusion of non-impacting changes.  
+- **Execution 2** is not aligned, missing all key deviations.  
+- Non-impacting changes are mostly technical or temporal and do not affect compliance.

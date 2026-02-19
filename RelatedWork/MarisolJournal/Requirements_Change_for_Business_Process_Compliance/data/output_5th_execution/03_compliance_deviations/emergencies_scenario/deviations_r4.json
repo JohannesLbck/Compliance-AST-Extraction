@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r4",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r4_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement in Version 2 introduces a conditional obligation: if the doctor does not authorize skipping blood analysis, the blood analysis test must precede surgery. The process model on page 1 does not include any activity for 'doctor_authorize_skip_blood_analysis'. Therefore, the process always requires blood analysis before surgery, regardless of whether a doctor could authorize skipping it. This results in non-compliance because the process does not allow the exception now permitted by the stricter, conditional requirement.",
+        "process_model_reference": [
+          "doctor_authorize_skip_blood_analysis"
+        ],
+        "change_id": "r4_c1"
+      },
+      {
+        "deviation_id": "r4_d2",
+        "deviation_type": "no impact",
+        "description": "The change from 'blood_analysis' to 'blood_analysis_test' is a renaming and does not affect the process flow, as the process model already includes a blood analysis step before surgery.",
+        "process_model_reference": [
+          "blood_analysis, blood_analysis_test"
+        ],
+        "change_id": "r4_c2"
+      }
+    ]
+  }
+]

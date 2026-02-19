@@ -1,0 +1,31 @@
+### Pairwise Comparison Table
+
+| Compared JSONs                | Are they identical? | Field or path where the difference occurs | Description of the difference         |
+|-------------------------------|---------------------|------------------------------------------|---------------------------------------|
+| 1st_r10 vs 2nd_r10            | Yes                 | N/A                                      | No differences found                  |
+| 1st_r10 vs 3rd_r10            | Yes                 | N/A                                      | No differences found                  |
+| 1st_r10 vs 4th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 1st_r10 vs 5th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 2nd_r10 vs 3rd_r10            | Yes                 | N/A                                      | No differences found                  |
+| 2nd_r10 vs 4th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 2nd_r10 vs 5th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 3rd_r10 vs 4th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 3rd_r10 vs 5th_r10            | Yes                 | N/A                                      | No differences found                  |
+| 4th_r10 vs 5th_r10            | Yes                 | N/A                                      | No differences found                  |
+
+---
+
+### Grouping of Identical JSON Arrays
+
+The following JSON arrays are **fully identical** and can be grouped together:
+
+- 1st_r10
+- 2nd_r10
+- 3rd_r10
+- 4th_r10
+- 5th_r10
+
+---
+
+**Summary:**  
+All provided JSON arrays are identical. There are no differences in field values, entry counts, or content for the same `id` across any of the arrays.

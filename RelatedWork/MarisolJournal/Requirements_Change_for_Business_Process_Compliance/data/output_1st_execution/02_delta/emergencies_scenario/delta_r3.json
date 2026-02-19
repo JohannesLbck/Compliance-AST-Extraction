@@ -1,0 +1,124 @@
+{
+  "requirement_id": "r3",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "data",
+        "compliance_pattern": "data_in_range",
+        "data_values": [
+          {
+            "element": "patient_age",
+            "domain": [
+              "[66,)"
+            ]
+          }
+        ]
+      },
+      "change_id": "r3_c1"
+    },
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "data",
+        "compliance_pattern": "data_in_range",
+        "data_values": [
+          {
+            "element": "patient_age",
+            "domain": [
+              ">65"
+            ]
+          }
+        ]
+      },
+      "change_id": "r3_c2"
+    },
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "data",
+        "compliance_pattern": "data_in_range",
+        "data_values": [
+          {
+            "element": "medication_count",
+            "domain": [
+              ">5"
+            ]
+          }
+        ]
+      },
+      "change_id": "r3_c3"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "nurse_approves_discharge",
+        "patient_discharged"
+      ],
+      "new": [
+        "doctor_approves_discharge",
+        "patient_discharged"
+      ],
+      "change_id": "r3_c4"
+    },
+    {
+      "change": "delete",
+      "element": "norm",
+      "old": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "resource",
+          "compliance_pattern": "performed_by",
+          "activities": [
+            "nurse_approves_discharge"
+          ],
+          "resources": [
+            "nurse"
+          ]
+        }
+      },
+      "change_id": "r3_c5"
+    },
+    {
+      "change": "delete",
+      "element": "norm",
+      "old": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "time",
+          "compliance_pattern": "time_lag",
+          "activities": [
+            "nurse_approves_discharge",
+            "patient_discharged"
+          ],
+          "temporal_constraints": [
+            {
+              "interval_minutes": 1440,
+              "direction": "before"
+            }
+          ]
+        }
+      },
+      "change_id": "r3_c6"
+    },
+    {
+      "change": "extend",
+      "element": "temporal_validity",
+      "old": {
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2030-12-31T23:59:59Z"
+      },
+      "new": {
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2031-12-31T23:59:59Z"
+      },
+      "change_id": "r3_c7"
+    }
+  ]
+}

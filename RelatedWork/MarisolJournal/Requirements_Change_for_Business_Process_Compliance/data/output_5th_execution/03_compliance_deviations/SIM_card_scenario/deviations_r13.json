@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r13",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r13_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model, as shown in the diagram on page 1, only restricts issuing a SIM card to customers with debt less than 100 €. The updated requirement prohibits issuing a SIM card to customers with debt exceeding 50 €, which is stricter. Therefore, the process allows issuing SIM cards to customers with debt between 50.01 € and 100 €, directly violating the new requirement.",
+        "process_model_reference": [
+          "issue SIM card"
+        ],
+        "change_id": "r13_c1"
+      }
+    ]
+  }
+]

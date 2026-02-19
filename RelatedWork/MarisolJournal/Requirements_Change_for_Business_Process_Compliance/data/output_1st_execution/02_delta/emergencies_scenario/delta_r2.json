@@ -1,0 +1,89 @@
+{
+  "requirement_id": "r2",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "obtain_patient_consent",
+        "conduct_time_out_procedure"
+      ],
+      "new": [
+        "obtain_patient_consent",
+        "surgical_intervention"
+      ],
+      "change_id": "r2_c1"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "A_precedes_B",
+      "new": "performed_by",
+      "change_id": "r2_c2"
+    },
+    {
+      "change": "modify",
+      "element": "dimension",
+      "old": "control_flow",
+      "new": "resource",
+      "change_id": "r2_c3"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "obtain_patient_consent",
+        "surgical_intervention"
+      ],
+      "new": [
+        "obtain_patient_consent"
+      ],
+      "change_id": "r2_c4"
+    },
+    {
+      "change": "modify_resources",
+      "element": "resources",
+      "old": null,
+      "new": [
+        "nurse"
+      ],
+      "change_id": "r2_c5"
+    },
+    {
+      "change": "add",
+      "element": "norm",
+      "new": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_followed_by_B",
+          "activities": [
+            "obtain_patient_consent",
+            "time_out_procedure"
+          ]
+        }
+      },
+      "change_id": "r2_c6"
+    },
+    {
+      "change": "add",
+      "element": "norm",
+      "new": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "resource",
+          "compliance_pattern": "performed_by",
+          "activities": [
+            "time_out_procedure"
+          ],
+          "resources": [
+            "doctor"
+          ]
+        }
+      },
+      "change_id": "r2_c7"
+    }
+  ]
+}

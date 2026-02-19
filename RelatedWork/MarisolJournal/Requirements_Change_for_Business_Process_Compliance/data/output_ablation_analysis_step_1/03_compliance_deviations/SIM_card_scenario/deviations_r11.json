@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r11",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r11_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement introduces an obligation for the phone company to ask for consent before retrieving any personal data. The process model on page 1 shows that the activity 'Request personal data' occurs before 'Ask for consent', and in some paths, 'Ask for consent' is not performed at all before personal data is requested. This directly violates the new obligation.",
+        "process_model_reference": [
+          "Request personal data"
+        ],
+        "change_id": "r11_c1"
+      },
+      {
+        "deviation_id": "r11_d2",
+        "deviation_type": "non-compliance",
+        "description": "The process model allows the retrieval of personal data without a preceding 'Ask for consent' activity, which is now strictly required by the updated requirement. This results in a compliance deviation.",
+        "process_model_reference": [
+          "Ask for consent, Request personal data"
+        ],
+        "change_id": "r11_c2"
+      }
+    ]
+  }
+]

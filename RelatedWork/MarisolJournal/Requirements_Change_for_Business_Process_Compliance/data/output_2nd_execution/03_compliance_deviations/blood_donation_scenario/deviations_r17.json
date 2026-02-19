@@ -1,0 +1,36 @@
+[
+  {
+    "requirement_id": "r17",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r17_d1",
+        "deviation_type": "over-compliance",
+        "description": "The process model enforces assessment and recording the reason after 15 minutes if the donor is still bleeding or in pain, but Version 2 only requires assessment after 20 minutes and only for bleeding. The process is stricter than required by Version 2.",
+        "process_model_reference": [
+          "Patient Monitoring, Record observations"
+        ],
+        "change_id": "r17_c1"
+      },
+      {
+        "deviation_id": "r17_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process model triggers obligations for both bleeding and pain, but Version 2 only requires action for bleeding. The process enforces obligations for pain, which is no longer required.",
+        "process_model_reference": [
+          "Patient Monitoring, Record observations"
+        ],
+        "change_id": "r17_c2"
+      },
+      {
+        "deviation_id": "r17_d3",
+        "deviation_type": "over-compliance",
+        "description": "The process model requires recording the reason in the system, but Version 2 no longer obligates this action. The process enforces an outdated requirement.",
+        "process_model_reference": [
+          "Record observations"
+        ],
+        "change_id": "r17_c3"
+      }
+    ]
+  }
+]

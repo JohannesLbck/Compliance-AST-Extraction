@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Compliance Requirement",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "precondition": {
+      "type": "object",
+      "properties": {
+        "and": { "type": "array", "items": { "$ref": "#/definitions/action" } },
+        "or": { "type": "array", "items": { "$ref": "#/definitions/action" } },
+        "not": { "type": "array", "items": { "$ref": "#/definitions/action" } }
+      },
+      "required": ["and", "or", "not"],
+      "additionalProperties": false
+    },
+    "norms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "modality": { "type": "string", "enum": ["obligation", "permission", "prohibition"] },
+          "action": { "$ref": "#/definitions/action" }
+        },
+        "required": ["modality", "action"],
+        "additionalProperties": false
+      }
+    },
+    "temporal_validity": {
+      "type": "object",
+      "properties": {
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" }
+      },
+      "required": ["start", "end"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "precondition", "norms", "temporal_validity"],
+  "definitions": {
+    "action": {
+      "type": "object",
+      "properties": {
+        "dimension": { "type": "string", "enum": ["control_flow", "data", "resource", "time"] },
+        "compliance_pattern": { "type": "string" },
+        "activities": { "type": "array", "items": { "type": "string" } },
+        "resources": { "type": "array", "items": { "type": "string" } },
+        "data_values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "element": { "type": "string" },
+              "value": {},
+              "domain": { "type": "array", "items": {} },
+              "format": { "type": "string" },
+              "purpose": { "type": "string" },
+              "origin": { "type": "string" }
+            },
+            "required": ["element"],
+            "additionalProperties": true
+          }
+        },
+        "temporal_constraints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "interval_minutes": { "type": "number" },
+              "min_duration_minutes": { "type": "number" },
+              "max_duration_minutes": { "type": "number" },
+              "window_start": { "type": "string", "format": "date-time" },
+              "window_end": { "type": "string", "format": "date-time" },
+              "schedule": { "type": "string" },
+              "event": { "type": "string" },
+              "recurrence": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": ["dimension", "compliance_pattern"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

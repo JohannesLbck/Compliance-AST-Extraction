@@ -1,0 +1,11 @@
+{
+    "model": "gpt-4.1",
+    "provider": "openai",
+    "prompt_file": "formalize_requirements_prompt.txt",
+    "temperature": 0,
+    "execution_timestamp": "2025-08-27 08:24:11",
+    "execution_time_seconds": 5.42,
+    "input_file": "emergencies_scenario.json",
+    "output_file": "formalized_requirements_r7.json",
+    "error_log": "error_log.txt"
+}

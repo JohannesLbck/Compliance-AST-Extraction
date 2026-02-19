@@ -1,0 +1,50 @@
+{
+  "requirement_id": "r8",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "permission -> obligation",
+      "element": "modality",
+      "old": "permission",
+      "new": "obligation",
+      "change_id": "r8_c1"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "duration",
+      "new": "existence_of_A",
+      "change_id": "r8_c2"
+    },
+    {
+      "change": "modify",
+      "element": "dimension",
+      "old": "time",
+      "new": "control_flow",
+      "change_id": "r8_c3"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "send_SIM_card"
+      ],
+      "new": [
+        "terminate_process"
+      ],
+      "change_id": "r8_c4"
+    },
+    {
+      "change": "modify_temporal_constraints",
+      "element": "temporal_constraints",
+      "old": [
+        {
+          "min_duration_minutes": 43200
+        }
+      ],
+      "new": null,
+      "change_id": "r8_c5"
+    }
+  ]
+}

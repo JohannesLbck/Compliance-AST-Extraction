@@ -1,0 +1,67 @@
+{
+  "requirement_id": "r8",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "time",
+        "compliance_pattern": "duration_exceeds",
+        "activities": [
+          "phone company process"
+        ],
+        "temporal_constraints": [
+          {
+            "min_duration_minutes": 43200
+          }
+        ]
+      },
+      "change_id": "r8_c1"
+    },
+    {
+      "change": "permission -> obligation",
+      "element": "modality",
+      "old": "permission",
+      "new": "obligation",
+      "change_id": "r8_c2"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "duration_greater_than",
+      "new": "activity_execution",
+      "change_id": "r8_c3"
+    },
+    {
+      "change": "modify",
+      "element": "dimension",
+      "old": "time",
+      "new": "control_flow",
+      "change_id": "r8_c4"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "send_SIM_card"
+      ],
+      "new": [
+        "terminate phone company process"
+      ],
+      "change_id": "r8_c5"
+    },
+    {
+      "change": "modify_temporal_constraints",
+      "element": "temporal_constraints",
+      "old": [
+        {
+          "min_duration_minutes": 43200
+        }
+      ],
+      "new": null,
+      "change_id": "r8_c6"
+    }
+  ]
+}

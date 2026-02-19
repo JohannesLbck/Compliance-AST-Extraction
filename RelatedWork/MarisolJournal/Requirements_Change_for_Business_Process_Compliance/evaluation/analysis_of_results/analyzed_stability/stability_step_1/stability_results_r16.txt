@@ -1,0 +1,64 @@
+Below is a detailed comparison table of all pairwise combinations of your JSON arrays (1st_r16, 2nd_r16, 3rd_r16, 4th_r16, 5th_r16). Each row describes a difference found, with the relevant field/path and a description. Arrays that are fully identical are grouped at the end.
+
+---
+
+### Pairwise Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                                   | Description of the difference                                                                                      |
+|------------------------|---------------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| 1st_r16 vs 2nd_r16     | No                  | norms[1].action.temporal_constraints[0] (in r16_1)                         | 1st_r16 uses `equals_activity_duration_of: blood collection`; 2nd_r16 uses `min_duration_minutes: 0, max_duration_linked_to_activity: bleeding` |
+| 1st_r16 vs 3rd_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 1st_r16: "blood collection"; 3rd_r16: "blood_collection" (underscore)                                              |
+| 1st_r16 vs 3rd_r16     | No                  | norms (in r16_1)                                                           | 1st_r16 has 2 norms; 3rd_r16 has 1 norm                                                                            |
+| 1st_r16 vs 3rd_r16     | No                  | norms[0].action.dimension (in r16_1)                                       | 1st_r16: "control_flow"; 3rd_r16: "time"                                                                           |
+| 1st_r16 vs 3rd_r16     | No                  | norms[0].action.compliance_pattern (in r16_1)                              | 1st_r16: "A_followed_by_B"; 3rd_r16: "duration"                                                                    |
+| 1st_r16 vs 3rd_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 1st_r16: ["blood collection", "donor monitoring"]; 3rd_r16: ["donor_monitoring"]                                   |
+| 1st_r16 vs 3rd_r16     | No                  | norms[0].action.temporal_constraints[0] (in r16_1)                         | 1st_r16: not present; 3rd_r16: present                                                                            |
+| 1st_r16 vs 3rd_r16     | No                  | norms[1] (in r16_1)                                                        | 1st_r16: present; 3rd_r16: not present                                                                             |
+| 1st_r16 vs 4th_r16     | No                  | norms[1].action.temporal_constraints[0] (in r16_1)                         | 1st_r16: `equals_activity_duration_of: blood collection`; 4th_r16: `min_duration_minutes: 0, max_duration_linked_to_activity: blood collection` |
+| 1st_r16 vs 5th_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 1st_r16: "blood collection"; 5th_r16: "blood_collection" (underscore)                                              |
+| 1st_r16 vs 5th_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 1st_r16: ["blood collection", "donor monitoring"]; 5th_r16: ["blood_collection", "donor_monitoring"] (underscores) |
+| 1st_r16 vs 5th_r16     | No                  | norms[1].action.temporal_constraints[0] (in r16_1)                         | 1st_r16: `equals_activity_duration_of: blood collection`; 5th_r16: `equal_to_activity_duration: blood_collection`  |
+| 2nd_r16 vs 3rd_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 2nd_r16: "blood collection"; 3rd_r16: "blood_collection" (underscore)                                              |
+| 2nd_r16 vs 3rd_r16     | No                  | norms (in r16_1)                                                           | 2nd_r16 has 2 norms; 3rd_r16 has 1 norm                                                                            |
+| 2nd_r16 vs 3rd_r16     | No                  | norms[0].action.dimension (in r16_1)                                       | 2nd_r16: "control_flow"; 3rd_r16: "time"                                                                           |
+| 2nd_r16 vs 3rd_r16     | No                  | norms[0].action.compliance_pattern (in r16_1)                              | 2nd_r16: "A_followed_by_B"; 3rd_r16: "duration"                                                                    |
+| 2nd_r16 vs 3rd_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 2nd_r16: ["blood collection", "donor monitoring"]; 3rd_r16: ["donor_monitoring"]                                   |
+| 2nd_r16 vs 3rd_r16     | No                  | norms[0].action.temporal_constraints[0] (in r16_1)                         | 2nd_r16: not present; 3rd_r16: present                                                                            |
+| 2nd_r16 vs 3rd_r16     | No                  | norms[1] (in r16_1)                                                        | 2nd_r16: present; 3rd_r16: not present                                                                             |
+| 2nd_r16 vs 4th_r16     | No                  | norms[1].action.temporal_constraints[0].max_duration_linked_to_activity    | 2nd_r16: "bleeding"; 4th_r16: "blood collection"                                                                   |
+| 2nd_r16 vs 5th_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 2nd_r16: "blood collection"; 5th_r16: "blood_collection" (underscore)                                              |
+| 2nd_r16 vs 5th_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 2nd_r16: ["blood collection", "donor monitoring"]; 5th_r16: ["blood_collection", "donor_monitoring"] (underscores) |
+| 2nd_r16 vs 5th_r16     | No                  | norms[1].action.temporal_constraints[0] (in r16_1)                         | 2nd_r16: `min_duration_minutes: 0, max_duration_linked_to_activity: bleeding`; 5th_r16: `equal_to_activity_duration: blood_collection` |
+| 3rd_r16 vs 4th_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 3rd_r16: "blood_collection"; 4th_r16: "blood collection" (space)                                                   |
+| 3rd_r16 vs 4th_r16     | No                  | norms (in r16_1)                                                           | 3rd_r16 has 1 norm; 4th_r16 has 2 norms                                                                            |
+| 3rd_r16 vs 4th_r16     | No                  | norms[0].action.dimension (in r16_1)                                       | 3rd_r16: "time"; 4th_r16: "control_flow"                                                                           |
+| 3rd_r16 vs 4th_r16     | No                  | norms[0].action.compliance_pattern (in r16_1)                              | 3rd_r16: "duration"; 4th_r16: "A_followed_by_B"                                                                    |
+| 3rd_r16 vs 4th_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 3rd_r16: ["donor_monitoring"]; 4th_r16: ["blood collection", "donor monitoring"]                                   |
+| 3rd_r16 vs 4th_r16     | No                  | norms[0].action.temporal_constraints[0] (in r16_1)                         | 3rd_r16: present; 4th_r16: not present                                                                            |
+| 3rd_r16 vs 4th_r16     | No                  | norms[1] (in r16_1)                                                        | 3rd_r16: not present; 4th_r16: present                                                                             |
+| 3rd_r16 vs 5th_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 3rd_r16: "blood_collection"; 5th_r16: "blood_collection" (identical)                                               |
+| 3rd_r16 vs 5th_r16     | No                  | norms[0].action.dimension (in r16_1)                                       | 3rd_r16: "time"; 5th_r16: "control_flow"                                                                           |
+| 3rd_r16 vs 5th_r16     | No                  | norms[0].action.compliance_pattern (in r16_1)                              | 3rd_r16: "duration"; 5th_r16: "A_followed_by_B"                                                                    |
+| 3rd_r16 vs 5th_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 3rd_r16: ["donor_monitoring"]; 5th_r16: ["blood_collection", "donor_monitoring"]                                   |
+| 3rd_r16 vs 5th_r16     | No                  | norms[0].action.temporal_constraints[0] (in r16_1)                         | 3rd_r16: present; 5th_r16: not present                                                                            |
+| 3rd_r16 vs 5th_r16     | No                  | norms[1] (in r16_1)                                                        | 3rd_r16: not present; 5th_r16: present                                                                             |
+| 4th_r16 vs 5th_r16     | No                  | precondition.and[0].activities (in r16_1)                                  | 4th_r16: "blood collection"; 5th_r16: "blood_collection" (underscore)                                              |
+| 4th_r16 vs 5th_r16     | No                  | norms[0].action.activities (in r16_1)                                      | 4th_r16: ["blood collection", "donor monitoring"]; 5th_r16: ["blood_collection", "donor_monitoring"] (underscores) |
+| 4th_r16 vs 5th_r16     | No                  | norms[1].action.temporal_constraints[0] (in r16_1)                         | 4th_r16: `min_duration_minutes: 0, max_duration_linked_to_activity: blood collection`; 5th_r16: `equal_to_activity_duration: blood_collection` |
+
+---
+
+### Identical Groups
+
+- **No arrays are fully identical.**  
+  Every array differs from every other in at least one field, either in field values, structure, or naming (e.g., "blood collection" vs "blood_collection").
+
+---
+
+#### Notes
+
+- All arrays have the same number of entries (2), and the second entry (r16_2) is always empty/identical.
+- All differences are in the first entry (r16_1), especially in the `precondition.and[0].activities`, `norms`, and the structure/content of `norms[*].action.temporal_constraints[0]`.
+- Naming conventions (spaces vs underscores) and the structure of temporal constraints are the most common sources of difference.
+
+If you need a more visual or grouped summary, or want to focus on a specific pair, let me know!

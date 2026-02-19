@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r20",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r20_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model prohibits blood collection if the donor has recently undergone surgery OR received a blood transfusion, but the new requirement only prohibits collection if BOTH conditions are true. The process allows blood collection when only one condition is met, which is now permitted, but it still prohibits collection in these cases, resulting in over-compliance. However, if the process collects blood when only one condition is met, it would violate the new stricter requirement.",
+        "process_model_reference": [
+          "Collect blood"
+        ],
+        "change_id": "r20_c1"
+      },
+      {
+        "deviation_id": "r20_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process model prohibits blood collection if the donor has recently undergone surgery OR received a blood transfusion, which is stricter than the new requirement that only prohibits collection if BOTH conditions are true. The process unnecessarily restricts blood collection when only one of the conditions is met.",
+        "process_model_reference": [
+          "Collect blood"
+        ],
+        "change_id": "r20_c2"
+      }
+    ]
+  }
+]

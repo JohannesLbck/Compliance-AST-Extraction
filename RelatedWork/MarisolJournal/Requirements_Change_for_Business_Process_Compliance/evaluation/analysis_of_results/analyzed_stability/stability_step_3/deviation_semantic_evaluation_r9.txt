@@ -1,0 +1,132 @@
+### Ground Truth Deviation:
+> "x1 non-compliant (before activity "Sign contract" it is necessary to add an activity "verify correctness customer personal data")"
+
+**Key semantic points:**
+- **Deviation Type:** Non-compliance.
+- **Root Cause:** The process is missing a "verify correctness customer personal data" activity before "Sign contract".
+- **Updated Requirement:** Now requires verification of customer personal data before signing the contract.
+- **Process Behavior:** The process does not verify customer data before signing.
+- **Process Model Reference:** The missing activity should be before "Sign contract".
+
+---
+
+## Per-Execution Assessment
+
+---
+
+### r9 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial  
+  *Mentions omission of verification after receiving data, but not specifically before "Sign contract".*
+- **Updated Requirement Interpretation:** Partially Correct  
+  *Correctly identifies the new obligation, but frames it as "after receiving" rather than "before signing contract".*
+- **Process Behavior Interpretation:** Partially Correct  
+  *Describes missing verification after receiving data, not in relation to "Sign contract".*
+- **Process Model Reference:** Equivalent  
+  *References "receive customer personal information" instead of "Sign contract".*
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  The deviation correctly identifies the non-compliance and the need for verification, but it frames the requirement and process behavior in terms of "after receiving customer information" rather than "before signing contract". This is semantically close but not fully aligned with the ground truth, which is more specific about the placement of the verification.
+
+---
+
+### r9 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial  
+  *Again, focuses on missing verification after receiving data, not before "Sign contract".*
+- **Updated Requirement Interpretation:** Partially Correct  
+  *Correctly notes the new obligation, but the timing is "immediately after receiving" rather than "before signing".*
+- **Process Behavior Interpretation:** Partially Correct  
+  *Describes the process as missing verification after receiving data, not in relation to "Sign contract".*
+- **Process Model Reference:** Equivalent  
+  *References "receive customer personal information".*
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  The deviation captures the essence of the new requirement and the process's failure to comply, but the temporal placement of the verification is not as precise as in the ground truth.
+
+---
+
+### r9 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial  
+  *Same as above: missing verification after receiving data, not before "Sign contract".*
+- **Updated Requirement Interpretation:** Partially Correct  
+  *Correctly identifies the new obligation, but the timing is "immediately after receiving".*
+- **Process Behavior Interpretation:** Partially Correct  
+  *Describes missing verification after receiving data, not before "Sign contract".*
+- **Process Model Reference:** Equivalent  
+  *References "receive customer personal information".*
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  The deviation is semantically similar to the previous ones, with the same misalignment regarding the specific process point where verification should occur.
+
+---
+
+### r9 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial  
+  *Again, focuses on missing verification after receiving data, not before "Sign contract".*
+- **Updated Requirement Interpretation:** Partially Correct  
+  *Correctly notes the new obligation, but the timing is "immediately after receiving".*
+- **Process Behavior Interpretation:** Partially Correct  
+  *Describes missing verification after receiving data, not before "Sign contract".*
+- **Process Model Reference:** Equivalent  
+  *References "receive customer personal information".*
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  The deviation is nearly identical to the previous ones, with the same partial alignment due to the less precise process placement.
+
+---
+
+### r9 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial  
+  *Same as above.*
+- **Updated Requirement Interpretation:** Partially Correct  
+  *Same as above.*
+- **Process Behavior Interpretation:** Partially Correct  
+  *Same as above.*
+- **Process Model Reference:** Equivalent  
+  *Same as above.*
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  This execution is a duplicate of the fourth, with the same partial semantic alignment.
+
+---
+
+## Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|--------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                       | No                            |
+| output_2nd_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                       | No                            |
+| output_3rd_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                       | No                            |
+| output_4th_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                       | No                            |
+| output_5th_execution  | Yes           | Partial    | Partial            | Partial          | Equivalent      | 3/5   | No                       | No                            |
+
+---
+
+### 1. Closest and Furthest from Ground Truth
+
+- **Closest:** All executions are equally close (score 3/5). They all capture the main idea of the new requirement and the non-compliance, but none precisely match the ground truth's specific process placement ("before Sign contract").
+- **Furthest:** None are further than the others; all have the same partial alignment.
+
+### 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?** No executions missed meaningful changes; all detected the main deviation.
+- **Non-impacting Changes Present?** No; all changes are semantically relevant.
+
+### 3. Non-impacting Changes Observed
+
+- **None observed.** All deviations are focused on the substantive requirement change and its process impact. No formatting, metadata, ordering, or renaming changes are present.
+
+---
+
+## **Summary Comment**
+
+All executions correctly identify the non-compliance due to the missing verification of customer personal data. However, they all frame the requirement and process behavior in terms of "after receiving customer information" rather than the more precise "before signing contract" as in the ground truth. This results in partial semantic alignment (3/5) for all executions. No executions missed the main deviation, and no non-impacting changes were present.

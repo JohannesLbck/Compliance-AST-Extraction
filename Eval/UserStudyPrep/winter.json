@@ -1,0 +1,72 @@
+{
+  "NL": {
+    "R1": "In order that access to an IT system is reliably prevented during a short absence of the IT user, it should only be possible to disable a screen lock after successful user authentication",
+    "R2": "It should be possible for the user to activate the screen lock manually",
+    "R3": "In addition, the screen lock should be automatically initiated after a predefined period of inactivity"
+  },
+  "Humanmade": {
+    "R1": "not condition_eventually_follows('not data.authenticated, 'Unlock screen', 'global')",
+    "R2": "exists('activate screeen lock')",
+    "R3": "exists('automatic screen lock') and timed_alternative('automatic screen lock', 'user input', 60')"
+  },
+  "Generated1": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "executed_by(tree, 'activate screen lock manually', 'user')",
+    "R3": "exists(tree, 'initiate screen lock automatically')"
+  },
+  "Generated2": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "exists(tree, 'activate screen lock manually') and executed_by(tree, 'activate screen lock manually', 'user')",
+    "R3": "condition_eventually_follows(tree, 'inactivity', 'activate screen lock automatically')"
+  },
+  "Generated3": {
+    "R1": "precedence(tree, 'Disable Screen Lock', 'Authenticate User')",
+    "R2": "exists(tree, 'Activate Screen Lock Manually') and executed_by(tree, 'Activate Screen Lock Manually', 'IT User')",
+    "R3": "timed_alternative(tree, 'Wait Activity', 'Activate Screen Lock Automatically', 1)"
+  },
+  "Generated4": {
+    "R1": "precedence(tree, 'Disable Screen Lock', 'Authenticate User') and data_leads_to_absence(tree, 'not authenticationSuccess', 'Disable Screen Lock')",
+    "R2": "executed_by(tree, 'Activate Screen Lock Manually', 'User')",
+    "R3": "exists(tree, 'Initiate Screen Lock Automatically')"
+  },
+  "Generated5": {
+    "R1": "precedence(tree, 'Disable screen lock', 'Authenticate user')",
+    "R2": "exists(tree, 'Activate screen lock manually')",
+    "R3": "timed_alternative(tree, 'Perform user activity', 'Initiate screen lock automatically', 300)"
+  },
+  "Generated6": {
+    "R1": "precedence(tree, 'Disable Screen Lock', 'Authenticate User') and condition_eventually_follows(tree, 'successfulUserAuthentication', 'Disable Screen Lock')",
+    "R2": "exists(tree, 'Activate Screen Lock Manually')",
+    "R3": "timed_alternative(tree, 'Perform User Activity', 'Initiate Screen Lock Automatically', 300)"
+  },
+  "Generated7": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "executed_by(tree, 'activate screen lock manually', 'user')",
+    "R3": "exists(tree, 'initiate screen lock automatically')"
+  },
+  "Generated8": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "executed_by(tree, 'activate screen lock manually', 'IT user')",
+    "R3": "timed_alternative(tree, 'perform IT activity', 'initiate screen lock automatically', 600)"
+  },
+  "Generated9": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "exists(tree, 'activate screen lock') and executed_by(tree, 'activate screen lock', 'user')",
+    "R3": "timed_alternative(tree, 'user activity', 'initiate screen lock', 'predefined period')"
+  },
+  "Generated10": {
+    "R1": "precedence('disable screen lock', 'authenticate user')",
+    "R2": "exists('activate screen lock') and executed_by('activate screen lock', 'user')",
+    "R3": "timed_alternative('user interaction', 'activate screen lock', 'predefined period of inactivity')"
+  },
+  "Generated11": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user') and condition_eventually_follows(tree, 'authenticationSuccessful', 'disable screen lock')",
+    "R2": "exists(tree, 'activate screen lock') and executed_by(tree, 'activate screen lock', 'it user')",
+    "R3": "timed_alternative(tree, 'interact with system', 'initiate screen lock', 'predefined period')"
+  },
+  "Generated12": {
+    "R1": "precedence(tree, 'disable screen lock', 'authenticate user')",
+    "R2": "executed_by(tree, 'activate screen lock manually', 'user')",
+    "R3": "exists(tree, 'activate screen lock automatically')"
+  }
+}

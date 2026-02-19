@@ -1,0 +1,15 @@
+requirements,fitness score,obligation costs,so costs,resource costs,costs
+emergencies_scenario_r1_v1,0.85579,0.0,0,0.0,0.0
+emergencies_scenario_r1_v2,0.80939,0.0,0,0.0,0.0
+emergencies_scenario_r2_v1,0.82937,0.0,1.0,0.0,0.33333
+emergencies_scenario_r2_v2,0.83043,0.0,1.0,0.0,0.33333
+emergencies_scenario_r3_v1,0.81144,0.0,0,0.0,0.0
+emergencies_scenario_r3_v2,0.83063,0.0,0,0.0,0.0
+emergencies_scenario_r4_v1,0,0,0,0,0.0
+emergencies_scenario_r4_v2,0.80501,0.0,0,0.0,0.0
+emergencies_scenario_r5_v1,0,0,0,0,0.0
+emergencies_scenario_r5_v2,0.81783,0.0,0,0.0,0.0
+emergencies_scenario_r6_v1,0.8112,0.0,0,0.0,0.0
+emergencies_scenario_r6_v2,0.81417,0.0,0,0.0,0.0
+emergencies_scenario_r7_v1,0.80561,0.0,1.0,0.0,0.33333
+emergencies_scenario_r7_v2,0.77028,0.0,1.0,0.0,0.33333

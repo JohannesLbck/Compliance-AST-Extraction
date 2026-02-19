@@ -1,0 +1,135 @@
+{
+  "NL": {
+    "R1": "The customer should receive an automated email notification when his personal data is collected by the \u2018credit bureau service\u2019",
+    "R2": "The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application",
+    "R3": "The activity \u2018customer bank privilege check\u2019 (to be performed by credit broker or supervisor) should be segregated from \u2018credit worthiness check\u2019 (to be performed by post-processing clerk)",
+    "R4": "The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request",
+    "R5": "The offer in the signed loan contract is valid for 7 working days and afterwards it is closed",
+    "R6": "If the loan request\u2019s credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In case of failure of the creation of a suspense file, the manager is notified by the system",
+    "R7": "Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer\u2019s loan request is less than 1M Euros, the evaluation of the loan risk is not performed"
+  },
+  "Humanmade": {
+    "R1": "parallel('send automated email', 'check credit worthiness') and executed_by('check credit worthiness', 'credit bureau service')",
+    "R2": "precedence('evaluate loan risk', 'customer bank privilege check') and precedence('evaluate loan risk', 'check credit worthiness') and leads_to('customer bank privilege check', 'check credit worthiness')",
+    "R3": "executed_by('customer bank privilege check', 'credit broker') or executed_by('customer bank privilege check', 'supervisor') and executed_by('check credit worthiness', 'data.post_processing_resource') and executed_by_return('customer bank privilege check') != executed_by_return('credit worthiness check')",
+    "R4": "executed_by('evaluate loan risk', 'manager') and executed_by('officially sign loan contract', 'manager')",
+    "R5": "max_time_between('officially sign loan contract', 'perform loan settlement', 604800)",
+    "R6": "condition_eventually_follows('data.loan_amount > 1000000', 'assign post processing to supervisor')",
+    "R7": "not condition_eventually_follows('data.customer_status == gold && data.loan_amount < 1000000','evaluate loan risk','global')"
+  },
+  "Generated1": {
+    "R1": "leads_to(tree, executed_by_identify(tree, 'credit bureau service'), receive_exist(tree, 'automatedEmailNotification'))",
+    "R2": "directly_follows(tree, 'check customer bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine risk level')",
+    "R3": "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and not(executed_by_return(tree, 'check customer bank privilege') == executed_by_return(tree, 'check credit worthiness'))",
+    "R4": "executed_by(tree, 'check risk', 'branch office manager') and condition_eventually_follows(tree, 'riskAcceptable', 'approve request') and condition_eventually_follows(tree, 'not riskAcceptable', 'reject request')",
+    "R5": "timed_alternative(tree, 'sign loan contract', 'close offer', 7)",
+    "R6": "condition_eventually_follows(tree, 'creditAmount > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0) and timed_alternative(tree, 'create suspense file', 'notify manager', 0)",
+    "R7": "data_leads_to_absence(tree, 'trustedGold and creditAmount < 1000000', 'evaluate loan risk')"
+  },
+  "Generated2": {
+    "R1": "executed_by(tree, 'collect personal data', 'credit bureau service') and activity_sends(tree, 'collect personal data', 'automatedEmailNotification')",
+    "R2": "leads_to(tree, 'check customer bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine risk level loan application')",
+    "R3": "(executed_by(tree, 'customer bank privilege check', 'credit broker') or executed_by(tree, 'customer bank privilege check', 'supervisor')) and executed_by(tree, 'credit worthiness check', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risk', 'branch office manager') and condition_eventually_follows(tree, 'riskAcceptable', 'approve request') and condition_eventually_follows(tree, 'not riskAcceptable', 'reject request')",
+    "R5": "timed_alternative(tree, 'sign loan contract', 'close', 7)",
+    "R6": "condition_eventually_follows(tree, 'credit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0) and timed_alternative(tree, 'create suspense file', 'notify manager', 0)",
+    "R7": "data_leads_to_absence(tree, 'trustedGoldCustomer and credit < 1000000', 'evaluate loan risk')"
+  },
+  "Generated3": {
+    "R1": "executed_by(tree, 'collect personal data', 'credit bureau service') and leads_to(tree, 'collect personal data', receive_exist(tree, 'automatedEmailNotification'))",
+    "R2": "leads_to(tree, 'check bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine loan risk level')",
+    "R3": "(executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risk acceptance', 'branch office manager') and condition_eventually_follows(tree, 'risksAcceptable', 'approve request') and condition_eventually_follows(tree, 'not risksAcceptable', 'reject request')",
+    "R5": "max_time_between(tree, 'sign loan contract', 'close offer', 7)",
+    "R6": "condition_eventually_follows(tree, 'creditAmount > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor')",
+    "R7": "timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0) and timed_alternative(tree, 'create suspense file', receive_exist(tree, 'managerNotification'), 0)",
+    "R8": "data_leads_to_absence(tree, \"customerStatus == 'gold' and creditAmount < 1000000\", 'evaluate loan risk')"
+  },
+  "Generated4": {
+    "R1": "executed_by(tree, 'collect personal data', 'credit bureau service') and leads_to(tree, 'collect personal data', receive_exist(tree, 'automatedEmailNotification'))",
+    "R2": "precedence(tree, 'determine risk level', 'check credit worthiness') and precedence(tree, 'check credit worthiness', 'check customer bank privilege')",
+    "R3": "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risk', 'branch office manager') and (leads_to(tree, 'check risk', 'approve request') or leads_to(tree, 'check risk', 'reject request'))",
+    "R5": "max_time_between(tree, 'sign loan contract', 'close offer', 7)",
+    "R6": "condition_eventually_follows(tree, 'credit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0) and timed_alternative(tree, 'create suspense file', 'notify manager', 0)",
+    "R7": "data_leads_to_absence(tree, 'isGold and credit < 1000000', 'evaluate loan risk')"
+  },
+  "Generated5": {
+    "R1": "activity_receives(tree, 'collect personal data', 'personalData') and executed_by(tree, 'collect personal data', 'credit bureau service') and leads_to(tree, 'collect personal data', 'receive automated email notification')",
+    "R2": "leads_to(tree, 'check customer bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine loan risk level')",
+    "R3": "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risks', 'branch office manager') and condition_eventually_follows(tree, 'risksAcceptable', 'approve request') and condition_eventually_follows(tree, 'not risksAcceptable', 'reject request')",
+    "R5": "max_time_between(tree, 'sign loan contract', 'close offer', 7)",
+    "R6": "condition_eventually_follows(tree, 'credit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0) and timed_alternative(tree, 'create suspense file', 'notify manager', 0)",
+    "R7": "data_leads_to_absence(tree, 'goldCustomer and credit < 1000000', 'evaluate loan risk')"
+  },
+  "Generated6": {
+    "R1": "leads_to(tree, 'collect_personal_data', receive_exist(tree, 'automatedEmailNotification')) and executed_by(tree, 'collect_personal_data', 'credit bureau service')",
+    "R2": "directly_follows(tree, 'check_customer_bank_privilege', 'check_credit_worthiness') and precedence(tree, 'determine_loan_risk_level', 'check_credit_worthiness')",
+    "R3": "(executed_by(tree, 'check_customer_bank_privilege', 'credit broker') or executed_by(tree, 'check_customer_bank_privilege', 'supervisor')) and executed_by(tree, 'check_credit_worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check_risk_acceptability', 'branch office manager') and condition_eventually_follows(tree, 'risksAcceptable == True', 'approve_request') and condition_eventually_follows(tree, 'risksAcceptable == False', 'reject_request')",
+    "R5": "max_time_between(tree, 'sign_loan_contract', 'close_offer', 7)",
+    "R6": "condition_eventually_follows(tree, 'loanCredit > 1000000', 'check_credit_worthiness') and executed_by(tree, 'check_credit_worthiness', 'clerk supervisor') and timed_alternative(tree, 'check_credit_worthiness', 'create_suspense_file', 0) and timed_alternative(tree, 'create_suspense_file', 'notify_manager', 0) and executed_by(tree, 'notify_manager', 'system')",
+    "R7": "condition_eventually_follows(tree, 'customerStatus != \"gold\"', 'check_banking_privileges') and data_leads_to_absence(tree, 'customerStatus == \"gold\" and loanCredit < 1000000', 'evaluate_loan_risk')"
+  },
+  "Generated7": {
+    "R1": "leads_to(tree, receive_exist(tree, 'personalData'), send_exist(tree, 'automatedEmailNotification')) and executed_by(tree, receive_exist(tree, 'personalData'), 'credit bureau service')",
+    "R2": "directly_follows(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness') and leads_to(tree, 'checkCreditWorthiness', 'determineRiskLevelLoanApplication')",
+    "R3": "(executed_by(tree, 'checkCustomerBankPrivilege', 'credit broker') or executed_by(tree, 'checkCustomerBankPrivilege', 'supervisor')) and executed_by(tree, 'checkCreditWorthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'checkRisks', 'branch office manager') and condition_eventually_follows(tree, 'risksAcceptable', 'approveRequest') and condition_eventually_follows(tree, 'not risksAcceptable', 'rejectRequest')",
+    "R5": "max_time_between(tree, 'signLoanContract', 'closeOffer', 7)",
+    "R6": "condition_eventually_follows(tree, 'credit > 1000000', timed_alternative(tree, 'checkCreditWorthiness', timed_alternative(tree, 'createSuspenseFile', 'notifyManager', 0), 0)) and executed_by(tree, 'checkCreditWorthiness', 'clerk supervisor')",
+    "R7": "data_leads_to_absence(tree, 'customerStatus == \"gold\" and credit < 1000000', 'evaluateLoanRisk')"
+  },
+  "Generated8": {
+    "R1": "executed_by(tree, \"collect personal data\", \"credit bureau service\") and leads_to(tree, \"collect personal data\", receive_exist(tree, \"automatedEmailNotification\"))",
+    "R2": "directly_follows(tree, \"check customer bank privilege\", \"check credit worthiness\") and leads_to(tree, \"check credit worthiness\", \"determine risk level loan application\")",
+    "R3": "(executed_by(tree, \"check customer bank privilege\", \"credit broker\") or executed_by(tree, \"check customer bank privilege\", \"supervisor\")) and executed_by(tree, \"check credit worthiness\", \"post-processing clerk\")",
+    "R4": "executed_by(tree, \"check risk\", \"branch office manager\") and condition_directly_follows(tree, \"riskAcceptable == True\", \"approve request\") and condition_directly_follows(tree, \"riskAcceptable == False\", \"reject request\")",
+    "R5": "max_time_between(tree, \"sign loan contract\", \"close offer\", 7)",
+    "R6": "condition_eventually_follows(tree, \"credit > 1000000\", \"check credit worthiness\") and executed_by(tree, \"check credit worthiness\", \"clerk supervisor\") and timed_alternative(tree, \"check credit worthiness\", send_exist(tree, \"suspenseFile\"), 0) and timed_alternative(tree, send_exist(tree, \"suspenseFile\"), \"notify manager\", 0)",
+    "R7": "data_leads_to_absence(tree, \"customerGold and credit < 1000000\", \"evaluate loan risk\")"
+  },
+  "Generated9": {
+    "R1": "leads_to(tree, 'collect personal data', 'notify customer') and executed_by(tree, 'collect personal data', 'credit bureau service') and activity_receives(tree, 'collect personal data', 'personalData') and activity_sends(tree, 'notify customer', 'automatedEmailNotification')",
+    "R2": "directly_follows(tree, 'check customer bank privilege', 'check credit worthiness') and precedence(tree, 'determine risk level', 'check credit worthiness')",
+    "R3": "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risk', 'branch office manager') and condition_eventually_follows(tree, 'riskAcceptable', 'approve request') and condition_eventually_follows(tree, 'not riskAcceptable', 'reject request')",
+    "R5": "timed_alternative(tree, 'sign loan contract', 'close offer', '7 working days')",
+    "R6": "condition_eventually_follows(tree, 'credit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and failure_directly_follows(tree, 'check credit worthiness', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+    "R7": "data_leads_to_absence(tree, 'gold and credit < 1000000', 'evaluate loan risk')"
+  },
+  "Generated10": {
+    "R1": "R1: leads_to(executed_by_identify(\"credit bureau service\"), send_exists(\"automatedEmailNotification\"))",
+    "R2": "R2: leads_to(\"check bank privilege\", \"check credit worthiness\") and leads_to(\"check credit worthiness\", \"determine loan risk level\")",
+    "R3": "R3: (executed_by(\"check bank privilege\", \"credit broker\") or executed_by(\"check bank privilege\", \"supervisor\")) and executed_by(\"check credit worthiness\", \"post-processing clerk\")",
+    "R4": "R4: executed_by(\"check risks\", \"branch office manager\") and condition_eventually_follows(\"risksAcceptable\", \"approve request\") and condition_eventually_follows(\"not risksAcceptable\", \"reject request\")",
+    "R5": "R5: timed_alternative(\"sign loan contract\", \"close offer\", \"7 working days\")",
+    "R6": "R6: condition_eventually_follows(\"creditAmount > 1000000\", \"check credit worthiness\") and executed_by(\"check credit worthiness\", \"clerk supervisor\")",
+    "R7": "R7: condition_directly_follows(\"not supervisorCheckPerformed\", \"create suspense file\")",
+    "R8": "R8: failure_eventually_follows(\"create suspense file\", send_exists(\"managerNotification\"))",
+    "R9": "R9: data_leads_to_absence(\"customerStatus == 'gold' and creditAmount < 1000000\", \"evaluate loan risk\")"
+  },
+  "Generated11": {
+    "R1": "leads_to(\"collect personal data\", send_exist(\"automatedEmailNotification\")) and executed_by(\"collect personal data\", \"credit bureau service\")",
+    "R2": "precedence(\"determine risk level\", \"check credit worthiness\") and precedence(\"check credit worthiness\", \"check customer bank privilege\")",
+    "R3": "(executed_by(\"check customer bank privilege\", \"credit broker\") or executed_by(\"check customer bank privilege\", \"supervisor\")) and executed_by(\"check credit worthiness\", \"post-processing clerk\")",
+    "R4": "executed_by(\"check risk\", \"branch office manager\") and condition_eventually_follows(\"riskAcceptable == True\", \"approve request\") and condition_eventually_follows(\"riskAcceptable == False\", \"reject request\")",
+    "R5": "max_time_between(\"sign loan contract\", \"close\", \"7 working days\")",
+    "R6": "condition_eventually_follows(\"credit > 1000000\", \"check credit worthiness\") and executed_by(\"check credit worthiness\", \"clerk supervisor\")",
+    "R7": "failure_directly_follows(\"check credit worthiness\", \"create suspense file\")",
+    "R8": "failure_eventually_follows(\"create suspense file\", send_exist(\"managerNotification\"))",
+    "R9": "data_leads_to_absence(\"customerType == gold and credit < 1000000\", \"evaluate loan risk\")"
+  },
+  "Generated12": {
+    "R1": "leads_to(tree, 'collect personal data', send_exists(tree, 'automatedEmailNotification')) and executed_by(tree, 'collect personal data', 'credit bureau service')",
+    "R2": "directly_follows(tree, 'check customer bank privilege', 'check credit worthiness') and precedence(tree, 'determine risk level', 'check credit worthiness')",
+    "R3": "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R4": "executed_by(tree, 'check risk acceptable', 'branch office manager') and condition_eventually_follows(tree, 'riskAcceptable', 'approve request') and condition_eventually_follows(tree, 'not riskAcceptable', 'reject request')",
+    "R5": "max_time_between(tree, 'sign loan contract', 'close offer', '7 working days')",
+    "R6": "condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor')",
+    "R7": "timed_alternative(tree, 'check credit worthiness', 'create suspense file', 0)",
+    "R8": "failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+    "R9": "data_leads_to_absence(tree, 'isTrustedGoldCustomer and loanRequestCredit < 1000000', 'evaluate loan risk')"
+  }
+}

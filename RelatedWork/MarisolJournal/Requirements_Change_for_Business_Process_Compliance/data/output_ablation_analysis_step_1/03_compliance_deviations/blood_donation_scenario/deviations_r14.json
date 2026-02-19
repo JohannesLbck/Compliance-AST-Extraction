@@ -1,0 +1,54 @@
+[
+  {
+    "requirement_id": "r14",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r14_d1",
+        "deviation_type": "non-compliance",
+        "description": "The removal of the precondition based on 'donor.donation_count == 0' broadens the requirement to all donors, not just first-time donors. The process model on page 1 only requires providing information about the nature of blood donations to first-time donors. Therefore, the process does not provide this information to repeat donors, directly violating the stricter Version 2 requirement.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c1"
+      },
+      {
+        "deviation_id": "r14_d2",
+        "deviation_type": "no impact",
+        "description": "Changing the action dimension from 'data' to 'control_flow' does not affect compliance, as the process model already represents the sequence of activities rather than data conditions.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c2"
+      },
+      {
+        "deviation_id": "r14_d3",
+        "deviation_type": "non-compliance",
+        "description": "The removal of the data value condition (donor.donation_count == 0) means the obligation now applies to all donors. The process model only enforces this for first-time donors, resulting in a violation for repeat donors.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c3"
+      },
+      {
+        "deviation_id": "r14_d4",
+        "deviation_type": "no impact",
+        "description": "Switching the compliance pattern from 'precedence' to 'activity_occurs' does not introduce a stricter requirement, as the process model already ensures the activity occurs for first-time donors.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c4"
+      },
+      {
+        "deviation_id": "r14_d5",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement obligates the activity 'provide_information_nature_blood_donations' for all donors, but the process model only includes this for first-time donors. This results in a direct violation for repeat donors.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c5"
+      }
+    ]
+  }
+]

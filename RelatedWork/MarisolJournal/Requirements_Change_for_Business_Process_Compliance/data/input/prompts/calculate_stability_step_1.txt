@@ -1,0 +1,32 @@
+You will receive multiple JSON arrays, each labeled with a unique name (e.g., iteration1, iteration2, iteration3, etc.).
+Each array contains multiple requirements, each with fields such as id, precondition, norms, and temporal_validity.
+
+- Do not compare entries *within* a single JSON array (e.g., do not compare r14_1 vs r14_2 inside iteration1).
+- Only compare entire JSON arrays *against each other* (e.g., iteration1 vs iteration2).
+
+Please do the following:
+
+1. Compare each JSON array against every other array (pairwise).
+2. Identify **any differences** between the arrays, including:
+   - Changes in any field values across arrays
+   - Added or missing entries (e.g., one array has 3 items, another has 2)
+   - Any content mismatch for the same `id`
+3. Present the results in a table with these columns:
+   - Compared JSONs (e.g., iteration1 vs iteration2)
+   - Are they identical? (Yes / No)
+   - Field or path where the difference occurs (e.g., `norms[0].action.activities[0]`)
+   - Description of the difference
+4. If some JSON arrays are fully identical, group them together.
+
+Paste your JSON arrays one after another and label them like:
+
+iteration1:
+[ ... ]
+
+iteration2:
+[ ... ]
+
+iteration3:
+[ ... ]
+
+Here are the names of the JSONs and JSON arrays to compare:

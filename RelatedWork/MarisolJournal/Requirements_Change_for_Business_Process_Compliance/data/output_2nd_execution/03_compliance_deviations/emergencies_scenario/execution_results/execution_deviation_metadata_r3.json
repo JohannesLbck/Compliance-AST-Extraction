@@ -1,0 +1,12 @@
+{
+    "model": "gpt-4.1",
+    "provider": "openai",
+    "prompt_file": "inline_prompt_with_pdf",
+    "temperature": 0,
+    "execution_timestamp": "2025-08-29 14:39:20",
+    "execution_time_seconds": 3.99,
+    "input_file": "emergencies_scenario.json",
+    "output_file": "deviations_r3.json",
+    "error_log": "error_log.txt",
+    "process_model_pdf": "emergencies_scenario.pdf"
+}

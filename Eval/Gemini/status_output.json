@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "recurring(tree,'check document upload',10368000) and activity_receives(tree,'check document upload','signedChecklist')",
+        "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyze reports') and (executed_by_return(tree,'create resolution proposal') == executed_by_return(tree,'analyze reports'))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "recurring('check document upload', 10368000)",
+        "R2": "condition_eventually_follows('resolutionProposal and cbReport and ldReport', 'analyse report') and (executed_by_return('create resolution proposal') == executed_by_return('analyse report'))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "recurring(tree,'check document upload',10368000)",
+        "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyse reports')",
+        "R3": "executed_by(tree,'analyse reports',executed_by_return(tree,'create resolution proposal'))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "recurring(tree,'check document upload',10368000)",
+        "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyse reports')",
+        "R3": "executed_by(tree,'analyse reports',executed_by_return(tree,'create resolution proposal'))"
+      }
+    }
+  ]
+}

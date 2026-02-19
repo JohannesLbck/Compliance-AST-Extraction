@@ -1,0 +1,52 @@
+Below is a comprehensive comparison table for the five provided JSON arrays. Each pair is compared for differences in entries, field values, and content for the same `id`. Identical arrays are grouped at the end.
+
+---
+
+### Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                   |
+|------------------------|---------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| 1st_r11 vs 2nd_r11     | No                  | r11_1.norms                                              | 1st_r11: `[]` (empty); 2nd_r11: permission norm with "ask_for_consent_to_customer"                              |
+| 1st_r11 vs 2nd_r11     | No                  | r11_1.norms[0].modality                                  | 1st_r11: n/a; 2nd_r11: "permission"                                                                             |
+| 1st_r11 vs 2nd_r11     | No                  | r11_1.norms[0].action.activities[0]                      | 1st_r11: n/a; 2nd_r11: "ask_for_consent_to_customer"                                                            |
+| 1st_r11 vs 2nd_r11     | No                  | r11_2.norms[0].action.activities                         | 1st_r11: ["ask_consent_from_data_subject", "retrieve_personal_data_from_data_subject"]; 2nd_r11: ["ask_consent", "retrieve_personal_data"] |
+| 1st_r11 vs 2nd_r11     | No                  | r11_2.norms[0].action.activities[0]                      | 1st_r11: "ask_consent_from_data_subject"; 2nd_r11: "ask_consent"                                                |
+| 1st_r11 vs 2nd_r11     | No                  | r11_2.norms[0].action.activities[1]                      | 1st_r11: "retrieve_personal_data_from_data_subject"; 2nd_r11: "retrieve_personal_data"                          |
+| 1st_r11 vs 2nd_r11     | No                  | r11_1.input_version                                      | Both: "1"                                                                                                       |
+| 1st_r11 vs 3rd_r11     | No                  | r11_1.norms                                              | 1st_r11: `[]` (empty); 3rd_r11: permission norm with "ask_for_consent"                                          |
+| 1st_r11 vs 3rd_r11     | No                  | r11_1.norms[0].modality                                  | 1st_r11: n/a; 3rd_r11: "permission"                                                                             |
+| 1st_r11 vs 3rd_r11     | No                  | r11_1.norms[0].action.activities[0]                      | 1st_r11: n/a; 3rd_r11: "ask_for_consent"                                                                        |
+| 1st_r11 vs 3rd_r11     | No                  | r11_2.norms[0].action.activities                         | Both: ["ask_consent_from_data_subject", "retrieve_personal_data_from_data_subject"]                             |
+| 1st_r11 vs 4th_r11     | No                  | r11_1.norms                                              | 1st_r11: `[]` (empty); 4th_r11: permission norm with "ask_for_consent"                                          |
+| 1st_r11 vs 4th_r11     | No                  | r11_1.norms[0].modality                                  | 1st_r11: n/a; 4th_r11: "permission"                                                                             |
+| 1st_r11 vs 4th_r11     | No                  | r11_1.norms[0].action.activities[0]                      | 1st_r11: n/a; 4th_r11: "ask_for_consent"                                                                        |
+| 1st_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities                         | 1st_r11: ["ask_consent_from_data_subject", "retrieve_personal_data_from_data_subject"]; 4th_r11: ["ask_consent", "retrieve_personal_data"] |
+| 1st_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[0]                      | 1st_r11: "ask_consent_from_data_subject"; 4th_r11: "ask_consent"                                                |
+| 1st_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[1]                      | 1st_r11: "retrieve_personal_data_from_data_subject"; 4th_r11: "retrieve_personal_data"                          |
+| 1st_r11 vs 5th_r11     | Yes                 |                                                          | Arrays are identical                                                                                            |
+| 2nd_r11 vs 3rd_r11     | No                  | r11_1.norms[0].action.activities[0]                      | 2nd_r11: "ask_for_consent_to_customer"; 3rd_r11: "ask_for_consent"                                              |
+| 2nd_r11 vs 3rd_r11     | No                  | r11_2.norms[0].action.activities[0]                      | 2nd_r11: "ask_consent"; 3rd_r11: "ask_consent_from_data_subject"                                                |
+| 2nd_r11 vs 3rd_r11     | No                  | r11_2.norms[0].action.activities[1]                      | 2nd_r11: "retrieve_personal_data"; 3rd_r11: "retrieve_personal_data_from_data_subject"                          |
+| 2nd_r11 vs 4th_r11     | No                  | r11_1.norms[0].action.activities[0]                      | 2nd_r11: "ask_for_consent_to_customer"; 4th_r11: "ask_for_consent"                                              |
+| 2nd_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[0]                      | 2nd_r11: "ask_consent"; 4th_r11: "ask_consent"                                                                  |
+| 2nd_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[1]                      | 2nd_r11: "retrieve_personal_data"; 4th_r11: "retrieve_personal_data"                                            |
+| 3rd_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[0]                      | 3rd_r11: "ask_consent_from_data_subject"; 4th_r11: "ask_consent"                                                |
+| 3rd_r11 vs 4th_r11     | No                  | r11_2.norms[0].action.activities[1]                      | 3rd_r11: "retrieve_personal_data_from_data_subject"; 4th_r11: "retrieve_personal_data"                          |
+| 3rd_r11 vs 5th_r11     | No                  | r11_1.norms                                              | 3rd_r11: permission norm with "ask_for_consent"; 5th_r11: `[]` (empty)                                          |
+| 4th_r11 vs 5th_r11     | No                  | r11_1.norms                                              | 4th_r11: permission norm with "ask_for_consent"; 5th_r11: `[]` (empty)                                          |
+
+---
+
+### Identical Groups
+
+- **1st_r11 and 5th_r11** are fully identical.
+
+---
+
+### Summary of Key Differences
+
+- The main differences across arrays are:
+  - The presence or absence of permission norms for `r11_1`.
+  - The specific activities listed in the norms for both `r11_1` and `r11_2`.
+  - The difference in naming of activities (e.g., "ask_for_consent_to_customer" vs "ask_for_consent", "ask_consent" vs "ask_consent_from_data_subject").
+- 1st_r11 and 5th_r11 are the only identical arrays; all others differ in at least one field or value.

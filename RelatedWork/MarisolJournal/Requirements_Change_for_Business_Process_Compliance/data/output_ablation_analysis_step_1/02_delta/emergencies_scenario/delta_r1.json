@@ -1,0 +1,18 @@
+{
+  "requirement_id": "r1",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "ask_patient_about_pain"
+      ],
+      "new": [
+        "administer_additional_anesthesia"
+      ],
+      "change_id": "r1_c1"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "r2_1",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "precedence",
+          "activities": [
+            "obtain_patient_consent",
+            "surgical_intervention"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "response",
+          "activities": [
+            "obtain_patient_consent",
+            "conduct_time_out_procedure"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r2",
+    "input_version": "1"
+  },
+  {
+    "id": "r2_2",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "precedence",
+          "activities": [
+            "obtain_patient_consent",
+            "surgical_intervention"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "response",
+          "activities": [
+            "obtain_patient_consent",
+            "doctor_time_out_procedure"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r2",
+    "input_version": "2"
+  }
+]

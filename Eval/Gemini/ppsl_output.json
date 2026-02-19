@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "precedence(tree, 'close order', 'record received order')",
+        "R2": "leads_to(tree, 'perform production action', 'perform quality check') and precedence(tree, 'deliver', 'perform quality check')",
+        "R3": "precedence(tree, 'close order', 'record payment') or precedence(tree, 'close order', 'record rejection')",
+        "R4": "leads_to(tree, receive_exist(tree, 'payment'), 'report payment')",
+        "R5": "leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', send_exist(tree, 'invoice'))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "precedence(tree,\"close order\",send_exist(tree,\"receivedOrderRecord\"))",
+        "R2": "leads_to(tree,\"perform production action\",\"perform quality check\") and precedence(tree,\"deliver product\",\"perform quality check\")",
+        "R3": "precedence(tree,\"close order\",send_exist(tree,\"paymentRecord\")) or precedence(tree,\"close order\",send_exist(tree,\"rejectionRecord\"))",
+        "R4": "leads_to(tree,receive_exist(tree,\"payment\"),\"report payment\")",
+        "R5": "leads_to(tree,\"fill order\",\"ship product\") and leads_to(tree,\"fill order\",send_exist(tree,\"invoice\"))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "precedence(tree, 'close order', 'record order')",
+        "R2": "leads_to(tree, 'produce product', 'check quality') and precedence(tree, 'deliver product', 'check quality')",
+        "R3": "precedence(tree, 'close order', 'record payment') or precedence(tree, 'close order', 'record rejection')",
+        "R4": "leads_to(tree, receive_exist(tree, 'payment'), 'report payment')",
+        "R5": "leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', send_exist(tree, 'invoice'))"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "precedence('close order', 'record received order')",
+        "R2": "leads_to('perform production action', 'perform quality check') and precedence('deliver product', 'perform quality check')",
+        "R3": "precedence('close order', 'record payment') or precedence('close order', 'record order rejection')",
+        "R4": "leads_to(receive_exist('payment'), 'report payment')",
+        "R5": "leads_to('fill order', 'ship product') and leads_to('fill order', send_exist('invoice'))"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'consult', 'check symptoms')",
+        "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+        "R3": "leads_to(tree, 'set diagnosis', 'prescribe medicine')",
+        "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+        "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+        "R6": "leads_to_absence(tree, 'feel sick', 'feel healthy')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'consult', 'check symptoms')",
+        "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+        "R3": "leads_to(tree, 'set diagnosis', 'prescribe medicine')",
+        "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+        "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+        "R6": "leads_to_absence(tree, 'feel sick', 'feel healthy')",
+        "R7": "leads_to_absence(tree, 'feel healthy', 'feel sick')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'consult', 'check symptoms')",
+        "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+        "R3": "leads_to(tree, 'set diagnosis', 'prescribe medicine')",
+        "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+        "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+        "R6": "leads_to_absence(tree, 'feel sick', 'feel healthy')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'consult', 'check symptoms')",
+        "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+        "R3": "leads_to(tree, 'set diagnosis', 'prescribe medicine')",
+        "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+        "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+        "R6": "leads_to_absence(tree, 'feel sick', 'feel healthy')",
+        "R7": "leads_to_absence(tree, 'feel healthy', 'feel sick')"
+      }
+    }
+  ]
+}

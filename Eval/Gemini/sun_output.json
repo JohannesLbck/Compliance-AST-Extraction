@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "timed_alternative(tree, 'End Activity', 'terminate', 2592000)",
+        "R2": "exists(tree, 'Verify accuracy user personal information') and executed_by(tree, 'Verify accuracy user personal information', 'Telephone company')",
+        "R3": "leads_to(tree, send_exists(tree, 'simCard'), 'Activate SIM card') and precedence(tree, 'Use SIM card', 'Activate SIM card') and executed_by(tree, 'Activate SIM card', 'Telephone company')",
+        "R4": "precedence(tree, receive_exists(tree, 'personalData'), 'Obtain consent') and executed_by(tree, 'Obtain consent', 'Data controller')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "timed_alternative(tree, 'Start Activity', 'terminate', 2592000)",
+        "R2": "exists(tree, 'verify accuracy user personal information') and executed_by(tree, 'verify accuracy user personal information', 'telephone company')",
+        "R3": "leads_to(tree, send_exists(tree, 'simCard'), 'activate sim card') and precedence(tree, 'use sim card', 'activate sim card') and executed_by(tree, 'activate sim card', 'telephone company')",
+        "R4": "precedence(tree, receive_exists(tree, 'personalData'), 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "max_time_between(tree, \"Start Activity\", \"End Activity\", 2592000, \"terminate\")",
+        "R2": "exists(tree, \"verify accuracy user personal information\") and executed_by(tree, \"verify accuracy user personal information\", \"telephone company\")",
+        "R3": "precedence(tree, \"use sim card\", \"activate sim card\") and executed_by(tree, \"activate sim card\", \"telephone company\")",
+        "R4": "precedence(tree, receive_exists(tree, \"personalData\"), receive_exists(tree, \"consent\")) and executed_by(tree, receive_exists(tree, \"consent\"), \"data controller\")"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+        "R2": "executed_by(tree, 'verify accuracy user personal information', 'telephone company')",
+        "R3": "send_exist(tree, 'simCard') and precedence(tree, 'use sim card', 'activate sim card') and executed_by(tree, 'activate sim card', 'telephone company')",
+        "R4": "precedence(tree, receive_exist(tree, 'personalData'), 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller')"
+      }
+    }
+  ]
+}

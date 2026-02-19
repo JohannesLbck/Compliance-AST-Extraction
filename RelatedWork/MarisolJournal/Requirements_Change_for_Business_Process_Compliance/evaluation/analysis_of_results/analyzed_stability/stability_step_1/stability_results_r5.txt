@@ -1,0 +1,68 @@
+Here is a detailed comparison of the five JSON arrays (1st_r5, 2nd_r5, 3rd_r5, 4th_r5, 5th_r5):
+
+---
+
+### 1. Grouping Identical JSON Arrays
+
+**Identical Arrays:**  
+- 1st_r5  
+- 2nd_r5  
+- 3rd_r5  
+- 5th_r5  
+
+These four arrays are fully identical.
+
+---
+
+### 2. Pairwise Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                 |
+|------------------------|---------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1st_r5 vs 2nd_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 1st_r5 vs 3rd_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 1st_r5 vs 5th_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 2nd_r5 vs 3rd_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 2nd_r5 vs 5th_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 3rd_r5 vs 5th_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+| 1st_r5 vs 4th_r5       | No                 | r5_2.precondition.not                                    | 4th_r5 has two entries in `precondition.not` for r5_2; others have an empty array.                            |
+| 2nd_r5 vs 4th_r5       | No                 | r5_2.precondition.not                                    | 4th_r5 has two entries in `precondition.not` for r5_2; others have an empty array.                            |
+| 3rd_r5 vs 4th_r5       | No                 | r5_2.precondition.not                                    | 4th_r5 has two entries in `precondition.not` for r5_2; others have an empty array.                            |
+| 5th_r5 vs 4th_r5       | No                 | r5_2.precondition.not                                    | 4th_r5 has two entries in `precondition.not` for r5_2; others have an empty array.                            |
+| 4th_r5 vs 4th_r5       | Yes                | -                                                        | No differences found.                                                                                         |
+
+---
+
+### 3. Description of the Difference
+
+- **Field:** `r5_2.precondition.not`
+- **Arrays affected:** 4th_r5 vs all others
+- **Description:**  
+  In 4th_r5, the `precondition.not` field for the entry with `id: r5_2` contains two objects:
+  ```json
+  [
+    {
+      "dimension": "control_flow",
+      "compliance_pattern": "existence_of_A",
+      "activities": ["physical examination"]
+    },
+    {
+      "dimension": "control_flow",
+      "compliance_pattern": "existence_of_A",
+      "activities": ["blood test"]
+    }
+  ]
+  ```
+  In all other arrays, this field is an empty array (`[]`).
+
+---
+
+### 4. Summary Table of Groups
+
+| Group Name         | Members                        |
+|--------------------|--------------------------------|
+| Group 1 (Identical)| 1st_r5, 2nd_r5, 3rd_r5, 5th_r5 |
+| Group 2 (Unique)   | 4th_r5                         |
+
+---
+
+**No other differences** (such as missing/added entries or other field mismatches) were found. All arrays have the same number of entries and identical content except for the noted difference in 4th_r5.

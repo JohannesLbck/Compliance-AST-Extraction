@@ -1,0 +1,35 @@
+{
+  "requirement_id": "r11",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "control_flow",
+        "compliance_pattern": "activity_execution",
+        "activities": [
+          "retrieve_personal_data"
+        ]
+      },
+      "change_id": "r11_c1"
+    },
+    {
+      "change": "add",
+      "element": "norm",
+      "new": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "precedence",
+          "activities": [
+            "ask_consent",
+            "retrieve_personal_data"
+          ]
+        }
+      },
+      "change_id": "r11_c2"
+    }
+  ]
+}

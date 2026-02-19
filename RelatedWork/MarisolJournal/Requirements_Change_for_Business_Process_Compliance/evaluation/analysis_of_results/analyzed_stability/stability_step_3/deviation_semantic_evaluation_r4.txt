@@ -1,0 +1,157 @@
+Let's evaluate each execution's deviations against the **ground truth**:
+
+> **Ground Truth Deviation:**  
+> "x1 non-compliant ("Draw Blood Samples" should be only executed if doctor authorizes, therefore a new activity should be added before, e.g., "ask doctor approval for blood test")"
+
+---
+
+## r4 - output_1st_execution
+
+### Deviation Type Match: **Yes**
+- Identifies both "non-compliance" and "over-compliance" (the latter is a nuanced but related type).
+
+### Root Cause Match: **Yes**
+- Correctly identifies the missing conditional logic: the process always requires blood analysis, regardless of doctor authorization.
+
+### Updated Requirement Interpretation: **Correct**
+- Accurately describes the new requirement as introducing a conditional/exception based on doctor authorization.
+
+### Process Behavior Interpretation: **Correct**
+- Clearly states that the process always requires blood analysis, not allowing for the new exception.
+
+### Process Model Reference: **Aligned**
+- References the relevant process elements and the absence of the required conditional activity.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution captures both the non-compliance (missing conditional logic) and over-compliance (process is stricter than required) aspects. It fully aligns with the ground truth, including the need for a doctor authorization step before blood analysis. The "no impact" deviation is correctly identified as a non-impacting terminology change.
+
+---
+
+## r4 - output_2nd_execution
+
+### Deviation Type Match: **Yes**
+- Identifies "non-compliance" and "no impact" (no "over-compliance" label, but the non-compliance is the main issue).
+
+### Root Cause Match: **Yes**
+- Correctly identifies the missing activity for doctor authorization as the root cause.
+
+### Updated Requirement Interpretation: **Correct**
+- Describes the new requirement as introducing an exception for doctor authorization.
+
+### Process Behavior Interpretation: **Correct**
+- Accurately states that the process always requires blood analysis, not allowing the exception.
+
+### Process Model Reference: **Aligned**
+- References the absence of the required activity and the relevant process steps.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is semantically equivalent to the ground truth, clearly identifying the missing conditional logic and the process's failure to allow the new exception. The "no impact" deviation is correctly classified.
+
+---
+
+## r4 - output_3rd_execution
+
+### Deviation Type Match: **Yes**
+- Identifies "non-compliance" and "no impact".
+
+### Root Cause Match: **Yes**
+- Correctly identifies the missing activity for doctor authorization.
+
+### Updated Requirement Interpretation: **Correct**
+- Describes the new requirement as a conditional precondition.
+
+### Process Behavior Interpretation: **Correct**
+- Accurately states that the process always requires blood analysis, regardless of doctor authorization.
+
+### Process Model Reference: **Aligned**
+- References the relevant process element ("doctor_authorizes_skipping_blood_analysis").
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth, capturing the missing conditional logic and the process's non-compliance. The "no impact" deviation is correctly identified as a terminology update.
+
+---
+
+## r4 - output_4th_execution
+
+### Deviation Type Match: **Yes**
+- Identifies "non-compliance" and "no impact".
+
+### Root Cause Match: **Yes**
+- Correctly identifies the missing activity for doctor authorization.
+
+### Updated Requirement Interpretation: **Correct**
+- Describes the new requirement as a conditional obligation.
+
+### Process Behavior Interpretation: **Correct**
+- Accurately states that the process always requires blood analysis, regardless of doctor authorization.
+
+### Process Model Reference: **Aligned**
+- References the relevant process elements and the absence of the required activity.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth, capturing the missing conditional logic and the process's non-compliance. The "no impact" deviation is correctly identified as a naming refinement.
+
+---
+
+## r4 - output_5th_execution
+
+### Deviation Type Match: **Yes**
+- Identifies "non-compliance" and "no impact".
+
+### Root Cause Match: **Yes**
+- Correctly identifies the missing activity for doctor authorization.
+
+### Updated Requirement Interpretation: **Correct**
+- Describes the new requirement as a conditional obligation.
+
+### Process Behavior Interpretation: **Correct**
+- Accurately states that the process always requires blood analysis, regardless of doctor authorization.
+
+### Process Model Reference: **Aligned**
+- References the relevant process element ("doctor_authorize_skip_blood_analysis").
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth, capturing the missing conditional logic and the process's non-compliance. The "no impact" deviation is correctly identified as a renaming.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|----------------|------------|--------------------|------------------|-----------------|-------|--------------------------|-------------------------------|
+| output_1st_execution  | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_2nd_execution  | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_3rd_execution  | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_4th_execution  | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_5th_execution  | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+
+---
+
+## 1. Closest and Furthest from Ground Truth
+
+- **All executions are equally closest to the ground truth** (all scored 5/5).
+- **None are further**; all are fully semantically aligned.
+
+## 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**: No executions missed meaningful changes.
+- **Non-impacting Changes Present?**: All executions correctly identified non-impacting changes (terminology/naming updates) as "no impact".
+
+## 3. Non-impacting Changes Observed
+
+- All executions mention a change from `'blood_analysis'` to `'blood_analysis_test'` (or similar), correctly classifying it as a **terminology update, renaming, or naming refinement** that does not affect compliance or process flow.
+
+---
+
+**Conclusion:**  
+All executions are fully semantically aligned with the ground truth. They correctly identify the missing conditional logic (doctor authorization before blood analysis) as the root cause of non-compliance, accurately interpret the updated requirement, and properly classify non-impacting terminology changes. No executions missed meaningful changes or misclassified non-impacting changes.

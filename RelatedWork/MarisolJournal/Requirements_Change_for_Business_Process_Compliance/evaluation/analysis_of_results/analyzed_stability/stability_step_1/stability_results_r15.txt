@@ -1,0 +1,46 @@
+### Step 1: High-Level Comparison
+
+Let's first summarize the structure and key differences:
+
+- All arrays have two entries: `r15_1` and `r15_2`.
+- For `r15_1`, the structure is identical across all arrays.
+- For `r15_2`, there is a difference in the field name inside `precondition.not[0].data_values[0]`:
+  - In **1st_r15, 2nd_r15, 3rd_r15**: the field is `"value": ["given"]`
+  - In **4th_r15, 5th_r15**: the field is `"domain": ["given"]`
+
+### Step 2: Pairwise Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                  |
+|------------------------|--------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1st_r15 vs 2nd_r15     | Yes                | -                                                        | No differences found.                                                                                         |
+| 1st_r15 vs 3rd_r15     | Yes                | -                                                        | No differences found.                                                                                         |
+| 1st_r15 vs 4th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 1st_r15 uses `"value": ["given"]`, 4th_r15 uses `"domain": ["given"]`                                         |
+| 1st_r15 vs 5th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 1st_r15 uses `"value": ["given"]`, 5th_r15 uses `"domain": ["given"]`                                         |
+| 2nd_r15 vs 3rd_r15     | Yes                | -                                                        | No differences found.                                                                                         |
+| 2nd_r15 vs 4th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 2nd_r15 uses `"value": ["given"]`, 4th_r15 uses `"domain": ["given"]`                                         |
+| 2nd_r15 vs 5th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 2nd_r15 uses `"value": ["given"]`, 5th_r15 uses `"domain": ["given"]`                                         |
+| 3rd_r15 vs 4th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 3rd_r15 uses `"value": ["given"]`, 4th_r15 uses `"domain": ["given"]`                                         |
+| 3rd_r15 vs 5th_r15     | No                 | r15_2.precondition.not[0].data_values[0].value/domain    | 3rd_r15 uses `"value": ["given"]`, 5th_r15 uses `"domain": ["given"]`                                         |
+| 4th_r15 vs 5th_r15     | Yes                | -                                                        | No differences found.                                                                                         |
+
+### Step 3: Grouping Identical Arrays
+
+- **Identical Group 1:** 1st_r15, 2nd_r15, 3rd_r15
+- **Identical Group 2:** 4th_r15, 5th_r15
+
+### Step 4: Summary Table
+
+| Group Members                  | Description                                                                                      |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| 1st_r15, 2nd_r15, 3rd_r15     | All use `"value": ["given"]` in `r15_2.precondition.not[0].data_values[0]`                       |
+| 4th_r15, 5th_r15              | All use `"domain": ["given"]` in `r15_2.precondition.not[0].data_values[0]`                      |
+
+---
+
+#### **Key Difference**
+- The only difference is in the field name for `r15_2.precondition.not[0].data_values[0]`:  
+  - `"value"` vs `"domain"` (for the array containing `"given"`).
+
+---
+
+If you need a more detailed breakdown or a different format, let me know!

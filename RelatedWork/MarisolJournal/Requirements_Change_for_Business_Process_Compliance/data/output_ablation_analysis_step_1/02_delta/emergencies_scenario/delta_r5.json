@@ -1,0 +1,58 @@
+{
+  "requirement_id": "r5",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "control_flow",
+        "compliance_pattern": "activity_performed",
+        "activities": [
+          "physical examination"
+        ]
+      },
+      "change_id": "r5_c1"
+    },
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "control_flow",
+        "compliance_pattern": "activity_performed",
+        "activities": [
+          "blood test"
+        ]
+      },
+      "change_id": "r5_c2"
+    },
+    {
+      "change": "obligation -> permission",
+      "element": "modality",
+      "old": "obligation",
+      "new": "permission",
+      "change_id": "r5_c3"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "precedence",
+      "new": "activity_performed",
+      "change_id": "r5_c4"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "physical examination",
+        "blood test",
+        "diagnosis"
+      ],
+      "new": [
+        "diagnosis"
+      ],
+      "change_id": "r5_c5"
+    }
+  ]
+}

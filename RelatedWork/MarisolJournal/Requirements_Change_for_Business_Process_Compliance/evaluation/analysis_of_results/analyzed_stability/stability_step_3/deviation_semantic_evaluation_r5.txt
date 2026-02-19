@@ -1,0 +1,109 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> **Ground Truth Deviation:**  
+> "x1 over-compliant (a XOR should be added to be able to skip in some cases performing physical examination)"
+
+This means:  
+- The process is **over-compliant** (stricter than required).
+- The new requirement allows skipping the physical examination (i.e., an XOR/choice should be present).
+- The process model still enforces the old, stricter behavior (physical examination always required).
+
+---
+
+## r5 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This deviation precisely captures the over-compliance: the process still requires both physical examination and blood test before diagnosis, while the updated requirement allows skipping these steps. The need for an XOR (choice) is implied by the mention of relaxing the requirement and permitting diagnosis without these steps. The process model reference is clear and relevant.
+
+---
+
+## r5 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  Both deviations correctly identify over-compliance. The first deviation matches the ground truth closely, describing the process as enforcing both prerequisites when the requirement is relaxed. The second deviation further splits out the blood test as a separate over-compliance, which is a valid, more granular interpretation. Both are semantically correct and aligned.
+
+---
+
+## r5 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution provides three deviations, each focusing on a specific aspect (both prerequisites, blood test, physical examination). All deviations correctly identify over-compliance and the need for the process to allow skipping steps. The granularity is higher, but the semantics are fully aligned with the ground truth.
+
+---
+
+## r5 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution is the most granular, with six deviations covering all aspects: both prerequisites, each individually, modality change, compliance pattern, and repeated constraints. All deviations are correct, and the extra detail does not detract from semantic alignment. No spurious or missing deviations are present.
+
+---
+
+## r5 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution is similar to the 3rd, with two deviations (both prerequisites, and blood test). Both are semantically correct and fully aligned with the ground truth.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+
+---
+
+## 1. Closest and Furthest from Ground Truth
+
+- **All executions are equally closest to the ground truth** (all scored 5/5).  
+- **None are further**; all are fully semantically aligned.
+
+## 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**: No executions missed meaningful deviations.
+- **Non-impacting Changes Present?**: No executions included irrelevant or non-impacting changes.
+
+## 3. Non-impacting Changes Observed
+
+- **None observed.**  
+  All deviations are relevant and semantically meaningful. No formatting, metadata, ordering, or renaming changes were present that did not impact compliance.
+
+---
+
+### **Conclusion**
+
+All executions are fully semantically aligned with the ground truth. Some provide more granular deviations, but none miss or misinterpret the core compliance issue. No undetected or non-impacting changes are present.

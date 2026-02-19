@@ -1,0 +1,11 @@
+{
+    "model": "N/A",
+    "provider": "internal_script",
+    "prompt_file": "calculate_atomic_delta.py",
+    "temperature": "N/A",
+    "execution_timestamp": "2025-12-09 08:21:27",
+    "execution_time_seconds": 0.02,
+    "input_file": "formalized_requirements_r16.json",
+    "output_file": "delta_r16.json",
+    "error_log": "error_log.txt"
+}

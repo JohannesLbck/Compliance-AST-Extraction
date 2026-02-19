@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r12",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r12_d1",
+        "deviation_type": "over-compliance",
+        "description": "The obligation to delete the customer's personal data when the third party denies portability has been deleted in Version 2. The process model still enforces this deletion, resulting in unnecessary restriction and enforcement of an outdated requirement.",
+        "process_model_reference": [
+          "delete personal data"
+        ],
+        "change_id": "r12_c1"
+      }
+    ]
+  }
+]

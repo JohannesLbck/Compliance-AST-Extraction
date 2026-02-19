@@ -1,0 +1,52 @@
+[
+  {
+    "id": "r18_1",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r18",
+    "input_version": "1"
+  },
+  {
+    "id": "r18_2",
+    "precondition": {
+      "and": [
+        {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "reject_potential_donor"
+          ]
+        }
+      ],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_immediately_followed_by_B",
+          "activities": [
+            "reject_potential_donor",
+            "send_rejection_reason"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r18",
+    "input_version": "2"
+  }
+]

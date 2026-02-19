@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r14",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r14_d1",
+        "deviation_type": "non-compliance",
+        "description": "The requirement in Version 2 obligates that information on the nature of blood donations is provided to all donors before consent, whereas the process model only provides this information to first-time donors. The process does not provide this information to repeat donors before consent, resulting in non-compliance.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c1"
+      },
+      {
+        "deviation_id": "r14_d2",
+        "deviation_type": "no impact",
+        "description": "The modification of the activity name from 'provide_information_nature_of_blood_donations' to 'provide_information_on_nature_of_blood_donations' does not affect the process model, as the BPMN task name already matches the intent of both versions.",
+        "process_model_reference": [
+          "Provide information of the nature of the blood donations"
+        ],
+        "change_id": "r14_c2"
+      }
+    ]
+  }
+]

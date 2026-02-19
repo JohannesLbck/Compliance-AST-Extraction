@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r5",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r5_d1",
+        "deviation_type": "over-compliance",
+        "description": "The process model enforces that both physical examination and blood test must precede diagnosis, while Version 2 permits diagnosis without these prerequisites. The process unnecessarily restricts behavior by requiring steps that are no longer mandatory.",
+        "process_model_reference": [
+          "Make Diagnosis"
+        ],
+        "change_id": "r5_c1"
+      },
+      {
+        "deviation_id": "r5_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process model requires a blood test before diagnosis, but Version 2 removes this obligation. The process continues to enforce an outdated constraint.",
+        "process_model_reference": [
+          "Blood Analysis Requested, Blood Analysis Results, Make Diagnosis"
+        ],
+        "change_id": "r5_c2"
+      }
+    ]
+  }
+]

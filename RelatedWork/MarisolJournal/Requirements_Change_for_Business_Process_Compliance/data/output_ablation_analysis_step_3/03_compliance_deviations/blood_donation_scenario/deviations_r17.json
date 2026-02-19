@@ -1,0 +1,54 @@
+[
+  {
+    "requirement_id": "r17",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r17_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model triggers donor assessment after 15 minutes if the donor is still bleeding or experiencing more pain, but Version 2 requires assessment only after 20 minutes and only for bleeding. The process does not enforce the new 20-minute interval and the narrower condition, resulting in non-compliance.",
+        "process_model_reference": [
+          "15 Minutes Timeout, Assess donor"
+        ],
+        "change_id": "r17_c1"
+      },
+      {
+        "deviation_id": "r17_d2",
+        "deviation_type": "non-compliance",
+        "description": "The process model allows assessment for both bleeding and pain, but Version 2 restricts the trigger to bleeding only. The process does not distinguish between bleeding and pain, resulting in non-compliance with the stricter requirement.",
+        "process_model_reference": [
+          "Patient Monitoring, 15 Minutes Timeout, Assess donor"
+        ],
+        "change_id": "r17_c2"
+      },
+      {
+        "deviation_id": "r17_d3",
+        "deviation_type": "no impact",
+        "description": "The process model does not reference or enforce the deleted data precondition regarding 'donor_bleeding_or_pain_status', so its removal has no effect on compliance.",
+        "process_model_reference": [
+          "N/A"
+        ],
+        "change_id": "r17_c3"
+      },
+      {
+        "deviation_id": "r17_d4",
+        "deviation_type": "no impact",
+        "description": "The change from 'assess_donor' to 'assess donor' is a naming convention update and does not affect process behavior or compliance.",
+        "process_model_reference": [
+          "Assess donor"
+        ],
+        "change_id": "r17_c4"
+      },
+      {
+        "deviation_id": "r17_d5",
+        "deviation_type": "over-compliance",
+        "description": "The process model includes a 'Record observations' task after donor assessment, which satisfies the deleted obligation to record the reason in the system. Since Version 2 no longer requires this, the process exceeds the new requirement.",
+        "process_model_reference": [
+          "Record observations"
+        ],
+        "change_id": "r17_c5"
+      }
+    ]
+  }
+]

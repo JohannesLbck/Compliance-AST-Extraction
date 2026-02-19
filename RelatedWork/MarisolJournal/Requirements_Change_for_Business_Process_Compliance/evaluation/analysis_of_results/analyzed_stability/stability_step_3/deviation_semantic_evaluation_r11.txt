@@ -1,0 +1,100 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> "x1 non-compliant (before activity "Request personal data" the phone company should execute a new task called "ask for consent")"
+
+---
+
+## r11 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This deviation precisely captures the new obligation: consent must be obtained before requesting personal data. The description clearly states the process model's flaw (requesting data before consent) and references the correct activity. The meaning is fully aligned with the ground truth.
+
+---
+
+## r11 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned (for d1), Equivalent (for d2, d3)
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  All three deviations correctly identify the new obligation and the process's failure to comply. The descriptions elaborate on the modality change and the required activity order. The references to both activities in d2 and d3 are equivalent to the ground truth, though slightly more detailed. No extra or missing changes.
+
+---
+
+## r11 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned (for d1), Equivalent (for d2, d3)
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The deviations accurately describe the new requirement and the process's non-compliance. The explanations are clear, and the references to activities are either directly aligned or equivalent to the ground truth. No extra or missing changes.
+
+---
+
+## r11 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned (for d1), Equivalent (for d2, d3)
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The deviations fully capture the modality change and the new ordering constraint. The process model's failure is described in detail, and the references are appropriate. No extra or missing changes.
+
+---
+
+## r11 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Equivalent
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The deviation clearly states the new obligation and the process's violation. The reference to both activities is equivalent to the ground truth. No extra or missing changes.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|--------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned/Equivalent | 5/5 | No                       | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned/Equivalent | 5/5 | No                       | No                            |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned/Equivalent | 5/5 | No                       | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Equivalent      | 5/5   | No                       | No                            |
+
+---
+
+## 1. Closest and Furthest from Ground Truth
+
+- **All executions are equally closest to the ground truth** (score 5/5). Each captures the correct deviation type, root cause, updated requirement, process behavior, and references the process model appropriately.
+
+## 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**: No executions missed meaningful changes.
+- **Non-impacting Changes Present?**: No executions included non-impacting changes.
+
+## 3. Non-impacting Changes Observed
+
+- **None observed.** All changes and deviations are semantically relevant and directly address the compliance issue.
+
+---
+
+**Conclusion:**  
+All executions are fully semantically aligned with the ground truth. There are no missed deviations or irrelevant changes. The only minor differences are in the level of detail or the inclusion of both activities in the process model reference, which does not affect semantic correctness.

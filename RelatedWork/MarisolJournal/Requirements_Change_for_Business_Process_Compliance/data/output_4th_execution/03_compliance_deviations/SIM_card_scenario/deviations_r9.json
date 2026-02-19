@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r9",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r9_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement in Version 2 introduces an obligation to verify the correctness of the customer's personal information immediately after receiving it. The process model on page 1 does not include any activity for verifying customer personal information after receiving it, resulting in a direct violation of the stricter requirement.",
+        "process_model_reference": [
+          "receive customer personal information"
+        ],
+        "change_id": "r9_c1"
+      }
+    ]
+  }
+]

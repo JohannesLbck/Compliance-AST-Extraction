@@ -1,0 +1,94 @@
+{
+  "NL": {
+    "R1": "All new customers must be scanned against provided databases for identity checks.",
+    "R2": "Retain history of identity checks performed.",
+    "R3": "Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers.",
+    "R4": "Accounts of type VIP are allowed to have a non positive balance and no approval is required for this type of accounts"
+  },
+  "Humanmade": {
+    "R1": "condition_eventually_follows('data.state == \"new\"', 'identity check')",
+    "R2": "exists('initiate account')",
+    "R3": "condition_directly_follows('data.balance < 0 and not data.special_allowance', 'send warning')",
+    "R4": "condition_eventually_follows('data.special_allowance', 'Accept Empty Initial Balance')"
+  },
+  "Generated1": {
+    "R1": "exists(tree, 'scan_customer_identity')",
+    "R2": "receive_exist(tree, 'identityDatabases')",
+    "R3": "leads_to(tree, 'scan_customer_identity', 'retain_history')",
+    "R4": "send_exist(tree, 'identityCheckHistory')",
+    "R5": "condition_eventually_follows(tree, 'balance <= 0 and not (customerType == \"VIP\")', 'approve_negative_balance')",
+    "R6": "executed_by(tree, 'approve_negative_balance', 'Bank Manager')",
+    "R7": "data_leads_to_absence(tree, 'customerType == \"VIP\"', 'approve_negative_balance')"
+  },
+  "Generated2": {
+    "R1": "exists(tree, 'scan_customer') and receive_exist(tree, 'customerDatabase')",
+    "R2": "leads_to(tree, 'scan_customer', 'retain_history') and send_exist(tree, 'identityCheckHistory')",
+    "R3": "condition_eventually_follows(tree, \"balance <= 0 and accountType != 'VIP'\", 'approve_overdraft') and executed_by(tree, 'approve_overdraft', 'bank_manager')",
+    "R4": "data_leads_to_absence(tree, \"accountType == 'VIP'\", 'approve_overdraft')"
+  },
+  "Generated3": {
+    "R1": "exists(tree, 'Perform identity check') and receive_exist(tree, 'providedDatabases')",
+    "R2": "leads_to(tree, 'Perform identity check', 'Retain history')",
+    "R3": "condition_eventually_follows(tree, 'balance <= 0 and customerType != \"VIP\"', 'Approve account')",
+    "R4": "executed_by(tree, 'Approve account', 'Bank manager')"
+  },
+  "Generated4": {
+    "R1": "exists(tree, \"Scan new customer\") and receive_exist(tree, \"databases\")",
+    "R2": "exists(tree, \"Retain history\") and send_exist(tree, \"identity_check_history\")",
+    "R3": "condition_eventually_follows(tree, \"balance <= 0 and not customer_type == 'VIP'\", \"Approve account\") and executed_by(tree, \"Approve account\", \"Bank manager\")",
+    "R4": "data_leads_to_absence(tree, \"customer_type == 'VIP'\", \"Approve account\")"
+  },
+  "Generated5": {
+    "R1": "exists(tree, \"scan_new_customer\") and receive_exist(tree, \"providedDatabases\")",
+    "R2": "leads_to(tree, \"scan_new_customer\", \"retain_identity_check\") and activity_sends(tree, \"retain_identity_check\", \"identityCheckHistory\")",
+    "R3": "condition_eventually_follows(tree, \"balance <= 0 and accountType != 'VIP'\", \"approve_balance\") and executed_by(tree, \"approve_balance\", \"bank_manager\")",
+    "R4": "data_leads_to_absence(tree, \"accountType == 'VIP'\", \"approve_balance\")"
+  },
+  "Generated6": {
+    "R1": "leads_to(tree, receive_exist(tree, 'newCustomer'), 'perform_identity_check')",
+    "R2": "leads_to(tree, 'perform_identity_check', 'retain_identity_check_history')",
+    "R3": "condition_eventually_follows(tree, 'accountBalance <= 0 and not (customerType == \"VIP\")', 'approve_by_bank_manager')",
+    "R4": "data_leads_to_absence(tree, 'customerType == \"VIP\"', 'approve_by_bank_manager')"
+  },
+  "Generated7": {
+    "R1": "condition_eventually_follows(tree, 'isNewCustomer', 'scan customer') and receive_exist(tree, 'identityDatabases')",
+    "R2": "leads_to(tree, 'scan customer', 'retain history') and send_exist(tree, 'identityCheckHistory')",
+    "R3": "condition_eventually_follows(tree, 'accountBalance <= 0 and not accountType == \"VIP\"', 'approve account') and executed_by(tree, 'approve account', 'bank manager')"
+  },
+  "Generated8": {
+    "R1": "exists(tree,'scan customer against databases')",
+    "R2": "send_exist(tree,'identityCheckHistory')",
+    "R3": "condition_eventually_follows(tree,'balance <= 0 and not customerType == \"VIP\"','approve account') and executed_by(tree,'approve account','bank manager')",
+    "R4": "data_leads_to_absence(tree,'customerType == \"VIP\"','approve account')"
+  },
+  "Generated9": {
+    "R1": "exists('scan customer') and activity_receives('scan customer', 'providedDatabases')",
+    "R2": "activity_sends('scan customer', 'identityCheckHistory')",
+    "R3": "condition_eventually_follows('balance <= 0 and not (customerType == \"VIP\")', 'approve transaction') and executed_by('approve transaction', 'bank manager')",
+    "R4": "data_leads_to_absence('customerType == \"VIP\"', 'approve transaction')"
+  },
+  "Generated10": {
+    "R1": "exists(tree, 'scan customer')",
+    "R2": "receive_exist(tree, 'providedDatabases')",
+    "R3": "leads_to(tree, 'scan customer', 'save history')",
+    "R4": "send_exist(tree, 'identityCheckHistory')",
+    "R5": "condition_eventually_follows(tree, 'balance <= 0 and not(accountType == \"VIP\")', 'approve balance')",
+    "R6": "executed_by(tree, 'approve balance', 'bank manager')",
+    "R7": "data_leads_to_absence(tree, 'accountType == \"VIP\"', 'approve balance')",
+    "R8": "data_leads_to_absence(tree, 'balance > 0', 'approve balance')"
+  },
+  "Generated11": {
+    "R1": "condition_eventually_follows(tree, 'isNewCustomer', 'scan customer')",
+    "R2": "activity_receives(tree, 'scan customer', 'providedDatabases')",
+    "R3": "activity_sends(tree, 'scan customer', 'identityCheckHistory')",
+    "R4": "condition_eventually_follows(tree, 'balance <= 0 and not (customerType == \"VIP\")', 'approve account')",
+    "R5": "executed_by(tree, 'approve account', 'bank manager')",
+    "R6": "data_leads_to_absence(tree, 'customerType == \"VIP\"', 'approve account')"
+  },
+  "Generated12": {
+    "R1": "exists('scan identity') and receive_exist('providedDatabases')",
+    "R2": "leads_to('scan identity', 'store identity history') and send_exist('identityHistory')",
+    "R3": "condition_eventually_follows('balance <= 0 and customerType != \"VIP\"', 'approve balance') and executed_by('approve balance', 'bank manager')",
+    "R4": "data_leads_to_absence('customerType == \"VIP\"', 'approve balance')"
+  }
+}

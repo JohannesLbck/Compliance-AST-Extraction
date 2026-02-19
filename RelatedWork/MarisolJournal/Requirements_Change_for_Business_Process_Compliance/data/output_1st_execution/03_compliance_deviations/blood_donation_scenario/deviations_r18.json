@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r18",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r18_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement obligates that whenever a potential donor is rejected, the reason for rejection must be sent immediately. The process model on page 1 does not include any activity or step where the rejection reason is sent to the donor after rejection. Therefore, the process violates the stricter requirement introduced in Version 2.",
+        "process_model_reference": [
+          "reject_potential_donor"
+        ],
+        "change_id": "r18_c1"
+      }
+    ]
+  }
+]

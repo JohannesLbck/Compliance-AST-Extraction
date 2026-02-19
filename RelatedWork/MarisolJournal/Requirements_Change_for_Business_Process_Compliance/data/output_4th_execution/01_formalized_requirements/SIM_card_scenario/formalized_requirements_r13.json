@@ -1,0 +1,81 @@
+[
+  {
+    "id": "r13_1",
+    "precondition": {
+      "and": [
+        {
+          "dimension": "data",
+          "compliance_pattern": "data_in_range",
+          "data_values": [
+            {
+              "element": "customer_outstanding_debt",
+              "domain": [
+                ">100"
+              ],
+              "format": "EUR"
+            }
+          ]
+        }
+      ],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "prohibition",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "issue_SIM_card"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r13",
+    "input_version": "1"
+  },
+  {
+    "id": "r13_2",
+    "precondition": {
+      "and": [
+        {
+          "dimension": "data",
+          "compliance_pattern": "data_in_range",
+          "data_values": [
+            {
+              "element": "customer_outstanding_debt",
+              "domain": [
+                "[50.01, ∞)"
+              ]
+            }
+          ]
+        }
+      ],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "prohibition",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "issue_SIM_card"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r13",
+    "input_version": "2"
+  }
+]

@@ -1,0 +1,30 @@
+### Pairwise Comparison Table
+
+| Compared JSONs                | Are they identical? | Field or path where the difference occurs | Description of the difference         |
+|-------------------------------|---------------------|------------------------------------------|---------------------------------------|
+| 1st_r12 vs 2nd_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 1st_r12 vs 3rd_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 1st_r12 vs 4th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 1st_r12 vs 5th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 2nd_r12 vs 3rd_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 2nd_r12 vs 4th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 2nd_r12 vs 5th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 3rd_r12 vs 4th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 3rd_r12 vs 5th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+| 4th_r12 vs 5th_r12            | Yes                | N/A                                      | No differences; arrays are identical. |
+
+---
+
+### Grouping of Identical JSON Arrays
+
+All the following JSON arrays are fully identical and can be grouped together:
+- 1st_r12
+- 2nd_r12
+- 3rd_r12
+- 4th_r12
+- 5th_r12
+
+---
+
+**Summary:**  
+There are no differences between any of the provided JSON arrays. All arrays are fully identical in content, structure, and field values.

@@ -1,0 +1,108 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> **Ground Truth Deviation:**  
+> "x1 over-compliant (activity "Delete personal data" is no longer needed)"
+
+---
+
+## Per-Execution Assessment
+
+---
+
+### r12 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The deviation is correctly identified as "over-compliance." The root cause (requirement to delete personal data is removed, but process still deletes) is clearly stated. The updated requirement and process behavior are both interpreted correctly. The process model reference is specific but semantically matches the ground truth. No divergence from the ground truth.
+
+---
+
+### r12 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  Identical to the 1st execution. All aspects align perfectly with the ground truth. No divergence.
+
+---
+
+### r12 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  Identical to the 1st and 2nd executions. All aspects align perfectly with the ground truth. No divergence.
+
+---
+
+### r12 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Equivalent
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The only difference is the process model reference: "delete personal data" (less specific than "delete customer personal data from database"). However, this is semantically equivalent for the purposes of this deviation, as the ground truth also uses the general term "Delete personal data." All other aspects are correct.
+
+---
+
+### r12 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  Identical to the 1st, 2nd, and 3rd executions. All aspects align perfectly with the ground truth. No divergence.
+
+---
+
+## Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|--------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Equivalent      | 5/5   | No                       | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                       | No                            |
+
+---
+
+## Summary & Analysis
+
+### Closest and Furthest from Ground Truth
+
+- **All executions are equally closest to the ground truth** (all scored 5/5).
+- The only minor difference is in `output_4th_execution`, where the process model reference is less specific but still semantically equivalent.
+
+### Extra Undetected Changes / Non-impacting Changes
+
+- **Extra Undetected Changes?**: No executions missed any meaningful changes; all deviations were correctly triggered.
+- **Non-impacting Changes Present?**: No non-impacting changes (e.g., formatting, metadata, ordering, renaming) are present in any execution.
+
+#### Non-impacting Changes Observed
+
+- The only minor variation is in the process model reference wording in `output_4th_execution` ("delete personal data" vs. "delete customer personal data from database"), which is not semantically significant for compliance.
+
+---
+
+**Conclusion:**  
+All executions are fully aligned with the ground truth in terms of deviation detection and semantic interpretation. No undetected or non-impacting changes are present. The outputs are robust and consistent.

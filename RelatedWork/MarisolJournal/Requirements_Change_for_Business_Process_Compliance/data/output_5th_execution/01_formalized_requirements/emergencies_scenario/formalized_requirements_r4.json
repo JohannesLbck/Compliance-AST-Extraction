@@ -1,0 +1,72 @@
+[
+  {
+    "id": "r4_1",
+    "precondition": {
+      "and": [
+        {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "surgery"
+          ]
+        }
+      ],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "blood_analysis",
+            "surgery"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r4",
+    "input_version": "1"
+  },
+  {
+    "id": "r4_2",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": [
+        {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "doctor_authorize_skip_blood_analysis"
+          ]
+        }
+      ]
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "blood_analysis_test",
+            "surgery"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r4",
+    "input_version": "2"
+  }
+]

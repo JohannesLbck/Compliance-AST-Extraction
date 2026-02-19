@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r9",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r9_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement in Version 2 introduces an obligation that after receiving the customer’s personal information, the process must verify the correctness of that information. The BPMN process model contains the activity 'Request personal data' and an event 'Send personal data', but does not include any activity corresponding to 'verify_customer_personal_information'. Therefore, the process does not fulfill the new obligation and is non-compliant.",
+        "process_model_reference": [
+          "Phone company process (missing 'verify_customer_personal_information' after 'receive_customer_personal_information')"
+        ],
+        "change_id": "r9_c1"
+      }
+    ]
+  }
+]

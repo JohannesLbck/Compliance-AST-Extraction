@@ -1,0 +1,114 @@
+{
+  "NL": {
+    "R1": "We have to obtain and analyze the respondent bank report.",
+    "R2": "If the respondent bank evaluation fails, it must be added to a black list.",
+    "R3": "Opening an account must be of low risk.",
+    "R4": "If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted.",
+    "R5": "If the respondent bank rating is rejected, an account must never be opened.",
+    "R6": "Before opening an account, the respondent bank certificate must be valid."
+  },
+  "Humanmade": {
+    "R1": "exists('obtain respondent bank annual report') and exists('analyze respondent bank annual report')",
+    "R2": "condition_eventually_follows('not data.evaluation', 'add respondent bank to blacklist')",
+    "R3": "condition_directly_follows('data.risk', 'terminate')",
+    "R4": "condition_eventually_follows('data.evaluation_extra', 'conduct due diligence study')",
+    "R5": "condition_eventually_follows('data.respondent_bank_rating == \"rejected\"', 'terminate')",
+    "R6": "precedence('open bank account', 'check respondent bank certificate')"
+  },
+  "Generated1": {
+    "R1": "leads_to(tree, 'Obtain respondent bank report', 'Analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'Add to black list')",
+    "R3": "condition_eventually_follows(tree, 'risk == \"low\"', 'Open account')",
+    "R4": "condition_eventually_follows(tree, 'isFirstTime', 'Conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'Open account')",
+    "R6": "condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'Open account')"
+  },
+  "Generated2": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'Add to black list')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'Open account')",
+    "R4": "condition_eventually_follows(tree, \"firstTime\", 'Conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'Open account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'Open account')"
+  },
+  "Generated3": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'add to black list')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'open account')",
+    "R4": "condition_eventually_follows(tree, \"isFirstTime\", 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'open account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'open account')"
+  },
+  "Generated4": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'Add black list')",
+    "R3": "condition_eventually_follows(tree, 'risk == \"low\"', 'Open account')",
+    "R4": "condition_eventually_follows(tree, 'firstTimeDeal', 'Conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'Open account')",
+    "R6": "condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'Open account')"
+  },
+  "Generated5": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze Respondent Bank Report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'Add Respondent Bank Black List')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'Open Account')",
+    "R4": "condition_eventually_follows(tree, \"isFirstTime\", 'Conduct Advanced Due Diligence Study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'Open Account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'Open Account')"
+  },
+  "Generated6": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'Add black list')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'Open account')",
+    "R4": "condition_eventually_follows(tree, \"isFirstTime\", 'Conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'Open account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'Open account')"
+  },
+  "Generated7": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze Respondent Bank Report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'Add Black List')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'Open Account')",
+    "R4": "condition_eventually_follows(tree, \"firstTimeDeal\", 'Conduct Advanced Due Diligence Study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'Open Account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'Open Account')"
+  },
+  "Generated8": {
+    "R1": "leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'add respondent bank to black list')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'open account')",
+    "R4": "condition_eventually_follows(tree, \"isFirstTimeDealing\", 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, \"respondentBankRating == 'rejected'\", 'open account')",
+    "R6": "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'open account')"
+  },
+  "Generated9": {
+    "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'analyze respondent bank report')",
+    "R2": "condition_eventually_follows(tree, \"evaluation == 'fail'\", 'add to black list')",
+    "R3": "condition_eventually_follows(tree, \"risk == 'low'\", 'open account')",
+    "R4": "condition_eventually_follows(tree, 'isFirstTime', 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, \"rating == 'rejected'\", 'open account')",
+    "R6": "condition_eventually_follows(tree, 'certificateValid', 'open account')"
+  },
+  "Generated10": {
+    "R1": "receive_exist(tree, 'respondentBankReport') and exists(tree, 'analyze respondent bank report') and leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'analyze respondent bank report')",
+    "R2": "failure_eventually_follows(tree, 'analyze respondent bank report', 'add respondent bank black list')",
+    "R3": "condition_eventually_follows(tree, 'risk == \"low\"', 'open account')",
+    "R4": "condition_eventually_follows(tree, 'isFirstTime', 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+    "R6": "condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'open account')"
+  },
+  "Generated11": {
+    "R1": "leads_to(receive_exist('respondentBankReport'), 'analyze respondent bank report')",
+    "R2": "failure_eventually_follows('evaluate respondent bank', 'add to black list')",
+    "R3": "condition_eventually_follows('risk == \"low\"', 'open account')",
+    "R4": "condition_eventually_follows('isFirstTimeDealing', 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence('respondentBankRating == \"rejected\"', 'open account')",
+    "R6": "condition_eventually_follows('respondentBankCertificateValid', 'open account')"
+  },
+  "Generated12": {
+    "R1": "leads_to('obtain respondent bank report', 'analyze respondent bank report')",
+    "R2": "failure_eventually_follows('evaluate respondent bank', 'add to black list')",
+    "R3": "data_leads_to_absence(\"not (risk == 'low')\", 'open account')",
+    "R4": "condition_eventually_follows('isFirstTimeDeal', 'conduct advanced due diligence study')",
+    "R5": "data_leads_to_absence(\"respondentBankRating == 'rejected'\", 'open account')",
+    "R6": "data_leads_to_absence(\"not (respondentBankCertificate == 'valid')\", 'open account')"
+  }
+}

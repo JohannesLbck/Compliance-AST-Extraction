@@ -1,0 +1,40 @@
+{
+  "requirement_id": "r1",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "periodicity",
+      "new": "existence_of_A",
+      "change_id": "r1_c1"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "ask_patient_about_pain"
+      ],
+      "new": [
+        "administer_additional_anesthesia"
+      ],
+      "change_id": "r1_c2"
+    },
+    {
+      "change": "modify_temporal_constraints",
+      "element": "temporal_constraints",
+      "old": [
+        {
+          "interval_minutes": 20
+        }
+      ],
+      "new": [
+        {
+          "periodicity_minutes": 20
+        }
+      ],
+      "change_id": "r1_c3"
+    }
+  ]
+}

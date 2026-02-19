@@ -1,0 +1,104 @@
+[
+  {
+    "id": "r2_1",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "obtain_patient_consent",
+            "conduct_time_out_procedure"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "obtain_patient_consent",
+            "surgical_intervention"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r2",
+    "input_version": "1"
+  },
+  {
+    "id": "r2_2",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "obtain_patient_consent",
+            "surgical_intervention"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "resource",
+          "compliance_pattern": "performed_by",
+          "activities": [
+            "obtain_patient_consent"
+          ],
+          "resources": [
+            "nurse"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_followed_by_B",
+          "activities": [
+            "obtain_patient_consent",
+            "time_out_procedure"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "resource",
+          "compliance_pattern": "performed_by",
+          "activities": [
+            "time_out_procedure"
+          ],
+          "resources": [
+            "doctor"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r2",
+    "input_version": "2"
+  }
+]

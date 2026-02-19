@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r13",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r13_d1",
+        "deviation_type": "non-compliance",
+        "description": "The requirement threshold for outstanding debt was lowered from 100 € to 50 €, prohibiting SIM card issuance to customers with debt exceeding 50 €. The process model only restricts issuance when debt is less than 100 €, as indicated by the sequence flow labeled 'Debt < 100'. Therefore, the process allows issuance to customers with debt between 50.01 € and 100 €, which violates the stricter requirement in Version 2.",
+        "process_model_reference": [
+          "sequence flow 'Debt < 100' and all subsequent SIM card issuance activities"
+        ],
+        "change_id": "r13_c1"
+      }
+    ]
+  }
+]

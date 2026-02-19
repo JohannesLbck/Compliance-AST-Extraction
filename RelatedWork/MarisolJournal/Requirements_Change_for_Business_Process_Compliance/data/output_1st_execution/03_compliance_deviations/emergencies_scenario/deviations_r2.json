@@ -1,0 +1,72 @@
+[
+  {
+    "requirement_id": "r2",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r2_d1",
+        "deviation_type": "no impact",
+        "description": "The change modifies the control flow norm to require that patient consent precedes surgical intervention, which is already enforced in the process model. There is no deviation.",
+        "process_model_reference": [
+          "obtain_patient_consent, surgical_intervention"
+        ],
+        "change_id": "r2_c1"
+      },
+      {
+        "deviation_id": "r2_d2",
+        "deviation_type": "no impact",
+        "description": "Switching the compliance pattern from 'A_precedes_B' to 'performed_by' for the activity 'obtain_patient_consent' does not introduce a stricter requirement, as the process model already assigns this task to the nurse.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c2"
+      },
+      {
+        "deviation_id": "r2_d3",
+        "deviation_type": "no impact",
+        "description": "Changing the dimension from 'control_flow' to 'resource' for the consent activity does not affect compliance, since the process model already specifies the nurse as the responsible resource.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c3"
+      },
+      {
+        "deviation_id": "r2_d4",
+        "deviation_type": "no impact",
+        "description": "Narrowing the activities from both consent and surgical intervention to only consent for the resource assignment does not introduce a stricter requirement, as the process model already aligns with this assignment.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c4"
+      },
+      {
+        "deviation_id": "r2_d5",
+        "deviation_type": "no impact",
+        "description": "Specifying the nurse as the resource for obtaining consent matches the process model, which already assigns this task to the nurse.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c5"
+      },
+      {
+        "deviation_id": "r2_d6",
+        "deviation_type": "non-compliance",
+        "description": "The new norm requires that after obtaining patient consent, a 'time out' procedure must follow. The process model assigns the 'time out' procedure to the nurse, not the doctor, which violates the stricter requirement that the doctor must perform this step.",
+        "process_model_reference": [
+          "time_out_procedure"
+        ],
+        "change_id": "r2_c6"
+      },
+      {
+        "deviation_id": "r2_d7",
+        "deviation_type": "non-compliance",
+        "description": "The new norm obligates that the 'time out' procedure is performed by the doctor. The process model assigns this activity to the nurse, resulting in a direct violation of the updated requirement.",
+        "process_model_reference": [
+          "time_out_procedure"
+        ],
+        "change_id": "r2_c7"
+      }
+    ]
+  }
+]

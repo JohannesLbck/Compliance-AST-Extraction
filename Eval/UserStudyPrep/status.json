@@ -1,0 +1,60 @@
+{
+  "NL": {
+    "R1": "Every four months, it is necessary to check whether a new document has been uploaded to the Document Management System (DMS) that contains the checklist completed and signed by the Tax Manager and the Financial Controller",
+    "R2": "If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution proposal"
+  },
+  "Humanmade": {
+    "R1": "recurring('check DMS', '10518984 ') and activity_receives('check DMS', 'completedandsignedChecklist')",
+    "R2": "leads_to('create resolution proposal', 'analyse reports') and activity_receives('create resolution proposal', 'resolution_proposal') and activity_receives('generate consultative report', 'report_cb') and activity_receives('generate legal report', 'report_ld') and exists('analyse reports') and executed_by_return('analyse reports') == executed_by_return('create resolution proposal')"
+  },
+  "Generated1": {
+    "R1": "max_time_between(tree, 'check document upload', 'check document upload', 4) and activity_receives(tree, 'check document upload', 'signedChecklist')",
+    "R2": "condition_eventually_follows(tree, 'resolutionProposal and reportCb and reportLd', 'analyse reports') and executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  },
+  "Generated2": {
+    "R1": "loop(tree, 'Check document') and activity_receives(tree, 'Check document', 'signedChecklist') and max_time_between(tree, 'Check document', 'Check document', 120)",
+    "R2": "condition_eventually_follows(tree, 'resolutionProposal and cbReport and ldReport', 'Analyse reports') and executed_by(tree, 'Analyse reports', executed_by_return(tree, 'Create resolution proposal'))"
+  },
+  "Generated3": {
+    "R1": "loop(tree, \"check document upload\") and max_time_between(tree, \"check document upload\", \"check document upload\", 4)",
+    "R2": "condition_eventually_follows(tree, \"resolutionProposal and cbReport and ldReport\", \"analyse report\") and (executed_by_return(tree, \"create resolution proposal\") == executed_by_return(tree, \"analyse report\"))"
+  },
+  "Generated4": {
+    "R1": "max_time_between(tree, \"Check Document\", \"Check Document\", 4) and activity_receives(tree, \"Check Document\", \"signedChecklist\")",
+    "R2": "condition_eventually_follows(tree, \"resolutionProposal and reportsCb and reportsLd\", \"Analyse Reports\") and (executed_by_return(tree, \"Create Resolution Proposal\") == executed_by_return(tree, \"Analyse Reports\"))"
+  },
+  "Generated5": {
+    "R1": "recurring(tree, 'Check Document Upload', 4)",
+    "R2": "condition_eventually_follows(tree, 'resolutionProposal and cbReport and ldReport', 'Analyse Report') and (executed_by_return(tree, 'Create Resolution Proposal') == executed_by_return(tree, 'Analyse Report'))"
+  },
+  "Generated6": {
+    "R1": "recurring(tree, 'check document upload', 4)",
+    "R2": "condition_eventually_follows(tree, 'resolutionProposal and cbReport and ldReport', 'analyse reports') and (executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports'))"
+  },
+  "Generated7": {
+    "R1": "recurring(tree, 'Check Document Upload', 4)",
+    "R2": "condition_eventually_follows(tree, 'resolutionProposal and cbReport and ldReport', 'Analyze Reports') and (executed_by_return(tree, 'Create Resolution Proposal') == executed_by_return(tree, 'Analyze Reports'))"
+  },
+  "Generated8": {
+    "R1": "recurring(tree, 'Check DMS', 4)",
+    "R2": "(condition_eventually_follows(tree, 'resolutionProposal and reportCb and reportLd', 'Analyse Reports') and executed_by(tree, 'Analyse Reports', executed_by_return(tree, 'Create Resolution Proposal')))"
+  },
+  "Generated9": {
+    "R1": "recurring(tree,'check document upload',10368000) and activity_receives(tree,'check document upload','signedChecklist')",
+    "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyze reports') and (executed_by_return(tree,'create resolution proposal') == executed_by_return(tree,'analyze reports'))"
+  },
+  "Generated10": {
+    "R1": "recurring('check document upload', 10368000)",
+    "R2": "condition_eventually_follows('resolutionProposal and cbReport and ldReport', 'analyse report') and (executed_by_return('create resolution proposal') == executed_by_return('analyse report'))"
+  },
+  "Generated11": {
+    "R1": "recurring(tree,'check document upload',10368000)",
+    "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyse reports')",
+    "R3": "executed_by(tree,'analyse reports',executed_by_return(tree,'create resolution proposal'))"
+  },
+  "Generated12": {
+    "R1": "recurring(tree,'check document upload',10368000)",
+    "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyse reports')",
+    "R3": "executed_by(tree,'analyse reports',executed_by_return(tree,'create resolution proposal'))"
+  }
+}

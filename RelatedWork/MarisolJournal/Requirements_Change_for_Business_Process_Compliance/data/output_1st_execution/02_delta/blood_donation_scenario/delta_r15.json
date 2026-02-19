@@ -1,0 +1,28 @@
+{
+  "requirement_id": "r15",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "modify_data_values",
+      "element": "action.data_values",
+      "old": [
+        {
+          "element": "donor_consent",
+          "domain": [
+            "given"
+          ]
+        }
+      ],
+      "new": [
+        {
+          "element": "donor_consent",
+          "value": [
+            "given"
+          ]
+        }
+      ],
+      "change_id": "r15_c1"
+    }
+  ]
+}

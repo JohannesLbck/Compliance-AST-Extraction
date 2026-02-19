@@ -1,0 +1,172 @@
+Let's evaluate each execution's deviations against the **ground truth**:
+
+> **Ground Truth Deviation:**  
+> "x1 non-compliant (it should be added a timer to terminate the process if it takes longer than 30 days)"
+
+---
+
+## r8 - output_1st_execution
+
+### Deviation Type Match: **Yes**
+All deviations are labeled "non-compliance," matching the ground truth.
+
+### Root Cause Match: **Yes**
+All deviations correctly identify the absence of a process termination after 30 days as the root cause.
+
+### Updated Requirement Interpretation: **Correct**
+Descriptions accurately reflect the new requirement: an obligation to terminate the process after 30 days.
+
+### Process Behavior Interpretation: **Correct**
+All deviations state that the process continues past 30 days without termination, which is non-compliant.
+
+### Process Model Reference: **Aligned**
+References to "send SIM card," "process flow after 30 days," and "terminate process" are appropriate and specific.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution provides a comprehensive and precise set of deviations, all of which semantically align with the ground truth. The root cause, requirement change, and process behavior are all correctly interpreted, and the process model references are clear and relevant.
+
+---
+
+## r8 - output_2nd_execution
+
+### Deviation Type Match: **Yes**
+All deviations are "non-compliance," matching the ground truth.
+
+### Root Cause Match: **Yes**
+All deviations correctly identify the missing process termination after 30 days.
+
+### Updated Requirement Interpretation: **Correct**
+Descriptions clearly state the new obligation to terminate the process after 30 days.
+
+### Process Behavior Interpretation: **Correct**
+All deviations note that the process continues or allows sending the SIM card after 30 days, which is non-compliant.
+
+### Process Model Reference: **Aligned**
+References such as "send SIM card, process flow after 30 days," "terminate process (missing after 30 days)," and "control flow for process termination" are precise and relevant.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is highly aligned with the ground truth. The deviations are clear, accurate, and cover all relevant aspects of the requirement and process behavior.
+
+---
+
+## r8 - output_3rd_execution
+
+### Deviation Type Match: **Yes**
+Most deviations are "non-compliance," with one "no impact" deviation.
+
+### Root Cause Match: **Yes**
+The non-compliance deviations correctly identify the missing process termination after 30 days.
+
+### Updated Requirement Interpretation: **Correct**
+Descriptions accurately reflect the new obligation to terminate the process.
+
+### Process Behavior Interpretation: **Correct**
+Non-compliance deviations correctly state that the process continues past 30 days without termination.
+
+### Process Model Reference: **Aligned**
+References are specific and relevant (e.g., "send SIM card, process flow after 30 days," "absence of terminate_process activity").
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth. The "no impact" deviation correctly notes that the removal of the old temporal constraint is subsumed by the new, stricter requirement, and does not introduce a new compliance issue.
+
+---
+
+## r8 - output_4th_execution
+
+### Deviation Type Match: **Yes**
+All deviations are "non-compliance."
+
+### Root Cause Match: **Yes**
+All deviations correctly identify the missing process termination after 30 days.
+
+### Updated Requirement Interpretation: **Correct**
+Descriptions accurately reflect the new obligation.
+
+### Process Behavior Interpretation: **Correct**
+All deviations note the process does not terminate after 30 days, which is non-compliant.
+
+### Process Model Reference: **Aligned**
+References are precise and relevant (e.g., "send SIM card, process flow after 30 days," "terminate process," "control flow after 30 days").
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth, with clear and accurate deviations.
+
+---
+
+## r8 - output_5th_execution
+
+### Deviation Type Match: **Yes**
+Most deviations are "non-compliance," with some "no impact" deviations.
+
+### Root Cause Match: **Yes**
+Non-compliance deviations correctly identify the missing process termination after 30 days.
+
+### Updated Requirement Interpretation: **Correct**
+Descriptions accurately reflect the new obligation.
+
+### Process Behavior Interpretation: **Correct**
+Non-compliance deviations correctly state that the process continues past 30 days without termination.
+
+### Process Model Reference: **Aligned**
+References are specific and relevant (e.g., "entire phone company process (duration exceeding 30 days without termination)," "send SIM card," "terminate phone company process").
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is fully aligned with the ground truth. The "no impact" deviations correctly note that certain changes (e.g., removal of the old temporal constraint) are subsumed by the new requirement and do not introduce new compliance issues.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_3rd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | Yes                           |
+| output_4th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_5th_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | Yes                           |
+
+---
+
+## 1. Closest and Furthest Executions
+
+- **Closest to Ground Truth:**  
+  All executions are equally close, with a perfect semantic alignment score of 5/5.
+
+- **Furthest from Ground Truth:**  
+  None. All executions are fully aligned.
+
+## 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**  
+  **No** executions missed meaningful changes; all relevant deviations were detected.
+
+- **Non-impacting Changes Present?**  
+  - **output_3rd_execution** and **output_5th_execution** include "no impact" deviations.  
+    These correctly identify changes (e.g., removal of the old temporal constraint) that do not introduce new compliance issues, as the stricter requirement already covers them.
+
+## 3. Types of Non-impacting Changes Observed
+
+- **output_3rd_execution**:  
+  - Removal of the explicit temporal constraint is noted as "no impact" because the new obligation to terminate the process already covers the compliance need.
+
+- **output_5th_execution**:  
+  - Changes in compliance pattern and dimension (from "duration" to "existence_of_A" or "control_flow") are noted as "no impact" since they do not introduce new compliance issues beyond the lack of process termination.
+  - Removal of the temporal constraint on "send SIM card" is also "no impact" for the same reason.
+
+**These non-impacting changes are correctly identified as not affecting compliance, as they are subsumed by the stricter new requirement.**
+
+---
+
+## **Conclusion**
+
+All executions are highly aligned with the ground truth, with no missed deviations. The only differences are the explicit reporting of non-impacting changes in some executions, which is accurate and does not detract from semantic alignment. No executions missed meaningful changes, and all non-impacting changes were correctly identified as such.

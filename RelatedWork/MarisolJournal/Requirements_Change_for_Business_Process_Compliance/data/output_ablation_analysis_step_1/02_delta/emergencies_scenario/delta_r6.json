@@ -1,0 +1,40 @@
+{
+  "requirement_id": "r6",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "data",
+        "compliance_pattern": "data_in_domain",
+        "data_values": [
+          {
+            "element": "patient.age",
+            "domain": [
+              "adult"
+            ]
+          }
+        ]
+      },
+      "change_id": "r6_c1"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "activity_performed_for_all_resources",
+      "new": "activity_execution",
+      "change_id": "r6_c2"
+    },
+    {
+      "change": "modify_resources",
+      "element": "resources",
+      "old": [
+        "patient"
+      ],
+      "new": null,
+      "change_id": "r6_c3"
+    }
+  ]
+}

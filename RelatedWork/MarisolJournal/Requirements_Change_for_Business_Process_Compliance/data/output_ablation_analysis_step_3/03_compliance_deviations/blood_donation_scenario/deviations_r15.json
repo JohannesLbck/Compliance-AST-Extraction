@@ -1,0 +1,16 @@
+[
+  {
+    "requirement_id": "r15",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r15_d1",
+        "deviation_type": "no impact",
+        "description": "There are no atomic changes between Version 1 and Version 2; the requirement and its formalization remain identical, resulting in no compliance deviation.",
+        "process_model_reference": [],
+        "change_id": "r15_change_1"
+      }
+    ]
+  }
+]

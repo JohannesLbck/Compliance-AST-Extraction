@@ -1,0 +1,50 @@
+Here is a detailed comparison of your JSON arrays (1st_r8, 2nd_r8, 3rd_r8, 4th_r8, 5th_r8):
+
+---
+
+### Grouping of Identical JSON Arrays
+
+- **1st_r8, 2nd_r8** are fully identical.
+- **3rd_r8, 4th_r8** are fully identical.
+- **5th_r8** is unique.
+
+---
+
+### Pairwise Comparison Table
+
+| Compared JSONs         | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                   |
+|------------------------|--------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| 1st_r8 vs 2nd_r8       | Yes                | -                                                        | Arrays are fully identical.                                                                                      |
+| 1st_r8 vs 3rd_r8       | No                 | r8_2.norms[0].action.temporal_constraints                | 3rd_r8 is missing `temporal_constraints` in r8_2.norms[0].action (present in 1st_r8).                           |
+| 1st_r8 vs 4th_r8       | No                 | r8_2.norms[0].action.temporal_constraints                | 4th_r8 is missing `temporal_constraints` in r8_2.norms[0].action (present in 1st_r8).                           |
+| 1st_r8 vs 5th_r8       | No                 | r8_2.precondition, r8_2.norms[0].action.activities[0]    | 5th_r8 has a different precondition and different activities in r8_2.norms[0].action.                           |
+| 2nd_r8 vs 3rd_r8       | No                 | r8_2.norms[0].action.temporal_constraints                | 3rd_r8 is missing `temporal_constraints` in r8_2.norms[0].action (present in 2nd_r8).                           |
+| 2nd_r8 vs 4th_r8       | No                 | r8_2.norms[0].action.temporal_constraints                | 4th_r8 is missing `temporal_constraints` in r8_2.norms[0].action (present in 2nd_r8).                           |
+| 2nd_r8 vs 5th_r8       | No                 | r8_2.precondition, r8_2.norms[0].action.activities[0]    | 5th_r8 has a different precondition and different activities in r8_2.norms[0].action.                           |
+| 3rd_r8 vs 4th_r8       | Yes                | -                                                        | Arrays are fully identical.                                                                                      |
+| 3rd_r8 vs 5th_r8       | No                 | r8_2.precondition, r8_2.norms[0].action.activities[0]    | 5th_r8 has a different precondition and different activities in r8_2.norms[0].action.                           |
+| 4th_r8 vs 5th_r8       | No                 | r8_2.precondition, r8_2.norms[0].action.activities[0]    | 5th_r8 has a different precondition and different activities in r8_2.norms[0].action.                           |
+
+---
+
+### Detailed Description of Differences
+
+#### 1st_r8, 2nd_r8 vs 3rd_r8, 4th_r8
+- In `r8_2.norms[0].action`, the field `temporal_constraints` is present in 1st_r8/2nd_r8 but **missing** in 3rd_r8/4th_r8.
+
+#### 5th_r8 vs All Others
+- In `r8_2.precondition`, 5th_r8 has a non-empty `and` array with a time/duration condition, while all others have empty `and`, `or`, and `not` arrays.
+- In `r8_2.norms[0].action.activities[0]`, 5th_r8 uses `"terminate phone company process"` instead of `"terminate_process"` (or similar).
+- In `r8_2.norms[0].action`, 5th_r8 is also missing the `temporal_constraints` field (like 3rd_r8/4th_r8).
+
+---
+
+### Grouping Summary
+
+- **Identical Group 1:** 1st_r8, 2nd_r8
+- **Identical Group 2:** 3rd_r8, 4th_r8
+- **Unique:** 5th_r8
+
+---
+
+If you need a more granular, field-by-field breakdown for a specific pair, let me know!

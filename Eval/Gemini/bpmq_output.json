@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
+        "R2": "condition_eventually_follows(tree, 'respondentBankEvaluation == \"failed\"', 'add to black list')",
+        "R3": "condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+        "R4": "condition_eventually_follows(tree, 'isFirstTimeDealing == true', 'conduct advanced due diligence study')",
+        "R5": "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+        "R6": "condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'open account')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'analyze respondent bank report')",
+        "R2": "condition_eventually_follows(tree, 'evaluationResult == \"fail\"', 'add to black list')",
+        "R3": "condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+        "R4": "condition_eventually_follows(tree, 'isFirstTimeDealing == true', 'conduct advanced due diligence study')",
+        "R5": "data_leads_to_absence(tree, 'ratingStatus == \"rejected\"', 'open account')",
+        "R6": "condition_eventually_follows(tree, 'certificateStatus == \"valid\"', 'open account')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'analyze respondent bank report')",
+        "R2": "condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add bank to black list')",
+        "R3": "condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+        "R4": "condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advanced due diligence study')",
+        "R5": "data_leads_to_absence(tree, 'ratingStatus == \"rejected\"', 'open account')",
+        "R6": "condition_eventually_follows(tree, 'certificateStatus == \"valid\"', 'open account')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
+        "R2": "condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to black list')",
+        "R3": "condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+        "R4": "condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advanced due diligence study')",
+        "R5": "data_leads_to_absence(tree, 'ratingStatus == \"rejected\"', 'open account')",
+        "R6": "condition_eventually_follows(tree, 'isCertificateValid == true', 'open account')"
+      }
+    }
+  ]
+}

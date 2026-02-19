@@ -1,0 +1,141 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> "x1 non-compliant deviation (extra_activity = "Ask Patient About Pain Level")  
+> x1 over-compliant deviation  (missing_activity = "Aminister Extra Anaesthesia")"
+
+---
+
+## r1 - output_1st_execution
+
+- **Deviation Type Match:** Yes  
+  - 1x non-compliance, 1x over-compliance (matches ground truth types and counts).
+- **Root Cause Match:** Yes  
+  - Non-compliance: Missing "administer extra anaesthesia" as required.  
+  - Over-compliance: Still requires "ask patient about pain" which is no longer required.
+- **Updated Requirement Interpretation:** Correct  
+  - Correctly identifies new requirement for "administer extra anaesthesia" and removal of "ask patient about pain".
+- **Process Behavior Interpretation:** Correct  
+  - Accurately describes what the process does and does not do.
+- **Process Model Reference:** Aligned  
+  - References are clear and match the activities in question.
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  This execution precisely matches the ground truth: it identifies the missing new activity as non-compliance and the obsolete activity as over-compliance, with clear, accurate descriptions and references.
+
+---
+
+## r1 - output_2nd_execution
+
+- **Deviation Type Match:** No  
+  - Both deviations are labeled as "non-compliance" (should be 1x non-compliance, 1x over-compliance).
+- **Root Cause Match:** Partial  
+  - Both deviations focus on missing "administer extra anaesthesia" (correct for non-compliance), but the second should be about over-compliance for "ask patient about pain".
+- **Updated Requirement Interpretation:** Partially Correct  
+  - Correctly notes the new requirement for "administer extra anaesthesia", but fails to recognize that "ask patient about pain" is no longer required (and thus, its continued presence is over-compliance, not non-compliance).
+- **Process Behavior Interpretation:** Partially Correct  
+  - Describes missing new activity well, but mislabels the continued presence of the old activity.
+- **Process Model Reference:** Equivalent  
+  - References are relevant but not as clearly mapped to the over-compliance case.
+- **Semantic Alignment Score:** 2/5  
+- **Summary Comment:**  
+  This execution misclassifies the over-compliance as non-compliance, missing the semantic distinction. It does, however, correctly identify the missing new activity.
+
+---
+
+## r1 - output_3rd_execution
+
+- **Deviation Type Match:** Yes  
+  - 1x non-compliance, 1x over-compliance.
+- **Root Cause Match:** Yes  
+  - Non-compliance: Missing "administer additional anesthesia".  
+  - Over-compliance: Still requires "ask patient about pain".
+- **Updated Requirement Interpretation:** Correct  
+  - Correctly interprets the new and removed requirements.
+- **Process Behavior Interpretation:** Correct  
+  - Accurately describes process actions and omissions.
+- **Process Model Reference:** Aligned  
+  - Uses slightly different naming ("administer_additional_anesthesia", "ask_patient_about_pain") but semantically equivalent.
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  This execution matches the ground truth in all key aspects, with only minor naming differences that do not affect semantic meaning.
+
+---
+
+## r1 - output_4th_execution
+
+- **Deviation Type Match:** Yes  
+  - 1x non-compliance, 1x over-compliance.
+- **Root Cause Match:** Yes  
+  - Non-compliance: Missing "administer additional anesthesia".  
+  - Over-compliance: Still requires "ask patient about pain".
+- **Updated Requirement Interpretation:** Correct  
+  - Correctly interprets the new and removed requirements.
+- **Process Behavior Interpretation:** Correct  
+  - Accurately describes process actions and omissions.
+- **Process Model Reference:** Aligned  
+  - Uses slightly different naming, but semantically equivalent.
+- **Semantic Alignment Score:** 5/5  
+- **Summary Comment:**  
+  This execution is semantically equivalent to the ground truth, with only minor naming differences.
+
+---
+
+## r1 - output_5th_execution
+
+- **Deviation Type Match:** Yes  
+  - 2x non-compliance, 1x over-compliance (extra non-compliance deviation).
+- **Root Cause Match:** Partial  
+  - Correctly identifies missing "administer additional anesthesia" and over-compliance for "ask patient about pain", but adds a redundant non-compliance deviation for the same missing activity.
+- **Updated Requirement Interpretation:** Partially Correct  
+  - Correctly interprets the new and removed requirements, but the extra non-compliance deviation suggests confusion or redundancy.
+- **Process Behavior Interpretation:** Partially Correct  
+  - Describes process actions and omissions, but the extra deviation may indicate a misunderstanding of the requirement change's impact.
+- **Process Model Reference:** Aligned  
+  - References are clear and match the activities in question.
+- **Semantic Alignment Score:** 3/5  
+- **Summary Comment:**  
+  This execution is mostly correct but introduces a redundant non-compliance deviation for the same missing activity, which could indicate a lack of consolidation or double-counting.
+
+---
+
+# Summary Table
+
+| Execution            | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|----------------------|----------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_2nd_execution | No             | Partial    | Partial            | Partial          | Equivalent      | 2/5   | No                        | No                            |
+| output_3rd_execution | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_4th_execution | Yes            | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_5th_execution | Yes            | Partial    | Partial            | Partial          | Aligned         | 3/5   | No                        | No                            |
+
+---
+
+## 1. Closest and Furthest Executions
+
+- **Closest to Ground Truth:**  
+  - `output_1st_execution`, `output_3rd_execution`, and `output_4th_execution` (all 5/5, fully aligned).
+- **Furthest from Ground Truth:**  
+  - `output_2nd_execution` (2/5, misclassifies deviation types and misses over-compliance).
+  - `output_5th_execution` (3/5, introduces redundant non-compliance deviation).
+
+---
+
+## 2. Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**  
+  - None of the executions missed a meaningful deviation; all relevant changes were detected.
+- **Non-impacting Changes Present?**  
+  - No non-impacting changes (e.g., formatting, metadata, ordering, renaming) were present in any execution.
+
+---
+
+## 3. Non-impacting Changes Observed
+
+- **None observed.**  
+  - All changes detected and reported are semantically relevant to compliance.  
+  - Minor naming differences (e.g., "administer_additional_anesthesia" vs. "administer additional anesthesia") are not considered non-impacting as they do not affect semantic interpretation.
+
+---
+
+**In summary:**  
+Executions 1, 3, and 4 are fully aligned with the ground truth. Execution 2 misclassifies the over-compliance as non-compliance, and Execution 5 introduces a redundant deviation, slightly reducing their semantic alignment. No executions missed meaningful changes or included irrelevant changes.

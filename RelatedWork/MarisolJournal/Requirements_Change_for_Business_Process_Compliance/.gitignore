@@ -1,0 +1,5 @@
+config/api_keys.json
+env/
+.idea/
+notebooks/.ipynb_checkpoints/
+notebooks/coopis/

@@ -1,0 +1,111 @@
+{
+  "NL": {
+    "R1": "The consult event should occur before checking the symptoms",
+    "R2": "Checking symptoms should occur before setting a diagnosis",
+    "R3": "The prescription of medicine occurs only after the diagnosis is set",
+    "R4": "Event feel sick occurs after the medicine is give",
+    "R5": "Event feel healthy occurs after the medicine is given",
+    "R6": "Events feel sick and feel healthy should not simultaneously occur"
+  },
+  "Humanmade": {
+    "R1": "precedence('verify symptoms', 'consult')",
+    "R2": "leads_to('verify symptoms', 'diagnosis')",
+    "R3": "precedence('prescribe medicine', 'verify symptoms')"
+  },
+  "Generated1": {
+    "R1": "leads_to(tree, 'consult', 'check symptoms')",
+    "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "precedence(tree, 'feel sick', 'give medicine')",
+    "R5": "precedence(tree, 'feel healthy', 'give medicine')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated2": {
+    "R1": "precedence(tree, 'check symptoms', 'consult')",
+    "R2": "precedence(tree, 'set diagnosis', 'check symptoms')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "precedence(tree, 'feel sick', 'give medicine')",
+    "R5": "precedence(tree, 'feel healthy', 'give medicine')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated3": {
+    "R1": "leads_to(tree, 'consult', 'check symptoms')",
+    "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "precedence(tree, 'feel sick', 'give medicine')",
+    "R5": "precedence(tree, 'feel healthy', 'give medicine')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated4": {
+    "R1": "leads_to(tree, 'consult', 'check symptoms')",
+    "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+    "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated5": {
+    "R1": "leads_to(tree, 'consult_event', 'check_symptoms')",
+    "R2": "leads_to(tree, 'check_symptoms', 'set_diagnosis')",
+    "R3": "precedence(tree, 'prescribe_medicine', 'set_diagnosis')",
+    "R4": "leads_to(tree, 'give_medicine', 'feel_sick')",
+    "R5": "leads_to(tree, 'give_medicine', 'feel_healthy')",
+    "R6": "not parallel(tree, 'feel_sick', 'feel_healthy')"
+  },
+  "Generated6": {
+    "R1": "leads_to(tree, 'Consult event', 'Check symptoms')",
+    "R2": "leads_to(tree, 'Check symptoms', 'Set diagnosis')",
+    "R3": "precedence(tree, 'Prescribe medicine', 'Set diagnosis')",
+    "R4": "leads_to(tree, 'Give medicine', 'Feel sick')",
+    "R5": "leads_to(tree, 'Give medicine', 'Feel healthy')",
+    "R6": "not parallel(tree, 'Feel sick', 'Feel healthy')"
+  },
+  "Generated7": {
+    "R1": "precedence(tree, 'check symptoms', 'consult')",
+    "R2": "precedence(tree, 'set diagnosis', 'check symptoms')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+    "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated8": {
+    "R1": "leads_to(tree, 'consult', 'check symptoms')",
+    "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+    "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated9": {
+    "R1": "leads_to(tree, 'Consult', 'Check symptoms')",
+    "R2": "leads_to(tree, 'Check symptoms', 'Set diagnosis')",
+    "R3": "precedence(tree, 'Prescribe medicine', 'Set diagnosis')",
+    "R4": "leads_to(tree, 'Give medicine', 'Feel sick')",
+    "R5": "leads_to(tree, 'Give medicine', 'Feel healthy')",
+    "R6": "not parallel(tree, 'Feel sick', 'Feel healthy')"
+  },
+  "Generated10": {
+    "R1": "leads_to(tree, 'consult', 'check symptoms')",
+    "R2": "leads_to(tree, 'check symptoms', 'set diagnosis')",
+    "R3": "precedence(tree, 'prescribe medicine', 'set diagnosis')",
+    "R4": "leads_to(tree, 'give medicine', 'feel sick')",
+    "R5": "leads_to(tree, 'give medicine', 'feel healthy')",
+    "R6": "not parallel(tree, 'feel sick', 'feel healthy')"
+  },
+  "Generated11": {
+    "R1": "leads_to('consult', 'check symptoms')",
+    "R2": "leads_to('check symptoms', 'set diagnosis')",
+    "R3": "precedence('prescribe medicine', 'set diagnosis')",
+    "R4": "precedence('feel sick', 'give medicine')",
+    "R5": "precedence('feel healthy', 'give medicine')",
+    "R6": "not parallel('feel sick', 'feel healthy')"
+  },
+  "Generated12": {
+    "R1": "precedence('check symptoms', 'consult')",
+    "R2": "precedence('set diagnosis', 'check symptoms')",
+    "R3": "precedence('prescribe medicine', 'set diagnosis')",
+    "R4": "precedence('feel sick', 'give medicine')",
+    "R5": "precedence('feel healthy', 'give medicine')",
+    "R6": "not parallel('feel sick', 'feel healthy')"
+  }
+}

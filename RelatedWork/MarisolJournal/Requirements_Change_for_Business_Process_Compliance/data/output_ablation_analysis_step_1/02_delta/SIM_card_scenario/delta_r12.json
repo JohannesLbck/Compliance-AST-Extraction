@@ -1,0 +1,57 @@
+{
+  "requirement_id": "r12",
+  "from_version": 1,
+  "to_version": 2,
+  "changes": [
+    [
+      "r12_c1",
+      "compliance",
+      {
+        "from": {
+          "id": "r12_1",
+          "precondition": {
+            "and": [
+              {
+                "dimension": "data",
+                "compliance_pattern": "data_value_equals",
+                "data_values": [
+                  {
+                    "element": "third_party_portability_decision",
+                    "value": [
+                      "denied"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "or": [],
+            "not": []
+          },
+          "norms": [
+            {
+              "modality": "obligation",
+              "action": {
+                "dimension": "data",
+                "compliance_pattern": "data_deleted",
+                "data_values": [
+                  {
+                    "element": "customer_personal_data",
+                    "origin": "database"
+                  }
+                ]
+              }
+            }
+          ],
+          "temporal_validity": {
+            "start": "0000-01-01T00:00:00Z",
+            "end": "9999-12-31T23:59:59Z"
+          },
+          "input_id": "r12",
+          "input_version": "1"
+        },
+        "to": null
+      },
+      "deleted"
+    ]
+  ]
+}

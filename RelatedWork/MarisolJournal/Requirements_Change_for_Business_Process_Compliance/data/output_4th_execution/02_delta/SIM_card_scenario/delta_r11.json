@@ -1,0 +1,33 @@
+{
+  "requirement_id": "r11",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "permission -> obligation",
+      "element": "modality",
+      "old": "permission",
+      "new": "obligation",
+      "change_id": "r11_c1"
+    },
+    {
+      "change": "switch_compliance_pattern",
+      "element": "compliance_pattern",
+      "old": "existence_of_A",
+      "new": "A_precedes_B",
+      "change_id": "r11_c2"
+    },
+    {
+      "change": "modify_activities",
+      "element": "activities",
+      "old": [
+        "ask_for_consent"
+      ],
+      "new": [
+        "ask_consent",
+        "retrieve_personal_data"
+      ],
+      "change_id": "r11_c3"
+    }
+  ]
+}

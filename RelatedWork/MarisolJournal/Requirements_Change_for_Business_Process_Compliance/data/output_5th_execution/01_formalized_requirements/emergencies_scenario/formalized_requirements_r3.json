@@ -1,0 +1,129 @@
+[
+  {
+    "id": "r3_1",
+    "precondition": {
+      "and": [
+        {
+          "dimension": "data",
+          "compliance_pattern": "data_in_range",
+          "data_values": [
+            {
+              "element": "patient_age",
+              "domain": [
+                "[66,)"
+              ]
+            }
+          ]
+        }
+      ],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "nurse_approves_discharge",
+            "patient_discharged"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "resource",
+          "compliance_pattern": "performed_by",
+          "activities": [
+            "nurse_approves_discharge"
+          ],
+          "resources": [
+            "nurse"
+          ]
+        }
+      },
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "time",
+          "compliance_pattern": "time_lag",
+          "activities": [
+            "nurse_approves_discharge",
+            "patient_discharged"
+          ],
+          "temporal_constraints": [
+            {
+              "interval_minutes": 1440
+            }
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2030-12-31T23:59:59Z"
+    },
+    "input_id": "r3",
+    "input_version": "1"
+  },
+  {
+    "id": "r3_2",
+    "precondition": {
+      "and": [],
+      "or": [
+        {
+          "dimension": "data",
+          "compliance_pattern": "data_in_range",
+          "data_values": [
+            {
+              "element": "patient_age",
+              "domain": [
+                "integer"
+              ],
+              "value": [
+                ">65"
+              ]
+            }
+          ]
+        },
+        {
+          "dimension": "data",
+          "compliance_pattern": "data_in_range",
+          "data_values": [
+            {
+              "element": "medication_count",
+              "domain": [
+                "integer"
+              ],
+              "value": [
+                ">5"
+              ]
+            }
+          ]
+        }
+      ],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "doctor_approves_discharge",
+            "patient_discharged"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2031-12-31T23:59:59Z"
+    },
+    "input_id": "r3",
+    "input_version": "2"
+  }
+]

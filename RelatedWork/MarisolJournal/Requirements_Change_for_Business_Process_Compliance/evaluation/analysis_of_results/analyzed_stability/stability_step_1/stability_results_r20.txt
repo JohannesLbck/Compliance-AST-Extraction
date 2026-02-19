@@ -1,0 +1,47 @@
+Below is a detailed comparison table for the five provided JSON arrays. Each pairwise comparison is listed, with differences identified by field/path and a description. Identical arrays are grouped together.
+
+---
+
+### Identical Groups
+
+- **1st_r20, 2nd_r20, 4th_r20** are **identical**.
+
+---
+
+### Comparison Table
+
+| Compared JSONs                | Are they identical? | Field or path where the difference occurs                | Description of the difference                                                                                  |
+|-------------------------------|---------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1st_r20 vs 2nd_r20            | Yes                | -                                                        | No differences.                                                                                               |
+| 1st_r20 vs 3rd_r20            | No                 | `[0].precondition.or[0].data_values[0].domain[0]`        | 1st_r20: "yes", 3rd_r20: "true"                                                                               |
+| 1st_r20 vs 3rd_r20            | No                 | `[0].precondition.or[1].data_values[0].domain[0]`        | 1st_r20: "yes", 3rd_r20: "true"                                                                               |
+| 1st_r20 vs 3rd_r20            | No                 | `[1].precondition.and[0].data_values[0].element`         | 1st_r20: "donor.surgery_status", 3rd_r20: "donor_recent_surgery"                                              |
+| 1st_r20 vs 3rd_r20            | No                 | `[1].precondition.and[0].data_values[0].domain[0]`       | 1st_r20: "recent", 3rd_r20: "yes"                                                                             |
+| 1st_r20 vs 3rd_r20            | No                 | `[1].precondition.and[1].data_values[0].element`         | 1st_r20: "donor.blood_transfusion_status", 3rd_r20: "donor_recent_blood_transfusion"                          |
+| 1st_r20 vs 3rd_r20            | No                 | `[1].precondition.and[1].data_values[0].domain[0]`       | 1st_r20: "received", 3rd_r20: "yes"                                                                           |
+| 1st_r20 vs 4th_r20            | Yes                | -                                                        | No differences.                                                                                               |
+| 1st_r20 vs 5th_r20            | No                 | `[0].precondition.or[0].data_values[0].domain[0]`        | 1st_r20: "yes", 5th_r20: "true"                                                                               |
+| 1st_r20 vs 5th_r20            | No                 | `[0].precondition.or[1].data_values[0].domain[0]`        | 1st_r20: "yes", 5th_r20: "true"                                                                               |
+| 1st_r20 vs 5th_r20            | No                 | `[1].precondition.and[0].data_values[0].element`         | 1st_r20: "donor.surgery_status", 5th_r20: "donor.surgery_status" (identical)                                  |
+| 1st_r20 vs 5th_r20            | No                 | `[1].precondition.and[0].data_values[0].domain[0]`       | 1st_r20: "recent", 5th_r20: "recent" (identical)                                                              |
+| 1st_r20 vs 5th_r20            | No                 | `[1].precondition.and[1].data_values[0].element`         | 1st_r20: "donor.blood_transfusion_status", 5th_r20: "donor.blood_transfusion_status" (identical)              |
+| 1st_r20 vs 5th_r20            | No                 | `[1].precondition.and[1].data_values[0].domain[0]`       | 1st_r20: "received", 5th_r20: "received" (identical)                                                          |
+| 2nd_r20 vs 3rd_r20            | No                 | (see 1st_r20 vs 3rd_r20)                                 | Same as above.                                                                                                |
+| 2nd_r20 vs 4th_r20            | Yes                | -                                                        | No differences.                                                                                               |
+| 2nd_r20 vs 5th_r20            | No                 | (see 1st_r20 vs 5th_r20)                                 | Same as above.                                                                                                |
+| 3rd_r20 vs 4th_r20            | No                 | (see 1st_r20 vs 3rd_r20)                                 | Same as above.                                                                                                |
+| 3rd_r20 vs 5th_r20            | No                 | `[1].precondition.and[0].data_values[0].element`         | 3rd_r20: "donor_recent_surgery", 5th_r20: "donor.surgery_status"                                              |
+| 3rd_r20 vs 5th_r20            | No                 | `[1].precondition.and[0].data_values[0].domain[0]`       | 3rd_r20: "yes", 5th_r20: "recent"                                                                             |
+| 3rd_r20 vs 5th_r20            | No                 | `[1].precondition.and[1].data_values[0].element`         | 3rd_r20: "donor_recent_blood_transfusion", 5th_r20: "donor.blood_transfusion_status"                          |
+| 3rd_r20 vs 5th_r20            | No                 | `[1].precondition.and[1].data_values[0].domain[0]`       | 3rd_r20: "yes", 5th_r20: "received"                                                                           |
+| 4th_r20 vs 5th_r20            | No                 | (see 1st_r20 vs 5th_r20)                                 | Same as above.                                                                                                |
+
+---
+
+### Summary
+
+- **1st_r20, 2nd_r20, and 4th_r20** are fully identical.
+- **3rd_r20** and **5th_r20** are not identical to any other array or to each other.
+- The main differences are in the values of the `domain` fields (e.g., "yes" vs "true"), and in the structure/naming of the `element` fields in the `precondition.and` arrays for `r20_2`.
+
+If you need a more detailed breakdown for a specific pair, let me know!

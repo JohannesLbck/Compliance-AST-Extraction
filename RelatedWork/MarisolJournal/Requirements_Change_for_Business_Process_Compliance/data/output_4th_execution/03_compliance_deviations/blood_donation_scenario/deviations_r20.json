@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r20",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r20_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model (see diagram on page 1) prohibits blood collection if the donor has recently undergone surgery OR received a blood transfusion, as shown by the decision gateway after the interview and questionnaire. Version 2 of the requirement only prohibits blood collection if BOTH conditions are true (recent surgery AND received transfusion). Therefore, the process model violates the new, less restrictive requirement by unnecessarily blocking donors who meet only one of the conditions.",
+        "process_model_reference": [
+          "decision gateway after 'Conduct interview and questionnaire' and before 'Prepare for venepuncture', specifically the check for recent surgery or blood transfusion"
+        ],
+        "change_id": "r20_c1"
+      },
+      {
+        "deviation_id": "r20_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process continues to enforce the prohibition on blood collection for donors who have only recently undergone surgery or only received a blood transfusion, which is stricter than the updated requirement in Version 2. This results in unnecessary exclusion of eligible donors.",
+        "process_model_reference": [
+          "decision gateway after 'Conduct interview and questionnaire' and before 'Prepare for venepuncture', specifically the check for recent surgery or blood transfusion"
+        ],
+        "change_id": "r20_c2"
+      }
+    ]
+  }
+]

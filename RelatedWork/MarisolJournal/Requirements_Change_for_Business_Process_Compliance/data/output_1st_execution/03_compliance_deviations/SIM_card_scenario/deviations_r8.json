@@ -1,0 +1,45 @@
+[
+  {
+    "requirement_id": "r8",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r8_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model does not include any activity or control flow that terminates the process if sending the SIM card takes more than 30 days. The new requirement in Version 2 introduces an obligation to terminate the process in such cases, which is not reflected in the current process model.",
+        "process_model_reference": [
+          "send SIM card, process flow after 30 days"
+        ],
+        "change_id": "r8_c1"
+      },
+      {
+        "deviation_id": "r8_d2",
+        "deviation_type": "non-compliance",
+        "description": "The modality has changed from permission to obligation, requiring the process to enforce termination after 30 days. The process model allows sending the SIM card after 30 days, which directly violates the new obligation.",
+        "process_model_reference": [
+          "send SIM card"
+        ],
+        "change_id": "r8_c2"
+      },
+      {
+        "deviation_id": "r8_d3",
+        "deviation_type": "non-compliance",
+        "description": "The compliance pattern has changed from a duration constraint on sending the SIM card to the existence of a process termination event after 30 days. The process model does not include such a termination event, resulting in non-compliance.",
+        "process_model_reference": [
+          "terminate process"
+        ],
+        "change_id": "r8_c3"
+      },
+      {
+        "deviation_id": "r8_d4",
+        "deviation_type": "non-compliance",
+        "description": "The activity affected by the requirement has changed from 'send SIM card' to 'terminate process'. The process model does not contain a 'terminate process' activity triggered by exceeding 30 days, violating the new requirement.",
+        "process_model_reference": [
+          "terminate process"
+        ],
+        "change_id": "r8_c4"
+      }
+    ]
+  }
+]

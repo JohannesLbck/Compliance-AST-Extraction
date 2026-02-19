@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r20",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r20_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model prohibits blood collection if the donor has recently undergone surgery OR received a blood transfusion, but the new requirement only prohibits collection if BOTH conditions are true. The process model allows fewer donors to donate than the new requirement permits, resulting in non-compliance with the updated, less restrictive rule.",
+        "process_model_reference": [
+          "Collect blood"
+        ],
+        "change_id": "r20_c1"
+      },
+      {
+        "deviation_id": "r20_d2",
+        "deviation_type": "over-compliance",
+        "description": "The process model continues to enforce the prohibition on blood collection for donors who have only recently undergone surgery or only received a blood transfusion, which is stricter than the new requirement that only prohibits collection when both conditions are met.",
+        "process_model_reference": [
+          "Collect blood"
+        ],
+        "change_id": "r20_c2"
+      }
+    ]
+  }
+]

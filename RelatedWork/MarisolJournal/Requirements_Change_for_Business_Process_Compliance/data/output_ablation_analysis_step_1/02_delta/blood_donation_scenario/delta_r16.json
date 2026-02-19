@@ -1,0 +1,35 @@
+{
+  "requirement_id": "r16",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "control_flow",
+        "compliance_pattern": "activity_completed",
+        "activities": [
+          "blood collection"
+        ]
+      },
+      "change_id": "r16_c1"
+    },
+    {
+      "change": "delete",
+      "element": "norm",
+      "old": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "activity_during_activity",
+          "activities": [
+            "donor monitoring",
+            "bleeding"
+          ]
+        }
+      },
+      "change_id": "r16_c2"
+    }
+  ]
+}

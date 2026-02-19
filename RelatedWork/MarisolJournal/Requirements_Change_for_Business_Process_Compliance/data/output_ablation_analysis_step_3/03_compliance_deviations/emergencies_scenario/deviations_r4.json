@@ -1,0 +1,27 @@
+[
+  {
+    "requirement_id": "r4",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r4_d1",
+        "deviation_type": "non-compliance",
+        "description": "The new requirement introduces a precondition that blood analysis before surgery is only mandatory if the doctor does not authorize skipping it. The process model does not include any activity or event corresponding to 'doctor_authorizes_skipping_blood_analysis', so the process cannot satisfy the new precondition logic. This results in non-compliance with the stricter requirement.",
+        "process_model_reference": [
+          "Entire process, specifically the absence of 'doctor_authorizes_skipping_blood_analysis'"
+        ],
+        "change_id": "r4_c1"
+      },
+      {
+        "deviation_id": "r4_d2",
+        "deviation_type": "non-compliance",
+        "description": "The activity name in the requirement changed from 'blood analysis' to 'blood_analysis_test'. The process model does not contain an activity named 'blood_analysis_test', so the process cannot fulfill the new obligation as specified.",
+        "process_model_reference": [
+          "No BPMN element named 'blood_analysis_test'"
+        ],
+        "change_id": "r4_c2"
+      }
+    ]
+  }
+]

@@ -1,0 +1,115 @@
+### Ground Truth Deviation:
+> "x1 over-compliant (activities "Prepare Patient" and "Administer Anaesthesia" are now any longer forced to be one directly after the other)"
+
+---
+
+## Per-Execution Assessment
+
+---
+
+### r7 - output_1st_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The main deviation correctly identifies over-compliance: the process still enforces "immediately after" for "Prepare Patient" and "Administer Anaesthesia" even though the requirement now allows more flexibility. The description is clear and matches the ground truth. The "no impact" deviation correctly identifies a non-semantic label change. No extra or missed changes.
+
+---
+
+### r7 - output_2nd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution is nearly identical in meaning to the first. The over-compliance deviation is described with clear reference to the process and requirement change. The "no impact" deviation is also correct. No extra or missed changes.
+
+---
+
+### r7 - output_3rd_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Partial
+- **Updated Requirement Interpretation:** Partially Correct
+- **Process Behavior Interpretation:** Partially Correct
+- **Process Model Reference:** Equivalent
+- **Semantic Alignment Score:** 3/5
+- **Summary Comment:**  
+  The first deviation is correct and matches the ground truth. However, the second deviation incorrectly labels a label generalization as "over-compliance" rather than "no impact." It overstates the impact of the label change, suggesting the process is non-compliant due to not adopting more general activity names, which is not semantically required by the updated requirement. This introduces a false positive deviation.
+
+---
+
+### r7 - output_4th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  The main deviation is described in a way that is semantically equivalent to the ground truth. The "no impact" deviation is also correct. No extra or missed changes.
+
+---
+
+### r7 - output_5th_execution
+
+- **Deviation Type Match:** Yes
+- **Root Cause Match:** Yes
+- **Updated Requirement Interpretation:** Correct
+- **Process Behavior Interpretation:** Correct
+- **Process Model Reference:** Aligned
+- **Semantic Alignment Score:** 5/5
+- **Summary Comment:**  
+  This execution only lists the main over-compliance deviation and omits the "no impact" label change. However, the main deviation is fully correct and matches the ground truth. No extra or missed changes, but the absence of the "no impact" deviation is a minor omission (not affecting compliance).
+
+---
+
+## Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|----------------|------------|--------------------|------------------|------------------|-------|----------------------------|-------------------------------|
+| output_1st_execution  | Yes            | Yes        | Correct            | Correct          | Aligned          | 5/5   | No                         | Yes                           |
+| output_2nd_execution  | Yes            | Yes        | Correct            | Correct          | Aligned          | 5/5   | No                         | Yes                           |
+| output_3rd_execution  | Yes            | Partial    | Partial            | Partial          | Equivalent       | 3/5   | No                         | No                            |
+| output_4th_execution  | Yes            | Yes        | Correct            | Correct          | Aligned          | 5/5   | No                         | Yes                           |
+| output_5th_execution  | Yes            | Yes        | Correct            | Correct          | Aligned          | 5/5   | No                         | No                            |
+
+---
+
+### Closest and Furthest from Ground Truth
+
+- **Closest:**  
+  - `output_1st_execution`, `output_2nd_execution`, `output_4th_execution`, and `output_5th_execution` all score 5/5 and are semantically equivalent to the ground truth.
+- **Furthest:**  
+  - `output_3rd_execution` (3/5): Incorrectly flags a label generalization as an over-compliance deviation, which is not required by the updated requirement.
+
+---
+
+### Executions with Undetected or Non-impacting Changes
+
+- **Extra Undetected Changes?**  
+  - None. All executions detect the main deviation; no meaningful changes are missed.
+
+- **Non-impacting Changes Present?**  
+  - `output_1st_execution`, `output_2nd_execution`, and `output_4th_execution` correctly identify non-impacting label changes as "no impact" deviations.
+  - `output_5th_execution` omits the "no impact" deviation, but this is not a compliance issue.
+  - `output_3rd_execution` does not correctly handle the non-impacting change, instead misclassifying it as over-compliance.
+
+#### Types of Non-impacting Changes Observed
+
+- **Label/Name Changes:**  
+  - Changes from 'prepare_patient' and 'apply_anesthesia' to 'patient preparation' and 'anesthesia' are recognized as non-semantic, non-impacting changes in most executions.
+- **No evidence of formatting, metadata, or ordering changes.**
+
+---
+
+**In summary:**  
+Executions 1, 2, 4, and 5 are fully aligned with the ground truth. Execution 3 is less aligned due to a false positive deviation regarding label generalization. Non-impacting changes are correctly identified in most executions, with only minor omissions or misclassifications.

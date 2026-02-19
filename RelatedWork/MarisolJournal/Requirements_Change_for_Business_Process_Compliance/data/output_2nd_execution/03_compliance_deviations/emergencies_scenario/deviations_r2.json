@@ -1,0 +1,99 @@
+[
+  {
+    "requirement_id": "r2",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r2_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model on page 1 shows that the nurse performs the 'time out' procedure after obtaining patient consent. Version 2 requires the doctor to perform the 'time out' procedure, which is not reflected in the process model. This results in a violation of the stricter resource constraint introduced in Version 2.",
+        "process_model_reference": [
+          "conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c1"
+      },
+      {
+        "deviation_id": "r2_d2",
+        "deviation_type": "no impact",
+        "description": "The change from 'obtain_patient_consent, conduct_time_out_procedure' to 'obtain_patient_consent, surgical_intervention' in the control flow obligation does not introduce a stricter requirement, as the process already ensures that consent is obtained before surgical intervention.",
+        "process_model_reference": [
+          "obtain_patient_consent, surgical_intervention"
+        ],
+        "change_id": "r2_c2"
+      },
+      {
+        "deviation_id": "r2_d3",
+        "deviation_type": "no impact",
+        "description": "Switching the compliance pattern from 'A_precedes_B' to 'performed_by' for the activity 'obtain_patient_consent' does not introduce a stricter requirement, as the process already assigns this activity to the nurse.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c3"
+      },
+      {
+        "deviation_id": "r2_d4",
+        "deviation_type": "no impact",
+        "description": "Changing the resource dimension for 'obtain_patient_consent' to specify the nurse does not affect compliance, as the process already assigns this task to the nurse.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c4"
+      },
+      {
+        "deviation_id": "r2_d5",
+        "deviation_type": "no impact",
+        "description": "Specifying the nurse as the resource for 'obtain_patient_consent' matches the process model, which already assigns this activity to the nurse.",
+        "process_model_reference": [
+          "obtain_patient_consent"
+        ],
+        "change_id": "r2_c5"
+      },
+      {
+        "deviation_id": "r2_d6",
+        "deviation_type": "no impact",
+        "description": "Switching the compliance pattern from 'performed_by' to 'A_followed_by_B' for 'obtain_patient_consent' and 'time_out_procedure' does not introduce a stricter requirement, as the process already ensures the correct order.",
+        "process_model_reference": [
+          "obtain_patient_consent, conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c6"
+      },
+      {
+        "deviation_id": "r2_d7",
+        "deviation_type": "no impact",
+        "description": "Changing the dimension from 'resource' to 'control_flow' for the sequence between consent and time out does not introduce a stricter requirement, as the process already enforces this order.",
+        "process_model_reference": [
+          "obtain_patient_consent, conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c7"
+      },
+      {
+        "deviation_id": "r2_d8",
+        "deviation_type": "no impact",
+        "description": "Modifying the activities from 'obtain_patient_consent, conduct_time_out_procedure' to 'obtain_patient_consent, time_out_procedure' in the control flow does not introduce a stricter requirement, as the process already follows this sequence.",
+        "process_model_reference": [
+          "obtain_patient_consent, conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c8"
+      },
+      {
+        "deviation_id": "r2_d9",
+        "deviation_type": "no impact",
+        "description": "Removing the nurse as the resource for 'conduct_time_out_procedure' aligns with the new requirement, which now assigns this activity to the doctor.",
+        "process_model_reference": [
+          "conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c9"
+      },
+      {
+        "deviation_id": "r2_d10",
+        "deviation_type": "non-compliance",
+        "description": "The addition of the obligation that the 'time out' procedure must be performed by the doctor is not reflected in the process model, which assigns this task to the nurse. This results in a direct violation of the new requirement.",
+        "process_model_reference": [
+          "conduct_time_out_procedure"
+        ],
+        "change_id": "r2_c10"
+      }
+    ]
+  }
+]

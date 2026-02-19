@@ -1,0 +1,239 @@
+[
+  {
+    "id": "r1",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_in_activity",
+        "description": "change in activity from target entity, from action of a norm"
+      }
+    ]
+  },
+  {
+    "id": "r2",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_in_role",
+        "description": "change in role from target entity, from action of a norm"
+      }
+    ]
+  },
+  {
+    "id": "r3",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_in_role",
+        "description": "change in role from target entity from action in a norm"
+      },
+      {
+        "count": 1,
+        "type": "add_precondition",
+        "description": "add precondition"
+      },
+      {
+        "count": 1,
+        "type": "delete_norm",
+        "description": "delete norm"
+      }
+    ]
+  },
+  {
+    "id": "r4",
+    "changes": [
+      {
+        "count": 1,
+        "type": "add_precondition",
+        "description": "add precondition"
+      }
+    ]
+  },
+  {
+    "id": "r5",
+    "changes": [
+      {
+        "count": 2,
+        "type": "change_modality",
+        "description": "change modality from norms (O -> P)",
+        "from": "obligation",
+        "to": "permission"
+      }
+    ]
+  },
+  {
+    "id": "r6",
+    "changes": [
+      {
+        "count": 1,
+        "type": "add_precondition",
+        "description": "add precondition"
+      }
+    ]
+  },
+  {
+    "id": "r7",
+    "changes": [
+      {
+        "count": 1,
+        "type": "switch_compliance_pattern",
+        "description": "switch compliance pattern",
+        "from": "A_immediately_followed_by_B",
+        "to": "A_followed_by_B"
+      }
+    ]
+  },
+  {
+    "id": "r8",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_modality",
+        "description": "change modality from norms (P -> O)",
+        "from": "permission",
+        "to": "obligation"
+      }
+    ]
+  },
+  {
+    "id": "r9",
+    "changes": [
+      {
+        "count": 1,
+        "type": "add_requirement",
+        "description": "add requirement"
+      }
+    ]
+  },
+  {
+    "id": "r10",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_in_role",
+        "description": "change in role from target entity, from action of a norm"
+      }
+    ]
+  },
+  {
+    "id": "r11",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_modality",
+        "description": "change modality from norms (P -> O)",
+        "from": "permission",
+        "to": "obligation"
+      },
+      {
+        "count": 1,
+        "type": "switch_compliance_pattern",
+        "description": "switch compliance pattern (existence_of_A -> A_precedes_B)",
+        "from": "existence_of_A",
+        "to": "A_precedes_B"
+      },
+      {
+        "count": 1,
+        "type": "add_norm",
+        "description": "add norm (performed_by)",
+        "parameter": "performed_by"
+      }
+    ]
+  },
+  {
+    "id": "r12",
+    "changes": [
+      {
+        "count": 1,
+        "type": "delete_requirement",
+        "description": "delete requirement"
+      }
+    ]
+  },
+  {
+    "id": "r13",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_in_data",
+        "description": "change in data from target entity, from action of a norm"
+      }
+    ]
+  },
+  {
+    "id": "r14",
+    "changes": [
+      {
+        "count": 1,
+        "type": "delete_precondition",
+        "description": "delete precondition"
+      }
+    ]
+  },
+  {
+    "id": "r15",
+    "changes": [
+      {
+        "count": 1,
+        "type": "delete_norm",
+        "description": "delete norm"
+      }
+    ]
+  },
+  {
+    "id": "r16",
+    "changes": [
+      {
+        "count": 1,
+        "type": "delete_requirement",
+        "description": "delete requirement"
+      }
+    ]
+  },
+  {
+    "id": "r17",
+    "changes": [
+      {
+        "count": 1,
+        "type": "change_time_constraint",
+        "description": "change time constraint in target entity from an action of the precondition"
+      },
+      {
+        "count": 1,
+        "type": "delete_action",
+        "description": "delete action from the precondition"
+      },
+      {
+        "count": 1,
+        "type": "delete_norm",
+        "description": "delete norm"
+      }
+    ]
+  },
+  {
+    "id": "r18",
+    "changes": [
+      {
+        "count": 1,
+        "type": "add_requirement",
+        "description": "add requirement"
+      }
+    ]
+  },
+  {
+    "id": "r19",
+    "changes": []
+  },
+  {
+    "id": "r20",
+    "changes": [
+      {
+        "count": 1,
+        "type": "changed_logical_operator",
+        "description": "change logical operator OR -> AND",
+        "from": "OR",
+        "to": "AND"
+      }
+    ]
+  }
+]

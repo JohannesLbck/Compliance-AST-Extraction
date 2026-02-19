@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "condition_eventually_follows(tree, 'jobStatus == \"rejected\"', 'terminate')",
+        "R2": "precedence(tree, 'close case', 'translate segment')",
+        "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update tm automatically')",
+        "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+        "R5": "condition_eventually_follows(tree, 'caseStatus == \"accepted\"', 'update tm')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "condition_eventually_follows(tree, 'jobStatus == \"rejected\"', 'terminate')",
+        "R2": "leads_to(tree, 'translate segments', 'close case')",
+        "R3": "data_leads_to_absence(tree, 'alignmentStatus == \"unverified\"', 'update tm automatically')",
+        "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+        "R5": "condition_eventually_follows(tree, 'caseStatus == \"accepted\"', 'update tm')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, 'reject job', 'terminate')",
+        "R2": "precedence(tree, 'close case', 'translate segments')",
+        "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+        "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+        "R5": "leads_to(tree, 'accept case', 'update TM')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "condition_eventually_follows(tree, 'jobStatus == \"rejected\"', 'terminate')",
+        "R2": "precedence(tree, 'close case', 'translate segments')",
+        "R3": "data_leads_to_absence(tree, 'alignmentStatus == \"unverified\"', 'update TM automatically')",
+        "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+        "R5": "condition_eventually_follows(tree, 'caseStatus == \"accepted\"', 'update TM')"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "requirement_id": "r3",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r3_d1",
+        "deviation_type": "no impact",
+        "description": "The change from '[66,)' to '>65' in the patient age domain is a technical rewording with no substantive effect on the process, as both expressions cover the same patient group (patients older than 65).",
+        "process_model_reference": [
+          "patient_age data check"
+        ],
+        "change_id": "r3_c1"
+      },
+      {
+        "deviation_id": "r3_d2",
+        "deviation_type": "non-compliance",
+        "description": "The process does not require discharge approval by a doctor for patients with more than 5 medications. The new requirement obligates doctor approval for this group, but the process only involves nurse approval and does not check medication count.",
+        "process_model_reference": [
+          "doctor_approves_discharge, medication_count data check"
+        ],
+        "change_id": "r3_c2"
+      },
+      {
+        "deviation_id": "r3_d3",
+        "deviation_type": "non-compliance",
+        "description": "The process requires nurse approval before discharge, but the new requirement mandates doctor approval instead. The process does not include a step for doctor approval before patient discharge.",
+        "process_model_reference": [
+          "doctor_approves_discharge"
+        ],
+        "change_id": "r3_c3"
+      },
+      {
+        "deviation_id": "r3_d4",
+        "deviation_type": "over-compliance",
+        "description": "The process continues to require nurse approval for discharge, but the new requirement no longer obligates nurse approval. This results in unnecessary enforcement of an outdated constraint.",
+        "process_model_reference": [
+          "nurse_approves_discharge"
+        ],
+        "change_id": "r3_c4"
+      },
+      {
+        "deviation_id": "r3_d5",
+        "deviation_type": "over-compliance",
+        "description": "The process enforces a 24-hour time constraint for nurse approval before discharge, but the new requirement does not include any temporal constraint. This results in unnecessary restriction.",
+        "process_model_reference": [
+          "nurse_approves_discharge, patient_discharged (24-hour time lag)"
+        ],
+        "change_id": "r3_c5"
+      },
+      {
+        "deviation_id": "r3_d6",
+        "deviation_type": "no impact",
+        "description": "The extension of the temporal validity period does not affect the compliance of the process, as it only changes the dates during which the rule applies.",
+        "process_model_reference": [
+          "temporal validity"
+        ],
+        "change_id": "r3_c6"
+      }
+    ]
+  }
+]

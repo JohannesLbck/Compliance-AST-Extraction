@@ -1,0 +1,14 @@
+{
+  "requirement_id": "r19",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "obligation -> prohibition",
+      "element": "modality",
+      "old": "obligation",
+      "new": "prohibition",
+      "change_id": "r19_c1"
+    }
+  ]
+}

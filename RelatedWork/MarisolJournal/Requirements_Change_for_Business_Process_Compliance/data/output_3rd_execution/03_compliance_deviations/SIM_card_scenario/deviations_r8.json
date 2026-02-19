@@ -1,0 +1,54 @@
+[
+  {
+    "requirement_id": "r8",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r8_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model does not include any activity or gateway that terminates the process if sending the SIM card takes more than 30 days. The new requirement introduces an obligation to terminate the process in such cases, which is not reflected in the current process model.",
+        "process_model_reference": [
+          "send SIM card, process flow after 30 days"
+        ],
+        "change_id": "r8_c1"
+      },
+      {
+        "deviation_id": "r8_d2",
+        "deviation_type": "non-compliance",
+        "description": "The modality has changed from permission to obligation, requiring the process to enforce termination after 30 days. The process model allows the SIM card to be sent after 30 days and does not enforce termination, directly violating the new obligation.",
+        "process_model_reference": [
+          "send SIM card, process continuation beyond 30 days"
+        ],
+        "change_id": "r8_c2"
+      },
+      {
+        "deviation_id": "r8_d3",
+        "deviation_type": "non-compliance",
+        "description": "The compliance pattern has changed from a duration constraint to the existence of a termination activity. The process model does not contain a 'terminate_process' activity or equivalent control flow, resulting in non-compliance.",
+        "process_model_reference": [
+          "absence of terminate_process activity"
+        ],
+        "change_id": "r8_c3"
+      },
+      {
+        "deviation_id": "r8_d4",
+        "deviation_type": "non-compliance",
+        "description": "The activity under scrutiny has changed from 'send_SIM_card' to 'terminate_process'. The process model does not include a 'terminate_process' activity, failing to meet the new requirement.",
+        "process_model_reference": [
+          "terminate_process"
+        ],
+        "change_id": "r8_c4"
+      },
+      {
+        "deviation_id": "r8_d5",
+        "deviation_type": "no impact",
+        "description": "The removal of the explicit temporal constraint (min_duration_minutes: 43200) is subsumed by the new obligation to terminate the process, which is already not implemented in the process model.",
+        "process_model_reference": [
+          "temporal constraints on send SIM card"
+        ],
+        "change_id": "r8_c5"
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "requirement_id": "r8",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r8_d1",
+        "deviation_type": "non-compliance",
+        "description": "The process model does not include any activity or control flow that terminates the phone company process if it takes longer than 30 days. The new requirement introduces an obligation to terminate the process after 30 days, which is not enforced in the current process.",
+        "process_model_reference": [
+          "entire phone company process (duration exceeding 30 days without termination)"
+        ],
+        "change_id": "r8_c1"
+      },
+      {
+        "deviation_id": "r8_d2",
+        "deviation_type": "non-compliance",
+        "description": "The process model allows the 'send SIM card' activity to occur after 30 days, which is now prohibited. The new requirement obligates process termination instead of continuing to send the SIM card after the 30-day threshold.",
+        "process_model_reference": [
+          "send SIM card"
+        ],
+        "change_id": "r8_c2"
+      },
+      {
+        "deviation_id": "r8_d3",
+        "deviation_type": "no impact",
+        "description": "The change in compliance pattern from 'duration' to 'existence_of_A' only formalizes the new obligation to terminate the process, which is already covered by the stricter requirement. The compliance deviation is already captured by the lack of process termination.",
+        "process_model_reference": [
+          "terminate phone company process"
+        ],
+        "change_id": "r8_c3"
+      },
+      {
+        "deviation_id": "r8_d4",
+        "deviation_type": "no impact",
+        "description": "The modification of the dimension from 'time' to 'control_flow' reflects the shift from a temporal to a control flow obligation, but does not introduce a new compliance deviation beyond the lack of process termination.",
+        "process_model_reference": [
+          "terminate phone company process"
+        ],
+        "change_id": "r8_c4"
+      },
+      {
+        "deviation_id": "r8_d5",
+        "deviation_type": "non-compliance",
+        "description": "The process model does not include the activity 'terminate phone company process' when the process exceeds 30 days, violating the new obligation.",
+        "process_model_reference": [
+          "terminate phone company process"
+        ],
+        "change_id": "r8_c5"
+      },
+      {
+        "deviation_id": "r8_d6",
+        "deviation_type": "no impact",
+        "description": "The removal of the temporal constraint on 'send SIM card' is superseded by the new obligation to terminate the process, which is already not enforced in the process model.",
+        "process_model_reference": [
+          "send SIM card"
+        ],
+        "change_id": "r8_c6"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "requirement_id": "r16",
+    "from_version": 1,
+    "to_version": 2,
+    "deviations": [
+      {
+        "deviation_id": "r16_d1",
+        "deviation_type": "over-compliance",
+        "description": "The process model continues to require donor monitoring after blood collection for the duration of bleeding, even though Version 2 has removed this obligation. The process enforces a constraint that is no longer required by the updated compliance requirement.",
+        "process_model_reference": [
+          "donor monitoring after blood collection"
+        ],
+        "change_id": "r16_c1"
+      }
+    ]
+  }
+]

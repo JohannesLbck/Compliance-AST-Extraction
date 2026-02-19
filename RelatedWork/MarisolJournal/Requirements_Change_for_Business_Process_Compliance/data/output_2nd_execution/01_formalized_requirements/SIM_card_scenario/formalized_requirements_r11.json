@@ -1,0 +1,55 @@
+[
+  {
+    "id": "r11_1",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "permission",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "ask_for_consent_to_customer"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r11",
+    "input_version": "1"
+  },
+  {
+    "id": "r11_2",
+    "precondition": {
+      "and": [],
+      "or": [],
+      "not": []
+    },
+    "norms": [
+      {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "A_precedes_B",
+          "activities": [
+            "ask_consent",
+            "retrieve_personal_data"
+          ]
+        }
+      }
+    ],
+    "temporal_validity": {
+      "start": "0000-01-01T00:00:00Z",
+      "end": "9999-12-31T23:59:59Z"
+    },
+    "input_id": "r11",
+    "input_version": "2"
+  }
+]

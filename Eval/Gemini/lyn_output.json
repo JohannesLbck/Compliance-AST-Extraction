@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "requirements": {
+        "R1": "leads_to_absence(tree, 'milestone deadline', 'upload milestone')",
+        "R2": "leads_to_absence(tree, 'exercise deadline', 'upload exercise')",
+        "R3": "leads_to(tree, 'upload milestone', 'give feedback')",
+        "R4": "executed_by(tree, 'give feedback', 'instructor')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to_absence(tree, 'reach milestone deadline', 'upload milestone')",
+        "R2": "leads_to_absence(tree, 'reach exercise deadline', 'upload exercise')",
+        "R3": "leads_to(tree, 'upload milestone', 'give feedback')",
+        "R4": "executed_by(tree, 'give feedback', 'instructor')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to_absence(tree, 'milestone deadline', 'upload milestone')",
+        "R2": "leads_to_absence(tree, 'exercise deadline', 'upload exercise')",
+        "R3": "leads_to(tree, 'upload milestone', 'give feedback')",
+        "R4": "executed_by(tree, 'give feedback', 'instructor')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to_absence(tree, 'reach milestone deadline', 'upload milestone')",
+        "R2": "leads_to_absence(tree, 'reach exercise deadline', 'upload exercise')",
+        "R3": "leads_to(tree, 'upload milestone', 'give feedback')",
+        "R4": "executed_by(tree, 'give feedback', 'instructor')"
+      }
+    }
+  ]
+}

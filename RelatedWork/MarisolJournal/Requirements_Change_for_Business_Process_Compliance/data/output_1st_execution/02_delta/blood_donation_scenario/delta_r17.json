@@ -1,0 +1,73 @@
+{
+  "requirement_id": "r17",
+  "from_version": "1",
+  "to_version": "2",
+  "changes": [
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "time",
+        "compliance_pattern": "duration",
+        "activities": [
+          "bleeding_or_pain_observed"
+        ],
+        "temporal_constraints": [
+          {
+            "min_duration_minutes": 15
+          }
+        ]
+      },
+      "change_id": "r17_c1"
+    },
+    {
+      "change": "delete",
+      "element": "action",
+      "old": {
+        "dimension": "data",
+        "compliance_pattern": "data_available",
+        "data_values": [
+          {
+            "element": "donor_status",
+            "value": [
+              "bleeding_or_pain"
+            ]
+          }
+        ]
+      },
+      "change_id": "r17_c2"
+    },
+    {
+      "change": "add",
+      "element": "action",
+      "new": {
+        "dimension": "time",
+        "compliance_pattern": "duration",
+        "activities": [
+          "donor_bleeding"
+        ],
+        "temporal_constraints": [
+          {
+            "min_duration_minutes": 20
+          }
+        ]
+      },
+      "change_id": "r17_c3"
+    },
+    {
+      "change": "delete",
+      "element": "norm",
+      "old": {
+        "modality": "obligation",
+        "action": {
+          "dimension": "control_flow",
+          "compliance_pattern": "existence_of_A",
+          "activities": [
+            "record_reason_in_system"
+          ]
+        }
+      },
+      "change_id": "r17_c4"
+    }
+  ]
+}

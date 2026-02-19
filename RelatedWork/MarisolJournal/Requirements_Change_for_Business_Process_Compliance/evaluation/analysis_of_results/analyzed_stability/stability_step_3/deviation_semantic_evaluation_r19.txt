@@ -1,0 +1,158 @@
+Let's evaluate each execution against the **ground truth deviation**:
+
+> **Ground Truth Deviation:**  
+> "x1 over-compliant (Activity "Measure blood pressure and pulse" is no longer enforced)"
+
+---
+
+## r19 - output_1st_execution
+
+### Deviation Type Match: **Yes**
+- All deviations are labeled "over-compliance," matching the ground truth.
+
+### Root Cause Match: **Yes**
+- All deviations correctly identify that the process still enforces "measure blood pressure and pulse" as a prerequisite, which is no longer required.
+
+### Updated Requirement Interpretation: **Correct**
+- Descriptions accurately state that the activity is now permitted/optional, not required.
+
+### Process Behavior Interpretation: **Correct**
+- The process is described as unnecessarily enforcing the measurement, which is the essence of over-compliance.
+
+### Process Model Reference: **Aligned**
+- References are specific and directly point to the relevant activities and their relationships.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution precisely captures the over-compliance: the process still enforces a step that is no longer required. The root cause, requirement change, and process behavior are all correctly interpreted and described. No extra or non-impacting changes are present.
+
+---
+
+## r19 - output_2nd_execution
+
+### Deviation Type Match: **Yes**
+- Both deviations are "over-compliance," matching the ground truth.
+
+### Root Cause Match: **Yes**
+- Both deviations identify that the process still requires the measurement, which is no longer required.
+
+### Updated Requirement Interpretation: **Correct**
+- Both descriptions state that the measurement is now permitted/optional, not required.
+
+### Process Behavior Interpretation: **Correct**
+- The process is described as enforcing an outdated constraint, matching the ground truth.
+
+### Process Model Reference: **Aligned**
+- References are clear and point to the relevant activities.
+
+### Semantic Alignment Score: **5/5**
+
+**Summary Comment:**  
+This execution is semantically equivalent to the ground truth. It correctly identifies the over-compliance, the root cause, and the process behavior. No extra or non-impacting changes are present.
+
+---
+
+## r19 - output_3rd_execution
+
+### Deviation Type Match: **No**
+- Deviation is labeled "non-compliance" instead of "over-compliance."
+
+### Root Cause Match: **No**
+- The deviation claims the process violates a new "prohibition," which is not the case; the requirement is now permissive, not prohibitive.
+
+### Updated Requirement Interpretation: **Incorrect**
+- Misinterprets the updated requirement as a prohibition rather than a removal of obligation.
+
+### Process Behavior Interpretation: **Incorrect**
+- Describes the process as violating a prohibition, not as being unnecessarily restrictive.
+
+### Process Model Reference: **Aligned**
+- References the correct activities, but the semantic interpretation is off.
+
+### Semantic Alignment Score: **1/5**
+
+**Summary Comment:**  
+This execution fundamentally misinterprets the requirement change, treating it as a new prohibition rather than a relaxation. The deviation type and behavioral interpretation are incorrect.
+
+---
+
+## r19 - output_4th_execution
+
+### Deviation Type Match: **No**
+- All deviations are "non-compliance," not "over-compliance."
+
+### Root Cause Match: **No**
+- Descriptions claim the process violates a new prohibition, which is not the case.
+
+### Updated Requirement Interpretation: **Incorrect**
+- Interprets the updated requirement as prohibiting the measurement, not as making it optional.
+
+### Process Behavior Interpretation: **Incorrect**
+- Describes the process as violating a prohibition, not as being unnecessarily restrictive.
+
+### Process Model Reference: **Aligned**
+- References are detailed and accurate in terms of process structure, but the semantic interpretation is incorrect.
+
+### Semantic Alignment Score: **1/5**
+
+**Summary Comment:**  
+This execution misinterprets the requirement change as a prohibition, leading to an incorrect deviation type and behavioral description.
+
+---
+
+## r19 - output_5th_execution
+
+### Deviation Type Match: **No**
+- Both deviations are "non-compliance," not "over-compliance."
+
+### Root Cause Match: **No**
+- Descriptions claim the process violates a new prohibition, which is not the case.
+
+### Updated Requirement Interpretation: **Incorrect**
+- Interprets the updated requirement as prohibiting the measurement, not as making it optional.
+
+### Process Behavior Interpretation: **Incorrect**
+- Describes the process as violating a prohibition, not as being unnecessarily restrictive.
+
+### Process Model Reference: **Aligned**
+- References are detailed and accurate in terms of process structure, but the semantic interpretation is incorrect.
+
+### Semantic Alignment Score: **1/5**
+
+**Summary Comment:**  
+This execution misinterprets the requirement change as a prohibition, leading to an incorrect deviation type and behavioral description.
+
+---
+
+# Summary Table
+
+| Execution             | Deviation Type | Root Cause | Updated Requirement | Process Behavior | Model Reference | Score | Extra Undetected Changes? | Non-impacting Changes Present? |
+|-----------------------|---------------|------------|--------------------|------------------|-----------------|-------|---------------------------|-------------------------------|
+| output_1st_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_2nd_execution  | Yes           | Yes        | Correct            | Correct          | Aligned         | 5/5   | No                        | No                            |
+| output_3rd_execution  | No            | No         | Incorrect          | Incorrect        | Aligned         | 1/5   | No                        | No                            |
+| output_4th_execution  | No            | No         | Incorrect          | Incorrect        | Aligned         | 1/5   | No                        | No                            |
+| output_5th_execution  | No            | No         | Incorrect          | Incorrect        | Aligned         | 1/5   | No                        | No                            |
+
+---
+
+## Summary
+
+- **Closest to Ground Truth:**  
+  - **output_1st_execution** and **output_2nd_execution** (Score: 5/5). Both correctly identify the over-compliance, the root cause, and the process behavior, with accurate references.
+- **Furthest from Ground Truth:**  
+  - **output_3rd_execution**, **output_4th_execution**, and **output_5th_execution** (Score: 1/5). All misinterpret the requirement change as a prohibition, leading to incorrect deviation types and behavioral descriptions.
+
+---
+
+## Extra Undetected Changes / Non-impacting Changes
+
+- **Extra Undetected Changes?**  
+  - **No** executions missed meaningful changes; all relevant deviations were detected.
+
+- **Non-impacting Changes Present?**  
+  - **No** non-impacting changes (such as formatting, metadata, ordering, or renaming) were observed in any execution.
+
+**Explanation:**  
+All executions focused on the core compliance-relevant change. No irrelevant or cosmetic changes were present in the deviation lists. All process model references were semantically relevant to the compliance issue at hand.
