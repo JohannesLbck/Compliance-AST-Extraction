@@ -109,6 +109,9 @@ def main():
         "DATA PATTERNS (CRITICAL)\n"
         "=" * 80 + "\n"
         "Use send_exist() and receive_exist() instead of embedding data in activity labels.\n\n"
+        "However, do not use data existence patterns for physical objects. A product being shipped should be modeled as activities, not data objects.\n\n"
+        "Finnaly, if a dataobject should stay in a certain domain, then conditional checks should prevent it from leaving the domain.\n\n"
+        "E.g., if a bank account should not have a negative balance, then the condition 'accountBalance >= withdrawalAmount' should be used to prevent unallowed withdrawals\n\n"
 
         "SYSTEM PERSPECTIVE EXAMPLES:\n"
         "  NL: 'Customer receives email notification'\n"
@@ -303,8 +306,7 @@ TEXT_MAPPING = {
     "pcl": (
         "All new customers must be scanned against provided databases for identity checks.\n"
         "Retain history of identity checks performed.\n"
-        "Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers.\n"
-        "Accounts of type VIP are allowed to have a non positive balance and no approval is required for this type of accounts."
+        "Accounts must maintain a positive balance, unless approved by a bank manager, or they are a VIP customer.\n"
     ),
 
     "ppsl": (

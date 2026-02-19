@@ -2,8 +2,7 @@
   "NL": {
     "R1": "All new customers must be scanned against provided databases for identity checks.",
     "R2": "Retain history of identity checks performed.",
-    "R3": "Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers.",
-    "R4": "Accounts of type VIP are allowed to have a non positive balance and no approval is required for this type of accounts"
+    "R3": "Accounts must maintain a positive balance, unless approved by a bank manager, or they are a VIP customer."
   },
   "Humanmade": {
     "R1": "condition_eventually_follows('data.state == \"new\"', 'identity check')",
