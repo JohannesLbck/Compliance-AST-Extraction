@@ -48,25 +48,18 @@ def main():
     doc = Path("../methods_doc_concise.md").read_text(encoding="utf-8") ## Shortened version of the documentation to fit within token limits
     #doc = Path("../methods_doc.md").read_text(encoding="utf-8") ## Full version of the documentation
     # -----------------------
-    # Prepare prompt with improved structure
+    # Prepare prompt
     # -----------------------
     prompt = (
-        "=" * 80 + "\n"
         "TASK: COMPLIANCE REQUIREMENT EXTRACTION\n"
-        "=" * 80 + "\n"
         "Extract business process requirements from natural language text and convert them\n"
         "into formal compliance pattern AST (Abstract Syntax Tree) expressions.\n\n"
 
-        "=" * 80 + "\n"
         "OUTPUT FORMAT\n"
-        "=" * 80 + "\n"
         "Each requirement must be formatted as: R{NUMBER}: <AST expression>\n"
         "Example: R1: leads_to(tree, 'submit application', 'review application')\n"
         "Example: R2: executed_by(tree, 'approve request', 'manager')\n\n"
-
-        "=" * 80 + "\n"
-        "CORE PRINCIPLES (READ CAREFULLY)\n"
-        "=" * 80 + "\n"
+        
         "1. SYSTEM PERSPECTIVE: Model requirements from the system's viewpoint, NOT external actors.\n"
         "   - If a customer receives an email, the system sent it.\n"
         "   - Use send_exist() for outgoing data, receive_exist() for incoming data.\n\n"
@@ -93,9 +86,7 @@ def main():
         "   - ✓ RIGHT: leads_to('deliverOrder', 'End Activity') and leads_to('rejectOrder', 'End Activity') and exists('deliverOrder') and exists('rejectOrder')\n\n"
         "   - This is not always the case as the natural language can also be describing different options of a compliant process in which case a disjunction of patterns would be correct.'.\n"
 
-        "=" * 80 + "\n"
         "TIME HANDLING\n"
-        "=" * 80 + "\n"
         "- Encode as integer seconds whenever possible.\n"
         "  Example: 7 working days = 604800 seconds\n"
         "- For non-specific or complex times, use descriptive strings.\n"
@@ -105,9 +96,7 @@ def main():
         "  * 'End Activity' = process end event\n"
         "  * 'terminate' = immediately stop/end process\n\n"
 
-        "=" * 80 + "\n"
         "DATA PATTERNS (CRITICAL)\n"
-        "=" * 80 + "\n"
         "Use send_exist() and receive_exist() instead of embedding data in activity labels.\n\n"
         "However, do not use data existence patterns for physical objects. A product being shipped should be modeled as activities, not data objects.\n\n"
         "Finnaly, if a dataobject should stay in a certain domain, then conditional checks should prevent it from leaving the domain.\n\n"
@@ -128,9 +117,7 @@ def main():
         "- Examples: 'loanAmount > 1000000', 'customerStatus == \"gold\"', 'riskScore < 50'\n"
         "- Combine with parentheses: '(loanAmount > 1000000) and (customerStatus == \"gold\")'\n\n"
 
-        "=" * 80 + "\n"
         "FAILURE PATTERNS (USE WITH CARE)\n"
-        "=" * 80 + "\n"
         "ONLY use failure_* patterns when an activity itself fails (system cannot execute it).\n"
         "Do NOT use for negative condition results.\n\n"
 
@@ -145,69 +132,9 @@ def main():
         "  ✓ failure_eventually_follows(tree, 'send email', 'retry sending')\n"
         "  REASON: The system cannot execute 'send email' (actual failure).\n\n"
 
-        "=" * 80 + "\n"
-        "COMMON TRANSFORMATIONS (REFERENCE)\n"
-        "=" * 80 + "\n"
-        "Pattern translations from natural language:\n\n"
-
-        "1. ORDERING/PRECEDENCE:\n"
-        "   'A must happen before B' OR 'B only after A'\n"
-        "   → leads_to(tree, 'a', 'b')\n\n"
-
-        "2. NEGATION/PREVENTION:\n"
-        "   'A cannot happen after B' OR 'After A, B is impossible'\n"
-        "   → leads_to_absence(tree, 'a', 'b')\n\n"
-
-        "3. CONDITIONS:\n"
-        "   'If X is true, then eventually A happens'\n"
-        "   → condition_eventually_follows(tree, 'X==true', 'a')\n\n"
-
-        "4. RESOURCE ASSIGNMENT:\n"
-        "   'A must be performed by role R'\n"
-        "   → executed_by(tree, 'a', 'R')\n\n"
-
-        "5. DATA FLOW:\n"
-        "   'X must be received before Y can occur'\n"
-        "   → leads_to(tree, receive_exist(tree, 'X'), 'y')\n\n"
-
-        "6. TIMING:\n"
-        "   'A must complete within N seconds before B happens'\n"
-        "   → timed_alternative(tree, 'a', 'b', N)\n\n"
-
-        "7. PARALLEL:\n"
-        "   'A and B must occur simultaneously'\n"
-        "   → parallel(tree, 'a', 'b')\n\n"
-
-        "=" * 80 + "\n"
-        "MULTI-REQUIREMENT HANDLING\n"
-        "=" * 80 + "\n"
-        "If one NL sentence describes multiple independent constraints, create separate R{N} entries.\n"
-        "If constraints are interdependent, combine them using 'and' operator within a single entry.\n\n"
-
-        "Example:\n"
-        "  NL: 'Check credit report and verify identity before opening account'\n"
-        "  R1: leads_to(tree, 'check credit report', 'open account')\n"
-        "  R2: leads_to(tree, 'verify identity', 'open account')\n\n"
-
-        "=" * 80 + "\n"
-        "VALIDATION CHECKLIST (Before submitting)\n"
-        "=" * 80 + "\n"
-        "□ All activity labels are in active voice (verb-object)\n"
-        "□ No resource names appear in activity labels\n"
-        "□ All data objects use camelCase\n"
-        "□ Failure patterns are only used for actual activity failures\n"
-        "□ Time values are integers (seconds) when specific, strings when not\n"
-        "□ System perspective applied consistently (not actor perspective)\n"
-        "□ Data presence uses send_exist/receive_exist, not activity labels\n\n"
-
-        "=" * 80 + "\n"
         "COMPLIANCE PATTERN REFERENCE\n"
-        "=" * 80 + "\n"
         f"{doc}\n\n"
-
-        "=" * 80 + "\n"
         "TEXT TO EXTRACT FROM\n"
-        "=" * 80 + "\n"
         f"{text}"
     )
 
