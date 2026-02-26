@@ -96,5 +96,61 @@
     "R3": "data_leads_to_absence(tree, 'alignmentUnverified', 'update tm automatically')",
     "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
     "R5": "leads_to(tree, 'accept case', 'update tm')"
+  },
+  "Generated13": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segments')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update translation memory')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update translation memory')"
+  },
+  "Generated14": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update tm automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update tm')"
+  },
+  "Generated15": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update TM')"
+  },
+  "Generated16": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update TM')"
+  },
+  "Generated17": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segments')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update translation memory')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update translation memory')"
+  },
+  "Generated18": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update tm automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update tm')"
+  },
+  "Generated19": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update TM')"
+  },
+  "Generated20": {
+    "R1": "directly_follows(tree, 'reject job', 'End Activity')",
+    "R2": "precedence(tree, 'close case', 'translate segment')",
+    "R3": "data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+    "R4": "leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5": "leads_to(tree, 'accept case', 'update TM')"
   }
 }

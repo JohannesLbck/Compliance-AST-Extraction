@@ -51,15 +51,23 @@ def main():
     # Prepare prompt
     # -----------------------
     prompt = (
-        "TASK: Extract compliance requirements from text and convert to AST expressions.\n"
-        "Format: R{NUMBER}: <expression>\n\n"
+        "TASK: COMPLIANCE REQUIREMENT EXTRACTION\n"
+        "Extract business process requirements from natural language text and convert them\n"
+        "into formal compliance pattern AST (Abstract Syntax Tree) expressions.\n\n"
 
-        "CRITICAL RULES:\n"
-        "1. SYSTEM PERSPECTIVE: Model from system viewpoint. 'Customer receives email' = system sent it.\n"
-        "   Use send_exist() for outgoing, receive_exist() for incoming data.\n\n"
+        "OUTPUT FORMAT\n"
+        "Each requirement must be formatted as: R{NUMBER}: <AST expression>\n"
+        "Example: R1: leads_to(tree, 'submit application', 'review application')\n"
+        "Example: R2: executed_by(tree, 'approve request', 'manager')\n\n"
+        
+        "1. SYSTEM PERSPECTIVE: Model requirements from the system's viewpoint, NOT external actors.\n"
+        "   - If a customer receives an email, the system sent it.\n"
+        "   - Use send_exist() for outgoing data, receive_exist() for incoming data.\n\n"
 
-        "2. ACTIVITY LABELS: Active voice, no articles or resource names.\n"
-        "   ✓ 'approve request'  ✗ 'manager approves request'\n\n"
+        "2. ACTIVITY LABELS:\n"
+        "   - Use active voice without articles (a, the).\n"
+        "   - Examples: 'approve request', 'scan document', 'send email' (NOT 'the approval', 'a scan').\n"
+        "   - NEVER include resource names in activity labels.\n\n"
 
         "3. RESOURCE SPECIFICATION:\n"
         "   - ALWAYS use executed_by(tree, 'activity', 'resource') pattern.\n"
@@ -67,28 +75,66 @@ def main():
         "   - ✗ WRONG:  executed_by(tree, 'manager approves request', 'manager')\n"
         "   - ✓ RIGHT:  executed_by(tree, 'approve request', 'manager')\n\n"
 
-        "4. DATA OBJECTS: camelCase names, not physical objects.\n"
-        "   ✓ 'accountBalance'  ✗ 'sim card', 'pizza'\n"
-        "   Use conditions to enforce domain constraints:\n"
-        "   data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')\n\n"
+        "4. DATA OBJECT NAMING:\n"
+        "   - Use camelCase for all data object names.\n"
+        "   - Examples: 'customerData', 'loanApplication', 'emailNotification'.\n\n"
 
-        "5. DATA CONDITIONS: Format = 'dataName operator value'\n"
-        "   Operators: not, or, ==, and, >, <, >=, <=\n"
-        "   Example: '(loanAmount > 1000000) and (status == \"gold\")'\n\n"
+        "5. DESIGN TIME PERSPECTIVE:\n"
+        "   - Rules are from the design time perspective. This means that a disjunction in the natural language can lead to a conjunction of patterns, if both patterns have to exist in the process\n"
+        "   - Example: 'Before a process ends, the order has to either be delivered or rejected'.\n"
+        "   - ✗ WRONG: precedence('End Activity', 'deliverOrder') or precedence('End Activity', 'rejectOrder')\n"
+        "   - ✓ RIGHT: leads_to('deliverOrder', 'End Activity') and leads_to('rejectOrder', 'End Activity') and exists('deliverOrder') and exists('rejectOrder')\n\n"
+        "   - This is not always the case as the natural language can also be describing different options of a compliant process in which case a disjunction of patterns would be correct.'.\n"
 
-        "6. DESIGN TIME: Disjunction in NL may need conjunction of patterns.\n"
-        "   'Either delivered OR rejected' = both must exist in process\n\n"
+        "TIME HANDLING\n"
+        "- Encode as integer seconds whenever possible.\n"
+        "  Example: 7 working days = 604800 seconds\n"
+        "- For non-specific or complex times, use descriptive strings.\n"
+        "  Example: 'predefined period', 'business hours'\n"
+        "- Special keywords:\n"
+        "  * 'Start Activity' = process start event\n"
+        "  * 'End Activity' = process end event\n"
+        "  * 'terminate' = immediately stop/end process\n\n"
 
-        "7. TIME: Encode seconds if possible (7 days = 604800s). String descriptiors if constraint is vague.\n"
-        "   Special Activities: 'Start Activity', 'End Activity', 'terminate'\n\n"
+        "DATA PATTERNS (CRITICAL)\n"
+        "Use send_exist() and receive_exist() instead of embedding data in activity labels.\n\n"
+        "However, do not use data existence patterns for physical objects. A product being shipped should be modeled as activities, not data objects.\n\n"
+        "Finnaly, if a dataobject should stay in a certain domain, then conditional checks should prevent it from leaving the domain.\n\n"
+        "E.g., if a bank account should not have a negative balance, then the condition 'accountBalance >= withdrawalAmount' should be used to prevent unallowed withdrawals\n\n"
 
-        "8. failure_* patterns: ONLY for system execution failures, not negative results.\n"
-        "   ✗ 'check fails' (negative result) → ✓ condition_eventually_follows(tree, 'checkFailed == true', ...)\n"
-        "   ✓ 'system fails to send' (cannot execute) → failure_eventually_follows(...)\n\n"
+        "SYSTEM PERSPECTIVE EXAMPLES:\n"
+        "  NL: 'Customer receives email notification'\n"
+        "  ✗ WRONG: receive_exist(tree, 'emailNotification')\n"
+        "  ✓ RIGHT: send_exist(tree, 'emailNotification')\n\n"
+
+        "  NL: 'System receives payment confirmation'\n"
+        "  ✗ WRONG: send_exist(tree, 'paymentConfirmation')\n"
+        "  ✓ RIGHT: receive_exist(tree, 'paymentConfirmation')\n\n"
+
+        "DATA CONDITIONS:\n"
+        "- Use operators: not, or, ==, and, >, <, >=, <=\n"
+        "- Format: dataObjectName operator value\n"
+        "- Examples: 'loanAmount > 1000000', 'customerStatus == \"gold\"', 'riskScore < 50'\n"
+        "- Combine with parentheses: '(loanAmount > 1000000) and (customerStatus == \"gold\")'\n\n"
+
+        "FAILURE PATTERNS (USE WITH CARE)\n"
+        "ONLY use failure_* patterns when an activity itself fails (system cannot execute it).\n"
+        "Do NOT use for negative condition results.\n\n"
+
+        "✗ WRONG USAGE:\n"
+        "  NL: 'If eligibility check fails, deny application'\n"
+        "  ✗ failure_eventually_follows(tree, 'eligibility check', 'deny application')\n"
+        "  REASON: The check ran successfully; the result was just negative.\n"
+        "  ✓ RIGHT: condition_eventually_follows(tree, 'checkFailed == true', 'deny application')\n\n"
+
+        "✓ CORRECT USAGE:\n"
+        "  NL: 'If system fails to send email, retry after 5 minutes'\n"
+        "  ✓ failure_eventually_follows(tree, 'send email', 'retry sending')\n"
+        "  REASON: The system cannot execute 'send email' (actual failure).\n\n"
 
         "COMPLIANCE PATTERN REFERENCE\n"
         f"{doc}\n\n"
-        "TEXT TO EXTRACT\n"
+        "TEXT TO EXTRACT FROM\n"
         f"{text}"
     )
 

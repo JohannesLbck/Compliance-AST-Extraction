@@ -2,40 +2,38 @@
   "results": [
     {
       "requirements": {
-        "R1": "exists('scan customer') and activity_receives('scan customer', 'providedDatabases')",
-        "R2": "activity_sends('scan customer', 'identityCheckHistory')",
-        "R3": "condition_eventually_follows('balance <= 0 and not (customerType == \"VIP\")', 'approve transaction') and executed_by('approve transaction', 'bank manager')",
-        "R4": "data_leads_to_absence('customerType == \"VIP\"', 'approve transaction')"
+        "R1": "exists(tree,'perform identity check')",
+        "R2": "activity_receives(tree,'perform identity check','identityDatabase')",
+        "R3": "send_exist(tree,'identityHistory')",
+        "R4": "data_leads_to_absence(tree,'(accountBalance < 0) and (approvedByManager == false) and (isVipCustomer == false)','End Activity')",
+        "R5": "executed_by(tree,'approve account overdraft','bank manager')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "R1: exists(tree, 'scan identity')",
+        "R2": "R2: receive_exist(tree, 'identityDatabase')",
+        "R3": "R3: send_exist(tree, 'identityHistory')",
+        "R4": "R4: executed_by(tree, 'approve balance', 'bank manager')",
+        "R5": "R5: data_leads_to_absence(tree, '(accountBalance < 0) and (isApproved == false) and (not (customerStatus == \"VIP\"))', 'End Activity')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "R1: leads_to(tree, 'Start Activity', 'scan customer identity')",
+        "R2": "R2: activity_receives(tree, 'scan customer identity', 'providedDatabases')",
+        "R3": "R3: leads_to(tree, 'scan customer identity', 'save identity check history')",
+        "R4": "R4: executed_by(tree, 'approve negative balance', 'bank manager')",
+        "R5": "R5: data_leads_to_absence(tree, '(accountBalance < 0) and (approvedByManager == false) and (isVipCustomer == false)', 'End Activity')"
       }
     },
     {
       "requirements": {
         "R1": "exists(tree, 'scan customer')",
-        "R2": "receive_exist(tree, 'providedDatabases')",
-        "R3": "leads_to(tree, 'scan customer', 'save history')",
-        "R4": "send_exist(tree, 'identityCheckHistory')",
-        "R5": "condition_eventually_follows(tree, 'balance <= 0 and not(accountType == \"VIP\")', 'approve balance')",
-        "R6": "executed_by(tree, 'approve balance', 'bank manager')",
-        "R7": "data_leads_to_absence(tree, 'accountType == \"VIP\"', 'approve balance')",
-        "R8": "data_leads_to_absence(tree, 'balance > 0', 'approve balance')"
-      }
-    },
-    {
-      "requirements": {
-        "R1": "condition_eventually_follows(tree, 'isNewCustomer', 'scan customer')",
-        "R2": "activity_receives(tree, 'scan customer', 'providedDatabases')",
-        "R3": "activity_sends(tree, 'scan customer', 'identityCheckHistory')",
-        "R4": "condition_eventually_follows(tree, 'balance <= 0 and not (customerType == \"VIP\")', 'approve account')",
-        "R5": "executed_by(tree, 'approve account', 'bank manager')",
-        "R6": "data_leads_to_absence(tree, 'customerType == \"VIP\"', 'approve account')"
-      }
-    },
-    {
-      "requirements": {
-        "R1": "exists('scan identity') and receive_exist('providedDatabases')",
-        "R2": "leads_to('scan identity', 'store identity history') and send_exist('identityHistory')",
-        "R3": "condition_eventually_follows('balance <= 0 and customerType != \"VIP\"', 'approve balance') and executed_by('approve balance', 'bank manager')",
-        "R4": "data_leads_to_absence('customerType == \"VIP\"', 'approve balance')"
+        "R2": "activity_receives(tree, 'scan customer', 'identityDatabase')",
+        "R3": "leads_to(tree, 'scan customer', 'store identity check history')",
+        "R4": "executed_by(tree, 'approve negative balance', 'bank manager')",
+        "R5": "data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == false) and (isVip == false)', 'End Activity')"
       }
     }
   ]

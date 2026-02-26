@@ -2,46 +2,46 @@
   "results": [
     {
       "requirements": {
-        "R1": "precedence('conduct individual risk assessment', receive_exist('customerData'))",
-        "R2": "executed_by(send_exist('wphgCustomerInformation'), 'customer advisor') and executed_by(send_exist('basicInformationSecuritiesAndCapitalInvestment'), 'customer advisor')",
-        "R3": "leads_to('conclude custody account contract', send_exist('customerLegitimation')) and leads_to('conclude custody account contract', send_exist('accountDocuments'))",
-        "R4": "executed_by('conduct investment advice', 'customer advisor') and condition('securitiesCompetence >= \"level C\"')",
-        "R5": "executed_by('conduct customer identification and legitimation', 'customer advisor') and executed_by('check suspected money laundering', 'anti-money-laundering officer')",
-        "R6": "executed_by('conclude custody account contract', 'customer advisor') and precedence('conclude custody account contract', 'resolve suspected anti-money laundering')",
-        "R7": "leads_to('contact customer', 'update customer information')"
-      }
-    },
-    {
-      "requirements": {
-        "R1": "precedence('conduct individual risk assessment', receive_exist('customerData'))",
-        "R2": "executed_by(send_exist('wphgCustomerInformation'), 'customer advisor') and executed_by(send_exist('basicInformationSecuritiesCapitalInvestment'), 'customer advisor')",
-        "R3": "leads_to('conclude custody account contract', send_exist('customerLegitimation')) and leads_to('conclude custody account contract', send_exist('accountDocuments'))",
-        "R4": "executed_by('conduct investment advice', 'customer advisor') and condition('securitiesCompetence >= \"C\"')",
-        "R5": "executed_by('identify and legitimate customer', 'customer advisor') and executed_by('check money laundering suspect', 'anti-money-laundering officer')",
-        "R6": "precedence('conclude custody account contract', 'resolve money laundering suspect')",
-        "R7": "leads_to('contact customer', 'update customer information')"
-      }
-    },
-    {
-      "requirements": {
-        "R1": "precedence(tree, 'conduct individual risk assessment', receive_exist(tree, 'customerData'))",
+        "R1": "leads_to(tree, 'receive customer data', 'conduct risk assessment') and activity_receives(tree, 'receive customer data', 'customerData')",
         "R2": "executed_by(tree, 'provide brochures', 'customer advisor') and activity_sends(tree, 'provide brochures', 'wphgCustomerInformation') and activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesCapitalInvestment')",
-        "R3": "leads_to(tree, 'conclude custody account contract', send_exist(tree, 'customerLegitimation')) and leads_to(tree, 'conclude custody account contract', send_exist(tree, 'accountDocuments'))",
-        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor') and condition(tree, 'securitiesCompetence >= \"level C\"')",
-        "R5": "executed_by(tree, 'conduct identification and legitimation', 'customer advisor') and executed_by(tree, 'check suspected money laundering', 'anti-money-laundering officer')",
-        "R6": "precedence(tree, 'conclude custody account contract', 'resolve suspected anti-money laundering case')",
+        "R3": "leads_to(tree, 'conclude custody account contract', 'send documents') and activity_sends(tree, 'send documents', 'customerLegitimation') and activity_sends(tree, 'send documents', 'accountDocuments')",
+        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"level C\"', 'conduct investment advice')",
+        "R5": "executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check suspected money laundering', 'anti-money-laundering officer')",
+        "R6": "leads_to(tree, 'resolve suspected money laundering', 'conclude custody account contract') and executed_by(tree, 'conclude custody account contract', 'customer advisor')",
         "R7": "leads_to(tree, 'contact customer', 'update customer information')"
       }
     },
     {
       "requirements": {
-        "R1": "precedence(tree, 'conduct individual risk assessment', receive_exist(tree, 'customerData'))",
-        "R2": "executed_by(tree, send_exist(tree, 'wpHGCustomerInformation'), 'customer advisor') and executed_by(tree, send_exist(tree, 'basicInformationSecuritiesAndCapitalInvestment'), 'customer advisor')",
-        "R3": "leads_to(tree, 'conclude custody account contract', send_exist(tree, 'customerLegitimation')) and leads_to(tree, 'conclude custody account contract', send_exist(tree, 'accountDocuments'))",
-        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor with securities competence level C or above')",
+        "R1": "precedence(tree, 'assess individual risk', 'receive customer data') and activity_receives(tree, 'receive customer data', 'customerData')",
+        "R2": "executed_by(tree, 'provide brochures', 'customer advisor') and activity_sends(tree, 'provide brochures', 'wphgCustomerInformation') and activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesAndCapitalInvestment')",
+        "R3": "leads_to(tree, 'conclude custody account contract', 'send documents to market support') and activity_sends(tree, 'send documents to market support', 'customerLegitimation') and activity_sends(tree, 'send documents to market support', 'accountDocuments')",
+        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"level C\"', 'conduct investment advice')",
         "R5": "executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check suspected money laundering', 'anti-money-laundering officer')",
-        "R6": "precedence(tree, 'conclude custody account contract', 'resolve suspected anti-money laundering case')",
+        "R6": "precedence(tree, 'conclude custody account contract', 'resolve suspected money laundering')",
         "R7": "leads_to(tree, 'contact customer', 'update customer information')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "leads_to(tree, receive_exist(tree, 'customerData'), 'perform risk assessment')",
+        "R2": "executed_by(tree, 'provide brochures', 'customer advisor') and activity_sends(tree, 'provide brochures', 'wphgCustomerInformation') and activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesAndCapitalInvestment')",
+        "R3": "leads_to(tree, 'conclude custody contract', 'send documents') and activity_sends(tree, 'send documents', 'customerLegitimation') and activity_sends(tree, 'send documents', 'accountDocuments')",
+        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"level C\"', 'conduct investment advice')",
+        "R5": "executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
+        "R6": "leads_to(tree, 'resolve money laundering suspicion', 'conclude custody contract') and executed_by(tree, 'conclude custody contract', 'customer advisor')",
+        "R7": "leads_to(tree, 'contact customer', 'update customer information')"
+      }
+    },
+    {
+      "requirements": {
+        "R1": "precedence(tree, 'perform individual risk assessment', 'receive data') and activity_receives(tree, 'receive data', 'customerData')",
+        "R2": "exists(tree, 'provide brochures') and executed_by(tree, 'provide brochures', 'customer advisor') and activity_sends(tree, 'provide brochures', 'wphgCustomerInformation') and activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesAndCapitalInvestment')",
+        "R3": "leads_to(tree, 'conclude custody account contract', 'send documents') and activity_sends(tree, 'send documents', 'customerLegitimation') and activity_sends(tree, 'send documents', 'accountDocuments')",
+        "R4": "executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"Level C\"', 'conduct investment advice')",
+        "R5": "executed_by(tree, 'identify and legitimate customer', 'customer advisor') and condition_eventually_follows(tree, 'isMoneyLaunderingSuspected == true', 'check money laundering suspicion') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
+        "R6": "executed_by(tree, 'conclude custody account contract', 'customer advisor') and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
+        "R7": "leads_to(tree, 'contact customer', 'update customer information') and activity_sends(tree, 'update customer information', 'customerInformation')"
       }
     }
   ]

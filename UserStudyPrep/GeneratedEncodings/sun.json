@@ -82,5 +82,79 @@
     "R2": "executed_by(tree, 'verify accuracy user personal information', 'telephone company')",
     "R3": "send_exist(tree, 'simCard') and precedence(tree, 'use sim card', 'activate sim card') and executed_by(tree, 'activate sim card', 'telephone company')",
     "R4": "precedence(tree, receive_exist(tree, 'personalData'), 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller')"
+  },
+  "Generated13": {
+    "R1": "max_time_between(tree,'Start Activity','End Activity',2592000,'terminate')",
+    "R2": "exists(tree,'verify user information accuracy')",
+    "R3": "executed_by(tree,'verify user information accuracy','telephone company')",
+    "R4": "leads_to(tree,'send sim card','activate sim card')",
+    "R5": "precedence(tree,'use sim card','activate sim card')",
+    "R6": "executed_by(tree,'activate sim card','telephone company')",
+    "R7": "executed_by(tree,'use sim card','customer')",
+    "R8": "precedence(tree,'retrieve personal data','obtain consent')",
+    "R9": "executed_by(tree,'retrieve personal data','data controller')",
+    "R10": "executed_by(tree,'obtain consent','data controller')",
+    "R11": "activity_receives(tree,'retrieve personal data','personalData')",
+    "R12": "activity_receives(tree,'obtain consent','userConsent')"
+  },
+  "Generated14": {
+    "R1": "max_time_between(tree, 'Start Activity', 'terminate', 2592000)",
+    "R2": "exists(tree, 'verify personal information accuracy') and executed_by(tree, 'verify personal information accuracy', 'telephone company')",
+    "R3": "leads_to(tree, 'send SIM card', 'activate SIM card') and precedence(tree, 'use SIM card', 'activate SIM card') and executed_by(tree, 'activate SIM card', 'telephone company')",
+    "R4": "precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'retrieve personal data', 'data controller') and executed_by(tree, 'obtain consent', 'data controller') and activity_receives(tree, 'retrieve personal data', 'personalData') and activity_receives(tree, 'obtain consent', 'consentData')"
+  },
+  "Generated15": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify accuracy') and executed_by(tree, 'verify accuracy', 'telephone company') and activity_receives(tree, 'verify accuracy', 'userPersonalInformation')",
+    "R3": "leads_to(tree, 'send sim card', 'activate sim card') and precedence(tree, 'use sim card', 'activate sim card') and executed_by(tree, 'activate sim card', 'telephone company')",
+    "R4": "precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller') and executed_by(tree, 'retrieve personal data', 'data controller') and activity_receives(tree, 'retrieve personal data', 'personalData')"
+  },
+  "Generated16": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify user information') and executed_by(tree, 'verify user information', 'telephone company') and receive_exist(tree, 'userPersonalInformation')",
+    "R3": "leads_to(tree, 'send SIM card', 'activate SIM card') and precedence(tree, 'use SIM card', 'activate SIM card') and executed_by(tree, 'activate SIM card', 'telephone company') and activity_sends(tree, 'send SIM card', 'simCard')",
+    "R4": "precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller') and receive_exist(tree, 'personalData') and receive_exist(tree, 'consent')"
+  },
+  "Generated17": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify information accuracy')",
+    "R3": "executed_by(tree, 'verify information accuracy', 'telephone company')",
+    "R4": "receive_exist(tree, 'personalInformation')",
+    "R5": "leads_to(tree, 'send SIM card', 'activate SIM card')",
+    "R6": "precedence(tree, 'use SIM card', 'activate SIM card')",
+    "R7": "executed_by(tree, 'activate SIM card', 'telephone company')",
+    "R8": "precedence(tree, 'retrieve data', 'obtain consent')",
+    "R9": "executed_by(tree, 'retrieve data', 'data controller')",
+    "R10": "executed_by(tree, 'obtain consent', 'data controller')",
+    "R11": "receive_exist(tree, 'consentData')",
+    "R12": "receive_exist(tree, 'personalData')"
+  },
+  "Generated18": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify user information accuracy')",
+    "R3": "executed_by(tree, 'verify user information accuracy', 'telephone company')",
+    "R4": "leads_to(tree, 'deliver SIM card', 'activate SIM card')",
+    "R5": "precedence(tree, 'use SIM card', 'activate SIM card')",
+    "R6": "executed_by(tree, 'activate SIM card', 'telephone company')",
+    "R7": "precedence(tree, 'retrieve personal data', 'obtain consent')",
+    "R8": "executed_by(tree, 'obtain consent', 'data controller')",
+    "R9": "executed_by(tree, 'retrieve personal data', 'data controller')",
+    "R10": "receive_exist(tree, 'personalData')",
+    "R11": "receive_exist(tree, 'consentData')",
+    "R12": "receive_exist(tree, 'userPersonalInformation')",
+    "R13": "executed_by(tree, 'deliver SIM card', 'telephone company')",
+    "R14": "executed_by(tree, 'use SIM card', 'customer')"
+  },
+  "Generated19": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify personal information accuracy') and executed_by(tree, 'verify personal information accuracy', 'telephone company') and activity_receives(tree, 'verify personal information accuracy', 'personalInformation')",
+    "R3": "leads_to(tree, 'send sim card', 'activate sim card') and precedence(tree, 'use sim card', 'activate sim card') and executed_by(tree, 'activate sim card', 'telephone company') and executed_by(tree, 'use sim card', 'customer')",
+    "R4": "precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'retrieve personal data', 'data controller') and executed_by(tree, 'obtain consent', 'data controller') and activity_receives(tree, 'obtain consent', 'consent') and activity_receives(tree, 'retrieve personal data', 'personalData')"
+  },
+  "Generated20": {
+    "R1": "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "R2": "exists(tree, 'verify personal information') and executed_by(tree, 'verify personal information', 'telephone company') and activity_receives(tree, 'verify personal information', 'personalData')",
+    "R3": "leads_to(tree, 'deliver SIM card', 'activate SIM card') and leads_to(tree, 'activate SIM card', 'use SIM card') and executed_by(tree, 'activate SIM card', 'telephone company')",
+    "R4": "precedence(tree, 'retrieve personal data', 'obtain consent') and activity_receives(tree, 'retrieve personal data', 'personalData') and executed_by(tree, 'obtain consent', 'data controller') and executed_by(tree, 'retrieve personal data', 'data controller')"
   }
 }

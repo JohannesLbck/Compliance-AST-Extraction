@@ -56,5 +56,73 @@
     "R1": "recurring(tree,'check document upload',10368000)",
     "R2": "condition_eventually_follows(tree,'resolutionProposal and cbReport and ldReport','analyse reports')",
     "R3": "executed_by(tree,'analyse reports',executed_by_return(tree,'create resolution proposal'))"
+  },
+  "Generated13": {
+    "R1": "recurring(tree, 'check document upload', 10368000)",
+    "R2": "receive_exist(tree, 'checklistDocument')",
+    "R3": "executed_by(tree, 'sign checklist', 'Tax Manager')",
+    "R4": "executed_by(tree, 'sign checklist', 'Financial Controller')",
+    "R5": "leads_to(tree, 'sign checklist', 'upload document')",
+    "R6": "condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+    "R7": "executed_by_return(tree, 'analyse reports') == executed_by_return(tree, 'create resolution proposal')",
+    "R8": "leads_to(tree, 'complete checklist', 'sign checklist')"
+  },
+  "Generated14": {
+    "R1": "recurring(tree, 'check document upload', 10368000)",
+    "R2": "receive_exist(tree, 'signedChecklist')",
+    "R3": "executed_by(tree, 'sign checklist', 'Tax Manager')",
+    "R4": "executed_by(tree, 'sign checklist', 'Financial Controller')",
+    "R5": "leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R6": "executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))",
+    "R7": "receive_exist(tree, 'cbReport')",
+    "R8": "receive_exist(tree, 'ldReport')"
+  },
+  "Generated15": {
+    "R1": "R1: recurring(tree, 'check document upload', 10368000)",
+    "R2": "R2: receive_exist(tree, 'signedChecklist')",
+    "R3": "R3: leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R4": "R4: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyze reports')",
+    "R5": "R5: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyze reports')"
+  },
+  "Generated16": {
+    "R1": "R1: recurring(tree, 'check checklist upload', 10368000)",
+    "R2": "R2: activity_receives(tree, 'check checklist upload', 'signedChecklist')",
+    "R3": "R3: condition_eventually_follows(tree, '(resolutionProposal == \"created\") and (cbReport == \"available\") and (ldReport == \"available\")', 'analyze reports')",
+    "R4": "R4: leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R5": "R5: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
+  },
+  "Generated17": {
+    "R1": "recurring(tree, 'check document upload', 10368000)",
+    "R2": "receive_exist(tree, 'checklistDocument')",
+    "R3": "executed_by(tree, 'sign checklist', 'Tax Manager')",
+    "R4": "executed_by(tree, 'sign checklist', 'Financial Controller')",
+    "R5": "leads_to(tree, 'sign checklist', 'upload document')",
+    "R6": "condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+    "R7": "executed_by_return(tree, 'analyse reports') == executed_by_return(tree, 'create resolution proposal')",
+    "R8": "leads_to(tree, 'complete checklist', 'sign checklist')"
+  },
+  "Generated18": {
+    "R1": "recurring(tree, 'check document upload', 10368000)",
+    "R2": "receive_exist(tree, 'signedChecklist')",
+    "R3": "executed_by(tree, 'sign checklist', 'Tax Manager')",
+    "R4": "executed_by(tree, 'sign checklist', 'Financial Controller')",
+    "R5": "leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R6": "executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))",
+    "R7": "receive_exist(tree, 'cbReport')",
+    "R8": "receive_exist(tree, 'ldReport')"
+  },
+  "Generated19": {
+    "R1": "R1: recurring(tree, 'check document upload', 10368000)",
+    "R2": "R2: receive_exist(tree, 'signedChecklist')",
+    "R3": "R3: leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R4": "R4: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyze reports')",
+    "R5": "R5: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyze reports')"
+  },
+  "Generated20": {
+    "R1": "R1: recurring(tree, 'check checklist upload', 10368000)",
+    "R2": "R2: activity_receives(tree, 'check checklist upload', 'signedChecklist')",
+    "R3": "R3: condition_eventually_follows(tree, '(resolutionProposal == \"created\") and (cbReport == \"available\") and (ldReport == \"available\")', 'analyze reports')",
+    "R4": "R4: leads_to(tree, 'create resolution proposal', 'analyze reports')",
+    "R5": "R5: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
   }
 }
