@@ -1,0 +1,6 @@
+[
+  "R1: executed_by(tree, 'scan customer identity', 'system') and receive_exist(tree, 'customerDatabase') and condition_eventually_follows(tree, 'customerStatus == \"new\"', 'scan customer identity')",
+  "R2: exists(tree, 'store identity check record') and leads_to(tree, 'scan customer identity', 'store identity check record')",
+  "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (customerType not \"VIP\") and (managerApproval not \"approved\")', 'End Activity')",
+  "R4: condition_eventually_follows(tree, 'customerType == \"VIP\"', 'End Activity', scope='global') and data_leads_to_absence(tree, '(customerType == \"VIP\") and (accountBalance <= 0)', 'request manager approval')"
+]

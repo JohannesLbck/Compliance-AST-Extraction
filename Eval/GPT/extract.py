@@ -1,16 +1,20 @@
 import json
+import os
 from pathlib import Path
 import argparse
 from typing import Dict, List
 from pydantic import BaseModel, Field
-import openai
+import datetime
+from openai import OpenAI
 
 # The client gets the API key from the environment variable `OPENAI_API_KEY`.
-client = openai.OpenAI()
+client = OpenAI(
+    api_key = os.environ.get("OPENAI_API_KEY"),
+)
 
 
 class RequirementsModel(BaseModel):
-    requirements: Dict[str, str] = Field(..., description="Requirement ASTs")
+    requirements: List[str] = Field(..., description="List of requirement ASTs")
 
 
 def main():
@@ -34,11 +38,18 @@ def main():
         default=1,
         help="Number of times to generate content (default=1)"
     )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=0.3,
+        help="Temperature setting for GPT response generation (default=0.3)"
+    )
 
     args = parser.parse_args()
 
     text_selector = args.textselector
     repeat = args.range
+    temperature = args.temperature
 
     text = TEXT_MAPPING[text_selector]
 
@@ -51,30 +62,15 @@ def main():
     # Prepare prompt with improved structure
     # -----------------------
     prompt = (
-        "=" * 80 + "\n"
-        "TASK: COMPLIANCE REQUIREMENT EXTRACTION\n"
-        "=" * 80 + "\n"
-        "Extract business process requirements from natural language text and convert them\n"
-        "into formal compliance pattern AST (Abstract Syntax Tree) expressions.\n\n"
+        "TASK: Extract compliance requirements from text and convert to AST expressions.\n"
+        "Format: R{NUMBER}: <expression>\n\n"
 
-        "=" * 80 + "\n"
-        "OUTPUT FORMAT\n"
-        "=" * 80 + "\n"
-        "Each requirement must be formatted as: R{NUMBER}: <AST expression>\n"
-        "Example: R1: leads_to(tree, 'submit application', 'review application')\n"
-        "Example: R2: executed_by(tree, 'approve request', 'manager')\n\n"
+        "CRITICAL RULES:\n"
+        "1. SYSTEM PERSPECTIVE: Model from system viewpoint. 'Customer receives email' = system sent it.\n"
+        "   Use send_exist() for outgoing, receive_exist() for incoming data.\n\n"
 
-        "=" * 80 + "\n"
-        "CORE PRINCIPLES (READ CAREFULLY)\n"
-        "=" * 80 + "\n"
-        "1. SYSTEM PERSPECTIVE: Model requirements from the system's viewpoint, NOT external actors.\n"
-        "   - If a customer receives an email, the system sent it.\n"
-        "   - Use send_exist() for outgoing data, receive_exist() for incoming data.\n\n"
-
-        "2. ACTIVITY LABELS:\n"
-        "   - Use active voice without articles (a, the).\n"
-        "   - Examples: 'approve request', 'scan document', 'send email' (NOT 'the approval', 'a scan').\n"
-        "   - NEVER include resource names in activity labels.\n\n"
+        "2. ACTIVITY LABELS: Active voice, no articles or resource names.\n"
+        "   ✓ 'approve request'  ✗ 'manager approves request'\n\n"
 
         "3. RESOURCE SPECIFICATION:\n"
         "   - ALWAYS use executed_by(tree, 'activity', 'resource') pattern.\n"
@@ -82,145 +78,42 @@ def main():
         "   - ✗ WRONG:  executed_by(tree, 'manager approves request', 'manager')\n"
         "   - ✓ RIGHT:  executed_by(tree, 'approve request', 'manager')\n\n"
 
-        "4. DATA OBJECT NAMING:\n"
-        "   - Use camelCase for all data object names.\n"
-        "   - Examples: 'customerData', 'loanApplication', 'emailNotification'.\n\n"
+        "4. DATA OBJECTS: camelCase names, not physical objects.\n"
+        "   ✓ 'accountBalance'  ✗ 'sim card', 'pizza'\n"
+        "   Use conditions to enforce domain constraints:\n"
+        "   data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')\n\n"
+        
+        "5. Data Domain: If a dataobject should stay in a certain domain, prevent it from reaching said domain.\n"
+        "  Example: 'accountBalance must never be negative' → no condition_eventually_follows(tree, 'accountBalance < withdrawalAmount', 'withdrawal')\n\n"
 
-        "=" * 80 + "\n"
-        "TIME HANDLING\n"
-        "=" * 80 + "\n"
-        "- Encode as integer seconds whenever possible.\n"
-        "  Example: 7 working days = 604800 seconds\n"
-        "- For non-specific or complex times, use descriptive strings.\n"
-        "  Example: 'predefined period', 'business hours'\n"
-        "- Special keywords:\n"
-        "  * 'Start Activity' = process start event\n"
-        "  * 'End Activity' = process end event\n"
-        "  * 'terminate' = immediately stop/end process\n\n"
+        "5. DATA CONDITIONS: Format = 'dataName operator value'\n"
+        "   Operators: not, or, ==, and, >, <, >=, <=\n"
+        "   Example: '(loanAmount > 1000000) and (status == \"gold\")'\n\n"
 
-        "=" * 80 + "\n"
-        "DATA PATTERNS (CRITICAL)\n"
-        "=" * 80 + "\n"
-        "Use send_exist() and receive_exist() instead of embedding data in activity labels.\n\n"
+        "6. DESIGN TIME: Disjunction in NL may need conjunction of patterns.\n"
+        "   'Either delivered OR rejected' = both must exist in process\n\n"
 
-        "SYSTEM PERSPECTIVE EXAMPLES:\n"
-        "  NL: 'Customer receives email notification'\n"
-        "  ✗ WRONG: receive_exist(tree, 'emailNotification')\n"
-        "  ✓ RIGHT: send_exist(tree, 'emailNotification')\n\n"
+        "7. TIME: Encode seconds if possible (7 days = 604800s). String descriptiors if constraint is vague.\n"
+        "   Special Activities: 'Start Activity', 'End Activity', 'terminate'\n\n"
 
-        "  NL: 'System receives payment confirmation'\n"
-        "  ✗ WRONG: send_exist(tree, 'paymentConfirmation')\n"
-        "  ✓ RIGHT: receive_exist(tree, 'paymentConfirmation')\n\n"
+        "8. failure_* patterns: ONLY for system execution failures, not negative results.\n"
+        "   ✗ 'check fails' (negative result) → ✓ condition_eventually_follows(tree, 'checkFailed == true', ...)\n"
+        "   ✓ 'system fails to send' (cannot execute) → failure_eventually_follows(...)\n\n"
 
-        "DATA CONDITIONS:\n"
-        "- Use operators: not, or, ==, and, >, <, >=, <=\n"
-        "- Format: dataObjectName operator value\n"
-        "- Examples: 'loanAmount > 1000000', 'customerStatus == \"gold\"', 'riskScore < 50'\n"
-        "- Combine with parentheses: '(loanAmount > 1000000) and (customerStatus == \"gold\")'\n\n"
-
-        "=" * 80 + "\n"
-        "FAILURE PATTERNS (USE WITH CARE)\n"
-        "=" * 80 + "\n"
-        "ONLY use failure_* patterns when an activity itself fails (system cannot execute it).\n"
-        "Do NOT use for negative condition results.\n\n"
-
-        "✗ WRONG USAGE:\n"
-        "  NL: 'If eligibility check fails, deny application'\n"
-        "  ✗ failure_eventually_follows(tree, 'eligibility check', 'deny application')\n"
-        "  REASON: The check ran successfully; the result was just negative.\n"
-        "  ✓ RIGHT: condition_eventually_follows(tree, 'checkFailed == true', 'deny application')\n\n"
-
-        "✓ CORRECT USAGE:\n"
-        "  NL: 'If system fails to send email, retry after 5 minutes'\n"
-        "  ✓ failure_eventually_follows(tree, 'send email', 'retry sending')\n"
-        "  REASON: The system cannot execute 'send email' (actual failure).\n\n"
-
-        "=" * 80 + "\n"
-        "COMMON TRANSFORMATIONS (REFERENCE)\n"
-        "=" * 80 + "\n"
-        "Pattern translations from natural language:\n\n"
-
-        "1. ORDERING/PRECEDENCE:\n"
-        "   'A must happen before B' OR 'B only after A'\n"
-        "   → leads_to(tree, 'a', 'b')\n\n"
-
-        "2. NEGATION/PREVENTION:\n"
-        "   'A cannot happen after B' OR 'After A, B is impossible'\n"
-        "   → leads_to_absence(tree, 'a', 'b')\n\n"
-
-        "3. CONDITIONS:\n"
-        "   'If X is true, then eventually A happens'\n"
-        "   → condition_eventually_follows(tree, 'X==true', 'a')\n\n"
-
-        "4. RESOURCE ASSIGNMENT:\n"
-        "   'A must be performed by role R'\n"
-        "   → executed_by(tree, 'a', 'R')\n\n"
-
-        "5. DATA FLOW:\n"
-        "   'X must be received before Y can occur'\n"
-        "   → leads_to(tree, receive_exist(tree, 'X'), 'y')\n\n"
-
-        "6. TIMING:\n"
-        "   'A must complete within N seconds before B happens'\n"
-        "   → timed_alternative(tree, 'a', 'b', N)\n\n"
-
-        "7. PARALLEL:\n"
-        "   'A and B must occur simultaneously'\n"
-        "   → parallel(tree, 'a', 'b')\n\n"
-
-        "=" * 80 + "\n"
-        "MULTI-REQUIREMENT HANDLING\n"
-        "=" * 80 + "\n"
-        "If one NL sentence describes multiple independent constraints, create separate R{N} entries.\n"
-        "If constraints are interdependent, combine them using 'and' operator within a single entry.\n\n"
-
-        "Example:\n"
-        "  NL: 'Check credit report and verify identity before opening account'\n"
-        "  R1: leads_to(tree, 'check credit report', 'open account')\n"
-        "  R2: leads_to(tree, 'verify identity', 'open account')\n\n"
-
-        "=" * 80 + "\n"
-        "VALIDATION CHECKLIST (Before submitting)\n"
-        "=" * 80 + "\n"
-        "□ All activity labels are in active voice (verb-object)\n"
-        "□ No resource names appear in activity labels\n"
-        "□ All data objects use camelCase\n"
-        "□ Failure patterns are only used for actual activity failures\n"
-        "□ Time values are integers (seconds) when specific, strings when not\n"
-        "□ System perspective applied consistently (not actor perspective)\n"
-        "□ Data presence uses send_exist/receive_exist, not activity labels\n\n"
-
-        "=" * 80 + "\n"
         "COMPLIANCE PATTERN REFERENCE\n"
-        "=" * 80 + "\n"
         f"{doc}\n\n"
-
-        "=" * 80 + "\n"
-        "TEXT TO EXTRACT FROM\n"
-        "=" * 80 + "\n"
-        f"{text}\n\n"
-
-        "=" * 80 + "\n"
-        "RESPONSE INSTRUCTIONS\n"
-        "=" * 80 + "\n"
-        "Return your response as valid JSON in this exact format:\n"
-        "{\n"
-        '  "requirements": {\n'
-        '    "R1": "leads_to(tree, \'activity1\', \'activity2\')",\n'
-        '    "R2": "executed_by(tree, \'activity\', \'resource\')"\n'
-        "  }\n"
-        "}"
+        "TEXT TO EXTRACT\n"
+        f"{text}"
     )
 
     # -----------------------
     # Collect all responses
     # -----------------------
-    results: List[Dict] = []
 
     for i in range(repeat):
-        response = client.chat.completions.create(
+        response = client.responses.parse(
             model="gpt-4o-2024-11-20",
-            messages=[
+            input=[
                 {
                     "role": "system",
                     "content": "You are an expert in business process compliance modeling. Extract requirements and express them as AST expressions following the provided schema exactly."
@@ -230,43 +123,22 @@ def main():
                     "content": prompt
                 }
             ],
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "RequirementsModel",
-                    "schema": RequirementsModel.model_json_schema(),
-                    "strict": True
-                }
-            },
-            temperature=0.3
+            text_format=RequirementsModel,
+            temperature=temperature
         )
 
-        # Parse response JSON and append to results
-        try:
-            result = json.loads(response.choices[0].message.content)
-            results.append(result)
-        except json.JSONDecodeError as e:
-            print(f"Error parsing response {i+1}: {e}")
-            print(f"Response content: {response.choices[0].message.content}")
-            continue
+        output_file = Path(f"{text_selector}_{temperature}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
 
-    # -----------------------
-    # Write all responses to a single JSON file
-    # -----------------------
-    output_file = Path(f"{text_selector}_output.json")
-    output_data = {"results": results}
+        output_file.write_text(
+            json.dumps(response.output_parsed.requirements, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
 
-    output_file.write_text(
-        json.dumps(output_data, indent=2, ensure_ascii=False),
-        encoding="utf-8"
-    )
-
-    # Print the lines of the JSON file
-    with output_file.open(encoding="utf-8") as f:
-        for line in f:
-            print(line.rstrip())
-
-    print(f"\nAll {repeat} response(s) saved to: {output_file.resolve()}")
+        # Print the lines of the JSON file
+        with output_file.open(encoding="utf-8") as f:
+            for line in f:
+                print(line.rstrip())
+        print(f"Response saved to: {output_file.resolve()}")
 
 
 # -----------------------

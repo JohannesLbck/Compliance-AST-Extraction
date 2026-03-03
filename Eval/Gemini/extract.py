@@ -2,6 +2,7 @@ from google import genai
 from pydantic import BaseModel, Field
 from typing import Dict, List
 from pathlib import Path
+import datetime
 import argparse
 import json
 
@@ -34,11 +35,18 @@ def main():
         default=1,
         help="Number of times to generate content (default=1)"
     )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=0.3,
+        help="Temperature setting for response generation (default=0.3)"
+    )
 
     args = parser.parse_args()
 
     text_selector = args.textselector
     repeat = args.range
+    temperature = args.temperature
 
     text = TEXT_MAPPING[text_selector]
 
@@ -71,6 +79,9 @@ def main():
         "   ✓ 'accountBalance'  ✗ 'sim card', 'pizza'\n"
         "   Use conditions to enforce domain constraints:\n"
         "   data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')\n\n"
+        
+        "5. Data Domain: If a dataobject should stay in a certain domain, prevent it from reaching said domain.\n"
+        "  Example: 'accountBalance must never be negative' → no condition_eventually_follows(tree, 'accountBalance < withdrawalAmount', 'withdrawal')\n\n"
 
         "5. DATA CONDITIONS: Format = 'dataName operator value'\n"
         "   Operators: not, or, ==, and, >, <, >=, <=\n"
@@ -103,7 +114,8 @@ def main():
             contents=prompt,
             config={
                 "response_mime_type": "application/json",
-                "response_json_schema": RequirementsModel.model_json_schema()
+                "response_json_schema": RequirementsModel.model_json_schema(),
+                "temperature": temperature
             }
         )
 
@@ -113,7 +125,7 @@ def main():
     # -----------------------
     # Write all responses to a single JSON file
     # -----------------------
-    output_file = Path(f"{text_selector}_output.json")
+    output_file = Path(f"{text_selector}_{temperature}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     output_data = {"results": results}
 
     output_file.write_text(
