@@ -17,6 +17,9 @@ build/
 *.swo
 *~
 
+# Results
+*.json
+
 # Cache
 .cache/
 *.cache
