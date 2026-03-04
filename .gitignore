@@ -22,8 +22,8 @@ build/
 *.cache
 
 # Case Study
-Case Study/**/*.pdf
-Case Study/*.pdf
+CaseStudy/**/*.pdf
+CaseStudy/*.pdf
 
 # Logs
 *.log
