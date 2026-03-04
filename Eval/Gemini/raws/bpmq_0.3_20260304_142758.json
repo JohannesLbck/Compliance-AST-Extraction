@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    "R1: receive_exist(tree, \"respondentBankReport\")",
+    "R2: exists(tree, \"analyze respondent bank report\")",
+    "R3: leads_to(tree, \"obtain respondent bank report\", \"analyze respondent bank report\")",
+    "R4: condition_eventually_follows(tree, \"respondentBankEvaluationFailed == true\", \"add to black list\")",
+    "R5: condition_directly_follows(tree, \"accountRisk == \\\"low\\\"\", \"open account\")",
+    "R6: condition_eventually_follows(tree, \"firstTimeDealingWithRespondentBank == true\", \"conduct advanced due diligence study\")",
+    "R7: data_leads_to_absence(tree, \"respondentBankRating == \\\"rejected\\\"\", \"open account\")",
+    "R8: precedence(tree, \"open account\", \"respondentBankCertificateStatus == \\\"valid\\\"\")"
+  ]
+}

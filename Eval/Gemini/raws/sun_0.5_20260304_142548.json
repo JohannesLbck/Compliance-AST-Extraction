@@ -1,0 +1,14 @@
+{
+  "requirements": [
+    "by_due_date(tree, 'End Activity', 2592000, 'terminate')",
+    "executed_by(tree, 'verify user personal information accuracy', 'telephoneCompany')",
+    "leads_to(tree, 'receive sim card', 'activate sim card')",
+    "executed_by(tree, 'receive sim card', 'customer')",
+    "executed_by(tree, 'activate sim card', 'telephoneCompany')",
+    "leads_to(tree, 'activate sim card', 'use sim card')",
+    "executed_by(tree, 'use sim card', 'customer')",
+    "leads_to(tree, 'obtain consent', 'retrieve personal data')",
+    "executed_by(tree, 'obtain consent', 'dataController')",
+    "executed_by(tree, 'retrieve personal data', 'dataController')"
+  ]
+}

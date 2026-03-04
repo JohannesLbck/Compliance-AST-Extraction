@@ -1,0 +1,24 @@
+{
+  "requirements": [
+    "leads_to(tree, 'collect personal data', 'send email notification')",
+    "executed_by(tree, 'collect personal data', 'credit bureau service')",
+    "executed_by(tree, 'send email notification', 'system')",
+    "leads_to(tree, 'check customer bank privilege', 'check credit worthiness')",
+    "leads_to(tree, 'check credit worthiness', 'determine loan risk level')",
+    "(executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor'))",
+    "executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "executed_by(tree, 'check risk acceptability', 'branch office manager')",
+    "executed_by(tree, 'approve request', 'branch office manager')",
+    "executed_by(tree, 'reject request', 'branch office manager')",
+    "(leads_to(tree, 'check risk acceptability', 'approve request') or leads_to(tree, 'check risk acceptability', 'reject request'))",
+    "max_time_between(tree, 'sign loan contract', 'close offer', '7 working days')",
+    "condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness (supervisor)')",
+    "executed_by(tree, 'check credit worthiness (supervisor)', 'clerk supervisor')",
+    "condition_directly_follows(tree, 'supervisorCheckPerformed == false', 'create suspense file')",
+    "exists(tree, 'create suspense file')",
+    "failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+    "executed_by(tree, 'notify manager', 'system')",
+    "condition_eventually_follows(tree, 'customerStatus != \"gold\"', 'check customer bank privilege')",
+    "data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanRequestAmount < 1000000)', 'evaluate loan risk')"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "R1: by_due_date(tree, 'End Activity', 2592000, 'terminate')",
+    "R2: exists(tree, 'verify accuracy') and executed_by(tree, 'verify accuracy', 'telephone company')",
+    "R3: precedence(tree, 'use simCard', 'activate simCard') and executed_by(tree, 'activate simCard', 'telephone company')",
+    "R4: precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller')"
+  ]
+}

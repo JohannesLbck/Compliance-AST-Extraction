@@ -1,0 +1,6 @@
+[
+  "R1: exists(tree, 'scan identity')",
+  "R2: condition_eventually_follows(tree, 'scan identity', 'identityCheckPerformed')",
+  "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'maintain account')",
+  "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP == true)', 'maintain account')"
+]

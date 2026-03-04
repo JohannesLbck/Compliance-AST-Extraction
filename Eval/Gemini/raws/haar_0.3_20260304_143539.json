@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "R1: data_leads_to_absence(tree, 'jobRejected == true', 'perform further actions')",
+    "R2: precedence(tree, 'close case', 'translate all segments')",
+    "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+    "R4: precedence(tree, 'create segment', 'start translation')",
+    "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+  ]
+}

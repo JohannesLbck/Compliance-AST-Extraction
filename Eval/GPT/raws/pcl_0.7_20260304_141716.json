@@ -1,0 +1,6 @@
+[
+  "R1: exists(tree, 'perform identity scan')",
+  "R2: executed_by(tree, 'perform identity scan', 'system')",
+  "R3: send_exist(tree, 'identityCheckHistory')",
+  "R4: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvalProvided == true or customerStatus == \"VIP\")', 'End Activity')"
+]

@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "recurring(tree, 'verify checklist document', 10368000)",
+    "condition_eventually_follows(tree, '(checklistDocument.status == \"completed\") and (checklistDocument.taxManagerSigned == true) and (checklistDocument.financialControllerSigned == true)', 'verify checklist document')",
+    "condition_eventually_follows(tree, '(resolutionProposal.status == \"created\") and (cbReport.status == \"available\") and (ldReport.status == \"available\")', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

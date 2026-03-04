@@ -1,0 +1,6 @@
+[
+  "R1: recurring(tree, 'check document upload', 10368000)",
+  "R2: condition_eventually_follows(tree, \"(documentType == 'checklist') and (status == 'completed and signed')\", 'upload document', 'global')",
+  "R3: condition_eventually_follows(tree, \"(proposalCreated == true) and (CBreportAvailable == true) and (LDreportAvailable == true)\", 'analyze reports', 'global')",
+  "R4: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
+]

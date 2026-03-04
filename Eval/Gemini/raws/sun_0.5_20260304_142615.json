@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    "by_due_date(tree, 'Start Activity', 259200, 'terminate')",
+    "executed_by(tree, 'verify accuracy', 'telephone company')",
+    "leads_to(tree, 'activate simCard', 'use simCard')",
+    "executed_by(tree, 'activate simCard', 'telephone company')",
+    "executed_by(tree, 'use simCard', 'customer')",
+    "leads_to(tree, 'obtain consent', 'retrieve personal data')",
+    "executed_by(tree, 'obtain consent', 'data controller')",
+    "executed_by(tree, 'retrieve personal data', 'data controller')"
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  "R1: exists(tree, 'scan customer')",
+  "R2: executed_by(tree, 'scan customer', 'system')",
+  "R3: send_exist(tree, 'identityCheckHistory')",
+  "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvalStatus == \"approved\") and not (customerType == \"VIP\")', 'End Activity')"
+]

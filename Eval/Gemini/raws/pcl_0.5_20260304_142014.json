@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "exists(tree, 'perform identity check') and executed_by(tree, 'perform identity check', 'identityCheckService')",
+    "exists(tree, 'store identity check history') and leads_to(tree, 'perform identity check', 'store identity check history')",
+    "data_leads_to_absence(tree, 'accountBalance <= 0 and approvedByManager == false and isVIP == false', 'perform withdrawal')"
+  ]
+}

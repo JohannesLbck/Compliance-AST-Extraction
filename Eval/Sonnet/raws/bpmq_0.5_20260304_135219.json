@@ -1,0 +1,13 @@
+[
+  "R1: exists(tree, 'obtain respondent bank report')",
+  "R2: exists(tree, 'analyze respondent bank report')",
+  "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
+  "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+  "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+  "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
+  "R7: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+  "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+  "R9: condition_eventually_follows(tree, 'certificateValid == true', 'open account')",
+  "R10: data_leads_to_absence(tree, 'certificateValid == false', 'open account')",
+  "R11: precedence(tree, 'open account', 'validate respondent bank certificate')"
+]

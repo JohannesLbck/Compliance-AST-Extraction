@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "R1: recurring(tree, 'verify document upload', 10368000)",
+    "R1: condition_eventually_follows(tree, 'signedChecklistDocument.isUploaded == true', 'verify document upload')",
+    "R2: condition_eventually_follows(tree, '(resolutionProposal.isCreated == true) and (cbReport.isAvailable == true) and (ldReport.isAvailable == true)', 'analyse reports')",
+    "R2: executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

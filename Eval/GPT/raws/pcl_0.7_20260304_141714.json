@@ -1,0 +1,6 @@
+[
+  "R1: condition_eventually_follows(tree, 'newCustomer == true', 'scan identity')",
+  "R2: exists(tree, 'retain identityCheckHistory')",
+  "R3: condition_eventually_follows(tree, 'accountBalance < 0', 'manager approves')",
+  "R4: condition_eventually_follows(tree, 'accountBalance < 0', 'accountStatus == \"VIP\"')"
+]

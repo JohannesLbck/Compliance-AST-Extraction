@@ -1,0 +1,11 @@
+{
+  "requirements": [
+    "exists(tree, 'perform identity check')",
+    "executed_by(tree, 'perform identity check', 'system')",
+    "activity_receives(tree, 'perform identity check', 'customerData')",
+    "leads_to(tree, 'perform identity check', 'store identity check history')",
+    "activity_sends(tree, 'perform identity check', 'identityCheckResult')",
+    "activity_receives(tree, 'store identity check history', 'identityCheckResult')",
+    "data_leads_to_absence(tree, '(accountBalance < 0) and (NOT approvedByBankManager) and (NOT isVIPCustomer)', 'End Activity')"
+  ]
+}

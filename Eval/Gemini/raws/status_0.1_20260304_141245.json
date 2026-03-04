@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "recurring(tree, 'check document upload', '4 months')",
+    "condition_eventually_follows(tree, 'check document upload', '(uploadedDocumentChecklistCompleted == true) and (uploadedDocumentSignedByTaxManager == true) and (uploadedDocumentSignedByFinancialController == true)')",
+    "condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

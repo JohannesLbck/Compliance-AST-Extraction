@@ -1,0 +1,8 @@
+[
+  "R1: receive_exist(tree, 'personalData')",
+  "R2: directly_follows(tree, 'check bank privilege', 'determine risk level')",
+  "R3: executed_by(tree, 'bank privilege check', 'credit broker')",
+  "R4: executed_by(tree, 'credit worthiness check', 'post-processing clerk')",
+  "R5: max_time_between(tree, 'offer signed', 'contract expire', 604800)",
+  "R6: condition_eventually_follows(tree, 'creditAmount > 1000000', 'supervisor check', scope='branch')"
+]

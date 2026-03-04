@@ -1,0 +1,7 @@
+[
+  "R1: recurring(tree, 'check document uploaded', 10368000)",
+  "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+  "R3: leads_to(tree, 'resolution proposal created', 'analyse reports')",
+  "R4: exists(tree, 'CB report available')",
+  "R5: exists(tree, 'LD report available')"
+]

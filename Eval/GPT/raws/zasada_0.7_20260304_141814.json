@@ -1,0 +1,9 @@
+[
+  "R1: precedence(tree, receive_exist(tree, 'customerData'), 'perform risk assessment')",
+  "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+  "R3: send_exist(tree, 'custodyAccountContract')",
+  "R4: executed_by(tree, 'conduct investment advice', 'customerAdvisor')",
+  "R5: executed_by(tree, 'handle customer identification', 'customerAdvisor')",
+  "R6: precedence(tree, 'resolve money laundering case', 'conclude custody-account contract')",
+  "R7: condition_eventually_follows(tree, 'update customer information', 'contact customer')"
+]

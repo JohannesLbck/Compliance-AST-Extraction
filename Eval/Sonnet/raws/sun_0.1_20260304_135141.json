@@ -1,0 +1,6 @@
+[
+  "R1: max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+  "R2: executed_by(tree, 'verify personal information accuracy', 'telephone company')",
+  "R3: leads_to(tree, 'send SIM card', 'activate SIM card')",
+  "R4: precedence(tree, 'retrieve personal data', 'obtain consent')"
+]

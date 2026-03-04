@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "recurring(tree, 'check uploaded document compliance', '4 months')",
+    "data_leads_to_absence(tree, 'not (uploadedDocument.checklistSignedByTaxManager == true and uploadedDocument.checklistSignedByFinancialController == true)', 'End Activity')",
+    "condition_eventually_follows(tree, 'resolutionProposalExists == true and cbReportExists == true and ldReportExists == true', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

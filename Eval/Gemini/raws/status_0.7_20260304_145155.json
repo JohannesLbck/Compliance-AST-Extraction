@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "recurring(tree, 'check document properties', 10368000)",
+    "condition_eventually_follows(tree, '(resolutionProposal.created == true) and (cbReport.available == true) and (ldReport.available == true)', 'analyse reports')",
+    "executed_by(tree, 'create resolution proposal', 'proposalCreator')",
+    "executed_by(tree, 'analyse reports', 'proposalCreator')"
+  ]
+}

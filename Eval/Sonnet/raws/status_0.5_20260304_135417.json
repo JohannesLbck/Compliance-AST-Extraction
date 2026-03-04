@@ -1,0 +1,10 @@
+[
+  "R1: recurring(tree, 'check document upload', '10368000s')",
+  "R2: activity_receives(tree, 'check document upload', 'documentChecklist')",
+  "R3: executed_by(tree, 'sign checklist', 'taxManager')",
+  "R4: executed_by(tree, 'sign checklist', 'financialController')",
+  "R5: leads_to(tree, 'create resolution proposal', 'analyse CB report')",
+  "R6: leads_to(tree, 'create resolution proposal', 'analyse LD report')",
+  "R7: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse CB report')",
+  "R8: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse LD report')"
+]

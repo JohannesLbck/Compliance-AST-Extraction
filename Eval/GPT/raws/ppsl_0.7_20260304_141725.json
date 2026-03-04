@@ -1,0 +1,10 @@
+[
+  "R1: precedence(tree, 'close order', 'record received orders')",
+  "R2: precedence(tree, 'delivery', 'perform quality check')",
+  "R3: leads_to(tree, 'perform quality check', 'delivery')",
+  "R4: precedence(tree, 'close order', 'record payments')",
+  "R5: precedence(tree, 'close order', 'record order rejection')",
+  "R6: condition_eventually_follows(tree, 'paymentReceived == true', 'report payment')",
+  "R7: leads_to(tree, 'fill order', 'ship product')",
+  "R8: leads_to(tree, 'fill order', 'send invoice')"
+]

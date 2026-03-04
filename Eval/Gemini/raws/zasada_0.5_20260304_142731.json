@@ -1,0 +1,22 @@
+{
+  "requirements": [
+    "R1: precedence(tree, 'perform individual risk assessment', 'receive customer data')",
+    "R2: executed_by(tree, 'provide wphg customer information', 'customer advisor')",
+    "R3: activity_sends(tree, 'provide wphg customer information', 'wphgCustomerInformation')",
+    "R4: executed_by(tree, 'provide basic information securities and capital investment', 'customer advisor')",
+    "R5: activity_sends(tree, 'provide basic information securities and capital investment', 'basicInformationSecuritiesAndCapitalInvestment')",
+    "R6: leads_to(tree, 'conclude custody account contract', 'send customer legitimation')",
+    "R7: activity_sends(tree, 'send customer legitimation', 'customerLegitimation')",
+    "R8: send_exist(tree, 'customerLegitimation')",
+    "R9: leads_to(tree, 'conclude custody account contract', 'send account documents')",
+    "R10: activity_sends(tree, 'send account documents', 'accountDocuments')",
+    "R11: send_exist(tree, 'accountDocuments')",
+    "R12: executed_by(tree, 'conduct investment advice', 'customer advisor')",
+    "R13: condition_directly_follows(tree, 'customerAdvisor.securitiesCompetence >= \"level C\"', 'conduct investment advice')",
+    "R14: executed_by(tree, 'handle customer identification and legitimation', 'customer advisor')",
+    "R15: executed_by(tree, 'check suspected money laundering', 'anti-money-laundering officer')",
+    "R16: precedence(tree, 'conclude custody account contract', 'resolve suspected anti-money laundering case')",
+    "R17: leads_to(tree, 'customer contact', 'update customer information')",
+    "R18: activity_sends(tree, 'update customer information', 'customerInformation')"
+  ]
+}

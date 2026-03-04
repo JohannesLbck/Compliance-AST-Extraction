@@ -1,0 +1,6 @@
+[
+  "exists(tree, 'terminate process') and max_time_between(tree, 'initiate process', 'terminate process', 2592000)",
+  "exists(tree, 'verify accuracy') and executed_by(tree, 'verify accuracy', 'telephoneCompany')",
+  "precedence(tree, 'send simCard', 'activate simCard') and executed_by(tree, 'activate simCard', 'telephoneCompany')",
+  "precedence(tree, 'obtain consent', 'retrieve personalData') and executed_by(tree, 'obtain consent', 'dataController')"
+]

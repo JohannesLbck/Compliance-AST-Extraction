@@ -1,0 +1,18 @@
+{
+  "requirements": [
+    "exists(tree, 'obtain respondent bank report')",
+    "exists(tree, 'analyze respondent bank report')",
+    "leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
+    "receive_exist(tree, 'respondentBankReport')",
+    "activity_receives(tree, 'analyze respondent bank report', 'respondentBankReport')",
+    "condition_eventually_follows(tree, 'respondentBankEvaluationFailed == true', 'add to black list')",
+    "exists(tree, 'assess account risk')",
+    "leads_to(tree, 'assess account risk', 'open account')",
+    "data_leads_to_absence(tree, 'accountRiskLevel != \"low\"', 'open account')",
+    "condition_eventually_follows(tree, 'isFirstTimeRespondentBank == true', 'conduct advanced due diligence study')",
+    "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+    "exists(tree, 'check respondent bank certificate validity')",
+    "leads_to(tree, 'check respondent bank certificate validity', 'open account')",
+    "data_leads_to_absence(tree, 'respondentBankCertificateStatus != \"valid\"', 'open account')"
+  ]
+}

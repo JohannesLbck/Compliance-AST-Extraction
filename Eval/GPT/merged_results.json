@@ -1,0 +1,1903 @@
+{
+  "bpmq": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141115",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141118",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141122",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141124",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141127",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141437",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"failed\"', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141439",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141441",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141443",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationResult == \"fail\"', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141445",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'open account')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141301",
+        "data": [
+          "R1: exists(tree, 'analyze respondentBankReport')",
+          "R2: precedence(tree, 'evaluate respondentBank', 'add blackList')",
+          "R3: condition_eventually_follows(tree, 'respondentBankRisk == \"low\"', 'open account')",
+          "R4: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advancedDueDiligence')",
+          "R5: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R6: precedence(tree, 'validate respondentBankCertificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141304",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list', scope='global')",
+          "R4: condition_eventually_follows(tree, 'accountRisk != \"low\"', 'terminate', scope='global')",
+          "R5: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advanced due diligence study', scope='global')",
+          "R6: leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141305",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence')",
+          "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141308",
+        "data": [
+          "R1: exists(tree, 'obtain respondent bank report')",
+          "R2: exists(tree, 'analyze respondent bank report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence')",
+          "R6: leads_to_absence(tree, 'ratingRejected == true', 'open account')",
+          "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141312",
+        "data": [
+          "R1: exists(tree, 'analyze respondent bank report')",
+          "R2: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'riskLevel == \"high\"', 'terminate')",
+          "R4: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence study')",
+          "R5: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R6: condition_eventually_follows(tree, 'certificateValid == false', 'terminate')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141625",
+        "data": [
+          "R1: exists(tree, 'obtain report')",
+          "R2: exists(tree, 'analyze report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstInteraction == true', 'conduct advanced due diligence')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'certificateValid == true', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141628",
+        "data": [
+          "R1: existence(tree, 'analyze report')",
+          "R2: condition_eventually_follows(tree, 'evaluationResult == \"fail\"', 'add to blacklist')",
+          "R3: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R4: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct due diligence')",
+          "R5: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
+          "R6: precedence(tree, 'validate certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141629",
+        "data": [
+          "R1: exists(tree, 'analyze report')",
+          "R2: leads_to(tree, 'analyze report', 'evaluate report')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'risk == \"low\"', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence')",
+          "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R7: precedence(tree, 'validate certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141632",
+        "data": [
+          "R1: exists(tree, 'analyze respondent bank report')",
+          "R2: condition_eventually_follows(tree, 'evaluationResult == false', 'add to blacklist')",
+          "R3: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
+          "R4: condition_eventually_follows(tree, 'firstInteraction == true', 'conduct advanced due diligence')",
+          "R5: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+          "R6: precedence(tree, 'validate bank certificate', 'open account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141634",
+        "data": [
+          "R1: exists(tree, 'obtain bank report')",
+          "R2: executed_by(tree, 'obtain bank report', 'system')",
+          "R3: condition_eventually_follows(tree, 'evaluationStatus == \"failed\"', 'add to blacklist')",
+          "R4: executed_by(tree, 'add to blacklist', 'system')",
+          "R5: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
+          "R6: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct due diligence')",
+          "R7: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
+          "R8: precedence(tree, 'validate bank certificate', 'open account')"
+        ]
+      }
+    ]
+  },
+  "crl": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141131",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: leads_to(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'checkRiskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'checkRiskAcceptability', 'approveRequest')",
+          "R10: leads_to(tree, 'checkRiskAcceptability', 'rejectRequest')",
+          "R11: max_time_between(tree, 'offerSignedLoanContract', 'closeOffer', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'checkCreditWorthiness', 'global')",
+          "R13: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'createSuspenseFile', 'global')",
+          "R14: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R15: condition_eventually_follows(tree, 'customerStatus == \"gold\" and loanRequestCredit < 1000000', 'evaluateLoanRisk', 'global')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141135",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: precedence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'checkRiskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'checkRiskAcceptability', 'approveRequest')",
+          "R10: leads_to(tree, 'checkRiskAcceptability', 'rejectRequest')",
+          "R11: max_time_between(tree, 'offerSigned', 'offerClosed', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'checkCreditWorthiness')",
+          "R13: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'createSuspenseFile')",
+          "R14: failure_directly_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R15: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanRequestCredit < 1000000)', 'evaluateLoanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141140",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: leads_to(tree, 'check bank privilege', 'check credit worthiness')",
+          "R3: precedence(tree, 'check credit worthiness', 'determine risk level')",
+          "R4: executed_by(tree, 'check bank privilege', 'credit broker')",
+          "R5: executed_by(tree, 'check bank privilege', 'supervisor')",
+          "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+          "R7: leads_to_absence(tree, 'check bank privilege', 'check credit worthiness')",
+          "R8: executed_by(tree, 'check risks', 'branch office manager')",
+          "R9: leads_to(tree, 'check risks', 'approve request')",
+          "R10: leads_to(tree, 'check risks', 'reject request')",
+          "R11: max_time_between(tree, 'sign loan contract', 'close offer', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness')",
+          "R13: leads_to(tree, 'absence(check credit worthiness)', 'create suspense file')",
+          "R14: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R15: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanRequestCredit < 1000000)', 'absence(evaluate loan risk)')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141145",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: precedence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'checkRiskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'checkRiskAcceptability', 'approveRequest')",
+          "R10: leads_to(tree, 'checkRiskAcceptability', 'rejectRequest')",
+          "R11: max_time_between(tree, 'signLoanContract', 'closeOffer', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'checkCreditWorthiness')",
+          "R13: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'createSuspenseFile')",
+          "R14: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R15: condition_eventually_follows(tree, 'customerStatus == \"gold\" and loanRequestCredit < 1000000', 'evaluateLoanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141149",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: precedence(tree, 'check bank privilege', 'check credit worthiness')",
+          "R3: precedence(tree, 'check credit worthiness', 'determine risk level')",
+          "R4: executed_by(tree, 'check bank privilege', 'credit broker')",
+          "R5: executed_by(tree, 'check bank privilege', 'supervisor')",
+          "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+          "R7: leads_to(tree, 'check risks', 'approve request')",
+          "R8: leads_to(tree, 'check risks', 'reject request')",
+          "R9: max_time_between(tree, 'sign loan contract', 'close offer', 604800)",
+          "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness')",
+          "R11: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'create suspense file')",
+          "R12: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R13: condition_eventually_follows(tree, 'customerStatus == \"gold\" and loanRequestCredit < 1000000', 'evaluate loan risk')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141449",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to(tree, 'checkRiskAcceptability', 'finalApproval')",
+          "R8: leads_to(tree, 'checkRiskAcceptability', 'finalRejection')",
+          "R9: max_time_between(tree, 'signLoanContract', 'closeOffer', '7 working days')",
+          "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'checkCreditWorthiness')",
+          "R11: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'createSuspenseFile')",
+          "R12: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R13: leads_to_absence(tree, 'loanRequestCredit < 1000000 and customerStatus == \"gold\"', 'evaluateLoanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141452",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'check bank privilege', 'check credit worthiness')",
+          "R3: precedence(tree, 'check credit worthiness', 'determine risk level')",
+          "R4: executed_by(tree, 'check bank privilege', 'credit broker')",
+          "R5: executed_by(tree, 'check bank privilege', 'supervisor')",
+          "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+          "R7: precedence(tree, 'check risk acceptability', 'approve request')",
+          "R8: precedence(tree, 'check risk acceptability', 'reject request')",
+          "R9: max_time_between(tree, 'sign loan contract', 'close offer', '7 working days')",
+          "R10: condition_eventually_follows(tree, 'loanAmount > 1000000', 'check credit worthiness', 'global')",
+          "R11: leads_to(tree, 'absence of check credit worthiness', 'create suspense file')",
+          "R12: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R13: leads_to_absence(tree, '(customerStatus == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141455",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'check customerBankPrivilege', 'check creditWorthiness')",
+          "R3: precedence(tree, 'determine riskLevel', 'check customerBankPrivilege')",
+          "R4: executed_by(tree, 'check customerBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'check customerBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'check creditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to(tree, 'check riskAcceptability', 'approve request')",
+          "R8: leads_to(tree, 'check riskAcceptability', 'reject request')",
+          "R9: max_time_between(tree, 'sign loanContract', 'close contract', '7 working days')",
+          "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check creditWorthiness', 'global')",
+          "R11: leads_to(tree, 'absence check creditWorthiness', 'create suspenseFile')",
+          "R12: failure_eventually_follows(tree, 'create suspenseFile', 'notify manager')",
+          "R13: leads_to_absence(tree, '(customerStatus == \"gold\") and (loanRequestCredit < 1000000)', 'evaluate loanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141458",
+        "data": [
+          "R1: send_exist(tree, 'personalDataCollectedNotification')",
+          "R2: leads_to(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkCustomerBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkCustomerBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'assessRiskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'assessRiskAcceptability', 'finalApproval')",
+          "R10: leads_to(tree, 'assessRiskAcceptability', 'finalRejection')",
+          "R11: max_time_between(tree, 'signLoanContract', 'offerClosure', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'supervisorCheckCreditWorthiness')",
+          "R13: condition_eventually_follows(tree, 'not supervisorCheckCreditWorthiness', 'createSuspenseFile')",
+          "R14: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R15: condition_eventually_follows(tree, 'customerStatus == \"gold\" and loanRequestCredit < 1000000', 'not evaluateLoanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141503",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'check customerBankPrivilege', 'check creditWorthiness')",
+          "R3: precedence(tree, 'check creditWorthiness', 'determine riskLevel')",
+          "R4: executed_by(tree, 'check customerBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'check customerBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'check creditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'check customerBankPrivilege', 'check creditWorthiness')",
+          "R8: executed_by(tree, 'check riskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'check riskAcceptability', 'approve request')",
+          "R10: leads_to(tree, 'check riskAcceptability', 'reject request')",
+          "R11: max_time_between(tree, 'sign loanContract', 'close loanContract', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check creditWorthiness')",
+          "R13: condition_eventually_follows(tree, 'loanRequestCredit > 1000000 and not check creditWorthiness', 'create suspenseFile')",
+          "R14: failure_eventually_follows(tree, 'create suspenseFile', 'notify manager')",
+          "R15: leads_to_absence(tree, 'loanRequestCredit < 1000000 and customerStatus == \"gold\"', 'evaluate loanRisk')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141315",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: precedence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to(tree, 'checkRiskAcceptability', 'finalApproval')",
+          "R8: leads_to(tree, 'checkRiskAcceptability', 'finalRejection')",
+          "R9: max_time_between(tree, 'signLoanContract', 'closeOffer', 604800)",
+          "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'supervisorCheck')",
+          "R11: failure_directly_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R12: leads_to(tree, 'evaluateLoanRisk', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141318",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'check bank privilege', 'check credit worthiness')",
+          "R3: precedence(tree, 'check credit worthiness', 'determine risk level')",
+          "R4: executed_by(tree, 'check bank privilege', 'credit broker')",
+          "R5: executed_by(tree, 'check bank privilege', 'supervisor')",
+          "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+          "R7: max_time_between(tree, 'sign loan contract', 'close loan contract', '7 working days')",
+          "R8: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness')",
+          "R9: condition_directly_follows(tree, 'loanRequestCredit > 1000000', 'create suspense file')",
+          "R10: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R11: leads_to_absence(tree, 'loanRequestCredit < 1000000', 'evaluate loan risk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141322",
+        "data": [
+          "R1: receive_exist(tree, 'personalData').",
+          "R2: leads_to(tree, 'check bank privilege', 'check credit worthiness').",
+          "R3: precedence(tree, 'check bank privilege', 'determine risk level').",
+          "R4: precedence(tree, 'check credit worthiness', 'determine risk level').",
+          "R5: executed_by(tree, 'check bank privilege', 'credit broker').",
+          "R6: executed_by(tree, 'check bank privilege', 'supervisor').",
+          "R7: executed_by(tree, 'check credit worthiness', 'post-processing clerk').",
+          "R8: by_due_date(tree, 'offer valid', '7 working days', 'close offer').",
+          "R9: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness', 'global').",
+          "R10: leads_to(tree, 'check credit worthiness', 'create suspense file').",
+          "R11: failure_eventually_follows(tree, 'create suspense file', 'notify manager').",
+          "R12: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanRequestCredit < 1000000)', 'evaluate loan risk', 'global')."
+        ]
+      },
+      {
+        "timestamp": "20260304_141325",
+        "data": [
+          "R1: send_exist(tree, 'personalDataNotification')",
+          "R2: directly_follows(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkCustomerBankPrivilege', 'creditBroker') and executed_by(tree, 'checkCustomerBankPrivilege', 'supervisor') and executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R5: leads_to(tree, 'determineRiskAcceptability', 'finalApproval') and leads_to(tree, 'determineRiskAcceptability', 'finalRejection')",
+          "R6: max_time_between(tree, 'offerInSignedLoanContract', 'closeOffer', 604800)",
+          "R7: condition_eventually_follows(tree, 'loanCredit > 1000000', 'checkCreditWorthinessBySupervisor', 'global')",
+          "R8: condition_directly_follows(tree, 'loanCredit > 1000000', 'createSuspenseFile')",
+          "R9: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R10: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'skipEvaluateLoanRisk', 'global')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141329",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: leads_to(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'checkRisks', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'checkRisks', 'finalApproval')",
+          "R10: leads_to(tree, 'checkRisks', 'finalRejection')",
+          "R11: max_time_between(tree, 'signLoanContract', 'closeOffer', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanCredit > 1000000', 'checkCreditWorthiness', 'clerkSupervisor')",
+          "R13: failure_directly_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R14: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'evaluateLoanRisk', 'End Activity')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141637",
+        "data": [
+          "R1: condition_eventually_follows(tree, 'personalDataCollected == true', 'send_emailNotification')",
+          "R2: leads_to(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
+          "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: leads_to_absence(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
+          "R8: executed_by(tree, 'checkRiskAcceptability', 'branchOfficeManager')",
+          "R9: leads_to(tree, 'checkRiskAcceptability', 'approveRequest')",
+          "R10: leads_to(tree, 'checkRiskAcceptability', 'rejectRequest')",
+          "R11: max_time_between(tree, 'offerSignedLoanContract', 'closeContract', 604800)",
+          "R12: condition_eventually_follows(tree, 'loanAmount > 1000000', 'supervisorCheckCredit')",
+          "R13: failure_eventually_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R14: absence(tree, 'evaluateLoanRisk')",
+          "R15: condition_directly_follows(tree, '(customerType == \"gold\") and (loanAmount < 1000000)', 'noEvaluateLoanRisk')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141642",
+        "data": [
+          "R1: receive_exist(tree, 'personalData').",
+          "R2: leads_to(tree, 'check bank privilege', 'check credit worthiness').",
+          "R3: precedence(tree, 'determine risk level', 'check credit worthiness').",
+          "R4: executed_by(tree, 'check bank privilege', 'credit broker').",
+          "R5: executed_by(tree, 'check bank privilege', 'supervisor').",
+          "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk').",
+          "R7: leads_to(tree, 'check risk acceptability', 'final approve').",
+          "R8: leads_to(tree, 'check risk acceptability', 'final reject').",
+          "R9: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800).",
+          "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'supervisor check credit worthiness', 'global').",
+          "R11: condition_eventually_follows(tree, 'supervisor check credit worthiness == False', 'create suspense file', 'global').",
+          "R12: failure_eventually_follows(tree, 'create suspense file', 'notify manager').",
+          "R13: leads_to_absence(tree, 'loanRequestCredit < 1000000 and customerStatus == gold', 'evaluate loan risk')."
+        ]
+      },
+      {
+        "timestamp": "20260304_141647",
+        "data": [
+          "R1: send_exist(tree, 'personalDataCollectedNotification')",
+          "R2: precedence(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness')",
+          "R3: precedence(tree, 'checkCreditWorthiness', 'determineLoanRiskLevel')",
+          "R4: executed_by(tree, 'checkCustomerBankPrivilege', 'creditBroker')",
+          "R5: executed_by(tree, 'checkCustomerBankPrivilege', 'supervisor')",
+          "R6: executed_by(tree, 'checkCreditWorthiness', 'postProcessingClerk')",
+          "R7: precedence_absence(tree, 'checkCustomerBankPrivilege', 'checkCreditWorthiness')",
+          "R8: leads_to(tree, 'checkRisksAcceptable', 'approveRequest')",
+          "R9: leads_to(tree, 'checkRisksAcceptable', 'rejectRequest')",
+          "R10: max_time_between(tree, 'signLoanContract', 'closeOffer', '7 working days')",
+          "R11: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'checkCreditWorthiness')",
+          "R12: condition_directly_follows(tree, 'loanRequestCredit > 1000000', 'createSuspenseFile')",
+          "R13: failure_directly_follows(tree, 'createSuspenseFile', 'notifyManager')",
+          "R14: condition_eventually_follows(tree, 'customerStatus == \"gold\" and loanRequestCredit < 1000000', 'skipLoanRiskEvaluation')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141649",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: directly_follows(tree, 'check bank privilege', 'determine risk level')",
+          "R3: executed_by(tree, 'bank privilege check', 'credit broker')",
+          "R4: executed_by(tree, 'credit worthiness check', 'post-processing clerk')",
+          "R5: max_time_between(tree, 'offer signed', 'contract expire', 604800)",
+          "R6: condition_eventually_follows(tree, 'creditAmount > 1000000', 'supervisor check', scope='branch')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141651",
+        "data": [
+          "R1: receive_exist(tree, 'personalData')",
+          "R2: executed_by(tree, 'check bank privilege', 'credit broker')",
+          "R3: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness')"
+        ]
+      }
+    ]
+  },
+  "haar": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141153",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141154",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141156",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141157",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: leads_to_absence(tree, 'alignment unverified', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'case accepted', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141159",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: leads_to_absence(tree, 'alignment unverified', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'case accepted', 'update TM')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141504",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141506",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'further actions')",
+          "R2: precedence(tree, 'translate all segments', 'close case')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141507",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM automatically', 'global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141509",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141510",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
+          "R2: precedence(tree, 'translate all segments', 'close case')",
+          "R3: leads_to_absence(tree, 'alignment unverified', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141331",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'translate segments', 'close case')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R4: precedence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141332",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence_absence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141335",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: leads_to_absence(tree, 'alignment unverified', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141337",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141338",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentStatus == \"unverified\"', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141653",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: leads_to_absence(tree, 'alignment unverified', 'update TM automatically')",
+          "R4: precedence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141655",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'further actions')",
+          "R2: precedence(tree, 'translate all segments', 'close case')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R4: precedence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141657",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: leads_to(tree, 'accept case', 'update TM')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141704",
+        "data": [
+          "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
+          "R2: precedence(tree, 'close case', 'translate all segments')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R4: precedence_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM', scope='global')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141706",
+        "data": [
+          "R1: condition_eventually_follows(tree, 'jobRejected == true', 'End Activity')",
+          "R2: precedence(tree, 'closeCase', 'translateSegment')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'updateTM')",
+          "R4: precedence_absence(tree, 'createSegment', 'startTranslation')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'updateTM')"
+        ]
+      }
+    ]
+  },
+  "pcl": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141203",
+        "data": [
+          "R1: leads_to(tree, 'scan customer', 'identity check')",
+          "R2: executed_by(tree, 'perform identity check', 'system')",
+          "R3: condition_eventually_follows(tree, 'accountBalance < 0', 'End Activity')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedBy == \"bankManager\") and not (customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141208",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
+          "R4: executed_by(tree, 'record identityCheck', 'system')",
+          "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141210",
+        "data": [
+          "R1: leads_to(tree, 'scan identity', 'identity check completed')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'identity check completed', 'record identity check')",
+          "R4: executed_by(tree, 'record identity check', 'system')",
+          "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager == true or customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141214",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
+          "R4: executed_by(tree, 'record identityCheck', 'system')",
+          "R5: data_leads_to_absence(tree, 'accountBalance < 0 and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141216",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
+          "R4: executed_by(tree, 'record identityCheck', 'system')",
+          "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141512",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'retain history')",
+          "R4: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R5: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP)', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141514",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'record identity check')",
+          "R4: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R5: condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\")', 'End Activity')",
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and (customerType == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141516",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'retain history')",
+          "R4: executed_by(tree, 'retain history', 'system')",
+          "R5: condition_eventually_follows(tree, 'accountBalance < 0 and not (approval == true or customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141517",
+        "data": [
+          "exists(tree, 'scan customer')",
+          "condition_eventually_follows(tree, 'identityCheckPerformed == true', 'End Activity')",
+          "data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\") or (customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141518",
+        "data": [
+          "R1: exists(tree, 'scan customer')",
+          "R2: activity_receives(tree, 'scan customer', 'identityDatabase')",
+          "R3: leads_to(tree, 'scan customer', 'record identityCheck')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141340",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: condition_eventually_follows(tree, 'scan identity', 'identityCheckPerformed')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'maintain account')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP == true)', 'maintain account')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141344",
+        "data": [
+          "R1: leads_to(tree, 'scan identity', 'identity verified')",
+          "R2: condition_eventually_follows(tree, 'true', 'retain history')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\")', 'End Activity')",
+          "R5: condition_eventually_follows(tree, '(accountBalance < 0) and (customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141348",
+        "data": [
+          "R1: leads_to(tree, 'scan customer', 'identity check')",
+          "R2: executed_by(tree, 'retain history', 'system')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and (isVIP == false)', 'manager approval')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141349",
+        "data": [
+          "R1: exists(tree, 'scan identity')",
+          "R2: executed_by(tree, 'scan identity', 'system')",
+          "R3: leads_to(tree, 'scan identity', 'record identity check')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approved == true or customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141354",
+        "data": [
+          "R1: exists(tree, 'scan customer')",
+          "R2: executed_by(tree, 'scan customer', 'system')",
+          "R3: send_exist(tree, 'identityCheckHistory')",
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvalStatus == \"approved\") and not (customerType == \"VIP\")', 'End Activity')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141708",
+        "data": [
+          "R1: leads_to(tree, 'scan identity', 'identity checked')",
+          "R2: exists(tree, 'record identity checks')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvedByManager == true or customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141710",
+        "data": [
+          "R1: leads_to(tree, 'scan customer identity', 'End Activity')",
+          "R2: executed_by(tree, 'record identity check', 'system')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+          "R4: condition_eventually_follows(tree, 'accountBalance < 0 or (status == \"VIP\")', 'approve negative balance', scope='global')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141713",
+        "data": [
+          "R1: leads_to(tree, 'scan identity', 'End Activity')",
+          "R2: exists(tree, 'log identity check')",
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity') or executed_by(tree, 'approve negative balance', 'bank manager') or (accountStatus == 'VIP')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141714",
+        "data": [
+          "R1: condition_eventually_follows(tree, 'newCustomer == true', 'scan identity')",
+          "R2: exists(tree, 'retain identityCheckHistory')",
+          "R3: condition_eventually_follows(tree, 'accountBalance < 0', 'manager approves')",
+          "R4: condition_eventually_follows(tree, 'accountBalance < 0', 'accountStatus == \"VIP\"')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141716",
+        "data": [
+          "R1: exists(tree, 'perform identity scan')",
+          "R2: executed_by(tree, 'perform identity scan', 'system')",
+          "R3: send_exist(tree, 'identityCheckHistory')",
+          "R4: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvalProvided == true or customerStatus == \"VIP\")', 'End Activity')"
+        ]
+      }
+    ]
+  },
+  "ppsl": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141218",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'deliver product', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record order rejection')",
+          "R4: executed_by(tree, 'report payment', 'system')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141220",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record order rejection')",
+          "R4: receive_exist(tree, 'payment') and activity_sends(tree, 'report payment', 'payment')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141223",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record rejection')",
+          "R4: leads_to(tree, 'receive payment', 'report payment')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141224",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments')",
+          "R4: precedence(tree, 'close order', 'record order rejection')",
+          "R5: send_exist(tree, 'paymentReceived')",
+          "R6: precedence(tree, 'ship product', 'fill order')",
+          "R7: precedence(tree, 'send invoice', 'fill order')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141226",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record rejection')",
+          "R4: send_exist(tree, 'paymentReceived')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141526",
+        "data": [
+          "R1: precedence(tree, 'record received orders', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: precedence(tree, 'record payment', 'close order')",
+          "R4: precedence(tree, 'record rejection', 'close order')",
+          "R5: send_exist(tree, 'paymentReceived')",
+          "R6: precedence(tree, 'ship product', 'fill order')",
+          "R7: precedence(tree, 'send invoice', 'fill order')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141528",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'perform quality check', 'production action')",
+          "R4: precedence(tree, 'close order', 'record payments')",
+          "R5: precedence(tree, 'close order', 'record order rejected')",
+          "R6: send_exist(tree, 'paymentReceived')",
+          "R7: leads_to(tree, 'fill order', 'ship product')",
+          "R8: leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141530",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record order rejected')",
+          "R4: send_exist(tree, 'paymentReceived')",
+          "R5: precedence(tree, 'fill order', 'ship product') and precedence(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141532",
+        "data": [
+          "R1: precedence(tree, 'record received orders', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: precedence(tree, 'record payments made', 'close order')",
+          "R4: precedence(tree, 'record order rejection', 'close order')",
+          "R5: send_exist(tree, 'paymentReceived')",
+          "R6: precedence(tree, 'ship product', 'fill order')",
+          "R7: precedence(tree, 'send invoice', 'fill order')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141533",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record order rejection')",
+          "R4: leads_to(tree, 'receive payment', 'report payment')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141357",
+        "data": [
+          "R1: precedence(tree, 'make record', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: precedence(tree, 'make record', 'close order') and (exists(tree, 'record payment') or exists(tree, 'record rejection'))",
+          "R4: send_exist(tree, 'paymentReceived')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141359",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payments') or precedence(tree, 'close order', 'record rejection')",
+          "R4: send_exist(tree, 'paymentReceived')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141401",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'deliver product', 'perform quality check')",
+          "R3: precedence(tree, 'close order', 'record payment') or precedence(tree, 'close order', 'record order rejection')",
+          "R4: send_exist(tree, 'paymentReceived')",
+          "R5: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141403",
+        "data": [
+          "R1: precedence(tree, 'make records of received orders', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: leads_to(tree, 'perform production action', 'perform quality check')",
+          "R4: precedence(tree, 'make records of payments made', 'close order')",
+          "R5: precedence(tree, 'make records of order rejection', 'close order')",
+          "R6: send_exist(tree, 'paymentReceived')",
+          "R7: precedence(tree, 'fill order', 'ship product')",
+          "R8: precedence(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141405",
+        "data": [
+          "R1: precedence(tree, 'record received order', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: precedence(tree, 'record payment', 'close order')",
+          "R4: precedence(tree, 'record order rejection', 'close order')",
+          "R5: send_exist(tree, 'paymentReceived')",
+          "R6: precedence(tree, 'ship product', 'fill order')",
+          "R7: precedence(tree, 'send invoice', 'fill order')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141723",
+        "data": [
+          "R1: precedence(tree, 'record received orders', 'close order')",
+          "R2: precedence(tree, 'perform quality check', 'deliver product')",
+          "R3: leads_to(tree, 'perform production action', 'perform quality check')",
+          "R4: leads_to(tree, 'receive payment', 'report payment')",
+          "R5: precedence(tree, 'record payment', 'close order')",
+          "R6: precedence(tree, 'record rejection', 'close order')",
+          "R7: parallel(tree, 'ship product', 'send invoice')",
+          "R8: precedence(tree, 'fill order', 'ship product')",
+          "R9: precedence(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141725",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: leads_to(tree, 'perform quality check', 'delivery')",
+          "R4: precedence(tree, 'close order', 'record payments')",
+          "R5: precedence(tree, 'close order', 'record order rejection')",
+          "R6: condition_eventually_follows(tree, 'paymentReceived == true', 'report payment')",
+          "R7: leads_to(tree, 'fill order', 'ship product')",
+          "R8: leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141727",
+        "data": [
+          "R1: precedence(tree, 'record received order', 'close order')",
+          "R2: precedence(tree, 'quality check', 'delivery')",
+          "R3: leads_to(tree, 'production action', 'quality check')",
+          "R4: precedence(tree, 'record payment', 'close order')",
+          "R5: precedence(tree, 'record rejected order', 'close order')",
+          "R6: send_exist(tree, 'paymentReceived')",
+          "R7: leads_to(tree, 'fill order', 'ship product')",
+          "R8: leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141730",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: precedence(tree, 'delivery', 'perform quality check')",
+          "R3: precedence(tree, 'perform quality check', 'perform production action')",
+          "R4: precedence(tree, 'close order', 'record payment') or precedence(tree, 'close order', 'record rejection')",
+          "R5: send_exist(tree, 'paymentReceived')",
+          "R6: leads_to(tree, 'fill order', 'ship product') and leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141732",
+        "data": [
+          "R1: precedence(tree, 'close order', 'record received orders')",
+          "R2: directly_follows(tree, 'perform quality check', 'perform production action')",
+          "R3: precedence(tree, 'close order', 'record payments')",
+          "R4: precedence(tree, 'close order', 'record order rejected')",
+          "R5: activity_sends(tree, 'record payment received', 'paymentData')",
+          "R6: leads_to(tree, 'fill order', 'ship product')",
+          "R7: leads_to(tree, 'fill order', 'send invoice')"
+        ]
+      }
+    ]
+  },
+  "status": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141228",
+        "data": [
+          "R1: recurring(tree, 'check document uploaded', 10368000)",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsAvailable == true)', 'analyse reports')",
+          "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141229",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')",
+          "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141231",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: condition_eventually_follows(tree, '(documentType == \"checklist\") and (signedBy == \"Tax Manager\") and (signedBy == \"Financial Controller\")', 'check document upload')",
+          "R3: leads_to(tree, 'create resolution proposal', 'analyse reports')",
+          "R4: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141232",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+          "R3: leads_to(tree, 'resolution proposal created', 'analyse reports')",
+          "R4: exists(tree, 'reports from CB and LD available')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141235",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: executed_by(tree, 'analyze reports', 'creator of resolution proposal')",
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyze reports')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141536",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141543",
+        "data": [
+          "R1: recurring(tree, 'check new document uploaded', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+          "R3: leads_to(tree, 'resolution proposal created and reports available', 'analyse reports')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141545",
+        "data": [
+          "exists(tree, 'upload document')",
+          "recurring(tree, 'check document', 10368000)",
+          "executed_by(tree, 'sign checklist', 'Tax Manager')",
+          "executed_by(tree, 'sign checklist', 'Financial Controller')",
+          "condition_eventually_follows(tree, 'reportsAvailable == true', 'analyse reports')",
+          "executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141547",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+          "R3: leads_to(tree, 'resolution proposal created', 'analyse reports')",
+          "R4: leads_to(tree, 'CB report available', 'analyse reports')",
+          "R5: leads_to(tree, 'LD report available', 'analyse reports')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141549",
+        "data": [
+          "R1: recurring(tree, 'check document uploaded', 10368000)",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsAvailable == true)', 'analyse reports')",
+          "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141407",
+        "data": [
+          "R1: recurring(tree, 'check document uploaded', 10368000)",
+          "R2: executed_by(tree, 'analyze reports', 'creator of resolution proposal')",
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyze reports')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141409",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')",
+          "R3: executed_by(tree, 'analyse reports', 'resolutionProposalCreator')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141410",
+        "data": [
+          "R1: recurring(tree, 'check document uploaded', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+          "R3: leads_to(tree, 'resolution proposal created', 'analyse reports')",
+          "R4: exists(tree, 'CB report available')",
+          "R5: exists(tree, 'LD report available')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141411",
+        "data": [
+          "R1: recurring(tree, 'check new document uploaded', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'creator of resolution proposal')",
+          "R3: precedence(tree, 'create resolution proposal', 'analyse reports')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141413",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: executed_by(tree, 'analyse reports', 'resolution proposal creator')",
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141734",
+        "data": [
+          "R1: recurring(tree, 'check new document', 10368000)",
+          "R2: condition_eventually_follows(tree, '(checklistSignedBy == \"Tax Manager\") and (checklistSignedBy == \"Financial Controller\")', 'check new document')",
+          "R3: leads_to(tree, 'create resolution proposal', 'analyse reports')",
+          "R4: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141743",
+        "data": [
+          "exists(tree, 'upload document')",
+          "recurring(tree, 'upload document', 10368000)",
+          "executed_by(tree, 'upload document', 'Tax Manager')",
+          "executed_by(tree, 'upload document', 'Financial Controller')",
+          "condition_eventually_follows(tree, 'exists(tree, \"resolution proposal\") and exists(tree, \"report CB\") and exists(tree, \"report LD\")', 'analyse report')",
+          "executed_by(tree, 'analyse report', executed_by_return(tree, 'create resolution proposal'))"
+        ]
+      },
+      {
+        "timestamp": "20260304_141745",
+        "data": [
+          "R1: recurring(tree, 'upload document', 10368000)",
+          "R2: condition_eventually_follows(tree, '(checklist == \"completed and signed\") and (actor in [\"Tax Manager\", \"Financial Controller\"])', 'upload document', 'branch')",
+          "R3: executed_by(tree, 'analyze report', executed_by_return(tree, 'create resolution proposal'))",
+          "R4: precedence(tree, 'reports available', 'analyze report')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141747",
+        "data": [
+          "R1: recurring(tree, 'upload document', 10368000)",
+          "R2: executed_by(tree, 'sign checklist', 'Tax Manager')",
+          "R3: executed_by(tree, 'sign checklist', 'Financial Controller')",
+          "R4: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsFromCBAvailable == true) and (reportsFromLDAvailable == true)', 'analyze reports')",
+          "R5: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
+        ]
+      },
+      {
+        "timestamp": "20260304_141749",
+        "data": [
+          "R1: recurring(tree, 'check document upload', 10368000)",
+          "R2: condition_eventually_follows(tree, \"(documentType == 'checklist') and (status == 'completed and signed')\", 'upload document', 'global')",
+          "R3: condition_eventually_follows(tree, \"(proposalCreated == true) and (CBreportAvailable == true) and (LDreportAvailable == true)\", 'analyze reports', 'global')",
+          "R4: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
+        ]
+      }
+    ]
+  },
+  "sun": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141236",
+        "data": [
+          "R1: max_time_between(tree, 'Start Activity', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141240",
+        "data": [
+          "R1: max_time_between(tree, 'initiate process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141241",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141243",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141244",
+        "data": [
+          "R1: max_time_between(tree, 'process with telephone company', 'terminate', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy of user personal information', 'telephone company')",
+          "R3: leads_to(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'retrieve personal data', 'obtain consent')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141551",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141552",
+        "data": [
+          "R1: max_time_between(tree, 'process with telephone company', 'terminate', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy of personal information', 'telephone company')",
+          "R3: precedence(tree, 'activate SIM card', 'use SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141558",
+        "data": [
+          "R1: max_time_between(tree, 'Start Activity', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141559",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify user information', 'telephone company')",
+          "R3: precedence(tree, 'activate SIM card', 'use SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141601",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: leads_to(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'retrieve personal data', 'obtain consent')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141415",
+        "data": [
+          "R1: max_time_between(tree, 'process telephone company', 'terminate', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: leads_to(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'retrieve personal data', 'obtain consent')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141416",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: directly_follows(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141418",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141419",
+        "data": [
+          "R1: max_time_between(tree, 'initiate process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141421",
+        "data": [
+          "R1: condition_eventually_follows(tree, 'processDuration > 2592000', 'terminate process')",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: leads_to(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personalData')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141750",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: precedence(tree, 'activate SIM card', 'customer uses SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141752",
+        "data": [
+          "R1: max_time_between(tree, 'process telephone company', 'terminate', 2592000)",
+          "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personalData')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141754",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify user information accuracy', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: precedence(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141802",
+        "data": [
+          "R1: max_time_between(tree, 'start process', 'terminate process', 2592000)",
+          "R2: executed_by(tree, 'verify personal information', 'telephone company')",
+          "R3: precedence(tree, 'receive SIM card', 'activate SIM card')",
+          "R4: leads_to(tree, 'obtain consent', 'retrieve personal data')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141804",
+        "data": [
+          "exists(tree, 'terminate process') and max_time_between(tree, 'initiate process', 'terminate process', 2592000)",
+          "exists(tree, 'verify accuracy') and executed_by(tree, 'verify accuracy', 'telephoneCompany')",
+          "precedence(tree, 'send simCard', 'activate simCard') and executed_by(tree, 'activate simCard', 'telephoneCompany')",
+          "precedence(tree, 'obtain consent', 'retrieve personalData') and executed_by(tree, 'obtain consent', 'dataController')"
+        ]
+      }
+    ]
+  },
+  "zasada": {
+    "0.1": [
+      {
+        "timestamp": "20260304_141248",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide WpHGCustomerInformation', 'customerAdvisor')",
+          "R3: executed_by(tree, 'provide BasicInformationSecuritiesAndCapitalInvestment', 'customerAdvisor')",
+          "R4: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndAccountDocuments')",
+          "R5: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R6: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R7: executed_by(tree, 'handle customerIdentificationAndLegitimation', 'customerAdvisor')",
+          "R8: executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R9: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R10: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141251",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'conduct riskAssessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conduct investmentAdvice')",
+          "R6: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor')",
+          "R7: executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R8: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R9: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141253",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == true', 'check suspectedMoneyLaundering', scope='global')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141255",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndAccountDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentificationAndLegitimation', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'futureCustomerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141259",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide WpHGCustomerInformation', 'customerAdvisor') and executed_by(tree, 'provide BasicInformationSecuritiesAndCapitalInvestment', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndAccountDocuments') and executed_by(tree, 'send customerLegitimationAndAccountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentificationAndLegitimation', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'futureCustomerContact')"
+        ]
+      }
+    ],
+    "0.3": [
+      {
+        "timestamp": "20260304_141603",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'conduct riskAssessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimation and accountDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141611",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141613",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'perform riskAssessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send accountDocuments', 'marketSupport')",
+          "R4: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentification', 'customerAdvisor')",
+          "R6: executed_by(tree, 'check moneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R7: precedence(tree, 'resolve moneyLaunderingCase', 'conclude custodyAccountContract')",
+          "R8: recurring(tree, 'update customerInformation', 'futureCustomerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141615",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'conduct riskAssessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conduct investmentAdvice')",
+          "R6: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor')",
+          "R7: executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R8: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R9: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141617",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'perform riskAssessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R6: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor')",
+          "R7: executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R8: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R9: loop(tree, 'update customerInformation')"
+        ]
+      }
+    ],
+    "0.5": [
+      {
+        "timestamp": "20260304_141425",
+        "data": [
+          "R1: precedence(tree, receive_exist(tree, 'customerData'), 'assessRisk')",
+          "R2: executed_by(tree, 'provideBrochures', 'customerAdvisor') and send_exist(tree, 'wpHGCustomerInformation') and send_exist(tree, 'basicInformationSecurities')",
+          "R3: leads_to(tree, 'concludeCustodyContract', 'sendDocuments') and executed_by(tree, 'sendDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conductInvestmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conductInvestmentAdvice')",
+          "R5: executed_by(tree, 'handleCustomerIdentification', 'customerAdvisor') and executed_by(tree, 'checkSuspectedCases', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolveSuspectedCase', 'concludeCustodyContract')",
+          "R7: recurring(tree, 'updateCustomerInformation', 'everyCustomerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141429",
+        "data": [
+          "R1: precedence(tree, receive_exist(tree, 'customerData'), 'perform risk assessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'send account documents', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investment advice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investment advice')",
+          "R6: executed_by(tree, 'handle legitimation', 'customerAdvisor')",
+          "R7: executed_by(tree, 'check money laundering', 'antiMoneyLaunderingOfficer')",
+          "R8: precedence(tree, 'resolve money laundering case', 'conclude custody account contract')",
+          "R9: recurring(tree, 'update customer information', 'every customer contact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141431",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'perform riskAssessment')",
+          "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == true', 'resolve suspectedMoneyLaundering')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: loop(tree, 'update customerInformation')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141433",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'conduct riskAssessment')",
+          "R2: executed_by(tree, 'provide customerInformationBrochures', 'customerAdvisor')",
+          "R3: executed_by(tree, 'provide basicInformationBrochures', 'customerAdvisor')",
+          "R4: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndDocuments')",
+          "R5: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R6: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= \"C\"', 'conduct investmentAdvice')",
+          "R7: executed_by(tree, 'handle customerIdentification', 'customerAdvisor')",
+          "R8: executed_by(tree, 'handle customerLegitimation', 'customerAdvisor')",
+          "R9: executed_by(tree, 'check moneyLaunderingSuspicions', 'antiMoneyLaunderingOfficer')",
+          "R10: precedence(tree, 'resolve moneyLaunderingSuspicions', 'conclude custodyAccountContract')",
+          "R11: loop(tree, 'update customerInformation')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141435",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentification', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'future customerContact')"
+        ]
+      }
+    ],
+    "0.7": [
+      {
+        "timestamp": "20260304_141807",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide WpHGCustomerInformation', 'customerAdvisor') and executed_by(tree, 'provide BasicInformationSecuritiesAndCapitalInvestment', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndAccountDocuments') and executed_by(tree, 'send customerLegitimationAndAccountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'advisorSecuritiesCompetenceLevel >= C', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentificationAndLegitimation', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: leads_to(tree, 'contact customer', 'update customerInformation')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141812",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor') and condition_eventually_follows(tree, '(brochuresProvided == true)', 'process continues')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send legitimation and accountDocuments') and executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, '(securitiesCompetenceLevel >= \"C\")', 'conduct investmentAdvice')",
+          "R5: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor') and executed_by(tree, 'check moneyLaunderingCase', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve antiMoneyLaunderingCase', 'conclude custodyAccountContract')",
+          "R7: looping(tree, 'update customerInformation', 'customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141814",
+        "data": [
+          "R1: precedence(tree, receive_exist(tree, 'customerData'), 'perform risk assessment')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+          "R3: send_exist(tree, 'custodyAccountContract')",
+          "R4: executed_by(tree, 'conduct investment advice', 'customerAdvisor')",
+          "R5: executed_by(tree, 'handle customer identification', 'customerAdvisor')",
+          "R6: precedence(tree, 'resolve money laundering case', 'conclude custody-account contract')",
+          "R7: condition_eventually_follows(tree, 'update customer information', 'contact customer')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141817",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'perform individualRiskAssessment')",
+          "R2: executed_by(tree, 'provide WpHGCustomerInformation', 'customerAdvisor')",
+          "R3: executed_by(tree, 'provide BasicInformationSecuritiesAndCapitalInvestment', 'customerAdvisor')",
+          "R4: directly_follows(tree, 'conclude custodyAccountContract', 'send customerLegitimationAndAccountDocumentsToMarketSupport')",
+          "R5: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+          "R6: condition_eventually_follows(tree, 'securitiesCompetence >= \"levelC\"', 'conduct investmentAdvice')",
+          "R7: executed_by(tree, 'perform customerIdentificationAndLegitimation', 'customerAdvisor')",
+          "R8: executed_by(tree, 'verify suspectedCaseOfMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R9: precedence(tree, 'resolve suspectedCaseOfAntiMoneyLaundering', 'conclude custodyAccountContract')",
+          "R10: recurring(tree, 'update customerInformation', 'every future customerContact')"
+        ]
+      },
+      {
+        "timestamp": "20260304_141819",
+        "data": [
+          "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
+          "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
+          "R3: leads_to(tree, 'conclude custodyAccountContract', 'send legitimationDocuments')",
+          "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, '(securitiesCompetenceLevel >= \"C\")', 'conduct investmentAdvice', \"scope='branch'\")",
+          "R5: executed_by(tree, 'handle customerIdentification', 'customerAdvisor') and executed_by(tree, 'check suspectedMoneyLaundering', 'antiMoneyLaunderingOfficer')",
+          "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+          "R7: recurring(tree, 'update customerInformation', 'every customer contact')"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "recurring(tree, 'check document upload', 10368000)",
+    "condition_eventually_follows(tree, 'resolutionProposal.isCreated == true and cbReport.isAvailable == true and ldReport.isAvailable == true', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

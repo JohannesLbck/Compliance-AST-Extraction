@@ -1,0 +1,16 @@
+{
+  "requirements": [
+    "R1: precedence(tree, 'close order', 'record received orders')",
+    "R2: leads_to(tree, 'perform production action', 'perform quality check')",
+    "R3: leads_to(tree, 'perform quality check', 'deliver product')",
+    "R4: exists(tree, 'record payments made')",
+    "R5: exists(tree, 'record order rejection')",
+    "R6: activity_sends(tree, 'record payments made', 'paymentRecordsMade')",
+    "R7: activity_sends(tree, 'record order rejection', 'orderRejectedRecordsMade')",
+    "R8: data_leads_to_absence(tree, 'paymentRecordsMade == false and orderRejectedRecordsMade == false', 'close order')",
+    "R9: leads_to(tree, 'receive payment', 'report payment')",
+    "R10: leads_to(tree, 'fill order', 'ship product')",
+    "R11: leads_to(tree, 'fill order', 'send invoice')",
+    "R12: parallel(tree, 'ship product', 'send invoice')"
+  ]
+}

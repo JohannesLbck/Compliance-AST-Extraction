@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "leads_to(tree, 'reject job', 'End Activity')",
+    "precedence(tree, 'close case', 'translate all segments')",
+    "data_leads_to_absence(tree, 'alignmentStatus == \"unverified\"', 'update TM automatically')",
+    "leads_to_absence(tree, 'start translation', 'create segment')",
+    "leads_to(tree, 'accept case', 'update TM')"
+  ]
+}

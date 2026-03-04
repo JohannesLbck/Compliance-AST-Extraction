@@ -1,0 +1,6 @@
+[
+  "R1: leads_to(tree, 'scan customer', 'identity check')",
+  "R2: executed_by(tree, 'perform identity check', 'system')",
+  "R3: condition_eventually_follows(tree, 'accountBalance < 0', 'End Activity')",
+  "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedBy == \"bankManager\") and not (customerStatus == \"VIP\")', 'End Activity')"
+]

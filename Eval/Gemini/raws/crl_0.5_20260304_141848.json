@@ -1,0 +1,23 @@
+{
+  "requirements": [
+    "R1: executed_by(tree, 'collect personal data', 'credit bureau service')",
+    "R2: activity_sends(tree, 'collect personal data', 'personalData')",
+    "R3: leads_to(tree, 'collect personal data', 'send email notification')",
+    "R4: activity_sends(tree, 'send email notification', 'emailNotification')",
+    "R5: leads_to(tree, 'check banking privileges', 'check credit worthiness')",
+    "R6: leads_to(tree, 'check credit worthiness', 'evaluate loan risk level')",
+    "R7: (executed_by(tree, 'check banking privileges', 'credit broker')) or (executed_by(tree, 'check banking privileges', 'supervisor'))",
+    "R8: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "R9: executed_by(tree, 'check acceptable risks', 'branch office manager')",
+    "R10: (leads_to(tree, 'check acceptable risks', 'approve request')) or (leads_to(tree, 'check acceptable risks', 'reject request'))",
+    "R11: executed_by(tree, 'approve request', 'branch office manager')",
+    "R12: executed_by(tree, 'reject request', 'branch office manager')",
+    "R13: by_due_date(tree, 'sign loan contract', '7 working days', 'close offer')",
+    "R14: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness')",
+    "R15: executed_by(tree, 'check credit worthiness', 'clerk supervisor')",
+    "R16: condition_directly_follows(tree, '(loanRequestCredit > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file')",
+    "R17: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+    "R18: activity_sends(tree, 'notify manager', 'managerNotification')",
+    "R19: data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanRequestAmount < 1000000)', 'evaluate loan risk level')"
+  ]
+}

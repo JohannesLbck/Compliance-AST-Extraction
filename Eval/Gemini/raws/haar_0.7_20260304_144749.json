@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "R1: data_leads_to_absence(tree, 'jobStatus == \"rejected\"', 'End Activity')",
+    "R2: precedence(tree, 'close case', 'translate segments')",
+    "R3: data_leads_to_absence(tree, 'alignment == \"unverified\"', 'update TM automatically')",
+    "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+    "R5: leads_to(tree, 'accept case', 'update TM')"
+  ]
+}

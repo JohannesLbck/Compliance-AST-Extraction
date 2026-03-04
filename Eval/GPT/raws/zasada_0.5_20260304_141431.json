@@ -1,0 +1,9 @@
+[
+  "R1: precedence(tree, 'receive customerData', 'perform riskAssessment')",
+  "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
+  "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
+  "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
+  "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == true', 'resolve suspectedMoneyLaundering')",
+  "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
+  "R7: loop(tree, 'update customerInformation')"
+]

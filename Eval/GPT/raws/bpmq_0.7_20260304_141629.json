@@ -1,0 +1,9 @@
+[
+  "R1: exists(tree, 'analyze report')",
+  "R2: leads_to(tree, 'analyze report', 'evaluate report')",
+  "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+  "R4: condition_eventually_follows(tree, 'risk == \"low\"', 'open account')",
+  "R5: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence')",
+  "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+  "R7: precedence(tree, 'validate certificate', 'open account')"
+]

@@ -1,0 +1,10 @@
+{
+  "requirements": [
+    "max_time_between(tree, 'Start Activity', 'End Activity', 2592000, 'terminate')",
+    "executed_by(tree, 'verify accuracy', 'telephone company')",
+    "precedence(tree, 'use simCard', 'activate simCard')",
+    "executed_by(tree, 'activate simCard', 'telephone company')",
+    "precedence(tree, 'retrieve personalData', 'obtain consent')",
+    "executed_by(tree, 'obtain consent', 'data controller')"
+  ]
+}

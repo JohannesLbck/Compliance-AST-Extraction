@@ -1,0 +1,9 @@
+[
+  "R1: receive_exist(tree, 'customerData') and leads_to(tree, 'receive customerData', 'assess individual risk')",
+  "R2: activity_sends(tree, 'provide brochures', 'wpHGCustomerInformation') and activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesAndCapitalInvestment')",
+  "R3: leads_to(tree, 'conclude custody account contract', 'send customer legitimation and account documents') and activity_sends(tree, 'send customer legitimation and account documents', 'customerLegitimation') and activity_sends(tree, 'send customer legitimation and account documents', 'accountDocuments') and executed_by(tree, 'send customer legitimation and account documents', 'market support')",
+  "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
+  "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
+  "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract') and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
+  "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+]

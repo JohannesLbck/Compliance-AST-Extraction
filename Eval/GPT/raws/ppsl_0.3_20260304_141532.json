@@ -1,0 +1,9 @@
+[
+  "R1: precedence(tree, 'record received orders', 'close order')",
+  "R2: precedence(tree, 'perform quality check', 'deliver product')",
+  "R3: precedence(tree, 'record payments made', 'close order')",
+  "R4: precedence(tree, 'record order rejection', 'close order')",
+  "R5: send_exist(tree, 'paymentReceived')",
+  "R6: precedence(tree, 'ship product', 'fill order')",
+  "R7: precedence(tree, 'send invoice', 'fill order')"
+]

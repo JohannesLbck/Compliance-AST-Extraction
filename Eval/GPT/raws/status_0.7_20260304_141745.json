@@ -1,0 +1,6 @@
+[
+  "R1: recurring(tree, 'upload document', 10368000)",
+  "R2: condition_eventually_follows(tree, '(checklist == \"completed and signed\") and (actor in [\"Tax Manager\", \"Financial Controller\"])', 'upload document', 'branch')",
+  "R3: executed_by(tree, 'analyze report', executed_by_return(tree, 'create resolution proposal'))",
+  "R4: precedence(tree, 'reports available', 'analyze report')"
+]

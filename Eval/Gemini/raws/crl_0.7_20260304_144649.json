@@ -1,0 +1,29 @@
+{
+  "requirements": [
+    "leads_to(tree, 'collect personal data', 'send email notification')",
+    "executed_by(tree, 'collect personal data', 'credit bureau service')",
+    "activity_sends(tree, 'send email notification', 'emailNotification')",
+    "activity_receives(tree, 'collect personal data', 'personalData')",
+    "leads_to(tree, 'check customer bank privilege', 'check credit worthiness')",
+    "leads_to(tree, 'check credit worthiness', 'determine loan risk level')",
+    "executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')",
+    "executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+    "executed_by_return(tree, 'check customer bank privilege') != executed_by_return(tree, 'check credit worthiness')",
+    "executed_by(tree, 'check risks acceptable', 'branch office manager')",
+    "leads_to(tree, 'check risks acceptable', 'approve request')",
+    "leads_to(tree, 'check risks acceptable', 'reject request')",
+    "executed_by(tree, 'approve request', 'branch office manager')",
+    "executed_by(tree, 'reject request', 'branch office manager')",
+    "exists(tree, 'approve request')",
+    "exists(tree, 'reject request')",
+    "max_time_between(tree, 'sign loan contract', 'close offer', 201600)",
+    "condition_eventually_follows(tree, 'loanAmount > 1000000', 'check credit worthiness')",
+    "executed_by(tree, 'check credit worthiness', 'clerk supervisor')",
+    "condition_directly_follows(tree, '(loanAmount > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file')",
+    "failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+    "activity_sends(tree, 'notify manager', 'notification')",
+    "executed_by(tree, 'notify manager', 'system')",
+    "not condition_eventually_follows(tree, 'customerStatus == \"gold\"', 'check banking privileges')",
+    "data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanAmount < 1000000)', 'determine loan risk level')"
+  ]
+}

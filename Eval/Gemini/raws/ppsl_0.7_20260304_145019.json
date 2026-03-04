@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    "precedence(tree, 'close order', 'make order records')",
+    "leads_to(tree, 'produce', 'quality check')",
+    "leads_to(tree, 'quality check', 'deliver product')",
+    "precedence(tree, 'close order', 'make payment records')",
+    "precedence(tree, 'close order', 'record order rejection')",
+    "leads_to(tree, 'receive payment', 'report payment')",
+    "leads_to(tree, 'fill order', 'ship product')",
+    "leads_to(tree, 'fill order', 'send invoice')"
+  ]
+}

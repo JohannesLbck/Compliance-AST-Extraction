@@ -1,0 +1,11 @@
+[
+  "R1: precedence(tree, receive_exist(tree, 'customerData'), 'perform risk assessment')",
+  "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
+  "R3: executed_by(tree, 'send account documents', 'marketSupport')",
+  "R4: executed_by(tree, 'conduct investment advice', 'customerAdvisor')",
+  "R5: condition_eventually_follows(tree, 'securitiesCompetenceLevel >= C', 'conduct investment advice')",
+  "R6: executed_by(tree, 'handle legitimation', 'customerAdvisor')",
+  "R7: executed_by(tree, 'check money laundering', 'antiMoneyLaunderingOfficer')",
+  "R8: precedence(tree, 'resolve money laundering case', 'conclude custody account contract')",
+  "R9: recurring(tree, 'update customer information', 'every customer contact')"
+]

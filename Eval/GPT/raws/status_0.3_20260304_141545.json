@@ -1,0 +1,8 @@
+[
+  "exists(tree, 'upload document')",
+  "recurring(tree, 'check document', 10368000)",
+  "executed_by(tree, 'sign checklist', 'Tax Manager')",
+  "executed_by(tree, 'sign checklist', 'Financial Controller')",
+  "condition_eventually_follows(tree, 'reportsAvailable == true', 'analyse reports')",
+  "executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
+]

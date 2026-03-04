@@ -1,0 +1,18 @@
+[
+  "R1: recurring(tree, 'check document upload', '10368000s')",
+  "R2: activity_receives(tree, 'check document upload', 'documentChecklist')",
+  "R3: executed_by(tree, 'complete checklist', 'Tax Manager')",
+  "R4: executed_by(tree, 'sign checklist', 'Financial Controller')",
+  "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+  "R6: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')",
+  "R7: leads_to(tree, 'create resolution proposal', 'analyse reports')",
+  "R8: leads_to(tree, 'receive CB report', 'analyse reports')",
+  "R9: leads_to(tree, 'receive LD report', 'analyse reports')",
+  "R10: receive_exist(tree, 'cbReport')",
+  "R11: receive_exist(tree, 'ldReport')",
+  "R12: exists(tree, 'analyse reports')",
+  "R13: exists(tree, 'create resolution proposal')",
+  "R14: precedence(tree, 'analyse reports', 'create resolution proposal')",
+  "R15: precedence(tree, 'analyse reports', 'receive CB report')",
+  "R16: precedence(tree, 'analyse reports', 'receive LD report')"
+]

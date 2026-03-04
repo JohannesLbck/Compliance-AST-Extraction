@@ -1,0 +1,9 @@
+[
+  "R1: activity_receives(tree, 'collect personal data', 'personalData') and executed_by(tree, 'collect personal data', 'credit bureau service') and send_exist(tree, 'emailNotification')",
+  "R2: leads_to(tree, 'check bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine risk level')",
+  "R3: executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
+  "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
+  "R5: max_time_between(tree, 'sign loan contract', 'close offer', 604800, 'close offer')",
+  "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+  "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check bank privilege', scope='branch') == False and condition_eventually_follows(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk', scope='branch') == False"
+]

@@ -1,0 +1,5 @@
+[
+  "R1: leads_to(tree, 'scan identity', 'identity checked')",
+  "R2: exists(tree, 'record identity checks')",
+  "R3: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvedByManager == true or customerStatus == \"VIP\")', 'End Activity')"
+]

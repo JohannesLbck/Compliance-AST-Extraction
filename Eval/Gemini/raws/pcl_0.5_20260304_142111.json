@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "exists(tree, 'scan customer for identity check')",
+    "leads_to(tree, 'scan customer for identity check', 'store identity check history')",
+    "data_leads_to_absence(tree, 'accountBalance <= 0 and not (approvedByManager == true or customerIsVIP == true)', 'End Activity')"
+  ]
+}

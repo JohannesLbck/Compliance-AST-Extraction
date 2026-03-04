@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "recurring(tree, 'receive valid checklist document', '4 months')",
+    "leads_to(tree, 'create resolution proposal', 'analyse reports')",
+    "leads_to(tree, 'receive cbReport', 'analyse reports')",
+    "leads_to(tree, 'receive ldReport', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

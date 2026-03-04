@@ -1,0 +1,10 @@
+{
+  "requirements": [
+    "exists(tree, 'scan customer for identity check')",
+    "executed_by(tree, 'scan customer for identity check', 'system')",
+    "exists(tree, 'retain identity check history')",
+    "leads_to(tree, 'scan customer for identity check', 'retain identity check history')",
+    "executed_by(tree, 'retain identity check history', 'system')",
+    "data_leads_to_absence(tree, '(accountBalance <= 0) and not (approvedByManager == true or isVIP == true)', 'End Activity')"
+  ]
+}

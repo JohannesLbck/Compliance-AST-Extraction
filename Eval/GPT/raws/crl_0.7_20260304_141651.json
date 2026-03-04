@@ -1,0 +1,5 @@
+[
+  "R1: receive_exist(tree, 'personalData')",
+  "R2: executed_by(tree, 'check bank privilege', 'credit broker')",
+  "R3: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness')"
+]

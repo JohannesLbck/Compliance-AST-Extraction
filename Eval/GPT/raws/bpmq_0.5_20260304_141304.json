@@ -1,0 +1,9 @@
+[
+  "R1: exists(tree, 'obtain respondent bank report')",
+  "R2: exists(tree, 'analyze respondent bank report')",
+  "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list', scope='global')",
+  "R4: condition_eventually_follows(tree, 'accountRisk != \"low\"', 'terminate', scope='global')",
+  "R5: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advanced due diligence study', scope='global')",
+  "R6: leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
+  "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
+]

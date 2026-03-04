@@ -1,0 +1,13 @@
+[
+  "R1: receive_exist(tree, 'personalData')",
+  "R2: directly_follows(tree, 'check bank privilege', 'check credit worthiness')",
+  "R3: precedence(tree, 'check credit worthiness', 'determine risk level')",
+  "R4: executed_by(tree, 'check bank privilege', 'credit broker')",
+  "R5: executed_by(tree, 'check bank privilege', 'supervisor')",
+  "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+  "R7: max_time_between(tree, 'sign loan contract', 'close loan contract', '7 working days')",
+  "R8: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'check credit worthiness')",
+  "R9: condition_directly_follows(tree, 'loanRequestCredit > 1000000', 'create suspense file')",
+  "R10: failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+  "R11: leads_to_absence(tree, 'loanRequestCredit < 1000000', 'evaluate loan risk')"
+]

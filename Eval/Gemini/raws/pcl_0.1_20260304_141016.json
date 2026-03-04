@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "condition_eventually_follows(tree, 'customerStatus == \"new\"', 'perform identity check')",
+    "activity_sends(tree, 'perform identity check', 'identityCheckHistory')",
+    "data_leads_to_absence(tree, '(accountBalance <= 0) AND NOT (approvedByManager == true OR customerType == \"VIP\")', 'End Activity')"
+  ]
+}

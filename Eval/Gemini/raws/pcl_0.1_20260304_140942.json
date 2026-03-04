@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "R1: condition_eventually_follows(tree, 'customerType == \"new\"', 'scan customer for identity check') and executed_by(tree, 'scan customer for identity check', 'identityCheckSystem')",
+    "R2: exists(tree, 'store identity check history')",
+    "R3: data_leads_to_absence(tree, '(accountBalance < 0) and not (approvedByBankManager == true or customerType == \"VIP\")', 'End Activity')"
+  ]
+}

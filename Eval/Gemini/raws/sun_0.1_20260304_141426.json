@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "by_due_date(tree, 'End Activity', 2592000, 'terminate')",
+    "executed_by(tree, 'verify user personal information accuracy', 'telephone company')",
+    "precedence(tree, 'use simCard', 'activate simCard') and executed_by(tree, 'activate simCard', 'telephone company')",
+    "precedence(tree, 'retrieve personal data', 'obtain consent') and executed_by(tree, 'obtain consent', 'data controller')"
+  ]
+}

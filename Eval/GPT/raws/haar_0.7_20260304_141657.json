@@ -1,0 +1,7 @@
+[
+  "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
+  "R2: precedence(tree, 'close case', 'translate all segments')",
+  "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM automatically')",
+  "R4: precedence_absence(tree, 'start translation', 'create segment')",
+  "R5: leads_to(tree, 'accept case', 'update TM')"
+]

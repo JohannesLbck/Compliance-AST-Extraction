@@ -1,0 +1,8 @@
+[
+  "exists(tree, 'upload document')",
+  "recurring(tree, 'upload document', 10368000)",
+  "executed_by(tree, 'upload document', 'Tax Manager')",
+  "executed_by(tree, 'upload document', 'Financial Controller')",
+  "condition_eventually_follows(tree, 'exists(tree, \"resolution proposal\") and exists(tree, \"report CB\") and exists(tree, \"report LD\")', 'analyse report')",
+  "executed_by(tree, 'analyse report', executed_by_return(tree, 'create resolution proposal'))"
+]

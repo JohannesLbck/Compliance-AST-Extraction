@@ -1,0 +1,19 @@
+{
+  "requirements": [
+    "leads_to(tree, 'receive customer data', 'conduct individual risk assessment')",
+    "exists(tree, 'provide brochures')",
+    "executed_by(tree, 'provide brochures', 'customer advisor')",
+    "activity_sends(tree, 'provide brochures', 'WpHGCustomerInformation')",
+    "activity_sends(tree, 'provide brochures', 'basicInformationSecuritiesAndCapitalInvestment')",
+    "leads_to(tree, 'conclude custody account contract', 'send customer legitimation and account documents')",
+    "activity_sends(tree, 'send customer legitimation and account documents', 'customerLegitimation')",
+    "activity_sends(tree, 'send customer legitimation and account documents', 'accountDocuments')",
+    "executed_by(tree, 'conduct investment advice', 'customer advisor')",
+    "condition_eventually_follows(tree, 'securitiesCompetenceLevel >= \"C\"', 'conduct investment advice')",
+    "executed_by(tree, 'handle customer identification and legitimation', 'customer advisor')",
+    "executed_by(tree, 'check suspected money laundering case', 'anti-money-laundering officer')",
+    "leads_to(tree, 'resolve suspected anti-money laundering case', 'conclude custody account contract')",
+    "leads_to(tree, 'customer contact', 'update customer information')",
+    "activity_sends(tree, 'update customer information', 'customerInformation')"
+  ]
+}

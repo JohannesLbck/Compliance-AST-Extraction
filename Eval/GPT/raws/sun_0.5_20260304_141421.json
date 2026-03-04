@@ -1,0 +1,6 @@
+[
+  "R1: condition_eventually_follows(tree, 'processDuration > 2592000', 'terminate process')",
+  "R2: executed_by(tree, 'verify accuracy', 'telephone company')",
+  "R3: leads_to(tree, 'receive SIM card', 'activate SIM card')",
+  "R4: precedence(tree, 'obtain consent', 'retrieve personalData')"
+]

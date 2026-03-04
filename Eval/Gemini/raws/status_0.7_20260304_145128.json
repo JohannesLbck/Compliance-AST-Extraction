@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "recurring(tree, 'check document content', 10368000)",
+    "data_leads_to_absence(tree, not ((checklistDocument.containsChecklist == true) and (checklistDocument.signedByTaxManager == true) and (checklistDocument.signedByFinancialController == true)), 'End Activity')",
+    "condition_eventually_follows(tree, '(resolutionProposal.status == \"created\") and (cbReport.status == \"available\") and (ldReport.status == \"available\")', 'analyse reports')",
+    "executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

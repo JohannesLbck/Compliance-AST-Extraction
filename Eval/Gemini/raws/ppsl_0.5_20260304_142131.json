@@ -1,0 +1,11 @@
+{
+  "requirements": [
+    "precedence(tree, 'close order', 'make order records')",
+    "leads_to(tree, 'perform production', 'perform quality check')",
+    "precedence(tree, 'deliver product', 'perform quality check')",
+    "data_leads_to_absence(tree, 'not (paymentRecordsMade == true or orderRejectedRecorded == true)', 'close order')",
+    "leads_to(tree, 'receive payment', 'report payment')",
+    "leads_to(tree, 'fill order', 'ship product')",
+    "leads_to(tree, 'fill order', 'send invoice')"
+  ]
+}

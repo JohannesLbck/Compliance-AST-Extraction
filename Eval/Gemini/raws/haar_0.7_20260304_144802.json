@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "condition_eventually_follows(tree, 'jobStatus == \"rejected\"', 'End Activity')",
+    "precedence(tree, 'close case', 'translate all segments')",
+    "data_leads_to_absence(tree, 'alignmentStatus == \"unverified\"', 'update TM automatically')",
+    "precedence(tree, 'start translation', 'create segment')",
+    "condition_eventually_follows(tree, 'caseStatus == \"accepted\"', 'update TM')"
+  ]
+}

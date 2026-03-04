@@ -1,0 +1,9 @@
+[
+  "R1: activity_receives(tree, 'collect personal data', 'personalData') and executed_by(tree, 'collect personal data', 'credit bureau service') and send_exist(tree, 'emailNotification')",
+  "R2: leads_to(tree, 'check customer bank privilege', 'check credit worthiness') and leads_to(tree, 'check credit worthiness', 'determine risk level')",
+  "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and (executed_by(tree, 'check credit worthiness', 'post-processing clerk')) and not parallel(tree, 'check customer bank privilege', 'check credit worthiness') and not directly_follows(tree, 'check customer bank privilege', 'check credit worthiness')",
+  "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
+  "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
+  "R6: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and leads_to_absence(tree, 'check credit worthiness', 'create suspense file') and failure_directly_follows(tree, 'create suspense file', 'notify manager')",
+  "R7: data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and condition_eventually_follows(tree, 'status == \"gold\"', 'check customer bank privilege')"
+]

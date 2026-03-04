@@ -1,0 +1,10 @@
+[
+  "R1: recurring(tree, 'check document upload', '10368000s')",
+  "R2: executed_by(tree, 'complete checklist', 'Tax Manager')",
+  "R3: executed_by(tree, 'sign checklist', 'Tax Manager')",
+  "R4: executed_by(tree, 'complete checklist', 'Financial Controller')",
+  "R5: executed_by(tree, 'sign checklist', 'Financial Controller')",
+  "R6: receive_exist(tree, 'checklistDocument')",
+  "R7: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports', scope='global')",
+  "R8: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')"
+]

@@ -1,0 +1,9 @@
+{
+  "requirements": [
+    "R1: recurring(tree, 'receive signed checklist document', 10368000)",
+    "R2: activity_receives(tree, 'receive signed checklist document', 'signedChecklistDocument')",
+    "R3: condition_eventually_follows(tree, 'NOT (signedChecklistDocument.signedByTaxManager == true AND signedChecklistDocument.signedByFinancialController == true)', 'handle invalid document')",
+    "R4: condition_eventually_follows(tree, '(resolutionProposal.created == true) and (cbReport.available == true) and (ldReport.available == true)', 'analyse reports')",
+    "R5: executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
+  ]
+}

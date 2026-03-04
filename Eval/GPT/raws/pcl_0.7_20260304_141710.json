@@ -1,0 +1,6 @@
+[
+  "R1: leads_to(tree, 'scan customer identity', 'End Activity')",
+  "R2: executed_by(tree, 'record identity check', 'system')",
+  "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+  "R4: condition_eventually_follows(tree, 'accountBalance < 0 or (status == \"VIP\")', 'approve negative balance', scope='global')"
+]

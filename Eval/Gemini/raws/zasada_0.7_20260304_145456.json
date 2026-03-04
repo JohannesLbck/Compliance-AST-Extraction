@@ -1,0 +1,13 @@
+{
+  "requirements": [
+    "R1: precedence(tree, 'conduct individual risk assessment', 'receive customer data')",
+    "R2: executed_by(tree, 'provide brochures', 'customer advisor')",
+    "R3: leads_to(tree, 'conclude custody account contract', 'send customer legitimation and account documents')",
+    "R4: executed_by(tree, 'conduct investment advice', 'customer advisor')",
+    "R5: data_leads_to_absence(tree, 'customerAdvisorCompetenceLevel < \"C\"', 'conduct investment advice')",
+    "R6: executed_by(tree, 'handle customer identification and legitimation', 'customer advisor')",
+    "R7: executed_by(tree, 'check suspected money laundering case', 'anti-money-laundering officer')",
+    "R8: precedence(tree, 'conclude custody account contract', 'resolve suspected anti-money laundering case')",
+    "R9: leads_to(tree, 'contact customer', 'update customer information')"
+  ]
+}

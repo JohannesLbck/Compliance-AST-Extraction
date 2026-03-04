@@ -1,0 +1,8 @@
+[
+  "R1: exists(tree, 'analyze respondent bank report')",
+  "R2: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+  "R3: condition_eventually_follows(tree, 'riskLevel == \"high\"', 'terminate')",
+  "R4: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence study')",
+  "R5: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
+  "R6: condition_eventually_follows(tree, 'certificateValid == false', 'terminate')"
+]

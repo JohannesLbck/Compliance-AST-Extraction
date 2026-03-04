@@ -1,0 +1,7 @@
+[
+  "R1: exists(tree, 'scan identity')",
+  "R2: executed_by(tree, 'scan identity', 'system')",
+  "R3: leads_to(tree, 'scan identity', 'retain history')",
+  "R4: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+  "R5: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP)', 'End Activity')"
+]

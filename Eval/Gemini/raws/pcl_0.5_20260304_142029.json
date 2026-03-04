@@ -1,0 +1,10 @@
+{
+  "requirements": [
+    "exists(tree, 'scan customer identity')",
+    "executed_by(tree, 'scan customer identity', 'system')",
+    "leads_to(tree, 'scan customer identity', 'store identity check history')",
+    "activity_receives(tree, 'store identity check history', 'identityCheckHistory')",
+    "executed_by(tree, 'store identity check history', 'system')",
+    "data_leads_to_absence(tree, '(accountBalance <= 0) and not (approvedByBankManager == true or isVipCustomer == true)', 'process account transaction')"
+  ]
+}

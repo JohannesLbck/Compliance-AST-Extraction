@@ -1,0 +1,15 @@
+{
+  "requirements": [
+    "precedence(tree, 'close order', 'make records of received orders')",
+    "leads_to(tree, 'production action', 'perform quality check')",
+    "precedence(tree, 'delivery', 'perform quality check')",
+    "data_leads_to_absence(tree, '(paymentRecordsMade == false and orderRejectedRecordsMade == false)', 'close order')",
+    "leads_to(tree, 'receive payment', 'report payment')",
+    "leads_to(tree, 'fill order', 'ship product')",
+    "leads_to(tree, 'fill order', 'send invoice')",
+    "receive_exist(tree, 'order')",
+    "receive_exist(tree, 'payment')",
+    "send_exist(tree, 'product')",
+    "send_exist(tree, 'invoice')"
+  ]
+}

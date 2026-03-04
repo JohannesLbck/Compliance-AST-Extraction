@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "R1: condition_eventually_follows(tree, 'customerIsNew == true', 'scan customer')",
+    "R2: leads_to(tree, 'scan customer', 'store identity check history')",
+    "R3: activity_sends(tree, 'store identity check history', 'identityCheckRecord')",
+    "R4: data_leads_to_absence(tree, 'accountBalance <= 0 and not (managerApproval == \"approved\" or customerType == \"VIP\")', 'End Activity')"
+  ]
+}

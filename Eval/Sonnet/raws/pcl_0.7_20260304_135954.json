@@ -1,0 +1,6 @@
+[
+  "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
+  "R2: exists(tree, 'perform identity check') and loop(tree, 'perform identity check')",
+  "R3: send_exist(tree, 'identityCheckHistory')",
+  "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity')"
+]

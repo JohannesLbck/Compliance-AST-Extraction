@@ -1,0 +1,9 @@
+[
+  "R1: precedence(tree, receive_exist(tree, 'customerData'), 'assessRisk')",
+  "R2: executed_by(tree, 'provideBrochures', 'customerAdvisor') and send_exist(tree, 'wpHGCustomerInformation') and send_exist(tree, 'basicInformationSecurities')",
+  "R3: leads_to(tree, 'concludeCustodyContract', 'sendDocuments') and executed_by(tree, 'sendDocuments', 'marketSupport')",
+  "R4: executed_by(tree, 'conductInvestmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, 'securitiesCompetence >= \"C\"', 'conductInvestmentAdvice')",
+  "R5: executed_by(tree, 'handleCustomerIdentification', 'customerAdvisor') and executed_by(tree, 'checkSuspectedCases', 'antiMoneyLaunderingOfficer')",
+  "R6: precedence(tree, 'resolveSuspectedCase', 'concludeCustodyContract')",
+  "R7: recurring(tree, 'updateCustomerInformation', 'everyCustomerContact')"
+]

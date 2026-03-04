@@ -1,0 +1,5 @@
+[
+  "R1: recurring(tree, 'check document upload', 10368000)",
+  "R2: executed_by(tree, 'analyze reports', 'creator of resolution proposal')",
+  "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyze reports')"
+]

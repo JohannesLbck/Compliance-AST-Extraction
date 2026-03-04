@@ -1,0 +1,11 @@
+{
+  "requirements": [
+    "exists(tree, 'perform identity scan')",
+    "executed_by(tree, 'perform identity scan', 'system')",
+    "activity_sends(tree, 'perform identity scan', 'identityCheckHistory')",
+    "data_leads_to_absence(tree, 'accountBalance < 0 and not (isNegativeBalanceApproved == true or isVIPCustomer == true)', 'End Activity')",
+    "exists(tree, 'approve negative balance')",
+    "executed_by(tree, 'approve negative balance', 'bank manager')",
+    "activity_sends(tree, 'approve negative balance', 'isNegativeBalanceApproved')"
+  ]
+}

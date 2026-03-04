@@ -1,0 +1,12 @@
+{
+  "requirements": [
+    "condition_eventually_follows(tree, 'newCustomerOnboarded == true', 'perform identity check')",
+    "executed_by(tree, 'perform identity check', 'system')",
+    "leads_to(tree, 'perform identity check', 'store identity check history')",
+    "activity_sends(tree, 'store identity check history', 'identityCheckRecord')",
+    "executed_by(tree, 'store identity check history', 'system')",
+    "data_leads_to_absence(tree, '(accountBalance < 0) and (approvedByBankManager == false) and (isVIPCustomer == false)', 'End Activity')",
+    "executed_by(tree, 'approve negative balance', 'bank manager')",
+    "activity_sends(tree, 'approve negative balance', 'approvedByBankManager')"
+  ]
+}

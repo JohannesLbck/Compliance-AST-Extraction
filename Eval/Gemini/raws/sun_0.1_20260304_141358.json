@@ -1,0 +1,13 @@
+{
+  "requirements": [
+    "max_time_between(tree, \"Start Activity\", \"terminate\", 259200)",
+    "exists(tree, \"verify accuracy\")",
+    "executed_by(tree, \"verify accuracy\", \"telephone company\")",
+    "leads_to(tree, \"receive sim card\", \"activate sim card\")",
+    "precedence(tree, \"use sim card\", \"activate sim card\")",
+    "executed_by(tree, \"activate sim card\", \"telephone company\")",
+    "precedence(tree, \"retrieve personal data\", \"obtain consent\")",
+    "executed_by(tree, \"obtain consent\", \"data controller\")",
+    "executed_by(tree, \"retrieve personal data\", \"data controller\")"
+  ]
+}

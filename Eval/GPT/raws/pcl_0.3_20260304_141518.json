@@ -1,0 +1,6 @@
+[
+  "R1: exists(tree, 'scan customer')",
+  "R2: activity_receives(tree, 'scan customer', 'identityDatabase')",
+  "R3: leads_to(tree, 'scan customer', 'record identityCheck')",
+  "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+]

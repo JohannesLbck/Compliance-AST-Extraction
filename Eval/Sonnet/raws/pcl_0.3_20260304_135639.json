@@ -1,0 +1,5 @@
+[
+  "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
+  "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckHistory')",
+  "R3: data_leads_to_absence(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, 'accountBalance <= 0', 'approve negative balance', scope='branch') and (executed_by(tree, 'approve negative balance', 'bank manager') or condition_eventually_follows(tree, 'customerType == \"VIP\"', 'approve negative balance', scope='branch')))"
+]

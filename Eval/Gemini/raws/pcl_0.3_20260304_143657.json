@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    "exists(tree, 'perform identity check')",
+    "exists(tree, 'store identity check history')",
+    "data_leads_to_absence(tree, 'accountBalance < 0 and not (approvedByBankManager == true or customerType == \"VIP\")', 'End Activity')",
+    "executed_by(tree, 'approve negative balance', 'bank manager')"
+  ]
+}

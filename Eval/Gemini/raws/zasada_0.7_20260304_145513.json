@@ -1,0 +1,18 @@
+{
+  "requirements": [
+    "precedence(tree, 'perform individual risk assessment', 'receive customer data')",
+    "executed_by(tree, 'provide WpHG Customer Information', 'customer advisor')",
+    "executed_by(tree, 'provide Basic Information Securities and Capital Investment', 'customer advisor')",
+    "leads_to(tree, 'conclude custody account contract', 'send customer legitimation')",
+    "leads_to(tree, 'conclude custody account contract', 'send account documents')",
+    "receive_exist(tree, 'customer legitimation')",
+    "receive_exist(tree, 'account documents')",
+    "executed_by(tree, 'conduct investment advice', 'customer advisor')",
+    "condition_directly_follows(tree, 'customerAdvisorCompetence >= \"C\"', 'conduct investment advice')",
+    "executed_by(tree, 'handle customer identification', 'customer advisor')",
+    "executed_by(tree, 'handle customer legitimation', 'customer advisor')",
+    "executed_by(tree, 'check suspected money laundering case', 'anti-money-laundering officer')",
+    "precedence(tree, 'conclude custody account contract', 'resolve suspected anti-money laundering case')",
+    "leads_to(tree, 'customer contact', 'update customer information')"
+  ]
+}

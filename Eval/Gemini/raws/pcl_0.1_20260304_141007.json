@@ -1,0 +1,7 @@
+{
+  "requirements": [
+    "R1: exists(tree, 'scan customer identity') and executed_by(tree, 'scan customer identity', 'database') and activity_receives(tree, 'scan customer identity', 'customerIdentity')",
+    "R2: leads_to(tree, 'scan customer identity', 'store identity check history') and activity_sends(tree, 'store identity check history', 'identityCheckHistory')",
+    "R3: condition_eventually_follows(tree, 'accountBalance < 0 and not (negativeBalanceApproved == true or customerType == \"VIP\")', 'terminate') and exists(tree, 'approve negative balance') and executed_by(tree, 'approve negative balance', 'bank manager')"
+  ]
+}

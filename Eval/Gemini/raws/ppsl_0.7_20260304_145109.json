@@ -1,0 +1,14 @@
+{
+  "requirements": [
+    "precedence(tree, 'close order', 'record received order')",
+    "leads_to(tree, 'produce item', 'quality check')",
+    "precedence(tree, 'deliver', 'quality check')",
+    "exists(tree, 'record payment')",
+    "exists(tree, 'record order rejection')",
+    "data_leads_to_absence(tree, '(paymentRecorded == false) and (orderRejectedRecorded == false)', 'close order')",
+    "leads_to(tree, 'receive payment', 'report payment')",
+    "leads_to(tree, 'fill order', 'ship product')",
+    "leads_to(tree, 'fill order', 'send invoice')",
+    "parallel(tree, 'ship product', 'send invoice')"
+  ]
+}

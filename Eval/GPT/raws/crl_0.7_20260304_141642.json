@@ -1,0 +1,15 @@
+[
+  "R1: receive_exist(tree, 'personalData').",
+  "R2: leads_to(tree, 'check bank privilege', 'check credit worthiness').",
+  "R3: precedence(tree, 'determine risk level', 'check credit worthiness').",
+  "R4: executed_by(tree, 'check bank privilege', 'credit broker').",
+  "R5: executed_by(tree, 'check bank privilege', 'supervisor').",
+  "R6: executed_by(tree, 'check credit worthiness', 'post-processing clerk').",
+  "R7: leads_to(tree, 'check risk acceptability', 'final approve').",
+  "R8: leads_to(tree, 'check risk acceptability', 'final reject').",
+  "R9: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800).",
+  "R10: condition_eventually_follows(tree, 'loanRequestCredit > 1000000', 'supervisor check credit worthiness', 'global').",
+  "R11: condition_eventually_follows(tree, 'supervisor check credit worthiness == False', 'create suspense file', 'global').",
+  "R12: failure_eventually_follows(tree, 'create suspense file', 'notify manager').",
+  "R13: leads_to_absence(tree, 'loanRequestCredit < 1000000 and customerStatus == gold', 'evaluate loan risk')."
+]

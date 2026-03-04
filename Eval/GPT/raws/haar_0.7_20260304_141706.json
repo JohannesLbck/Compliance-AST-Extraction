@@ -1,0 +1,7 @@
+[
+  "R1: condition_eventually_follows(tree, 'jobRejected == true', 'End Activity')",
+  "R2: precedence(tree, 'closeCase', 'translateSegment')",
+  "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'updateTM')",
+  "R4: precedence_absence(tree, 'createSegment', 'startTranslation')",
+  "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'updateTM')"
+]

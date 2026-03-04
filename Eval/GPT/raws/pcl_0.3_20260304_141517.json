@@ -1,0 +1,6 @@
+[
+  "exists(tree, 'scan customer')",
+  "condition_eventually_follows(tree, 'identityCheckPerformed == true', 'End Activity')",
+  "data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
+  "condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\") or (customerStatus == \"VIP\")', 'End Activity')"
+]
