@@ -1,9 +1,0 @@
-[
-  "R1: executed_by(tree, 'scan customer identity', 'system') and receive_exist(tree, 'customerDatabase') and leads_to(tree, 'register customer', 'scan customer identity')",
-  "R2: exists(tree, 'store identity check history')",
-  "R3: data_leads_to_absence(tree, 'accountBalance <= 0 and customerType != \"VIP\"', 'End Activity') or condition_eventually_follows(tree, 'accountBalance <= 0 and customerType != \"VIP\"', 'approve overdraft')",
-  "R4: executed_by(tree, 'approve overdraft', 'bank manager')",
-  "R5: data_leads_to_absence(tree, 'accountBalance <= 0 and customerType == \"VIP\"', 'approve overdraft')",
-  "R6: condition_eventually_follows(tree, 'customerType == \"VIP\"', 'End Activity')",
-  "R7: no condition_eventually_follows(tree, 'accountBalance <= 0 and customerType != \"VIP\" and approvalStatus != \"approved\"', 'End Activity')"
-]

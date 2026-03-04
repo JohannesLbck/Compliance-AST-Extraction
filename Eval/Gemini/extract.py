@@ -1,4 +1,5 @@
 from google import genai
+from google.genai import types
 from pydantic import BaseModel, Field
 from typing import Dict, List
 from pathlib import Path
@@ -11,7 +12,7 @@ client = genai.Client()
 
 
 class RequirementsModel(BaseModel):
-    requirements: Dict[str, str] = Field(..., description="Requirement ASTs")
+    requirements: List[str] = Field(..., description="List of requirement ASTs")
 
 
 def main():
@@ -106,39 +107,37 @@ def main():
     # -----------------------
     # Collect all responses
     # -----------------------
-    results: List[Dict] = []
 
     for i in range(repeat):
         response = client.models.generate_content(
-            model="gemini-3-flash-preview",
-            contents=prompt,
-            config={
-                "response_mime_type": "application/json",
-                "response_json_schema": RequirementsModel.model_json_schema(),
-                "temperature": temperature
-            }
+            model="gemini-2.5-flash",
+            contents = prompt,
+            config=types.GenerateContentConfig(
+                temperature=args.temperature,
+                response_mime_type="application/json",
+                response_schema=RequirementsModel.model_json_schema()
+            )
         )
 
         # Parse response JSON and append to results
-        results.append(json.loads(response.text))
 
-    # -----------------------
-    # Write all responses to a single JSON file
-    # -----------------------
-    output_file = Path(f"{text_selector}_{temperature}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
-    output_data = {"results": results}
+        # -----------------------
+        # Write all responses to a single JSON file
+        # -----------------------
+        output_file = Path(f"{text_selector}_{temperature}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+        output_data = json.loads(response.text)
 
-    output_file.write_text(
-        json.dumps(output_data, indent=2, ensure_ascii=False),
-        encoding="utf-8"
-    )
+        output_file.write_text(
+            json.dumps(output_data, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
 
-    # Print the lines of the JSON file
-    with output_file.open(encoding="utf-8") as f:
-        for line in f:
-            print(line.rstrip())
+        # Print the lines of the JSON file
+        with output_file.open(encoding="utf-8") as f:
+            for line in f:
+                print(line.rstrip())
 
-    print(f"\nAll {repeat} response(s) saved to: {output_file.resolve()}")
+        print(f"\nResponse saved to: {output_file.resolve()}")
 
 
 # -----------------------

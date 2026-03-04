@@ -7,7 +7,8 @@ This directory contains the case study results and instructions on how to replic
 ## How to regenerate
 1. Set up your Gemini API Key as an enviroment variable
 2. Download the required documents from the edqm Website
-3. Upload the downloaded documents to a gemini file storage by executing the create.py and upload.py scripts
+3. Create the file storage by executing create.py, Use the printed name of the file storage and replace it in the upload and ProcessDescription.py scripts
+3. Upload the downloaded documents to the created file storage using the upload.py script
 4. Use the Process Description.py script with inputs to generate encodings
 
 ## List of edqm Documents

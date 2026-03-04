@@ -89,9 +89,7 @@ def main():
     )
     # Build output containing original input text and the parsed requirements
     print(response)
-    parsed = response.text
-    output = json.loads(parsed)
-    print(parsed)
+    output = json.loads(response.text)
     if response.candidates[0].grounding_metadata:
         citations = []
         for chunk in response.candidates[0].grounding_metadata.grounding_chunks:
