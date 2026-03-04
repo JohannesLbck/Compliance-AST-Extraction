@@ -1,0 +1,28 @@
+{
+  "input_text": "Guidance for safe transportation of blood components",
+  "NL_requirements": [
+    "The activity 'pack components' must be executed by 'medicalStaff'.",
+    "The activity 'inspect components' must occur before 'pack components'.",
+    "The activity 'label components' must occur before 'transport components'.",
+    "The activity 'transport components' must be executed by 'courier'.",
+    "The system must send 'dispatchNotification' during 'dispatch components'.",
+    "If 'temperature' is greater than 10, the activity 'accept components' must not occur.",
+    "The maximum time between 'start transport' and 'end transport' is 86400 seconds.",
+    "The activity 'verify integrity' must occur before 'store components'.",
+    "If the system fails to 'transport components', it must 'notify lab'.",
+    "The activity 'transport components' eventually follows when 'status' is equal to 'validated'."
+  ],
+  "AST_requirements": [
+    "executed_by(tree, 'pack components', 'medicalStaff')",
+    "precedence(tree, 'pack components', 'inspect components')",
+    "leads_to(tree, 'label components', 'transport components')",
+    "executed_by(tree, 'transport components', 'courier')",
+    "activity_sends(tree, 'dispatch components', 'dispatchNotification')",
+    "data_leads_to_absence(tree, 'temperature > 10', 'accept components')",
+    "max_time_between(tree, 'start transport', 'end transport', 86400)",
+    "leads_to(tree, 'verify integrity', 'store components')",
+    "failure_eventually_follows(tree, 'transport components', 'notify lab')",
+    "condition_eventually_follows(tree, 'status == \"validated\"', 'transport components', 'branch')"
+  ],
+  "citations": "TODO"
+}

@@ -1,0 +1,27 @@
+{
+  "input_text": "Dentist appointment Process. Consider medication review.",
+  "NL_requirements": [
+    "The system receives the medicationHistory data object.",
+    "The dentist must execute the review medication activity.",
+    "The medication review must occur before the treatment is performed.",
+    "If a medication conflict is detected (medicationConflict == true), the treatment must not be performed.",
+    "The dentist must execute the perform treatment activity.",
+    "The treatment must eventually be followed by processing the payment.",
+    "If the payment processing fails, the system must record a pendingBalance.",
+    "The system sends an appointmentConfirmation after the appointment is scheduled.",
+    "The patient arrival must be recorded before the medication review takes place.",
+    "The treatment must be performed within 1800 seconds of the medication review."
+  ],
+  "AST_requirements": [
+    "receive_exist(tree, 'medicationHistory')",
+    "executed_by(tree, 'review medication', 'dentist')",
+    "precedence(tree, 'perform treatment', 'review medication')",
+    "data_leads_to_absence(tree, 'medicationConflict == true', 'perform treatment')",
+    "executed_by(tree, 'perform treatment', 'dentist')",
+    "leads_to(tree, 'perform treatment', 'process payment')",
+    "failure_eventually_follows(tree, 'process payment', 'record pendingBalance')",
+    "send_exist(tree, 'appointmentConfirmation')",
+    "precedence(tree, 'review medication', 'record arrival')",
+    "max_time_between(tree, 'review medication', 'perform treatment', 1800)"
+  ]
+}

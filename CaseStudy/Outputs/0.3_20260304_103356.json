@@ -1,0 +1,49 @@
+{
+  "input_text": "Guidelines for a sepsis diagonsis",
+  "NL_requirements": [
+    "The system must ensure that lactate levels are measured during the process.",
+    "Blood cultures must be obtained before the administration of antibiotics.",
+    "Broad-spectrum antibiotics must be administered within 10,800 seconds (3 hours) of the process start.",
+    "If the lactate level is greater than or equal to 4 mmol/L, the system must ensure fluid resuscitation is initiated.",
+    "If the patient remains hypotensive (isHypotensive is true), vasopressors must be applied.",
+    "The activity to diagnose sepsis must be executed by a doctor.",
+    "If the initial lactate level is elevated, it must be re-measured within 21,600 seconds (6 hours).",
+    "The system must receive the lactateValue data object to proceed with the assessment.",
+    "The system must send the treatmentPlan to the clinical staff.",
+    "A patient must not be discharged if their lactate level remains above 4 mmol/L."
+  ],
+  "AST_requirements": [
+    "exists(tree, 'measure lactate')",
+    "leads_to(tree, 'obtain blood culture', 'administer antibiotics')",
+    "max_time_between(tree, 'Start Activity', 'administer antibiotics', 10800)",
+    "condition_eventually_follows(tree, 'lactate >= 4', 'administer fluid', scope='branch')",
+    "condition_eventually_follows(tree, 'isHypotensive == true', 'apply vasopressors', scope='branch')",
+    "executed_by(tree, 'diagnose sepsis', 'doctor')",
+    "max_time_between(tree, 'measure lactate', 'remeasure lactate', 21600)",
+    "receive_exist(tree, 'lactateValue')",
+    "send_exist(tree, 'treatmentPlan')",
+    "data_leads_to_absence(tree, 'lactate > 4', 'discharge patient')"
+  ],
+  "citations": [
+    {
+      "source": "BloodGuide.pdf",
+      "text": "be in place.\r\n6.4.6. There should be clearly defined procedures to resolve \r\ndiscrepant results. \r\n6.4.7. Blood and blood components that have a repeatedly \r\nreactive result in a serological screening test for \r\ninfection with the viruses mentioned in Annex IV \r\nto Directive 2002/98/EC must be excluded from \r\ntherapeutic use and must be stored separately in a \r\ndedicated environment.\r\n6.4.8. Appropriate confirmatory testing must take place. In \r\nthe case of confirmed positive results, appropriate \r\ndonor management must take place, including the \r\nprovision of information to the donor and follow-up \r\nprocedures (Directive 2005/62/EC, Annex 6.3.3).\r\n6.4.9. Screening algorithms should be defined precisely \r\nin writing (i.e. SOPs) to deal with initially reactive \r\nBlood21.indb 100 04/04/2023 09:25:53 \nGood Practice Guidelines\r\n101\r\nspecimens, and to resolve discrepancies in results after \r\nretesting.\r\n6.5. Blood group serological testing of donors and donations\r\n6.5.1. Blood group serology testing must include procedures \r\nfor testing specific groups of donors (e.g. first�time donors, donors with a history of transfusion) \r\n(Directive 2005/62/EC, Annex 6.3.6).\r\n6.5.2. Each donation should be tested for ABO and RhD \r\nblood groups and at least all first-time donors should \r\nbe tested for clinically significant irregular red cell \r\nantibodies. This should not normally apply to plasma \r\nfor fractionation.\r\n6.5.3. ABO and RhD blood groups should be verified on \r\neach"
+    },
+    {
+      "source": "BloodGuide.pdf",
+      "text": "is mandatory in some countries. It is the \r\nresponsibility of the prescribing physician and the consent should be \r\ndocumented in the clinical record of the patient. Information could be \r\ndelivered orally but is preferable in written form and should include \r\nappropriate information on the risks and benefits of transfusion \r\ntherapy and its alternatives. The written information provided should \r\nbe approved by the HTC.\r\nBefore ordering the transfusion, the treating doctor should be aware \r\nof the patient’s transfusion history, including any adverse reactions.\r\nThe decision to transfuse should be evidence-based. Therefore, \r\nprofessionals should be familiar with the recommendations of good \r\nquality and regularly updated transfusion guidelines that take into \r\naccount the best available current evidence.\r\nThese specific internal guidelines should contain detailed instructions \r\non appropriate use of blood components for the most important \r\nclinical conditions, guidance on the dosage, the need for special \r\nrequirements (e.g. irradiated, washed) and a maximum (or agreed) \r\nsurgical blood ordering schedule.\r\nBlood21.indb 355 04/04/2023 09:26:23 \nGuide to the preparation, use and quality assurance of blood components\r\n356\r\nIt is strongly recommended that specific guidelines or \r\nrecommendations are available, at least for management of:\r\n• Critical/massive haemorrhage;\r\n• Obstetric haemorrhage;\r\n• Paediatrics;\r\n• Intensive care patients;\r\n• Cardiovascular surgery;\r\n• Patients with haemoglobinopathies and other haematological \r\ntransfusion-dependent chronic disorders;\r\n•"
+    },
+    {
+      "source": "BloodGuide.pdf",
+      "text": "date of the disinfectant should be checked. \r\nThe date of manufacture and the date of opening of \r\nin-house disinfectants should be stated on their labels.\r\n6.2.8.8. The blood container should be checked after donation \r\nfor any defect. The integral blood bag collection \r\ntubing should be sealed off at the end as close as \r\npossible to the blood bag.\r\n6.2.8.9. SOPs should be in place describing the actions to \r\nbe taken following an unsuccessful donation. These \r\nshould specify how to handle already-labelled \r\nmaterial and the circumstances under which a repeat \r\nvenepuncture might be possible.\r\nBlood21.indb 96 04/04/2023 09:25:52 \nGood Practice Guidelines\r\n97\r\n6.2.9. Laboratory samples must be taken at the time of \r\ndonation and be appropriately stored prior to testing \r\n(Directive 2005/62/EC, Annex 6.2.4).\r\n6.2.10. The procedure used for the labelling of records, blood \r\nbags and laboratory samples with donation numbers \r\nmust be designed to avoid any risk of identification \r\nerror and mix-up (Directive 2005/62/EC, Annex 6.2.5).\r\n6.2.11. After blood collection, blood bags must be handled \r\nin a way that maintains the quality of the blood and \r\nat a storage and transport temperature appropriate to \r\nfurther processing requirements (Directive 2005/62/EC, \r\nAnnex 6.2.6).\r\n6.2.12. Blood and blood components should be placed \r\nin controlled and validated conditions as soon as \r\npossible"
+    },
+    {
+      "source": "BloodGuide.pdf",
+      "text": "for infectious agents is a key \r\nfactor in ensuring that the risk of disease transmission \r\nis minimised and that blood components are suitable \r\nfor their intended purpose.\r\n6.4.2. Each donation must be tested in conformity with the \r\nrequirements laid down in Annex IV to Directive \r\n2002/98/EC (Directive 2005/62/EC, Annex 6.3.2).\r\nBlood21.indb 99 04/04/2023 09:25:53 \nGuide to the preparation, use and quality assurance of blood components\r\n100\r\n6.4.3. Additional testing for other agents or markers may \r\nbe required, taking into account the epidemiological \r\nsituation in any given region or country and the \r\nindividual risk of transmitting infectious diseases, in \r\naccordance with national legal requirements, where \r\napplicable.\r\n6.4.4. Serological testing should be performed on samples \r\ntransferred directly into the analyser from the \r\noriginal sample tube or aliquoted in a fully automated \r\nenvironment. Secondary aliquot samples may be used \r\nfor nucleic acid amplification technique (NAT) testing \r\nof mini-pools of individual samples.\r\n6.4.5. If NAT testing is performed by assembling various \r\nsamples in mini-pools, a thoroughly validated system \r\nof labelling/identification of samples, a validated \r\nstrategy and pooling process, and a validated \r\nalgorithm to reassign pool results to individual \r\ndonations should be in place.\r\n6.4.6. There should be clearly defined procedures to resolve \r\ndiscrepant results. \r\n6.4.7. Blood and blood components that have"
+    },
+    {
+      "source": "BloodGuide.pdf",
+      "text": "system include:\r\n• Adoption and regular updating of clear guidelines for \r\nappropriate use of blood and blood components;\r\n• Adoption of standard operating procedures (SOPs) for the \r\nimplementation and surveillance of appropriate blood \r\nutilisation;\r\n• Thorough dissemination of guidelines and SOPs;\r\n• Appropriate selection of suitable blood components for each \r\nclinical condition;\r\n• Safe storage, issue and handling of blood components;\r\n• Ensuring correct patient and blood component identification \r\nthroughout the transfusion process;\r\n• Safe administration of the component and monitoring of the \r\npatient;\r\n• Recognition, management and prevention of adverse effects of \r\ntransfusion;\r\n• Constant monitoring of quality and revision of all transfusion \r\nmedicine activities;\r\nBlood21.indb 354 04/04/2023 09:26:22 \nChapter 11 Elements for a quality system on the clinical use of blood\r\n355\r\n• Definition of staff responsibilities and needs for training and \r\neducation.\r\n11.2. Decision to transfuse\r\nA transfusion should only be ordered when the anticipated benefits \r\noutweigh the risks.\r\nTransfusion of blood components should follow appropriate evidence�based guidelines that are updated regularly.\r\n11.2.1. Documentation of the indication for transfusion\r\nStandard\r\n11.2.1.1. The indication for transfusion should be documented in the patient \r\nclinical record.\r\nWhen possible, informed consent should be obtained from the patient \r\nprior to transfusion. This is mandatory in some countries. It is the \r\nresponsibility of the prescribing physician and the consent should be \r\ndocumented in"
+    }
+  ]
+}

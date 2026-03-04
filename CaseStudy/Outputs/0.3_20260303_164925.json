@@ -1,0 +1,27 @@
+{
+  "input_text": "The process that determines whether a potential donor is eligible for blood donation",
+  "NL_requirements": [
+    "The system must receive donorInformation at the start of the process.",
+    "The donor must complete the health questionnaire.",
+    "A medical staff member must perform the hemoglobin check.",
+    "If the hemoglobinLevel is less than 12.5, the system must mark the donor as ineligible.",
+    "The health questionnaire must be completed before the interview is conducted.",
+    "A medical staff member must conduct the donor interview.",
+    "If the isEligible status is false, the system must ensure blood collection does not occur.",
+    "The screening process must be completed within 1800 seconds of donor registration.",
+    "The system must send the eligibilityStatus to the donor.",
+    "The eligibility status must be recorded before blood collection can begin."
+  ],
+  "AST_requirements": [
+    "receive_exist(tree, 'donorInformation')",
+    "executed_by(tree, 'completeQuestionnaire', 'donor')",
+    "executed_by(tree, 'checkHemoglobin', 'medicalStaff')",
+    "condition_eventually_follows(tree, 'hemoglobinLevel < 12.5', 'markIneligible')",
+    "leads_to(tree, 'completeQuestionnaire', 'conductInterview')",
+    "executed_by(tree, 'conductInterview', 'medicalStaff')",
+    "data_leads_to_absence(tree, 'isEligible == false', 'collectBlood')",
+    "max_time_between(tree, 'registerDonor', 'completeScreening', 1800)",
+    "activity_sends(tree, 'notifyDonor', 'eligibilityStatus')",
+    "precedence(tree, 'collectBlood', 'recordEligibility')"
+  ]
+}

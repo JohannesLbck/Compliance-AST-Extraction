@@ -1,0 +1,49 @@
+{
+  "input_text": "Guidelines for safe tattooing. The process should be focused on a person with bright skin and a tattoo on the back.",
+  "NL_requirements": [
+    "The activity 'check skin type' must be executed by the resource 'tattooist'.",
+    "The system must receive the data object 'skinType' during the process.",
+    "If the 'skinType' is not 'bright', the activity 'perform tattooing' must not occur.",
+    "The activity 'verify location' must precede the activity 'perform tattooing'.",
+    "If the 'tattooLocation' is not 'back', the activity 'perform tattooing' must not occur.",
+    "The activity 'verify instrument sterility' must be completed before 'perform tattooing' can start.",
+    "The activity 'perform tattooing' must be executed by the resource 'tattooist'.",
+    "The system must send the data object 'aftercareInstructions' after 'perform tattooing' is finished.",
+    "The activity 'verify ink safety' must send the data object 'batchNumber' for identification.",
+    "The process must eventually reach the 'End Activity' after starting."
+  ],
+  "AST_requirements": [
+    "executed_by(tree, 'check skin type', 'tattooist')",
+    "receive_exist(tree, 'skinType')",
+    "data_leads_to_absence(tree, 'skinType != \"bright\"', 'perform tattooing')",
+    "precedence(tree, 'perform tattooing', 'verify location')",
+    "data_leads_to_absence(tree, 'tattooLocation != \"back\"', 'perform tattooing')",
+    "precedence(tree, 'perform tattooing', 'verify instrument sterility')",
+    "executed_by(tree, 'perform tattooing', 'tattooist')",
+    "leads_to(tree, 'perform tattooing', 'send aftercare instructions')",
+    "activity_sends(tree, 'verify ink safety', 'batchNumber')",
+    "leads_to(tree, 'Start Activity', 'End Activity')"
+  ],
+  "citations": [
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "available to the competent authorities.\r\n3.2. Notwithstanding, and in addition to the requirements set out \r\nin paragraph 3.1, tattoo and PMU products must only be used if they \r\ncomply with all the following requirements:\r\n•\t they do not contain or release the aromatic amines listed in \r\nTable 1 of this appendix in concentrations that are technically \r\navoidable according to good manufacturing procedures; the \r\npresence or release of these aromatic amines should be de�termined by using appropriate test methods which should be \r\nharmonised across the member states in order to ensure compa�rable health protection of the consumer and to avoid divergent \r\nenforcement, drawing on existing methods which can serve as \r\nmodels (see Tables 4.a-c);\r\n•\t they do not contain the substances listed in Table 2 of this ap�pendix;\r\n•\t they do not contain substances listed in Directive 76/768/EEC \r\n(Annex II);\r\n•\t they do not contain substances specified in Directive 76/768/EEC \r\n(Annex IV, columns 2 to 4);\r\n•\t they do not contain carcinogenic, mutagenic and reprotoxic sub�stances of categories 1, 2 or 3 which are classified under Directive \r\n67/548/EEC;\r\n•\t they comply with maximum allowed concentrations of impuri�ties listed in Table 3 and the minimum requirements for further \nSafer tattooing – Overview of current knowledge, challenges of toxicological assessment\r\n76\r\norganic"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "in Table 3 and the minimum requirements for further \nSafer tattooing – Overview of current knowledge, challenges of toxicological assessment\r\n76\r\norganic impurities for colorants used in foodstuffs and cosmetic \r\nproducts as set out in Directive 95/45/EEC;\r\n•\t they are sterile and supplied in a container which maintains the \r\nsterility of the product until application, preferably in a packag�ing size appropriate for single use. In case multi-use containers \r\nare used, their design should ensure that the contents will not be \r\ncontaminated during the period of use;\r\n•\t preservatives should only be used to ensure the preservation of \r\nthe product after opening and by no means as a correction of \r\ninsufficient microbiologic purity in the course of manufacture \r\nand of inadequate hygiene in tattooing and PMU practice;\r\n•\t preservatives should only be used after a safety assessment and \r\nin the lowest effective concentration.\r\n3.3. Tattoo and PMU products should contain the following informa�tion on the packaging:\r\n•\t the name and address of the manufacturer or the person respon�sible for placing the product on the market;\r\n•\t the date of minimum durability ;\r\n•\t the conditions of use and warnings;\r\n•\t the batch number or other reference used by the manufacturer \r\nfor batch identification;\r\n•\t the list of ingredients according to their International"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "batch number or other reference used by the manufacturer \r\nfor batch identification;\r\n•\t the list of ingredients according to their International Union \r\nof Pure and Applied Chemistry (IUPAC) name, CAS number \r\n(Chemical Abstract Service of the American Chemical Society) \r\nor Colour Index (CI) number;\r\n•\t the guarantee of sterility of the contents.\r\n3.4. Tattooing and the application of PMU – including treatment and \r\nmaintenance of the instruments, in particular their sterilisation and \r\ndisinfection – must be carried out by the tattooist in conformity with \r\nthe hygiene regulations laid down by national public health services. \nAppendix 1. Resolution ResAP (2008) 1\r\n77\r\n4. Data for the safety assessment of substances which are \r\nused in tattoos and PMU\r\nIn order to ensure the use of only safe substances in tattoos and PMU, \r\nthe competent authorities should evaluate specific safety data as set \r\nout below, with a view to excluding the use of harmful substances and \r\nto establishing gradually and publishing a list of substances shown to \r\nbe safe in use. Priority should be given to the evaluation of colorants.\r\nIn doing so, the competent authorities may use amongst other sources \r\nthe files which manufacturers are required to keep readily available to \r\nthe authorities in accordance with paragraph 3.1 of"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "solubility in organic solvents. For this reason they \r\nremain essentially in the solid state, including in live tissues. Dyes are \r\norganic molecules that are soluble in general. Certain substances like \r\ntitanium dioxide (TiO2) or barium sulphate (BaSO4) can be used as \r\ncarriers for dyes used in tattoos, thereby forming “lakes” which are \r\ninsoluble in water.\r\nAuxiliary ingredients are necessary to obtain ready-to-use tattooing \r\nproducts. They are of different kinds like solvents, stabilisers, “wetting \r\nagents”, pH-regulators, emollients and thickeners.\r\nA permanent make-up (PMU) consists of colorants and auxiliary \r\ningredients which are injected intradermally for the purposes of \r\nenhancing the contours of the face. \nAppendix 1. Resolution ResAP (2008) 1\r\n75\r\n“Sterile” in this context means the absence of viable organisms, includ�ing viruses.\r\n 3. Specifications\r\n3.1. When applied and used as intended, tattoo and PMU products \r\nmust not endanger the health or safety of persons or the environment. \r\nTo this end, the manufacturer or person responsible for placing the \r\nproduct on the market should perform a risk evaluation based on \r\nrecent toxicological data and knowledge. This evaluation should be set \r\nout in a file which is readily available to the competent authorities.\r\n3.2. Notwithstanding, and in addition to the requirements set out \r\nin paragraph 3.1, tattoo and PMU"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "packaging size \r\nappropriate for single use).\r\nPreservatives may be added to ensure microbio�logical purity of the product after opening; their \r\npresence, however, will not compensate for any mi�crobiological contamination during manufacture \r\nor for inadequate hygiene in tattooing practices.\r\n1 Stability studies provide evidence on how the quality of ink varies under the \r\ninfluence of environmental factors such as temperature, humidity and light \r\nto establish a re-test period or a shelf-life for the ink as well as recommended \r\nstorage conditions. For reference see for instance International Conference \r\non Harmonisation (ICH) guidelines on stability Q1A to Q1F at www.ich.org/\r\nproducts/guidelines/quality/article/quality-guidelines.html.\r\nThe presence of \r\npreservatives will \r\nnot compensate for \r\nany microbiological \r\ncontamination during \r\nmanufacture or for \r\ninadequate hygiene in \r\ntattooing practices. \nData requirements for establishing safety\r\n33\r\nii. Genotoxicity\r\nIngredients of tattoo inks\r\nThe standard battery for genotoxicity testing of pharmaceuticals (ICH \r\nS2R1) can be used to assess the genotoxicity potential of tattooing inks. \r\nICH S2R1 proposes the following test battery:\r\n•\t One in vitro test on bacteria (Ames Test – OECD 471)\r\n•\t One in vitro test on cell cultures (OECD 473, 476, 487)\r\nIf these tests indicate genotoxic potential, then in vivo testing should \r\nbe carried out:\r\n•\t One in vivo test in the bone marrow of a rodent (OECD 474)\r\nAn alternative to"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "input_text": "Essential rules for a process of conducting the Medication review",
+  "NL_requirements": [
+    "The system identifies the patient for the medication review.",
+    "The pharmacist conducts the medication review.",
+    "The system receives the medication history data.",
+    "If the risk level is high, the system conducts an advanced medication review.",
+    "The system sends the pharmaceutical care plan to the general practitioner.",
+    "The pharmacist is responsible for sending the care plan.",
+    "The medication evaluation must occur before the care plan is developed.",
+    "The medication dosage must never be negative.",
+    "The medication review must be completed within 48 hours of identifying the patient.",
+    "If the system fails to access patient records, it notifies the pharmacist."
+  ],
+  "AST_requirements": [
+    "exists(tree, 'identify patient')",
+    "executed_by(tree, 'conduct medication review', 'pharmacist')",
+    "receive_exist(tree, 'medicationHistory')",
+    "condition_eventually_follows(tree, 'riskLevel == \"high\"', 'conduct advanced review')",
+    "activity_sends(tree, 'send care plan', 'pharmaceuticalCarePlan')",
+    "executed_by(tree, 'send care plan', 'pharmacist')",
+    "precedence(tree, 'develop care plan', 'evaluate medication')",
+    "data_leads_to_absence(tree, 'dosage < 0', 'End Activity')",
+    "max_time_between(tree, 'identify patient', 'complete review', 172800)",
+    "failure_eventually_follows(tree, 'access patient records', 'notify pharmacist')"
+  ]
+}

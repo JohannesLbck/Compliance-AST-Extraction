@@ -1,0 +1,49 @@
+{
+  "input_text": "Guidelines for safe tattooing.",
+  "NL_requirements": [
+    "The manufacturer must evaluate risk before the product is placed on the market.",
+    "The activity to evaluate risk must be executed by the manufacturer.",
+    "The system must ensure the product is sterile before the tattoo is performed.",
+    "Hygiene must be verified before the tattooist performs the tattoo.",
+    "The tattooing process must be executed by a tattooist.",
+    "Instruments must be sterilized before the tattooing process begins.",
+    "If an ingredient is on the negative list, the tattooing process must not be performed.",
+    "The competent authority must evaluate safety data.",
+    "The system must send a risk evaluation file to the authorities.",
+    "The system must verify that the current date is before the durability date before performing the tattoo."
+  ],
+  "AST_requirements": [
+    "precedence(tree, 'place product', 'evaluate risk')",
+    "executed_by(tree, 'evaluate risk', 'manufacturer')",
+    "condition_eventually_follows(tree, 'isSterile == true', 'perform tattoo')",
+    "precedence(tree, 'perform tattoo', 'verify hygiene')",
+    "executed_by(tree, 'perform tattoo', 'tattooist')",
+    "precedence(tree, 'perform tattoo', 'sterilize instruments')",
+    "data_leads_to_absence(tree, 'onNegativeList == true', 'perform tattoo')",
+    "executed_by(tree, 'evaluate safety', 'competentAuthority')",
+    "activity_sends(tree, 'send risk file', 'riskEvaluationFile')",
+    "condition_eventually_follows(tree, 'currentDate < durabilityDate', 'perform tattoo')"
+  ],
+  "citations": [
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "solubility in organic solvents. For this reason they \r\nremain essentially in the solid state, including in live tissues. Dyes are \r\norganic molecules that are soluble in general. Certain substances like \r\ntitanium dioxide (TiO2) or barium sulphate (BaSO4) can be used as \r\ncarriers for dyes used in tattoos, thereby forming “lakes” which are \r\ninsoluble in water.\r\nAuxiliary ingredients are necessary to obtain ready-to-use tattooing \r\nproducts. They are of different kinds like solvents, stabilisers, “wetting \r\nagents”, pH-regulators, emollients and thickeners.\r\nA permanent make-up (PMU) consists of colorants and auxiliary \r\ningredients which are injected intradermally for the purposes of \r\nenhancing the contours of the face. \nAppendix 1. Resolution ResAP (2008) 1\r\n75\r\n“Sterile” in this context means the absence of viable organisms, includ�ing viruses.\r\n 3. Specifications\r\n3.1. When applied and used as intended, tattoo and PMU products \r\nmust not endanger the health or safety of persons or the environment. \r\nTo this end, the manufacturer or person responsible for placing the \r\nproduct on the market should perform a risk evaluation based on \r\nrecent toxicological data and knowledge. This evaluation should be set \r\nout in a file which is readily available to the competent authorities.\r\n3.2. Notwithstanding, and in addition to the requirements set out \r\nin paragraph 3.1, tattoo and PMU"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "in Table 3 and the minimum requirements for further \nSafer tattooing – Overview of current knowledge, challenges of toxicological assessment\r\n76\r\norganic impurities for colorants used in foodstuffs and cosmetic \r\nproducts as set out in Directive 95/45/EEC;\r\n•\t they are sterile and supplied in a container which maintains the \r\nsterility of the product until application, preferably in a packag�ing size appropriate for single use. In case multi-use containers \r\nare used, their design should ensure that the contents will not be \r\ncontaminated during the period of use;\r\n•\t preservatives should only be used to ensure the preservation of \r\nthe product after opening and by no means as a correction of \r\ninsufficient microbiologic purity in the course of manufacture \r\nand of inadequate hygiene in tattooing and PMU practice;\r\n•\t preservatives should only be used after a safety assessment and \r\nin the lowest effective concentration.\r\n3.3. Tattoo and PMU products should contain the following informa�tion on the packaging:\r\n•\t the name and address of the manufacturer or the person respon�sible for placing the product on the market;\r\n•\t the date of minimum durability ;\r\n•\t the conditions of use and warnings;\r\n•\t the batch number or other reference used by the manufacturer \r\nfor batch identification;\r\n•\t the list of ingredients according to their International"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "batch number or other reference used by the manufacturer \r\nfor batch identification;\r\n•\t the list of ingredients according to their International Union \r\nof Pure and Applied Chemistry (IUPAC) name, CAS number \r\n(Chemical Abstract Service of the American Chemical Society) \r\nor Colour Index (CI) number;\r\n•\t the guarantee of sterility of the contents.\r\n3.4. Tattooing and the application of PMU – including treatment and \r\nmaintenance of the instruments, in particular their sterilisation and \r\ndisinfection – must be carried out by the tattooist in conformity with \r\nthe hygiene regulations laid down by national public health services. \nAppendix 1. Resolution ResAP (2008) 1\r\n77\r\n4. Data for the safety assessment of substances which are \r\nused in tattoos and PMU\r\nIn order to ensure the use of only safe substances in tattoos and PMU, \r\nthe competent authorities should evaluate specific safety data as set \r\nout below, with a view to excluding the use of harmful substances and \r\nto establishing gradually and publishing a list of substances shown to \r\nbe safe in use. Priority should be given to the evaluation of colorants.\r\nIn doing so, the competent authorities may use amongst other sources \r\nthe files which manufacturers are required to keep readily available to \r\nthe authorities in accordance with paragraph 3.1 of"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "the evaluation of the different \r\nendpoints and the final assessment. This person should have a certifi�cate attesting to basic knowledge in toxicology. \n22 \n23\r\nPART I – Tattooing process and biological \r\nresponse to tattooing\r\ni. History, equipment and materials\r\nThe histopathology and history of the tattooing process have been \r\nreviewed widely since the end of the 1970s (Kluger et al., 2008; Sperry, \r\n1992; Lea, 1987; Mann et al., 1981; Goldstein, 1979).\r\nTattooing is an invasive procedure during which a sharp object \r\n(needle, bone, hard wood, etc.) introduces various colourants \r\nthrough the epidermis into the dermis by repeated punctures. Four \r\nmain methods exist: incrustation, burning, incision and injection \r\n(Adatto, 1993). Mechanical tattooing came about through an innova�tive machine invented by Thomas Edison in 1876 (US patent 196,747), \r\ncalled the Stencil-Pen. It was designed for use as an engraving tool, but \r\nin 1891 Samuel O’Reilly modified the device to inject ink into the skin. \r\nThe device consisted of an electric motor driving a crankshaft similar \r\nto that of a sewing machine, which operated a metal stylus with a \r\nsingle needle or array of needles at its tip.\r\nNowadays, a similar device is the tool most commonly used to \r\nperform professional tattoos in the western world (Adatto et"
+    },
+    {
+      "source": "tatooing-guidelines.pdf",
+      "text": "appropriate \r\nhygienic conditions;\r\nConsidering the fact that implementing specific legislation on tattoos \r\nand PMU may have a substantial positive impact on health risks \r\nrelated to product quality;\r\nTaking the view that each member state, faced with the need to \r\nintroduce regulations governing this matter, would find it beneficial \r\nfor such regulations to be harmonised at European level;\r\nConsidering that this resolution follows a negative list approach by \r\nlisting the substances which must not be used in tattooing products \r\nand PMU, based on current knowledge in this field;\r\nConsidering further that using a negative list-approach is only a first \r\nstep towards ensuring that hazardous substances are avoided,\r\nRecommends that the governments of the member states of the Partial \r\nAgreement in the Social and Public Health Field:\r\n•\t take into account in their national laws and regulations on \r\ntattoos and PMU the principles set out thereafter in the appen�dix to this resolution, in particular on the composition of tattoos \r\nand PMU, and modes and criteria of the safety assessment with \r\na view to public health protection;\r\n•\t regulate the use of substances in tattoos and PMU by taking \r\nsteps towards establishing – on the basis of safety assessments \r\ncarried out by the competent bodies and harmonised at Euro�pean level"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "input_text": "Guidance for safe transportation of blood components",
+  "NL_requirements": [
+    "The system must continuously monitor environmental conditions during transportation.",
+    "A risk assessment must be performed to consider the impact of transportation variables.",
+    "Red cell components must never reach temperatures below 1°C or above 10°C.",
+    "A single interruption of platelet agitation must not exceed 8 hours (28,800 seconds).",
+    "Total interruption of platelet agitation must not exceed 24 hours (86,400 seconds).",
+    "Granulocyte preparations must not be transported for longer than 24 hours (86,400 seconds).",
+    "If a deviation occurs, the system must ensure that the deviation is approved.",
+    "A competent person must execute the approval of a deviation.",
+    "Upon receiving the component, the system must ensure it is transferred to storage.",
+    "After placing the thermometer between bags, the temperature must be read after a minimum delay of 300 seconds."
+  ],
+  "AST_requirements": [
+    "exists(tree, 'monitor environmental conditions')",
+    "exists(tree, 'perform risk assessment')",
+    "data_leads_to_absence(tree, '(componentType == \"redCell\") and (temperature < 1 or temperature > 10)', 'End Activity')",
+    "max_time_between(tree, 'stop agitation', 'resume agitation', 28800)",
+    "data_leads_to_absence(tree, '(componentType == \"platelet\") and (totalInterruptionTime > 86400)', 'End Activity')",
+    "max_time_between(tree, 'start transport', 'End Activity', 86400)",
+    "condition_eventually_follows(tree, 'deviationOccurred == true', 'approve deviation')",
+    "executed_by(tree, 'approve deviation', 'competentPerson')",
+    "leads_to(tree, 'receive component', 'transfer to storage')",
+    "min_time_between(tree, 'place thermometer', 'read temperature', 300)"
+  ],
+  "citations": "TODO"
+}

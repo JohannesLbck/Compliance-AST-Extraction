@@ -56,7 +56,7 @@ def main():
     # -----------------------
     # Load method documentation
     # -----------------------
-    doc = Path("../methods_doc.md").read_text(encoding="utf-8")
+    doc = Path("../methods_doc_concise.md").read_text(encoding="utf-8")
 
     # -----------------------
     # Prepare prompt with improved structure
