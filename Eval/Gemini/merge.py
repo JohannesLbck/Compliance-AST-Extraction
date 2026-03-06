@@ -4,8 +4,8 @@ from pathlib import Path
 from collections import defaultdict
 
 # Configuration
-gpt_folder = "/home/johannesl/Papers/BPM26Full/BPM26/Eval/Gemini/raws"
-output_file = "/home/johannesl/Papers/BPM26Full/BPM26/Eval/Gemini/merged_results.json"
+gpt_folder = "raws"
+output_file = "merged_results.json"
 
 # Parse and organize files
 results = defaultdict(lambda: defaultdict(list))

@@ -4,8 +4,8 @@ from pathlib import Path
 from collections import defaultdict
 
 # Configuration
-sonnet_folder = "/home/johannesl/Papers/BPM26Full/BPM26/Eval/Sonnet/raws"
-output_file = "/home/johannesl/Papers/BPM26Full/BPM26/Eval/Sonnet/merged_results.json"
+sonnet_folder = "raws"
+output_file = "merged_results.json"
 
 # Parse and organize files
 results = defaultdict(lambda: defaultdict(list))
