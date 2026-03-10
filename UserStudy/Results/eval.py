@@ -1,16 +1,21 @@
-"""
-Exploratory analysis script for TestingTemplate.csv survey data
-"""
-
 import pandas as pd
 import numpy as np
 from pathlib import Path
+from study_analysis import run_study_execution_analysis
+
+DATASETS= {
+    "A": "ResultsA.csv",
+    "B": "ResultsB.csv",
+    "C": "ResultsC.csv",
+}
+TEST_DATASET = {
+    "test": "TestingTemplate.csv"
+}
 
 # Configuration
-CSV_FILE = Path(__file__).parent / "TestingTemplate.csv"
+GT_COLUMN = Path(__file__).parent / "GroupBGT.csv"
 
-# Columns to remove from analysis
-COLUMNS_TO_REMOVE = {
+COLUMNS = {
     "metadata": [
         "Startzeit",
         "Fertigstellungszeit",
@@ -36,11 +41,14 @@ COLUMNS_TO_REMOVE = {
 
     
 
-def load_data():
+def load_data(name):
     """Load CSV file with semicolon delimiter"""
+    CSV_FILE = Path(__file__).parent / f"{name}"
     print(f"Loading data from: {CSV_FILE}")
     df = pd.read_csv(CSV_FILE, delimiter=";")
-    return df
+    print(f"Loading GT data from: {GT_COLUMN}")
+    gt_df = pd.read_csv(GT_COLUMN, delimiter=";")
+    return df, gt_df
 
 def print_basic_info(df):
     """Print basic information about the dataset"""
@@ -50,11 +58,11 @@ def print_basic_info(df):
     print(f"Shape: {df.shape[0]} rows × {df.shape[1]} columns")
     print(f"\nData types:\n{df.dtypes}")
 
-def remove_unnecessary_columns(df):
-    """Remove columns that are not needed for analysis using COLUMNS_TO_REMOVE config"""
+def prepare_task_df(df):
+    """Prepare task-related dataframe by removing non-task columns."""
     # Flatten all column names from the dictionary
     columns_to_remove = []
-    for category, col_list in COLUMNS_TO_REMOVE.items():
+    for category, col_list in COLUMNS.items():
         columns_to_remove.extend(col_list)
     
     # Also remove columns containing "Optional"
@@ -66,8 +74,67 @@ def remove_unnecessary_columns(df):
     
     if columns_to_remove:
         df = df.drop(columns=columns_to_remove)
-    
+
     return df
+
+
+def report_task_averages(task_df, gt_df):
+    """Compute, print, and export task averages analysis."""
+    # calculate and display column averages
+    averages = calculate_column_averages(task_df)
+
+    total_average = averages.mean()
+    print(f"\nOverall average score across all columns: {total_average:.2f}")
+    if averages.empty:
+        return pd.DataFrame(), task_df
+
+    # Export averages to CSV
+    averages_df = averages.reset_index()
+    averages_df.columns = ['Question', 'Average']
+
+    # Add question ID (1-5 within each question group)
+    averages_df['ID'] = (averages_df.index % 5) + 1
+
+    # Add gt_df column by cycling through the types
+    averages_df['gt_df'] = gt_df['Type'].iloc[averages_df.index % len(gt_df)].values
+
+    print(averages_df.head(10))  # Optional: print first 10 rows to verify
+
+    # Per-question analysis (every 5 rows is a new question)
+    threshold = averages_df['Average'].mean()
+    print("\n" + "="*80)
+    print("PER-QUESTION ANALYSIS")
+    print("="*80)
+    print(f"Threshold (average across all data): {threshold:.2f}")
+    print("="*80)
+    for i in range(0, len(averages_df), 5):
+        chunk = averages_df.iloc[i:i+5]
+        question_avg = chunk['Average'].mean()
+        y_avg = chunk[chunk['gt_df'] == 'Y']['Average'].mean() if (chunk['gt_df'] == 'Y').any() else None
+        y_max = chunk[chunk['gt_df'] == 'Y']['Average'].max() if (chunk['gt_df'] == 'Y').any() else None
+        x_avg = chunk[chunk['gt_df'] == 'X']['Average'].mean() if (chunk['gt_df'] == 'X').any() else None
+        y_str = f"{y_avg:.2f}" if y_avg is not None else 'N/A'
+        x_str = f"{x_avg:.2f}" if x_avg is not None else 'N/A'
+
+        # Get ID with highest average (among rows above threshold)
+        above_threshold = chunk[chunk['Average'] > threshold]
+        highest_id = chunk.loc[chunk['Average'].idxmax(), 'ID'] if not chunk.empty else 'N/A'
+        ids_above_threshold = above_threshold['ID'].tolist() if not above_threshold.empty else []
+
+        print(f"Question {i//5 + 1} average: {question_avg:.2f}, Highest Y: {y_max}, Y avg: {y_str}, X avg: {x_str}")
+        print(f'Highest ID: {highest_id}')
+        print(f'IDs above threshold: {ids_above_threshold}')
+        print("-"*80)
+
+    return averages_df, task_df
+
+
+def task_analysis(df, gt_df):
+    """Run task-related averages analysis and per-question reporting."""
+    task_df = prepare_task_df(df)
+    averages_df, task_df = report_task_averages(task_df, gt_df)
+
+    return averages_df, df
 
 
 def calculate_column_averages(df):
@@ -92,30 +159,43 @@ def calculate_column_averages(df):
             means[col] = numeric.mean()
     return pd.Series(means)
 
-def main():
-    try:
-        df = load_data()
-        df = remove_unnecessary_columns(df)
-        print_basic_info(df)
 
-        # calculate and display column averages
-        averages = calculate_column_averages(df)
-        total_average = averages.mean()
-        print(f"\nOverall average score across all columns: {total_average:.2f}")
-        if not averages.empty:
-            print("\n" + "="*80)
-            print("COLUMN AVERAGES")
-            print("="*80)
-            print(averages.to_string())
-        
-        return df
-        
-    except FileNotFoundError:
-        print(f"Error: CSV file not found at {CSV_FILE}")
+def main():
+    combined_dfs = []
+
+    for dataset_key, dataset_file in TEST_DATASET.items():
+        print(f"\nAnalysis for {dataset_key}: {dataset_file}")
+        try:
+            df, gt_df = load_data(dataset_file)
+            averages_df, original_df = task_analysis(df, gt_df)
+
+            print(gt_df.head())
+            if not averages_df.empty:
+                output_file = f"{dataset_file}_averages.csv"
+                averages_df.to_csv(output_file, index=False)
+                print(f"\nAverages exported to {output_file}")
+            else:
+                print("No task averages found; skipping averages export.")
+
+            combined_dfs.append(original_df)
+            print(f"\n{'='*80}\n")
+
+        except FileNotFoundError:
+            print(f"Error: CSV file not found at {dataset_file} or GT file at {GT_COLUMN}.")
+            continue
+        except Exception as e:
+            print(f"Error while processing {dataset_file}: {e}")
+            continue
+
+    if not combined_dfs:
+        print("No datasets were processed successfully.")
         return None
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
+
+    combined_study_df = pd.concat(combined_dfs, ignore_index=True)
+    print("Running combined study execution analysis across all processed datasets...")
+    run_study_execution_analysis(combined_study_df, COLUMNS)
+
+    return combined_study_df
 
 if __name__ == "__main__":
     df = main()

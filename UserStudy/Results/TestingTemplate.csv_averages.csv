@@ -1,0 +1,46 @@
+Question,Average,ID,gt_df
+"Before an order is being closed, records of the received orders have to be made..precedence( \""close_order\"", send_exist( \""receivedOrderRecord\""))",3.5,1,Y
+"Before an order is being closed, records of the received orders have to be made..precedence('Close Bill', 'Report Order')",1.0,2,X
+"Before an order is being closed, records of the received orders have to be made..precedence( 'Close Order', 'Record Order')",3.5,3,Y
+"Before an order is being closed, records of the received orders have to be made..precedence( 'close order', send_exist( 'receivedOrderRecord'))",3.5,4,Y
+"Before an order is being closed, records of the received orders have to be made..precedence(\""close order\"",\""record received order\"")",3.0,5,Y
+"After each production action a quality check has to be performed prior to delivery..leads_to( \""Perform Production Action\"", \""Perform Quality Check\"") and precedence( \""Deliver\"", \""Perform Quality C",3.5,1,Y
+"After each production action a quality check has to be performed prior to delivery..leads_to(\""production action\"",\""quality check\"") and precedence(\""delivery\"",\""quality check\"")",3.5,2,Y
+"After each production action a quality check has to be performed prior to delivery..leads_to( \""production_action\"", \""perform_quality_check\"") and precedence( \""deliver\"", \""perform_quality_check\"")",3.5,3,Y
+"After each production action a quality check has to be performed prior to delivery..precedence('Ship', 'Test Quality') and leads_to('production step', 'Test Quality')",1.0,4,X
+"After each production action a quality check has to be performed prior to delivery..leads_to( 'Perform Production Action', 'Perform Quality Check') and precedence( 'Deliver', 'Perform Quality Check')",4.5,5,Y
+"Before an order is being closed, either records of payments made or records of the fact that the order was rejected have to be taken. Each payment received shall be reported..leads_to(receive_exist(\""",1.0,1,Y
+"Before an order is being closed, either records of payments made or records of the fact that the order was rejected have to be taken. Each payment received shall be reported..leads_to(tree,'record pay",1.5,2,Y
+"Before an order is being closed, either records of payments made or records of the fact that the order was rejected have to be taken. Each payment received shall be reported..precedence('Close Bill', ",1.5,3,X
+"Before an order is being closed, either records of payments made or records of the fact that the order was rejected have to be taken. Each payment received shall be reported..(precedence( 'Close Order",4.5,4,Y
+"Before an order is being closed, either records of payments made or records of the fact that the order was rejected have to be taken. Each payment received shall be reported..precedence(tree, 'close o",4.0,5,Y
+"When an order is filled, a product has to be shipped and an invoice has to be sent..leads_to('Fill Order', 'Ship') and leads_to('Fill Order', 'Send Invoice')",3.5,1,X
+"When an order is filled, a product has to be shipped and an invoice has to be sent..leads_to( 'Fill Order', send_exist( 'product')) and leads_to( 'Fill Order', send_exist( 'invoice'))",3.5,2,Y
+"When an order is filled, a product has to be shipped and an invoice has to be sent..leads_to( \""fill_order\"", send_exist( \""product\"")) and leads_to( \""fill_order\"", send_exist( \""invoice\""))""",2.0,3,Y
+"When an order is filled, a product has to be shipped and an invoice has to be sent..condition_eventually_follows( \""orderFilled\"", \""ship product\"") and condition_eventually_follows( \""orderFilled\"", ",2.5,4,Y
+"When an order is filled, a product has to be shipped and an invoice has to be sent..leads_to( 'fill order', 'ship product') and leads_to( 'fill order', send_exist( 'invoice'))",3.0,5,Y
+All new customers must be scanned against provided databases for identity checks..exists( 'scan_customer') and receive_exist( 'customerDatabase'),1.5,1,Y
+"All new customers must be scanned against provided databases for identity checks..leads_to( receive_exist( 'newCustomer'), 'perform_identity_check')",1.5,2,Y
+"All new customers must be scanned against provided databases for identity checks..condition_eventually_follows('data.state == \""new\""', 'identity check') 1",3.0,3,X
+All new customers must be scanned against provided databases for identity checks..exists('scan customer against databases'),1.5,4,Y
+"All new customers must be scanned against provided databases for identity checks..condition_eventually_follows( 'isNewCustomer', 'scan customer') and receive_exist( 'identityDatabases')",2.5,5,Y
+Retain history of identity checks performed..send_exist('identityCheckHistory'),2.0,1,Y
+"Retain history of identity checks performed..leads_to( 'perform_identity_check', 'retain_identity_check_history')",5.0,2,Y
+"Retain history of identity checks performed..leads_to( \""scan_new_customer\"", \""retain_identity_check\"") and activity_sends( \""retain_identity_check\"", \""identityCheckHistory\"")",3.5,3,Y
+Retain history of identity checks performed..exists('initiate account'),1.0,4,X
+"Retain history of identity checks performed..leads_to( 'scan_customer', 'retain_history') and send_exist( 'identityCheckHistory')",4.5,5,Y
+"Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers..condition_eventually_follows( \""balance <= 0 and accountType != 'VIP'\"", 'approve_overdraft') and ex",1.5,1,Y
+"Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers..data_leads_to_absence('accountBalance < 0 and not managerApproved and not isVipCustomer', 'reject ac",3.0,2,X
+"Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers..condition_eventually_follows('balance <= 0 and not customerType == \""VIP\""','approve account') and e",1.5,3,Y
+"Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers..condition_eventually_follows(tree, '(accountBalance > 0) or (isApprovedByManager == true) or (custom",1.5,4,Y
+"Accounts must maintain a positive balance, unless approved by a bank manager, or for VIP customers..condition_eventually_follows(tree, '(accountBalance > 0) or (isApprovedByManager == true) or (custom1",2.5,5,Y
+"Every four months, it is necessary to check whether a new  document has been uploaded to the Document Management System (DMS) that  contains the checklist completed and signed by the Tax Manager and t",1.5,1,Y
+"Every four months, it is necessary to check whether a new  document has been uploaded to the Document Management System (DMS) that  contains the checklist completed and signed by the Tax Manager and t1",3.0,2,Y
+"Every four months, it is necessary to check whether a new  document has been uploaded to the Document Management System (DMS) that  contains the checklist completed and signed by the Tax Manager and t2",1.5,3,X
+"Every four months, it is necessary to check whether a new  document has been uploaded to the Document Management System (DMS) that  contains the checklist completed and signed by the Tax Manager and t3",2.0,4,Y
+"Every four months, it is necessary to check whether a new  document has been uploaded to the Document Management System (DMS) that  contains the checklist completed and signed by the Tax Manager and t4",4.0,5,Y
+"If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution",4.0,1,Y
+"If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution1",3.0,2,Y
+"If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution2",4.0,3,Y
+"If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution3",1.5,4,X
+"If the resolution proposal has been created and the respective reports from the CB and the LD are available, then such reports must be eventually analysed by the same person who created the resolution4",4.0,5,Y
