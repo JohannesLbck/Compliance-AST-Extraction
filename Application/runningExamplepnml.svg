@@ -1,0 +1,213 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" _ngcontent-ng-c3873681961="" id="drawingArea" class="canvas"><style>.import-hint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.import-hint p {
+    max-width: 800px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.canvas {
+    width: 100%;
+    height: 70vh;
+    border-style: dotted;
+    border-color: lightgrey;
+    transition: background-color 1s;
+    user-select: none;
+    box-sizing: border-box; /* make border be part of the 100% width */
+}
+
+.place {
+    fill: white;
+    stroke: black;
+    stroke-width: 2;
+}
+
+.transition {
+    fill: white;
+    stroke: black;
+    stroke-width: 2;
+}
+
+.transition.silent {
+    fill: black;
+}
+
+.arc {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
+}
+
+.background-arc {
+    fill: none;
+    stroke: transparent;
+    opacity: 0;
+    stroke-width: 10 !important;
+}
+
+.place-id {
+    fill: black;
+}
+
+.token-label {
+    fill: black;
+}
+
+.tansition-id {
+    fill: grey;
+}
+
+.arc-weight {
+    fill: black;
+}
+
+.arc-weight-background {
+    fill: white;
+    transition: fill 1s;
+}
+
+/**** PLAY MODE  ****/
+/*
+ * Adjusted styles for play mode
+ * these take effect once the drawing area svg
+ * has the play-mode class
+ */
+.canvas.play-mode {
+    background-color: #c0bfbc;
+}
+
+.play-mode .arc-weight-background {
+    fill: #c0bfbc;
+}
+.play-mode .transition.active {
+    cursor: pointer;
+    fill: green;
+}
+
+.play-mode .transition.active:hover {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1));
+}
+
+.play-mode .transition.active:active {
+    fill: lightgreen;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+}
+
+/*
+ * Text nodes that follow transitions (here: rects within svg) should not have
+ * different cursors in play mode.
+ * All interaction events should be caught in the wrapper group element.
+ */
+.play-mode .transition.active ~ text {
+    cursor: pointer;
+}
+
+/* Styles for 'move' and 'anchor' mode */
+.canvas.move-mode:hover {
+    cursor: pointer;
+}
+
+.canvas.move-mode.dragging {
+    cursor: grabbing;
+}
+
+.anchor {
+    fill: black;
+    stroke: black;
+    stroke-width: 0px;
+}
+
+.line-segment {
+    stroke: transparent;
+    stroke-width: 10;
+}
+
+.editable {
+    filter: drop-shadow(0 0 3px rgba(255, 0, 0, 1));
+}
+
+.editable:active,
+.anchor.active,
+.canvas.move-mode.dragging .place,
+.canvas.move-mode.dragging .transition,
+.canvas.move-mode.dragging .arc,
+.canvas.move-mode.dragging .anchor {
+    stroke: red;
+    stroke-width: 2;
+}
+
+.move-mode .editable:active {
+    cursor: grabbing;
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
+
+.background-arc.editable:hover,
+.analyze-mode .pointer {
+    cursor: pointer;
+}
+
+/*
+ * Add hover effect
+ * In general elements should show the "hover"-Style only when they are
+ * currently being editable and the user is doing a mouseover/hover on
+ * the element:
+ * - Elements with class ".editable" oder ".line-segment" that are currently
+ *   being hovered
+ * - Elements with class ".anchor" that also have the ".active" class set
+ * - Elements with class ".arc" AND ".editable", that are direct children of
+ *   the ".arc-group"-Element currently being hovered. This is needed to be
+ *   able to highlight the main arcs when line-segments are hovered, as those
+ *   cannot get a drop shadow since they have no stroke color.
+ */
+.editable:hover,
+.line-segment:hover,
+.anchor.active,
+.arc-group:hover &gt; .arc.editable {
+    cursor: pointer;
+    /* stronger drop shadow to visible highlight the hovered element */
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 1))
+        drop-shadow(0 0 3px rgba(255, 0, 0, 1));
+}
+
+.tab-transitioning .transition {
+    transition: fill 1s;
+}
+
+text.label {
+    text-anchor: middle;
+    dominant-baseline: central;
+    font-size: 15px;
+}
+
+/* Styles for Analyze-mode*/
+.analyze-mode .place-invariant {
+    fill: lightblue;
+}
+
+.analyze-mode text.place-invariant {
+    font-weight: bold;
+    fill: rgb(133, 186, 204);
+}
+</style><defs _ngcontent-ng-c3873681961=""><marker _ngcontent-ng-c3873681961="" id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon _ngcontent-ng-c3873681961="" points="0 0, 10 3.5, 0 7"/></marker></defs><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="217" cy="243" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="217" y="243" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="217" y="288"> p1 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="395" cy="241" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="395" y="241" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="395" y="286"> p2 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="548" cy="142" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="548" y="142" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="548" y="187"> p3 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="573" cy="339" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="573" y="339" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="573" y="384"> p4 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="784" cy="245" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="784" y="245" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="784" y="290"> p5 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="793" cy="448" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="793" y="448" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="793" y="493"> p6 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="1037" cy="322" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="1037" y="322" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="1037" y="367"> p7 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="1013" cy="152" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="1013" y="152" class="token-label no-pointer-events">  </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="1013" y="197"> p8 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961=""><circle _ngcontent-ng-c3873681961="" cx="1239" cy="262" r="25" class="place"><!----></circle><text _ngcontent-ng-c3873681961="" text-anchor="middle" dominant-baseline="central" x="1239" y="262" class="token-label no-pointer-events"> 1 </text></g><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="place-id" x="1239" y="307"> p9 </text></g><!----><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="296" y="220" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="306" y="290"> t1 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="459" y="161" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="469" y="231"> t2 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="465" y="308" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="475" y="378"> t3 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="657" y="264" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="667" y="334"> t4 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="670" y="407" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="680" y="477"> t5 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="784" y="331" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="794" y="401"> t6 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="908" y="141" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="918" y="211"> t7 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="921" y="281" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="931" y="351"> t8 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="1125" y="295" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="1135" y="365"> t10 </text></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><rect _ngcontent-ng-c3873681961="" x="1107" y="143" width="20" height="50" class="transition silent"/><!----><text _ngcontent-ng-c3873681961="" text-anchor="middle" class="transition-id" x="1117" y="213"> t11 </text></g><!----><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="241.993690055427,243.56165595630173 296,244.77528089887642 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="241.993690055427,243.56165595630173 296,244.77528089887642 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="316,244.5505617977528 370.0252111497383,242.12246242023647 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="316,244.5505617977528 370.0252111497383,242.12246242023647 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="415.0648870954618,226.0869082398595 459,193.43243243243242 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="415.0648870954618,226.0869082398595 459,193.43243243243242 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="479,180.43037974683546 526.1591215911303,154.1645398732945 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="479,180.43037974683546 526.1591215911303,154.1645398732945 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="411.40446787311964,259.8651380540876 465,321.5 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="411.40446787311964,259.8651380540876 465,321.5 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="485,333.61224489795916 548.0467241608695,337.47224841801244 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="485,333.61224489795916 548.0467241608695,337.47224841801244 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="591.8689340005061,355.4001015144586 670,423.30841121495325 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="591.8689340005061,355.4001015144586 670,423.30841121495325 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="595.071809729982,327.2596756755415 657,294.3191489361702 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="595.071809729982,327.2596756755415 657,294.3191489361702 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="677,285.2393162393162 760.6,253.8 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="677,285.2393162393162 760.6,253.8 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="690,433.4159292035398 768.2469005798847,444.49513636529343 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="690,433.4159292035398 768.2469005798847,444.49513636529343 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="793.2717230792147,423.00147671224914 793.7282608695652,381 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="793.2717230792147,423.00147671224914 793.7282608695652,381 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="791.7477477477478,331 786.2431676224053,269.8991606086991 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="791.7477477477478,331 786.2431676224053,269.8991606086991 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="807.0908408788229,254.5819135619605 921,301.8503401360544 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="807.0908408788229,254.5819135619605 921,301.8503401360544 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="805.5359505232019,232.3034321542317 908,171.8955223880597 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="805.5359505232019,232.3034321542317 908,171.8955223880597 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="941,307.50943396226415 1012.2800228328352,318.2686826917487 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="941,307.50943396226415 1012.2800228328352,318.2686826917487 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="928,164.52631578947367 988.2671249786567,155.64484473998743 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="928,164.52631578947367 988.2671249786567,155.64484473998743 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="1061.9947954615861,321.489902133437 1125,320.2040816326531 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="1061.9947954615861,321.489902133437 1125,320.2040816326531 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="1037.7092924412655,155.80142960634853 1107,166.46153846153845 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="1037.7092924412655,155.80142960634853 1107,166.46153846153845 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="1127,175.70491803278688 1219.1964751804571,246.74154645051624 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="1127,175.70491803278688 1219.1964751804571,246.74154645051624 " class="arc"/><!----><!----></g><!----></g><g _ngcontent-ng-c3873681961="" class="ng-star-inserted"><g _ngcontent-ng-c3873681961="" class="arc-group"><polyline _ngcontent-ng-c3873681961="" class="background-arc" points="1145,314.4230769230769 1217.1659031417935,274.1767078632305 "/><polyline _ngcontent-ng-c3873681961="" marker-end="url(#arrow)" points="1145,314.4230769230769 1217.1659031417935,274.1767078632305 " class="arc"/><!----><!----></g><!----></g><!----><!----></svg>

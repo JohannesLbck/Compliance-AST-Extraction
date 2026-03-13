@@ -1,0 +1,41 @@
+{
+  "input_text": "Rules important for conducting an Exam",
+  "NL_requirements": [
+    "The system must announce the assignment of students to examiners and locations at least 14 days (1209600 seconds) before conducting the exam [1.1].",
+    "The system must announce the allowed aids at least 4 weeks (2419200 seconds) before conducting the exam.",
+    "The supervisor must sign the exam protocol.",
+    "The examiner must grade the exam.",
+    "If the exam grade is failed, a second examiner must grade the exam.",
+    "If cheating is detected, the system must fail the exam.",
+    "The maximum time between starting the exam and ending the exam is 180 minutes (10800 seconds).",
+    "The minimum time between starting the exam and ending the exam is 60 minutes (3600 seconds).",
+    "The supervisor must grant permission before a student can leave the room.",
+    "The system must create a protocol after conducting the exam."
+  ],
+  "AST_requirements": [
+    "min_time_between(tree, 'announce assignment', 'conduct exam', 1209600)",
+    "min_time_between(tree, 'announce aids', 'conduct exam', 2419200)",
+    "executed_by(tree, 'sign protocol', 'supervisor')",
+    "executed_by(tree, 'grade exam', 'examiner')",
+    "condition_eventually_follows(tree, 'examGrade == \"failed\"', 'grade exam second time')",
+    "condition_eventually_follows(tree, 'cheatingDetected == true', 'fail exam')",
+    "max_time_between(tree, 'start exam', 'end exam', 10800)",
+    "min_time_between(tree, 'start exam', 'end exam', 3600)",
+    "precedence(tree, 'grant permission', 'leave room')",
+    "leads_to(tree, 'conduct exam', 'create protocol')"
+  ],
+  "citations": [
+    {
+      "source": "AllgemeinePruefungsOrdnung.pdf",
+      "text": "Niederschrift sind alle Vorkommnisse einzutragen, welche für die \r\nFeststellung der Prüfungsergebnisse von Belang sind, insbesondere Vorkommnisse nach \r\n§ 22.\r\n(5) Die zugelassenen Hilfsmittel bestimmt der jeweilige Prüfende; sie werden mindestens vier \r\nWochen vor dem Prüfungstermin bekannt gegeben. \n11\r\n(6) 1\r\nSchriftliche Prüfungsleistungen sind in der Regel durch einen Prüfenden zu bewerten.\r\n2\r\nPrüfungsleistungen, die als nicht bestanden bewertet werden sollen, sind von zwei Prüfenden \r\nzu bewerten. 3\r\nDie Noten mehrerer Prüfender werden gemäß § 18 Abs. 11 gemittelt. \r\n(7) 1\r\nKlausurarbeiten dauern mindestens 60 und höchstens 180 Minuten. 2\r\nFür Module im Umfang \r\nvon mehr als 10 Credits kann eine Prüfungsdauer bis zu 240 Minuten vorgesehen werden. \r\n3\r\nWird ein Modul durch Modulteilprüfungen abgeschlossen, so darf die Gesamtdauer der \r\nKlausuren die in den Sätzen 1 und 2 genannten Zeitangaben nicht überschreiten. 4\r\nDie Dauer \r\neiner Klausur ist in der FPSO zu regeln.\r\n(8) 1\r\nDie fachlich zuständigen Prüfenden können in Abstimmung mit dem zuständigen \r\nPrüfungsausschuss Abweichungen von den in der jeweiligen Anlage zur FPSO getroffenen \r\nFestlegungen bestimmen. 2\r\nÄnderungen sind zu Beginn der Lehrveranstaltung, an die die \r\nPrüfung anschließt, spätestens aber vier Wochen nach Vorlesungsbeginn in geeigneter Weise \r\nbekannt zu geben. 3\r\nMelden sich nur wenige Studierende zu einer Prüfung an, so kann der \r\nPrüfer nach schriftlicher Bekanntgabe spätestens vier Wochen vor dem Prüfungstermin"
+    },
+    {
+      "source": "AllgemeinePruefungsOrdnung.pdf",
+      "text": "Zuordnung der Studierenden zu \r\nden einzelnen Prüfenden und die Prüfungsorte sind mindestens 14 Tage vor dem jeweils \r\nfälligen Prüfungstermin in geeigneter Weise bekanntzugeben. 2\r\nEin kurzfristig aus zwingenden \r\nGründen notwendig werdender Wechsel des Prüfenden, Prüfungstermins oder Prüfungsortes \r\nist zulässig; er ist unverzüglich in der vorbezeichneten Weise bekannt zu geben.\r\n(3) 1\r\nDie FPSOen können vorsehen, dass Prüfungen in einer Fremdsprache abgenommen werden. \r\n2\r\nAußerdem kann die FPSO regeln, dass eine Prüfung auf Antrag des Studierenden in einer \r\nFremdsprache abgehalten wird.\r\n§ 12\r\nSchriftliche, zeichnerische und sportpraktische Prüfung\r\n(1) 1\r\nSchriftliche Prüfungen sind Klausuren oder sonstige schriftliche Leistungen. 2\r\nAls sonstige \r\nschriftliche Leistungen gelten z.B. Projektberichte, Hausarbeiten, Seminararbeiten, \r\nzeichnerische und gestalterische Entwürfe, Poster und Arbeitsberichte. \r\n(2) Studierende, die an einer schriftlichen Prüfung oder sportpraktischen Prüfung teilnehmen, \r\nhaben sich auf Verlangen durch Vorlage des Studentenausweises (Student Card) \r\nauszuweisen. \r\n(3) 1\r\nErscheint ein Studierender verspätet zu einer Prüfung, so kann er die versäumte Zeit nicht \r\nnachholen. 2\r\nDas Verlassen des Prüfungssaales ist nur mit Erlaubnis des Aufsichtführenden \r\nzulässig. 3\r\nUhrzeit und Dauer der Abwesenheit werden auf der Arbeit vermerkt.\r\n(4) 1\r\nÜber jede schriftliche Prüfung ist eine Niederschrift zu fertigen und vom Aufsichtführenden zu \r\nunterzeichnen. 2\r\nIn der Niederschrift sind alle Vorkommnisse einzutragen, welche für die \r\nFeststellung der Prüfungsergebnisse von Belang sind, insbesondere Vorkommnisse nach \r\n§ 22.\r\n(5) Die"
+    },
+    {
+      "source": "AllgemeinePruefungsOrdnung.pdf",
+      "text": "Form abzulegen, kann dies durch entsprechende \r\nVerlängerung der Arbeitszeit oder eine andere Gestaltung des Prüfungsverfahrens \r\nausgeglichen werden. 3\r\nAuf Verlangen ist ein ärztliches Attest vorzulegen.\r\n(2) Entscheidungen nach Abs. 1 trifft der zuständige Prüfungsausschuss im Einvernehmen mit \r\ndem Prüfenden.\r\n(3) Für mündliche Prüfungen gelten die Abs. 1 und 2 entsprechend.\r\n§ 20\r\nSchutzfristen nach dem Mutterschutzgesetz, Erziehungsurlaub\r\n1\r\nDie Inanspruchnahme der Schutzfristen entsprechen den §§ 3, 4, 6 und 8 des \r\nMutterschutzgesetzes sowie entsprechend den Fristen des Gesetzes zum Erziehungsgeld und zur \r\nElternzeit (Bundeserziehungsgeldgesetz – BErzGG) in der Fassung der Bekanntmachung vom 9. \r\nFebruar 2004 (BGBl. I S. 206) in der jeweils gelten Fassung wird ermöglicht. 2\r\nEine Ablegung von \r\nPrüfungen ist trotz Beurlaubung möglich, Wiederholungsprüfungen müssen nicht abgelegt werden.\r\n§ 21\r\nMängel im Prüfungsverfahren\r\nMängel des Prüfungsverfahrens müssen unverzüglich schriftlich beim Vorsitzenden des \r\nPrüfungsausschusses oder beim Prüfenden geltend gemacht werden. \n20\r\n§ 22\r\nTäuschung, Plagiatsprüfung, Ordnungsverstoß2\r\n(1) 1\r\nVersucht der Studierende das Ergebnis einer Prüfung durch Täuschung oder Benutzung \r\nnicht zugelassener Hilfsmittel zu beeinflussen, wird die betreffende Prüfung mit „nicht \r\nausreichend“ bzw. „nicht bestanden“ bewertet. 2\r\nPrüfungen und Prüfungselemente dürfen \r\nmithilfe geeigneter Software auf nicht kenntlich gemachte übernommene Textpassagen oder \r\nsonstige Quellen hin überprüft werden; die Beurteilung, ob eine Täuschung vorliegt, erfolgt \r\ndurch den Prüfenden. 3\r\nMit der Abgabe einer Prüfung stimmt der Studierende der Überprüfung"
+    }
+  ]
+}

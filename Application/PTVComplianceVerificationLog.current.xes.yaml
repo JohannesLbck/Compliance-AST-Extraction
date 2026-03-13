@@ -1,0 +1,514 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+    ptv: https://cpee.org/ptv/ptv.xesext
+  global:
+    trace:
+      concept:name: __NOTSPECIFIED__
+      cpee:name: __NOTSPECIFIED__
+    event:
+      concept:instance: -1
+      concept:name: __NOTSPECIFIED__
+      concept:endpoint: __NOTSPECIFIED__
+      id:id: __NOTSPECIFIED__
+      cpee:uuid: __NOTSPECIFIED__
+      lifecycle:transition: unknown
+      ptv:lifecycle:transition: unknown
+      time:timestamp: ''
+  trace:
+    concept:name: preprocessing
+    cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+---
+event:
+  concept:instance: preprocessing
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 9141649581538970738
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: No save attribute was passed, previous version will only be stored in memory
+    and not written to disk
+  time:timestamp: 2026-03-11 10:20:43,250.250
+---
+event:
+  concept:instance: preprocessing
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 9141649581538970738
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: The global assurance level is 100
+  time:timestamp: 2026-03-11 10:20:43,250.250
+---
+event:
+  concept:instance: R0
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -5262497880540981674
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: start
+  ptv:lifecycle:transition: start
+  data: 'Verifying Requirement R0: max_time_between (tree, ''request order information'',
+    ''automatically process order'', 1800)'
+  time:timestamp: 2026-03-11 10:20:43,250.250
+---
+event:
+  concept:instance: R0
+  concept:name: max_time_between
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 6685543331802548049
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: No timeout was found to enforce the max time between requirement
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R0
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -5262497880540981674
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: complete
+  ptv:lifecycle:transition: complete
+  data: Requirement R0 is False with assurance level 100
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -5339221244566662729
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: start
+  ptv:lifecycle:transition: start
+  data: 'Verifying Requirement R1: failure_eventually_follows (tree, ''automatically
+    process order'', ''manually review order'') and executed_by (tree, ''manually
+    review order'', ''manager'')'
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: failure_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4376456217563450244
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: 'Found a dataobject "rescue" that is used in a rescue of "automatically process
+    order", checking if there is a branch with condition: "data.rescue" that eventually
+    leads to "manually review order"'
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: warning
+  id:id: utils.data_util
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -1171597374889269068
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Condition mapped via in compared to ==, lower assurances
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 6670866144971287564
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "manually review order" was found on branch following condition "data.rescue"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 6670866144971287564
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Found 1 calls that influence condition "data.rescue. Checking if both are
+    prior to branch"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: leads_to
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 8278925099694247526
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda66072660>"
+    is before Activity "<Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f6a0>, checking if <Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f6a0> is on a different exclusive branch"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 6670866144971287564
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: All calls that influence the condition are prior to the condition, so eventually
+    follows is satisfied
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: failure_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4376456217563450244
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "manually review order" eventually follows the failure of "automatically
+    process order" through the dataobject "rescue"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: executed_by
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1838958291820845614
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "manually review order" is executed by Resource "manager"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R1
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -5339221244566662729
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: complete
+  ptv:lifecycle:transition: complete
+  data: Requirement R1 is True with assurance level 90
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R2
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -3813437761018428449
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: start
+  ptv:lifecycle:transition: start
+  data: 'Verifying Requirement R2: precedence (tree, ''End Activity'', ''accept order'')
+    and precedence (tree, ''End Activity'', ''reject order'') and exclusive (tree,
+    ''accept order'', ''reject order'')'
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R2
+  concept:name: precedence
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 8250587148359756270
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "accept order" was found before "End Activity". Ensuring that accept
+    order is not on an exclusive branch which could lead to violations in some traces
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R2
+  concept:name: precedence
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 8250587148359756270
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "accept order was found before "End Activity, but it is in a different
+    exclusive branch, so precedence can not be guaranteed in every trace
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R2
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -3813437761018428449
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: complete
+  ptv:lifecycle:transition: complete
+  data: Requirement R2 is False with assurance level 100
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4506688971081558395
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: start
+  ptv:lifecycle:transition: start
+  data: 'Verifying Requirement R3: condition_eventually_follows (tree, ''status ==
+    "accept"'', send_exist (tree, ''confirmation'')) and condition_eventually_follows
+    (tree, ''status == "reject"'', send_exist (tree, ''rejection''))'
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: send_exist
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -3369311354426073847
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: found activity"accept order" which sends dataobject "confirmation"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: warning
+  id:id: utils.data_util
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5409506621585333850
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Condition mapped via in compared to ==, lower assurances
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda6607d260>"
+    was found on branch following condition "status == "accept""
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Found 2 calls that influence condition "status == "accept". Checking if both
+    are prior to branch"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: leads_to
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5922984692675887697
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda66072660>"
+    is before Activity "<Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f4c0>, checking if <Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f4c0> is on a different exclusive branch"
+  time:timestamp: 2026-03-11 10:20:43,251.251
+---
+event:
+  concept:instance: R3
+  concept:name: leads_to
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5922984692675887697
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda6607d8f0>"
+    is before Activity "<Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f4c0>, checking if <Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607f4c0> is on a different exclusive branch"
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: All calls that influence the condition are prior to the condition, so eventually
+    follows is satisfied
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: send_exist
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -3369311354426073847
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: found activity"reject order" which sends dataobject "rejection"
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: warning
+  id:id: utils.data_util
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5409506621585333850
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Condition mapped via in compared to ==, lower assurances
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda6607c7c0>"
+    was found on branch following condition "status == "reject""
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Found 2 calls that influence condition "status == "reject". Checking if both
+    are prior to branch"
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: leads_to
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5922984692675887697
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda66072660>"
+    is before Activity "<Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607cea0>, checking if <Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607cea0> is on a different exclusive branch"
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: leads_to
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 5922984692675887697
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: Activity "<Element '{http://cpee.org/ns/description/1.0}call' at 0x7fda6607d8f0>"
+    is before Activity "<Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607cea0>, checking if <Element '{http://cpee.org/ns/description/1.0}alternative'
+    at 0x7fda6607cea0> is on a different exclusive branch"
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: condition_eventually_follows
+  id:id: annotated_verification
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: 1796675430847929182
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: All calls that influence the condition are prior to the condition, so eventually
+    follows is satisfied
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4506688971081558395
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: complete
+  ptv:lifecycle:transition: complete
+  data: Requirement R3 is True with assurance level 80
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4506688971081558395
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: 'Currently required activities for the process are: {''automatically process
+    order'', ''request order information'', ''accept order'', ''manually review order''}'
+  time:timestamp: 2026-03-11 10:20:43,252.252
+---
+event:
+  concept:instance: R3
+  concept:name: Subscriber
+  id:id: subscriber
+  ptv:call_uuid: 3cffad01-8517-45c0-b430-9031dcffdc74
+  ptv:activity_uuid: -4506688971081558395
+  cpee:instance: 35770545-afa8-43fd-81b0-917f3cf9c81c
+  lifecycle:transition: unknown
+  ptv:lifecycle:transition: unknown
+  data: 'Currently missing activities for the process are: set()'
+  time:timestamp: 2026-03-11 10:20:43,252.252

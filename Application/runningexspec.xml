@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bpmSpecification>
+    <elementGroups/>
+    <specificationSets>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl1" type="PaperCTL1">
+                    <inputElements>
+                        <inputElement target="x">t3</inputElement>
+                        <inputElement target="y">t2</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl2" type="PaperCTL2">
+                    <inputElements>
+                        <inputElement target="f">t5</inputElement>
+                        <inputElement target="m">t6</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl3" type="PaperCTL3">
+                    <inputElements>
+                        <inputElement target="e">p9</inputElement>
+                        <inputElement target="z">p9</inputElement>
+                        <inputElement target="a">t7</inputElement>
+                        <inputElement target="r">t8</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl4" type="PaperCTL4">
+                    <inputElements>
+                        <inputElement target="a">t7</inputElement>
+                        <inputElement target="r">t8</inputElement>
+                        <inputElement target="c">t11</inputElement>
+                        <inputElement target="j">t10</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+    </specificationSets>
+    <specificationTypes>
+        <specificationType id="PaperCTL1">
+            <inputs>
+                <input type="or">x</input>
+                <input type="or">y</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG((!EF x) -&gt; AF y)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL2">
+            <inputs>
+                <input type="or">f</input>
+                <input type="or">m</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(f -&gt; AF m)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL3">
+            <inputs>
+                <input type="or">e</input>
+                <input type="or">z</input>
+                <input type="or">a</input>
+                <input type="or">r</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(A[!z U (a | r)]) &amp; AG !(a &amp; r)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL4">
+            <inputs>
+                <input type="or">a</input>
+                <input type="or">r</input>
+                <input type="or">c</input>
+                <input type="or">j</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(a -&gt; AF c) &amp; AG(r -&gt; AF j)</formula>
+            </formulas>
+        </specificationType>
+    </specificationTypes>
+</bpmSpecification>

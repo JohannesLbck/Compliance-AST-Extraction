@@ -80,7 +80,7 @@ def main():
             temperature=args.temperature,
             tools=[types.Tool(
                 file_search=types.FileSearch(
-                    file_search_store_names=['fileSearchStores/bpm26casestudy-i0tme4qdt7rx'],
+                    file_search_store_names=['fileSearchStores/bpm26examregulations-8humw2v95nse'],
                 )
             )],
             response_mime_type="application/json",
@@ -112,6 +112,7 @@ def main():
     output_file = Path(f"Outputs/{args.temperature}_{time.strftime('%Y%m%d_%H%M%S')}.json")
     with output_file.open("w", encoding="utf-8") as f:
         f.write(json.dumps(output_obj, indent=2, ensure_ascii=False))
+    print(f"Output saved to {output_file}")
 
 if __name__ == "__main__":
     main()

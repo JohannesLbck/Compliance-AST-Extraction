@@ -1,0 +1,28 @@
+{
+  "input_text": "Rules that could lead to a doctoral candidate to get fail their promotion",
+  "NL_requirements": [
+    "If plagiarism is detected, the system must terminate the promotion process.",
+    "If the defense grade is less than 3.0, the system must trigger the fail promotion activity.",
+    "The examination committee must be the resource that conducts the defense.",
+    "The thesis must be submitted before the defense can be conducted.",
+    "If the thesis status is set to rejected, the system must ensure the defense is not conducted.",
+    "The defense must be conducted within 15,552,000 seconds (180 days) of the thesis submission.",
+    "The system must send the finalGrade data object during the issue grade activity.",
+    "The candidate must complete coursework before the defense is conducted.",
+    "If the system fails to notify the candidate of the result, it must log a system error.",
+    "The thesis must be submitted by the specified submission deadline."
+  ],
+  "AST_requirements": [
+    "condition_eventually_follows(tree, 'plagiarismDetected == true', 'terminate')",
+    "condition_eventually_follows(tree, 'defenseGrade < 3.0', 'fail promotion')",
+    "executed_by(tree, 'conduct defense', 'examinationCommittee')",
+    "precedence(tree, 'conduct defense', 'submit thesis')",
+    "data_leads_to_absence(tree, 'thesisStatus == \"rejected\"', 'conduct defense')",
+    "max_time_between(tree, 'submit thesis', 'conduct defense', 15552000)",
+    "activity_sends(tree, 'issue grade', 'finalGrade')",
+    "precedence(tree, 'conduct defense', 'complete coursework')",
+    "failure_eventually_follows(tree, 'notify candidate', 'log error')",
+    "by_due_date(tree, 'submit thesis', 'submissionDeadline')"
+  ],
+  "citations": "No grounding metadata was used in the Answer."
+}

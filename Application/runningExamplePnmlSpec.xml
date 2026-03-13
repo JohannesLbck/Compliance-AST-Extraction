@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bpmSpecification>
+    <elementGroups/>
+    <specificationSets>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl1" type="PaperCTL1">
+                    <inputElements/>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl2" type="PaperCTL2">
+                    <inputElements/>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl3" type="PaperCTL3">
+                    <inputElements/>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="ctl4" type="PaperCTL4">
+                    <inputElements/>
+                </specification>
+            </specifications>
+        </specificationSet>
+    </specificationSets>
+    <specificationTypes>
+        <specificationType id="PaperCTL1">
+            <inputs/>
+            <formulas>
+                <formula language="CTLSPEC">AG(!(F&lt;=30 t3) -&gt; AF t2)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL2">
+            <inputs/>
+            <formulas>
+                <formula language="CTLSPEC">AG(t5 -&gt; AF t6)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL3">
+            <inputs/>
+            <formulas>
+                <formula language="CTLSPEC">AG(end -&gt; A[(!p9) U (t7 | t8)]) &amp; AG !(t7 &amp; t8)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="PaperCTL4">
+            <inputs/>
+            <formulas>
+                <formula language="CTLSPEC">AG(t7 -&gt; AF t11) &amp; AG(t8 -&gt; AF t10)</formula>
+            </formulas>
+        </specificationType>
+    </specificationTypes>
+</bpmSpecification>

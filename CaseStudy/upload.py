@@ -14,7 +14,7 @@ def main():
 
     operation = client.file_search_stores.upload_to_file_search_store(
         file = args.file_path,
-        file_search_store_name="fileSearchStores/bpm26casestudy-i0tme4qdt7rx",
+        file_search_store_name="fileSearchStores/bpm26examregulations-8humw2v95nse",
         config = {
             "display_name": args.filename
         }

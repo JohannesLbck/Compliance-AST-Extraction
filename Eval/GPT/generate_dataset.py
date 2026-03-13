@@ -71,7 +71,7 @@ def main():
             for i in range(5):
                 print(f"Run {i+1}/5 for temperature={temperature} and text_selector={key}")
                 response = client.responses.parse(
-                    model="gpt-4o-2024-11-20",
+                    model="gpt-5.0",
                     input=[
                         {
                             "role": "system",

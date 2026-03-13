@@ -102,10 +102,12 @@ def report_task_averages(task_df, gt_df):
 
     # Per-question analysis (every 5 rows is a new question)
     threshold = averages_df['Average'].mean()
+    high_threshhold = averages_df['Average'].mean() + averages_df['Average'].std()
     print("\n" + "="*80)
     print("PER-QUESTION ANALYSIS")
     print("="*80)
     print(f"Threshold (average across all data): {threshold:.2f}")
+    print(f"High Threshold (mean + std): {high_threshhold:.2f}")
     print("="*80)
     for i in range(0, len(averages_df), 5):
         chunk = averages_df.iloc[i:i+5]
@@ -118,12 +120,15 @@ def report_task_averages(task_df, gt_df):
 
         # Get ID with highest average (among rows above threshold)
         above_threshold = chunk[chunk['Average'] > threshold]
+        above_high_threshold = chunk[chunk['Average'] > high_threshhold]
         highest_id = chunk.loc[chunk['Average'].idxmax(), 'ID'] if not chunk.empty else 'N/A'
         ids_above_threshold = above_threshold['ID'].tolist() if not above_threshold.empty else []
+        ids_above_high_threshold = above_high_threshold['ID'].tolist() if not above_high_threshold.empty else []
 
         print(f"Question {i//5 + 1} average: {question_avg:.2f}, Highest Y: {y_max}, Y avg: {y_str}, X avg: {x_str}")
         print(f'Highest ID: {highest_id}')
         print(f'IDs above threshold: {ids_above_threshold}')
+        print(f'IDs above high threshold: {ids_above_high_threshold}')
         print("-"*80)
 
     return averages_df, task_df

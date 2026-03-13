@@ -19,7 +19,7 @@ GT = {
 
 
 argparse = argparse.ArgumentParser(description='Evaluate combined JSON data.')
-argparse.add_argument('--file', type=str, default='combined.json', help='Path to the combined JSON file')
+argparse.add_argument('--file', type=str, default='Gemini/merged_results.json', help='Path to the combined JSON file')
 args = argparse.parse_args()
 
 def read_combined_json(file_path):

@@ -4,6 +4,6 @@ import time
 
 client = genai.Client()
 
-file_search_store = client.file_search_stores.create(config={'display_name': 'bpm26casestudy'})
+file_search_store = client.file_search_stores.create(config={'display_name': 'bpm26ExamRegulations'})
 
 print(f"Created File Search Store: {file_search_store.name}")

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bpmSpecification>
+    <elementGroups/>
+    <specificationSets>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="R1" type="Rule1TimeoutIfNoOrderInfo">
+                    <inputElements>
+                        <inputElement target="x">t3</inputElement>
+                        <inputElement target="y">t2</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="R2" type="Rule2ManualReviewAfterAutoFailure">
+                    <inputElements>
+                        <inputElement target="f">t5</inputElement>
+                        <inputElement target="m">t6</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="R3" type="Rule3AcceptOrRejectBeforeEnd">
+                    <inputElements>
+                        <inputElement target="z">p9</inputElement>
+                        <inputElement target="a">t7</inputElement>
+                        <inputElement target="r">t8</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+        <specificationSet>
+            <conditions/>
+            <specifications>
+                <specification id="R4" type="Rule4NotifyCustomerAfterDecision">
+                    <inputElements>
+                        <inputElement target="a">t7</inputElement>
+                        <inputElement target="r">t8</inputElement>
+                        <inputElement target="c">t11</inputElement>
+                        <inputElement target="j">t10</inputElement>
+                    </inputElements>
+                </specification>
+            </specifications>
+        </specificationSet>
+    </specificationSets>
+    <specificationTypes>
+        <specificationType id="Rule1TimeoutIfNoOrderInfo">
+            <inputs>
+                <input type="or">x</input>
+                <input type="or">y</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG((!EF y) -&gt; AF x)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="Rule2ManualReviewAfterAutoFailure">
+            <inputs>
+                <input type="or">f</input>
+                <input type="or">m</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(f -&gt; AF m)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="Rule3AcceptOrRejectBeforeEnd">
+            <inputs>
+                <input type="or">z</input>
+                <input type="or">a</input>
+                <input type="or">r</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(A[!z U (a | r)]) &amp; AG !(a &amp; r)</formula>
+            </formulas>
+        </specificationType>
+        <specificationType id="Rule4NotifyCustomerAfterDecision">
+            <inputs>
+                <input type="or">a</input>
+                <input type="or">r</input>
+                <input type="or">c</input>
+                <input type="or">j</input>
+            </inputs>
+            <formulas>
+                <formula language="CTLSPEC">AG(a -&gt; AF c) &amp; AG(r -&gt; AF j)</formula>
+            </formulas>
+        </specificationType>
+    </specificationTypes>
+</bpmSpecification>
