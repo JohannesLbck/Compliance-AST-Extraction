@@ -2,6 +2,8 @@ import json
 import argparse
 from operator import gt
 import textdistance as td
+from sentence_transformers import SentenceTransformer
+from sentence_transformers.util import cos_sim
 
 DATASETS={"bpmq", "crl", "haar", "pcl", "ppsl", "status", "sun", "zasada"}
 TEMPERATURES = {"0.1", "0.3", "0.5", "0.7"}
@@ -17,7 +19,7 @@ GT = {
     "zasada": {}
 }
 
-
+model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
 argparse = argparse.ArgumentParser(description='Evaluate combined JSON data.')
 argparse.add_argument('--file', type=str, default='Gemini/merged_results.json', help='Path to the combined JSON file')
 args = argparse.parse_args()
@@ -87,6 +89,13 @@ def similcheck_with_metric(rule1, rule2, metric_name='damerau_levenshtein', thre
     
     return similarity > threshold
 
+def alt_simil_check(rule1, rule2, threshold=0.8):
+    """Check similarity using sentence transformers"""
+    embeddings1 = model.encode(rule1, convert_to_tensor=True)
+    embeddings2 = model.encode(rule2, convert_to_tensor=True)
+    similarity = cos_sim(embeddings1, embeddings2)
+    return similarity.item() > threshold
+
 def comparison_with_metric(comparison_set, metric_name='damerau_levenshtein', threshold=0.5):
     """Compare datasets using a specific similarity metric from textdistance library"""
     comparisons = sum(range(len(comparison_set)))
@@ -105,7 +114,8 @@ def comparison_with_metric(comparison_set, metric_name='damerau_levenshtein', th
                     if rule in other_rule:
                         succesful_comparison_strict = True
                         break  # No need to check further once strict match found
-                    elif similcheck_with_metric(rule, other_rule, metric_name, threshold):
+                    #elif similcheck_with_metric(rule, other_rule, metric_name, threshold):
+                    elif alt_simil_check(rule, other_rule, threshold):
                         succesful_comparison_simil = True
                 if succesful_comparison_strict:
                     succesful_comparisons_strict += 1
