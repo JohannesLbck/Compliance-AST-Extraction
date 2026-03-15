@@ -114,8 +114,7 @@ def comparison_with_metric(comparison_set, metric_name='damerau_levenshtein', th
                     if rule in other_rule:
                         succesful_comparison_strict = True
                         break  # No need to check further once strict match found
-                    #elif similcheck_with_metric(rule, other_rule, metric_name, threshold):
-                    elif alt_simil_check(rule, other_rule, threshold):
+                    elif similcheck_with_metric(rule, other_rule, metric_name, threshold):
                         succesful_comparison_simil = True
                 if succesful_comparison_strict:
                     succesful_comparisons_strict += 1
