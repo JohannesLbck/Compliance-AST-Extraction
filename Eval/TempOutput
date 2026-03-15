@@ -1,0 +1,694 @@
+JohannesLbck: Evaluating file: Gemini/merged_results.json - Dataset: bpmq
+Dataset: bpmq, Temperature: 0.1, Iteration: 1, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 4, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.1: 0.80
+Dataset: bpmq, Temperature: 0.3, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 3, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.3: 0.50
+Dataset: bpmq, Temperature: 0.5, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.5: 0.90
+Dataset: bpmq, Temperature: 0.7, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.7: 0.80
+
+Similarity Score for bpmq: 0.73
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: crl
+Dataset: crl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 17, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.1: 1.00
+Dataset: crl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 21, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.3: 0.80
+Dataset: crl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 21, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.5: 1.00
+Dataset: crl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 25, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 17, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.7: 0.90
+
+Similarity Score for crl: 0.96
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: haar
+Dataset: haar, Temperature: 0.1, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.1: 0.30
+Dataset: haar, Temperature: 0.3, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.3: 0.20
+Dataset: haar, Temperature: 0.5, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.5: 0.60
+Dataset: haar, Temperature: 0.7, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.7: 0.60
+
+Similarity Score for haar: 0.35
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: pcl
+Dataset: pcl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.1: 0.40
+Dataset: pcl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.3: 0.30
+Dataset: pcl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.5: 0.30
+Dataset: pcl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.7: 0.60
+
+Similarity Score for pcl: 0.37
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: ppsl
+Dataset: ppsl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.1: 0.90
+Dataset: ppsl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 12, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.3: 1.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.5: 1.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 10, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.7: 0.70
+
+Similarity Score for ppsl: 0.85
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: status
+Dataset: status, Temperature: 0.1, Iteration: 1, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.1: 0.70
+Dataset: status, Temperature: 0.3, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 2, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 3, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.3: 0.40
+Dataset: status, Temperature: 0.5, Iteration: 1, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 3, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 4, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.5: 0.70
+Dataset: status, Temperature: 0.7, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.7: 0.70
+
+Similarity Score for status: 0.62
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: sun
+Dataset: sun, Temperature: 0.1, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.1: 0.50
+Dataset: sun, Temperature: 0.3, Iteration: 1, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 2, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.3: 0.60
+Dataset: sun, Temperature: 0.5, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 3, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.5: 0.50
+Dataset: sun, Temperature: 0.7, Iteration: 1, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.7: 1.00
+
+Similarity Score for sun: 0.76
+
+
+Evaluating file: Gemini/merged_results.json - Dataset: zasada
+Dataset: zasada, Temperature: 0.1, Iteration: 1, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 2, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 3, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 4, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 5, TP: 0, FP: 13, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.1: 0.90
+Dataset: zasada, Temperature: 0.3, Iteration: 1, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 2, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 4, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 5, TP: 0, FP: 17, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.3: 0.80
+Dataset: zasada, Temperature: 0.5, Iteration: 1, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 2, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 3, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 4, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 5, TP: 0, FP: 12, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.5: 1.00
+Dataset: zasada, Temperature: 0.7, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 2, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 3, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 4, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 5, TP: 0, FP: 15, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.7: 1.00
+
+Similarity Score for zasada: 0.72
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: bpmq
+Dataset: bpmq, Temperature: 0.1, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 3, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.1: 1.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 2, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 5, TP: 0, FP: 10, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.3: 1.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 2, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 3, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 5, TP: 0, FP: 10, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.5: 1.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 5, TP: 0, FP: 10, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.7: 1.00
+
+Similarity Score for bpmq: 1.00
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: crl
+Dataset: crl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 18, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 20, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.1: 1.00
+Dataset: crl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 22, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 22, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 19, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.3: 1.00
+Dataset: crl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 20, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 21, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.5: 1.00
+Dataset: crl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 23, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 19, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 21, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 21, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.7: 1.00
+
+Similarity Score for crl: 1.00
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: haar
+Dataset: haar, Temperature: 0.1, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.1: 1.00
+Dataset: haar, Temperature: 0.3, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.3: 1.00
+Dataset: haar, Temperature: 0.5, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.5: 1.00
+Dataset: haar, Temperature: 0.7, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.7: 1.00
+
+Similarity Score for haar: 1.00
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: pcl
+Dataset: pcl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.1: 1.00
+Dataset: pcl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.3: 0.60
+Dataset: pcl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.5: 0.40
+Dataset: pcl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.7: 0.30
+
+Similarity Score for pcl: 0.59
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: ppsl
+Dataset: ppsl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.1: 1.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.3: 1.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.5: 1.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.7: 1.00
+
+Similarity Score for ppsl: 1.00
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: status
+Dataset: status, Temperature: 0.1, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.1: 1.00
+Dataset: status, Temperature: 0.3, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.3: 0.60
+Dataset: status, Temperature: 0.5, Iteration: 1, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.5: 0.30
+Dataset: status, Temperature: 0.7, Iteration: 1, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 2, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.7: 1.00
+
+Similarity Score for status: 0.82
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: sun
+Dataset: sun, Temperature: 0.1, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.1: 1.00
+Dataset: sun, Temperature: 0.3, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.3: 1.00
+Dataset: sun, Temperature: 0.5, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.5: 1.00
+Dataset: sun, Temperature: 0.7, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.7: 1.00
+
+Similarity Score for sun: 1.00
+
+
+Evaluating file: Sonnet/merged_results.json - Dataset: zasada
+Dataset: zasada, Temperature: 0.1, Iteration: 1, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 2, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 3, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 4, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 5, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 6, TP: 0, FP: 14, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.1: 1.00
+Dataset: zasada, Temperature: 0.3, Iteration: 1, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 2, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 3, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 4, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 5, TP: 0, FP: 16, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.3: 1.00
+Dataset: zasada, Temperature: 0.5, Iteration: 1, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 2, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 3, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 4, TP: 0, FP: 16, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 5, TP: 0, FP: 16, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.5: 1.00
+Dataset: zasada, Temperature: 0.7, Iteration: 1, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 2, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 3, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 4, TP: 0, FP: 17, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 5, TP: 0, FP: 12, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.7: 1.00
+
+Similarity Score for zasada: 1.00
+
+
+Evaluating file: GPT/merged_results.json - Dataset: bpmq
+Dataset: bpmq, Temperature: 0.1, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.1, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.1: 1.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.3, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.3: 1.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 1, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.5, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.5: 0.90
+Dataset: bpmq, Temperature: 0.7, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: bpmq, Temperature: 0.7, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for bpmq at temperature 0.7: 1.00
+
+Similarity Score for bpmq: 0.99
+
+
+Evaluating file: GPT/merged_results.json - Dataset: crl
+Dataset: crl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 13, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.1: 1.00
+Dataset: crl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 15, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.3: 1.00
+Dataset: crl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 14, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.5: 0.90
+Dataset: crl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 15, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 13, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 14, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: crl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for crl at temperature 0.7: 0.30
+
+Similarity Score for crl: 0.80
+
+
+Evaluating file: GPT/merged_results.json - Dataset: haar
+Dataset: haar, Temperature: 0.1, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.1, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.1: 1.00
+Dataset: haar, Temperature: 0.3, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.3, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.3: 0.60
+Dataset: haar, Temperature: 0.5, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.5, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.5: 0.80
+Dataset: haar, Temperature: 0.7, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: haar, Temperature: 0.7, Iteration: 5, TP: 0, FP: 5, FN: 0, F1: 0.00
+Similarity Score for haar at temperature 0.7: 0.30
+
+Similarity Score for haar: 0.64
+
+
+Evaluating file: GPT/merged_results.json - Dataset: pcl
+Dataset: pcl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.1: 1.00
+Dataset: pcl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.3: 0.20
+Dataset: pcl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.5: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: pcl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for pcl at temperature 0.7: 0.10
+
+Similarity Score for pcl: 0.27
+
+
+Evaluating file: GPT/merged_results.json - Dataset: ppsl
+Dataset: ppsl, Temperature: 0.1, Iteration: 1, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 2, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.1, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.1: 0.90
+Dataset: ppsl, Temperature: 0.3, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.3, Iteration: 5, TP: 0, FP: 6, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.3: 1.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 1, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 4, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.5, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.5: 1.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 2, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 4, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: ppsl, Temperature: 0.7, Iteration: 5, TP: 0, FP: 7, FN: 0, F1: 0.00
+Similarity Score for ppsl at temperature 0.7: 1.00
+
+Similarity Score for ppsl: 0.96
+
+
+Evaluating file: GPT/merged_results.json - Dataset: status
+Dataset: status, Temperature: 0.1, Iteration: 1, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 2, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.1, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.1: 0.30
+Dataset: status, Temperature: 0.3, Iteration: 1, TP: 0, FP: 2, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 2, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 3, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.3, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.3: 0.50
+Dataset: status, Temperature: 0.5, Iteration: 1, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 2, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 3, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 4, TP: 0, FP: 3, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.5, Iteration: 5, TP: 0, FP: 3, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.5: 0.30
+Dataset: status, Temperature: 0.7, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 2, TP: 0, FP: 6, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 4, TP: 0, FP: 5, FN: 0, F1: 0.00
+Dataset: status, Temperature: 0.7, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for status at temperature 0.7: 0.30
+
+Similarity Score for status: 0.41
+
+
+Evaluating file: GPT/merged_results.json - Dataset: sun
+Dataset: sun, Temperature: 0.1, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.1, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.1: 1.00
+Dataset: sun, Temperature: 0.3, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.3, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.3: 0.80
+Dataset: sun, Temperature: 0.5, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.5, Iteration: 5, TP: 0, FP: 4, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.5: 0.60
+Dataset: sun, Temperature: 0.7, Iteration: 1, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 2, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 3, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 4, TP: 0, FP: 4, FN: 0, F1: 0.00
+Dataset: sun, Temperature: 0.7, Iteration: 5, TP: 0, FP: 8, FN: 0, F1: 0.00
+Similarity Score for sun at temperature 0.7: 1.00
+
+Similarity Score for sun: 0.83
+
+
+Evaluating file: GPT/merged_results.json - Dataset: zasada
+Dataset: zasada, Temperature: 0.1, Iteration: 1, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.1, Iteration: 5, TP: 0, FP: 11, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.1: 1.00
+Dataset: zasada, Temperature: 0.3, Iteration: 1, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 3, TP: 0, FP: 8, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 4, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.3, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.3: 1.00
+Dataset: zasada, Temperature: 0.5, Iteration: 1, TP: 0, FP: 12, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 2, TP: 0, FP: 9, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 4, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.5, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.5: 0.70
+Dataset: zasada, Temperature: 0.7, Iteration: 1, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 2, TP: 0, FP: 11, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 3, TP: 0, FP: 7, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 4, TP: 0, FP: 10, FN: 0, F1: 0.00
+Dataset: zasada, Temperature: 0.7, Iteration: 5, TP: 0, FP: 9, FN: 0, F1: 0.00
+Similarity Score for zasada at temperature 0.7: 0.90
+
