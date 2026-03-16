@@ -122,7 +122,6 @@ TEXT_MAPPING = {
         "Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed."
     ),
     "haar": (
-        "If a job gets rejected, no further actions are possible.\n"
         "A case cannot be closed before all segments are translated.\n"
         "The TM cannot be updated automatically if the alignment is unverified.\n"
         "Segment can only be created until the translation is started.\n"

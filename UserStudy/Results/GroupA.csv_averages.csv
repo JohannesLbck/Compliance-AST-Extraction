@@ -1,0 +1,66 @@
+Question,Average,ID,gt_df
+We have to obtain and analyze the respondent bank report..exists('obtain respondent bank annual report') and exists('analyze respondent bank annual report'),2.6666666666666665,1,Y
+"We have to obtain and analyze the respondent bank report..leads_to(tree, 'Obtain respondent bank report', 'Analyze respondent bank report')",2.3333333333333335,2,X
+"We have to obtain and analyze the respondent bank report..leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze respondent bank report')",3.3333333333333335,3,Y
+"We have to obtain and analyze the respondent bank report..receive_exist(tree, 'respondentBankReport') and exists('analyze respondent bank annual report')",2.0,4,Y
+We have to obtain and analyze the respondent bank report..exists('obtain and analyze respondent bank report'),2.6666666666666665,5,Y
+"If the respondent bank evaluation fails, it must be added to a black list..condition_eventually_follows('not data.evaluation', 'add respondent bank to blacklist')""",3.3333333333333335,1,Y
+"If the respondent bank evaluation fails, it must be added to a black list..condition_eventually_follows(tree, 'respondentBankEvaluation == \""fail\""', 'Add to black list')",4.333333333333333,2,Y
+"If the respondent bank evaluation fails, it must be added to a black list..condition_eventually_follows(tree, 'respondentBankEvaluation == \""fail\""', 'Add to black list')1",4.333333333333333,3,Y
+"If the respondent bank evaluation fails, it must be added to a black list..condition_eventually_follows('not respondentBankEvaluation', 'Add to black list')",4.0,4,X
+"If the respondent bank evaluation fails, it must be added to a black list..condition_eventually_follows(tree, \""respondentBankEvaluation == 'fail'\"", 'add respondent bank to black list')",4.666666666666667,5,Y
+"Opening an account must be of low risk..condition_directly_follows( 'risk == \""low\""', 'Open account')",2.3333333333333335,1,Y
+"Opening an account must be of low risk..condition_eventually_follows('not risk ', 'Open account')",3.0,2,Y
+"Opening an account must be of low risk..condition_eventually_follows('risk == \""low\""', 'Open account')",4.0,3,X
+"Opening an account must be of low risk..condition_directly_follows('risk == \""high\""', 'terminate')",1.3333333333333333,4,Y
+"Opening an account must be of low risk..condition_directly_follows('risk', 'terminate')",1.0,5,Y
+"If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted..condition_eventually_follows( 'isFirstTime', 'Conduct advanced due diligence study')",4.0,1,X
+"If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted..condition_eventually_follows('evaluation_extra', 'conduct due diligence study')",2.3333333333333335,2,Y
+"If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted..condition_eventually_follows( \""firstTime\"", 'Conduct advanced due diligence study')",4.0,3,Y
+"If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted..condition_eventually_follows(tree, \""isFirstTimeDealing\"", 'conduct advanced due diligence ",3.3333333333333335,4,Y
+"If it is the first time to deal with the respondent bank, an advanced due diligence study must be conducted..condition_eventually_follows( \""firstTimeDeal\"", 'Conduct Advanced Due Diligence Study')",4.333333333333333,5,Y
+"If the respondent bank rating is rejected, an account must never be opened..data_leads_to_absence(tree, 'respondentBankRating == \""rejected\""', 'Open account')",3.6666666666666665,1,Y
+"If the respondent bank rating is rejected, an account must never be opened..data_leads_to_absence( 'respondentBankRating == \""rejected\""', 'Open account')",3.6666666666666665,2,Y
+"If the respondent bank rating is rejected, an account must never be opened..not condition_eventually_follows(tree, 'respondentBankRating == \""rejected\""', 'Open account')",2.0,3,X
+"If the respondent bank rating is rejected, an account must never be opened..data_leads_to_absence(tree, 'status == \""rejected\""', 'Open account')",3.6666666666666665,4,Y
+"If the respondent bank rating is rejected, an account must never be opened..condition_eventually_follows('data.respondent_bank_rating == \""rejected\""', 'terminate')",2.6666666666666665,5,Y
+"Before opening an account, the respondent bank certificate must be valid..data_leads_to_absence(tree, \""respondentBankCertificate == 'invalid'\"", 'Open Account')",4.0,1,Y
+"Before opening an account, the respondent bank certificate must be valid..not condition_eventually_follows(tree, \""respondentBankCertificate == 'invalid'\"", 'Open Account')",3.3333333333333335,2,Y
+"Before opening an account, the respondent bank certificate must be valid..condition_eventually_follows(tree, \""respondentBankCertificate == 'valid'\"", 'Open Account')",3.3333333333333335,3,Y
+"Before opening an account, the respondent bank certificate must be valid..precedence('open bank account', 'check respondent bank certificate')",1.6666666666666667,4,X
+"Before opening an account, the respondent bank certificate must be valid..condition_eventually_follows(tree, \""respondentBankCertificate == 'valid'\"", 'open account')1",2.6666666666666665,5,Y
+"The customer should receive an automated email notification when his personal data is collected by the ""credit bureau service"".leads_to( executed_by_identify( 'credit bureau service'), receive_exist( ",2.3333333333333335,1,Y
+"The customer should receive an automated email notification when his personal data is collected by the ""credit bureau service"".parallel('send automated email', 'collect data') and executed_by('collect",3.3333333333333335,2,X
+"The customer should receive an automated email notification when his personal data is collected by the ""credit bureau service"".executed_by( 'collect personal data', 'credit bureau service') and activi",3.0,3,Y
+"The customer should receive an automated email notification when his personal data is collected by the ""credit bureau service"".executed_by( 'collect personal data', 'credit bureau service') and leads_",3.3333333333333335,4,Y
+"The customer should receive an automated email notification when his personal data is collected by the ""credit bureau service"".activity_receives( 'collect personal data', 'personalData') and executed_",3.3333333333333335,5,Y
+The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application.directly_follows( 'check cus,3.3333333333333335,1,Y
+The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application.leads_to( 'check customer ba,2.6666666666666665,2,Y
+The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application.precedence('evaluate loan ri,3.0,3,X
+The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application.precedence( 'determine risk ,2.6666666666666665,4,Y
+"The checking of the customer bank privilege that is followed by checking of her credit worthiness must take place before determining the risk level of the loan application.directly_follows(tree, 'chec",3.0,5,Y
+"The activity ""customer bank privilege check"" (to be performed by credit broker or supervisor) should be segregated from ""credit worthiness check"" (to be performed by post-processing clerk).executed_by",2.6666666666666665,1,Y
+"The activity ""customer bank privilege check"" (to be performed by credit broker or supervisor) should be segregated from ""credit worthiness check"" (to be performed by post-processing clerk).(executed_b",4.0,2,Y
+"The activity ""customer bank privilege check"" (to be performed by credit broker or supervisor) should be segregated from ""credit worthiness check"" (to be performed by post-processing clerk).(executed_b1",3.3333333333333335,3,Y
+"The activity ""customer bank privilege check"" (to be performed by credit broker or supervisor) should be segregated from ""credit worthiness check"" (to be performed by post-processing clerk).(executed_b2",2.0,4,X
+"The activity ""customer bank privilege check"" (to be performed by credit broker or supervisor) should be segregated from ""credit worthiness check"" (to be performed by post-processing clerk).(executed_b3",2.3333333333333335,5,Y
+"The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request.executed_by('check risks', 'branch office manager') and condition_eventual",1.6666666666666667,1,Y
+"The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request.executed_by( \""check risk\"", \""branch office manager\"") and condition_dire",2.0,2,X
+"The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request.executed_by( 'check risk', 'branch office manager') and (leads_to( 'check ",2.6666666666666665,3,Y
+"The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request.executed_by( 'checkRisks', 'branch office manager') and condition_eventual",2.3333333333333335,4,Y
+"The branch office manager checks whether risks are acceptable and makes either the final approval or rejection of the request.executed_by('evaluate loan risk', 'manager') and executed_by('officially s",2.0,5,Y
+"The offer in the signed loan contract is valid for 7 working days and afterwards it is closed.timed_alternative(tree, 'sign loan contract', 'close offer', 604800)",2.6666666666666665,1,Y
+"The offer in the signed loan contract is valid for 7 working days and afterwards it is closed.max_time_between('officially sign loan contract', 'perform loan settlement', 604800)",2.3333333333333335,2,Y
+"The offer in the signed loan contract is valid for 7 working days and afterwards it is closed.timed_alternative(tree, 'sign loan contract', 'close', 7)",3.6666666666666665,3,Y
+"The offer in the signed loan contract is valid for 7 working days and afterwards it is closed.max_time_between(tree, 'sign loan contract', 'close offer', 604800)",3.0,4,X
+"The offer in the signed loan contract is valid for 7 working days and afterwards it is closed.max_time_between(tree, 'sign loan contract', 'close offer', 'calculated working days')",2.6666666666666665,5,Y
+If the loan request's credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In c,2.0,1,Y
+If the loan request's credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In c1,2.3333333333333335,2,Y
+If the loan request's credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In c2,3.0,3,X
+If the loan request's credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In c3,3.0,4,Y
+If the loan request's credit exceeds 1 million Euro (1M e) the clerk supervisor checks the credit worthiness of the customer. The lack of the supervisor check immediately creates a suspense file. In c4,4.0,5,Y
+"Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed.data_leads_to_",3.6666666666666665,1,X
+"Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed.condition_even",3.3333333333333335,2,Y
+"Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed.data_leads_to_1",3.0,3,Y
+"Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed.data_leads_to_2",3.0,4,Y
+"Checking banking privileges is optional for trusted (gold) customers. If a trusted (gold) customer's loan request is less than 1M Euros, the evaluation of the loan risk is not performed.not condition_",3.0,5,Y

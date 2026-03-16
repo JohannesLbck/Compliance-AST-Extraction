@@ -4,9 +4,9 @@ from pathlib import Path
 from study_analysis import run_study_execution_analysis
 
 DATASETS= {
-    "A": "ResultsA.csv",
-    "B": "ResultsB.csv",
-    "C": "ResultsC.csv",
+    "A": "GroupA.csv",
+    "B": "GroupB.csv",
+    #"C": "GroupC.csv",
 }
 TEST_DATASET = {
     "test": "TestingTemplate.csv"
@@ -168,7 +168,7 @@ def calculate_column_averages(df):
 def main():
     combined_dfs = []
 
-    for dataset_key, dataset_file in TEST_DATASET.items():
+    for dataset_key, dataset_file in DATASETS.items():
         print(f"\nAnalysis for {dataset_key}: {dataset_file}")
         try:
             df, gt_df = load_data(dataset_file)

@@ -9,14 +9,82 @@ DATASETS={"bpmq", "crl", "haar", "pcl", "ppsl", "status", "sun", "zasada"}
 TEMPERATURES = {"0.1", "0.3", "0.5", "0.7"}
 ## Contains the pure patterns normalized from the user study identified validated encodings
 GT = {
-    "bpmq": {},
-    "crl": {},
-    "haar": {},
-    "pcl": {},
-    "ppsl": {},
-    "status": {},
-    "sun": {},
-    "zasada": {}
+    "bpmq": [
+        "leads_to(tree, receive_exist(tree, 'respondentBankReport'), 'Analyze respondent bank report')",
+        "condition_eventually_follows('not data.evaluation', 'add respondent bank to blacklist')",
+        "condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'Add to black list')",
+        "condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'Add to black list')",
+        "condition_eventually_follows('not respondentBankEvaluation', 'Add to black list')",
+        "condition_eventually_follows(tree, \"respondentBankEvaluation == 'fail'\", 'add respondent bank to black list')",
+        "condition_eventually_follows('not risk ', 'Open account')",
+        "condition_eventually_follows('risk == \"low\"', 'Open account')",
+        "condition_eventually_follows( 'isFirstTime', 'Conduct advanced due diligence study')",
+        "condition_eventually_follows( \"firstTime\", 'Conduct advanced due diligence study')",
+        "condition_eventually_follows(tree, \"isFirstTimeDealing\", 'conduct advanced due diligence study')",
+        "condition_eventually_follows( \"firstTimeDeal\", 'Conduct Advanced Due Diligence Study')",
+        "data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'Open account')",
+        "data_leads_to_absence( 'respondentBankRating == \"rejected\"', 'Open account')",
+        "data_leads_to_absence(tree, 'status == \"rejected\"', 'Open account')",
+        "data_leads_to_absence(tree, \"respondentBankCertificate == 'invalid'\", 'Open Account')",
+        "not condition_eventually_follows(tree, \"respondentBankCertificate == 'invalid'\", 'Open Account')",
+        "condition_eventually_follows(tree, \"respondentBankCertificate == 'valid'\", 'Open Account')",
+    ],
+    "crl": [
+        "parallel('send automated email', 'collect data') and executed_by('collect data', 'credit bureau service')",
+        "executed_by( 'collect personal data', 'credit bureau service') and activity_sends('collect personal data', 'automatedEmailNotification')",
+        "executed_by( 'collect personal data', 'credit bureau service') and leads_to( 'collect personal data', receive_exist(tree, 'automatedEmailNotification'))",
+        "activity_receives( 'collect personal data', 'personalData') and executed_by('collect personal data', 'credit bureau service') and leads_to( 'collect personal data', 'receive automated email notification')",
+        "directly_follows( 'check customer bank privilege', 'check credit worthiness') and leads_to( 'check credit worthiness', 'determine risk level')",
+        "precedence('evaluate loan risk', 'customer bank privilege check') and precedence('evaluate loan risk', 'check credit worthiness') and leads_to('customer bank privilege check', 'check credit worthiness')",
+        "directly_follows(tree, 'check_customer_bank_privilege', 'check_credit_worthiness') and precedence(tree, 'determine_loan_risk_level', 'check_credit_worthiness')",
+        "(executed_by( 'check customer bank privilege', 'credit broker') or executed_by('check customer bank privilege', 'supervisor')) and executed_by( 'check credit worthiness', 'post-processing clerk') and not(executed_by_return('check customer bank privilege') == executed_by_return( 'check credit worthiness'))",
+        "(executed_by( 'customer bank privilege check', 'credit broker') or executed_by( 'customer bank privilege check', 'supervisor')) and executed_by( 'credit worthiness check', 'post-processing clerk')",
+        "(executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk')",
+        "executed_by( 'check risk', 'branch office manager') and (leads_to( 'check risk', 'approve request') or leads_to( 'check risk', 'reject request'))",
+        "executed_by( 'check risk', 'branch office manager') and (leads_to( 'check risk', 'approve request') or leads_to( 'check risk', 'reject request'))",
+        "executed_by( 'checkRisks', 'branch office manager') and condition_eventually_follows('risksAcceptable', 'approveRequest') and condition_eventually_follows('not risksAcceptable', 'rejectRequest')",
+        "condition_eventually_follows( 'credit > 1000000', 'check credit worthiness') and executed_by( 'check credit worthiness', 'clerk supervisor') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+        "condition_eventually_follows(\"credit > 1000000\", \"check credit worthiness\") and executed_by(\"check credit worthiness\", \"clerk supervisor\") and failure_eventually_follows(\"create suspense file\", send_exist(\"managerNotification\"))",
+        "condition_eventually_follows( 'credit > 1000000', 'check credit worthiness') and executed_by( 'check credit worthiness', 'clerk supervisor') and failure_directly_follows( 'check credit worthiness', 'create suspense file') and failure_eventually_follows( 'create suspense file', 'notify manager')",
+        "data_leads_to_absence(tree, \"customerGold and credit < 1000000\", \"evaluate loan risk\")",
+        "condition_eventually_follows(tree, 'customerStatus != \"gold\"', 'check_banking_privileges') and data_leads_to_absence(tree, 'customerStatus == \"gold\" and loanCredit < 1000000', 'evaluate_loan_risk')",
+        "data_leads_to_absence(tree, \"customerStatus == 'gold' and creditAmount < 1000000\", 'evaluate loan risk')",
+        "data_leads_to_absence(tree, 'trustedGold and creditAmount < 1000000', 'evaluate loan risk')",
+        "not condition_eventually_follows('data.customer_status == gold && data.loan_amount < 1000000','evaluate loan risk','global')",
+    ],
+    "haar": [
+        "precedence( \"close_order\", send_exist( \"receivedOrderRecord\"))",
+        "precedence( 'Close Order', 'Record Order')",
+        "precedence( 'close order', send_exist( 'receivedOrderRecord'))",
+        "precedence(\"close order\",\"record received order\")",
+        "leads_to( \"Perform Production Action\", \"Perform Quality Check\") and precedence( \"Deliver\", \"Perform Quality Check\")",
+        "leads_to(\"production action\",\"quality check\") and precedence(\"delivery\",\"quality check\")",
+        "leads_to( \"production_action\", \"perform_quality_check\") and precedence( \"deliver\", \"perform_quality_check\")",
+        "leads_to( 'Perform Production Action', 'Perform Quality Check') and precedence( 'Deliver', 'Perform Quality Check')",
+        "(precedence( 'Close Order', 'Record Payment') or precedence( 'Close Order', 'Record Rejection')) and leads_to( receive_exist( 'payment'), 'Report Payment')",
+        "precedence(tree, 'close order', 'record payment') or precedence(tree, 'close order', 'record rejection') and leads_to(tree, receive_exist(tree, 'paymentData'), 'report payment')",
+        "leads_to('Fill Order', 'Ship') and leads_to('Fill Order', 'Send Invoice')",
+        "leads_to( 'Fill Order', send_exist( 'product')) and leads_to( 'Fill Order', send_exist( 'invoice'))",
+    ],
+    "pcl": [
+        "leads_to( 'perform_identity_check', 'retain_identity_check_history')",
+        "leads_to( receive_exist( 'newCustomer'), 'perform_identity_check')",
+        "condition_eventually_follows('data.state == \"new\"', 'identity check')",
+        "leads_to( \"scan_new_customer\", \"retain_identity_check\") and activity_sends( \"retain_identity_check\", \"identityCheckHistory\")",
+        "leads_to( 'scan_customer', 'retain_history') and send_exist( 'identityCheckHistory')",
+        "condition_eventually_follows(tree, '(accountBalance > 0) or (isApprovedByManager == true) or (customerType == \"VIP\")', 'End Activity')",
+    ],
+    "ppsl": [],
+    "status": [
+        "max_time_between(tree, \"Check Document\", \"Check Document\", 4) and activity_receives(tree, \"Check Document\", \"signedChecklist\")",
+        "recurring('check DMS', '10518984 ') and activity_receives('check DMS', 'completedandsignedChecklist')",
+        "(condition_eventually_follows( 'resolutionProposal and reportCb and reportLd', 'Analyse Reports') and executed_by( 'Analyse Reports', executed_by_return( 'Create Resolution Proposal')))",
+        "condition_eventually_follows( 'resolutionProposal and cbReport and ldReport', 'Analyse Report') and (executed_by_return( 'Create Resolution Proposal') == executed_by_return( 'Analyse Report'))",
+        "condition_eventually_follows( 'resolutionProposal and cbReport and ldReport', 'Analyse reports') and executed_by( 'Analyse reports', executed_by_return( 'Create resolution proposal'))",
+        "condition_eventually_follows( 'resolutionProposal and reportCb and reportLd', 'analyse reports') and executed_by( 'analyse reports', executed_by_return( 'create resolution proposal'))",
+    ],
+    "sun": [],
+    "zasada": []
 }
 
 model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
@@ -137,6 +205,10 @@ def main():
     
     for dataset in sorted(DATASETS):
         comparisons_set = []
+        gt_rules_normalized = []
+        for gt_rule in GT[dataset]:
+            gt_rules_normalized.extend(normalize_rules(gt_rule))
+
         for temp in sorted(TEMPERATURES):
             comparisons_set_temperature = []
             for iteration,result in enumerate(data[dataset][temp]):
@@ -146,17 +218,37 @@ def main():
                 drules = []
                 ## This is the "in" checking version, if the results are bad, lets copy paste it and make a similarity comparing where everything is the same
                 ## but "in" is replaced with the similcheck() function that checks if the rule is similar enough to the GT rule
+                rules_full = []
                 for rule in result["data"]:
                     rules = normalize_rules(rule)
                     for r in rules:
+                        rules_full.append(r)
                         drules.append(r)
-                        if r in GT[dataset]:
+                        matched_gt = any(
+                            similcheck_with_metric(
+                                r,
+                                gt_r,
+                                metric_name='damerau_levenshtein',
+                                threshold=0.75,
+                            )
+                            for gt_r in gt_rules_normalized
+                        )
+                        if matched_gt:
                             TP_counter += 1 ## True positive
                         else:
                             FP_counter += 1 ## False positive
-                    for gt_r in GT[dataset]:
-                        if gt_r not in rules:
-                            FN_counter += 1 ## False negative
+                for gt_r in gt_rules_normalized:
+                    matched_pred = any(
+                        similcheck_with_metric(
+                            gt_r,
+                            pred_r,
+                            metric_name='damerau_levenshtein',
+                            threshold=0.75,
+                        )
+                        for pred_r in rules_full
+                    )
+                    if not matched_pred:
+                        FN_counter += 1 ## False negative
                 comparisons_set.append(drules)
                 comparisons_set_temperature.append(drules)
                 F1 = 2 * TP_counter / (2 * TP_counter + FP_counter + FN_counter) if (2 * TP_counter + FP_counter + FN_counter) > 0 else 0

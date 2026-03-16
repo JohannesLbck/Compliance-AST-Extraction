@@ -2,7 +2,7 @@
 def exists(tree, a):
     return (f"{a} has to occur")
 
-def absence(tree, a):
+def absence(tree , a):
     return (f"{a} must not occur")
 
 def loop(tree, a):
