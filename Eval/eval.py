@@ -5,7 +5,7 @@ import textdistance as td
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 
-DATASETS={"bpmq", "crl", "haar", "pcl", "ppsl", "status", "sun", "zasada"}
+DATASETS={"bpmq", "crl", "pcl", "ppsl", "status", "sun", "zasada"}
 TEMPERATURES = {"0.1", "0.3", "0.5", "0.7"}
 ## Contains the pure patterns normalized from the user study identified validated encodings
 GT = {
@@ -52,7 +52,7 @@ GT = {
         "data_leads_to_absence(tree, 'trustedGold and creditAmount < 1000000', 'evaluate loan risk')",
         "not condition_eventually_follows('data.customer_status == gold && data.loan_amount < 1000000','evaluate loan risk','global')",
     ],
-    "haar": [
+    "ppsl": [
         "precedence( \"close_order\", send_exist( \"receivedOrderRecord\"))",
         "precedence( 'Close Order', 'Record Order')",
         "precedence( 'close order', send_exist( 'receivedOrderRecord'))",
@@ -74,7 +74,6 @@ GT = {
         "leads_to( 'scan_customer', 'retain_history') and send_exist( 'identityCheckHistory')",
         "condition_eventually_follows(tree, '(accountBalance > 0) or (isApprovedByManager == true) or (customerType == \"VIP\")', 'End Activity')",
     ],
-    "ppsl": [],
     "status": [
         "max_time_between(tree, \"Check Document\", \"Check Document\", 4) and activity_receives(tree, \"Check Document\", \"signedChecklist\")",
         "recurring('check DMS', '10518984 ') and activity_receives('check DMS', 'completedandsignedChecklist')",
@@ -83,8 +82,38 @@ GT = {
         "condition_eventually_follows( 'resolutionProposal and cbReport and ldReport', 'Analyse reports') and executed_by( 'Analyse reports', executed_by_return( 'Create resolution proposal'))",
         "condition_eventually_follows( 'resolutionProposal and reportCb and reportLd', 'analyse reports') and executed_by( 'analyse reports', executed_by_return( 'create resolution proposal'))",
     ],
-    "sun": [],
-    "zasada": []
+    "sun": [
+        "max_time_between( 'Start Activity', 'End Activity', 2592000, 'terminate')",
+        "max_time_between( \"Start Activity\", \"End Activity\", 30, \"terminate\")",
+        "max_time_between( \"Start Activity\", \"End Activity\", 2592000, \"terminate\")",
+        "exists('verify user data') and executed_by('verify user data', 'telephone company')",
+        "executed_by('Verify Accuracy User Personal Information', 'Telephone Company')",
+        "executed_by('verify accuracy user personal information', 'telephone company')",
+        "executed_by( \"verify user personal information accuracy\", \"telephone company\")",
+        "executed_by( \"verify accuracy user personal information\", \"telephone company\")",
+        "leads_to( receive_exist( 'simCard'), 'activate SIM card') and precedence( 'use SIM card', 'activate SIM card') and executed_by( 'activate SIM card', 'telephone company') and executed_by( 'use SIM card', 'customer')",
+        "leads_to(tree, receive_exist( 'simCard'), 'activate SIM card') and precedence( 'use SIM card', 'activate SIM card') and executed_by( 'activate SIM card', 'telephone company') and executed_by( 'use SIM card', 'customer')",
+        "precedence( receive_exist( 'personalData'), 'Obtain consent') and executed_by( 'Obtain consent', 'Data controller') and executed_by( receive_exist( 'personalData'), 'Data controller')",
+    ],
+    "zasada": [
+        "precedence('conduct risk disclosure', receive_exist('customer_data'))",
+        "precedence( 'conduct individual risk assessment', receive_exist( 'customerData'))",
+        "precedence( 'conductIndividualRiskAssessment', receive_exist( 'customerData'))",
+        "precedence( 'individual risk assessment', receive_exist( 'customerData'))",
+        "precedence( 'conduct_individual_risk_assessment', receive_exist( 'customerData'))",
+        "executed_by( send_exist( 'WphgCustomerInformation'), 'Customer advisor') and executed_by( send_exist( 'basicInformationSecuritiesAndCapitalInvestment'), 'customer advisor')",
+        "executed_by( send_exist( 'wphgCustomerInformation'), 'customer advisor') and executed_by( send_exist( 'BasicInformationSecuritiesAndCapitalInvestment'), 'Customer advisor')",
+        "executed_by( send_exist( 'wphgCustomerInformation'), 'Customer Advisor') and executed_by( send_exist( 'basicInformationSecuritiesAndCapitalInvestment'), 'Customer Advisor')",
+        "executed_by( send_exist( 'wphgCustomerInformation'), 'customer advisor') and executed_by( send_exist( 'basicInformationSecuritiesAndCapitalInvestment'), 'customer advisor')",
+        "leads_to( 'conclude custody account contract', send_exist( 'customerLegitimation')) and leads_to( 'conclude custody account contract', send_exist( 'accountDocuments')) and executed_by( receive_exist( 'customerLegitimation'), 'market support') and executed_by( receive_exist( 'accountDocuments'), 'market support')",
+        "executed_by( 'conduct investment advice', 'customer advisor with securities competence level C or above')",
+        "executed_by('conduct investment advice','customer advisor with securities competence level C or above')",
+        "executed_by( 'handle customer identification and legitimation', 'customer advisor') and executed_by( 'check suspected money laundering case', 'anti-money-laundering officer')",
+        "executed_by( 'handle customer identification and legitimation', 'customer advisor') and executed_by( 'check suspected money laundering case', 'anti-money-laundering officer')",
+        "executed_by('handle customer identification and legitimation', 'customer advisor') and executed_by( 'check suspected money laundering case', 'anti-money-laundering officer')",
+        "condition_eventually_follows('not data.customer.status == \"new\"', 'update customer data')",
+        "leads_to( 'customer contact', 'update customer information')",
+    ]
 }
 
 model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')

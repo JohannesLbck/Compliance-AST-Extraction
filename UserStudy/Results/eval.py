@@ -6,7 +6,7 @@ from study_analysis import run_study_execution_analysis
 DATASETS= {
     "A": "GroupA.csv",
     "B": "GroupB.csv",
-    #"C": "GroupC.csv",
+    "C": "GroupC.csv",
 }
 TEST_DATASET = {
     "test": "TestingTemplate.csv"
@@ -196,11 +196,11 @@ def main():
         print("No datasets were processed successfully.")
         return None
 
-    combined_study_df = pd.concat(combined_dfs, ignore_index=True)
-    print("Running combined study execution analysis across all processed datasets...")
-    run_study_execution_analysis(combined_study_df, COLUMNS)
+    #combined_study_df = pd.concat(combined_dfs, ignore_index=True)
+    #print("Running combined study execution analysis across all processed datasets...")
+    #run_study_execution_analysis(combined_study_df, COLUMNS)
 
-    return combined_study_df
+    #return combined_study_df
 
 if __name__ == "__main__":
     df = main()
