@@ -549,46 +549,51 @@
       {
         "timestamp": "20260304_135020",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135023",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135025",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135028",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135031",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       }
     ],
@@ -596,46 +601,51 @@
       {
         "timestamp": "20260304_135619",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135622",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135625",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135629",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135632",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       }
     ],
@@ -643,46 +653,51 @@
       {
         "timestamp": "20260304_135314",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135317",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135322",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135326",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135329",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       }
     ],
@@ -690,46 +705,51 @@
       {
         "timestamp": "20260304_135923",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135925",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135928",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135932",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       },
       {
         "timestamp": "20260304_135935",
         "data": [
-          "R1: precedence(tree, 'close case', 'translate segment')",
-          "R2: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
-          "R3: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R4: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
+          "R2: precedence(tree, 'close case', 'translate segment')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R4: leads_to_absence(tree, 'start translation', 'create segment')",
+          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
         ]
       }
     ]
