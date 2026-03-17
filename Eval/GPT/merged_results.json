@@ -6,9 +6,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -18,9 +18,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -30,9 +30,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -42,9 +42,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTime == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -54,9 +54,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -70,7 +70,7 @@
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"failed\"', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -80,9 +80,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -94,7 +94,7 @@
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'add to blacklist')",
           "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -106,7 +106,7 @@
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: condition_eventually_follows(tree, 'evaluationResult == \"fail\"', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -118,7 +118,7 @@
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: condition_eventually_follows(tree, 'respondentBankEvaluation == \"fail\"', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence study')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence study')",
           "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'open account')"
         ]
@@ -131,7 +131,7 @@
           "R1: exists(tree, 'analyze respondentBankReport')",
           "R2: precedence(tree, 'evaluate respondentBank', 'add blackList')",
           "R3: condition_eventually_follows(tree, 'respondentBankRisk == \"low\"', 'open account')",
-          "R4: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advancedDueDiligence')",
+          "R4: condition_eventually_follows(tree, 'isFirstTime == True', 'conduct advancedDueDiligence')",
           "R5: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R6: precedence(tree, 'validate respondentBankCertificate', 'open account')"
         ]
@@ -141,9 +141,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list', scope='global')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list', scope='global')",
           "R4: condition_eventually_follows(tree, 'accountRisk != \"low\"', 'terminate', scope='global')",
-          "R5: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct advanced due diligence study', scope='global')",
+          "R5: condition_eventually_follows(tree, 'isFirstTime == True', 'conduct advanced due diligence study', scope='global')",
           "R6: leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -153,9 +153,9 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence')",
           "R6: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
@@ -165,10 +165,10 @@
         "data": [
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct advanced due diligence')",
-          "R6: leads_to_absence(tree, 'ratingRejected == true', 'open account')",
+          "R5: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct advanced due diligence')",
+          "R6: leads_to_absence(tree, 'ratingRejected == True', 'open account')",
           "R7: precedence(tree, 'validate respondent bank certificate', 'open account')"
         ]
       },
@@ -176,11 +176,11 @@
         "timestamp": "20260304_141312",
         "data": [
           "R1: exists(tree, 'analyze respondent bank report')",
-          "R2: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R2: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R3: condition_eventually_follows(tree, 'riskLevel == \"high\"', 'terminate')",
-          "R4: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence study')",
+          "R4: condition_eventually_follows(tree, 'firstTime == True', 'conduct advanced due diligence study')",
           "R5: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
-          "R6: condition_eventually_follows(tree, 'certificateValid == false', 'terminate')"
+          "R6: condition_eventually_follows(tree, 'certificateValid == False', 'terminate')"
         ]
       }
     ],
@@ -190,11 +190,11 @@
         "data": [
           "R1: exists(tree, 'obtain report')",
           "R2: exists(tree, 'analyze report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R4: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstInteraction == true', 'conduct advanced due diligence')",
+          "R5: condition_eventually_follows(tree, 'firstInteraction == True', 'conduct advanced due diligence')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
-          "R7: precedence(tree, 'certificateValid == true', 'open account')"
+          "R7: precedence(tree, 'certificateValid == True', 'open account')"
         ]
       },
       {
@@ -203,7 +203,7 @@
           "R1: existence(tree, 'analyze report')",
           "R2: condition_eventually_follows(tree, 'evaluationResult == \"fail\"', 'add to blacklist')",
           "R3: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R4: condition_eventually_follows(tree, 'firstTimeDealing == true', 'conduct due diligence')",
+          "R4: condition_eventually_follows(tree, 'firstTimeDealing == True', 'conduct due diligence')",
           "R5: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
           "R6: precedence(tree, 'validate certificate', 'open account')"
         ]
@@ -213,9 +213,9 @@
         "data": [
           "R1: exists(tree, 'analyze report')",
           "R2: leads_to(tree, 'analyze report', 'evaluate report')",
-          "R3: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R3: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R4: condition_eventually_follows(tree, 'risk == \"low\"', 'open account')",
-          "R5: condition_eventually_follows(tree, 'firstTime == true', 'conduct advanced due diligence')",
+          "R5: condition_eventually_follows(tree, 'firstTime == True', 'conduct advanced due diligence')",
           "R6: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R7: precedence(tree, 'validate certificate', 'open account')"
         ]
@@ -224,9 +224,9 @@
         "timestamp": "20260304_141632",
         "data": [
           "R1: exists(tree, 'analyze respondent bank report')",
-          "R2: condition_eventually_follows(tree, 'evaluationResult == false', 'add to blacklist')",
+          "R2: condition_eventually_follows(tree, 'evaluationResult == False', 'add to blacklist')",
           "R3: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R4: condition_eventually_follows(tree, 'firstInteraction == true', 'conduct advanced due diligence')",
+          "R4: condition_eventually_follows(tree, 'firstInteraction == True', 'conduct advanced due diligence')",
           "R5: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R6: precedence(tree, 'validate bank certificate', 'open account')"
         ]
@@ -239,7 +239,7 @@
           "R3: condition_eventually_follows(tree, 'evaluationStatus == \"failed\"', 'add to blacklist')",
           "R4: executed_by(tree, 'add to blacklist', 'system')",
           "R5: condition_eventually_follows(tree, 'accountRisk == \"low\"', 'open account')",
-          "R6: condition_eventually_follows(tree, 'isFirstTime == true', 'conduct due diligence')",
+          "R6: condition_eventually_follows(tree, 'isFirstTime == True', 'conduct due diligence')",
           "R7: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'validate bank certificate', 'open account')"
         ]
@@ -533,7 +533,7 @@
       {
         "timestamp": "20260304_141637",
         "data": [
-          "R1: condition_eventually_follows(tree, 'personalDataCollected == true', 'send_emailNotification')",
+          "R1: condition_eventually_follows(tree, 'personalDataCollected == True', 'send_emailNotification')",
           "R2: leads_to(tree, 'checkBankPrivilege', 'checkCreditWorthiness')",
           "R3: precedence(tree, 'checkCreditWorthiness', 'determineRiskLevel')",
           "R4: executed_by(tree, 'checkBankPrivilege', 'creditBroker')",
@@ -615,7 +615,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', 'global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -625,7 +625,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -635,7 +635,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', scope='global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -667,7 +667,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -677,7 +677,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'further actions')",
           "R2: precedence(tree, 'translate all segments', 'close case')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', scope='global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -687,7 +687,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM automatically', 'global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM automatically', 'global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -697,7 +697,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -719,7 +719,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'translate segments', 'close case')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', 'global')",
           "R4: precedence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -729,7 +729,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence_absence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', scope='global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -749,7 +749,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'perform further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', 'global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -781,7 +781,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'further actions')",
           "R2: precedence(tree, 'translate all segments', 'close case')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', 'global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', 'global')",
           "R4: precedence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -791,7 +791,7 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
           "R5: leads_to(tree, 'accept case', 'update TM')"
         ]
@@ -801,19 +801,19 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'any further actions')",
           "R2: precedence(tree, 'close case', 'translate all segments')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'update TM', scope='global')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'update TM', scope='global')",
           "R4: precedence_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM', scope='global')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM', scope='global')"
         ]
       },
       {
         "timestamp": "20260304_141706",
         "data": [
-          "R1: condition_eventually_follows(tree, 'jobRejected == true', 'End Activity')",
+          "R1: condition_eventually_follows(tree, 'jobRejected == True', 'End Activity')",
           "R2: precedence(tree, 'closeCase', 'translateSegment')",
-          "R3: condition_eventually_follows(tree, 'alignmentVerified == false', 'updateTM')",
+          "R3: condition_eventually_follows(tree, 'alignmentVerified == False', 'updateTM')",
           "R4: precedence_absence(tree, 'createSegment', 'startTranslation')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'updateTM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'updateTM')"
         ]
       }
     ]
@@ -837,7 +837,7 @@
           "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
           "R4: executed_by(tree, 'record identityCheck', 'system')",
           "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
-          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == True or customerType == \"VIP\")', 'End Activity')"
         ]
       },
       {
@@ -848,7 +848,7 @@
           "R3: leads_to(tree, 'identity check completed', 'record identity check')",
           "R4: executed_by(tree, 'record identity check', 'system')",
           "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
-          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager == true or customerStatus == \"VIP\")', 'End Activity')"
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager == True or customerStatus == \"VIP\")', 'End Activity')"
         ]
       },
       {
@@ -858,7 +858,7 @@
           "R2: executed_by(tree, 'scan identity', 'system')",
           "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
           "R4: executed_by(tree, 'record identityCheck', 'system')",
-          "R5: data_leads_to_absence(tree, 'accountBalance < 0 and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+          "R5: data_leads_to_absence(tree, 'accountBalance < 0 and not (approval == True or customerType == \"VIP\")', 'End Activity')"
         ]
       },
       {
@@ -869,7 +869,7 @@
           "R3: leads_to(tree, 'scan identity', 'record identityCheck')",
           "R4: executed_by(tree, 'record identityCheck', 'system')",
           "R5: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
-          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+          "R6: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == True or customerType == \"VIP\")', 'End Activity')"
         ]
       }
     ],
@@ -902,14 +902,14 @@
           "R2: executed_by(tree, 'scan identity', 'system')",
           "R3: leads_to(tree, 'scan identity', 'retain history')",
           "R4: executed_by(tree, 'retain history', 'system')",
-          "R5: condition_eventually_follows(tree, 'accountBalance < 0 and not (approval == true or customerStatus == \"VIP\")', 'End Activity')"
+          "R5: condition_eventually_follows(tree, 'accountBalance < 0 and not (approval == True or customerStatus == \"VIP\")', 'End Activity')"
         ]
       },
       {
         "timestamp": "20260304_141517",
         "data": [
           "exists(tree, 'scan customer')",
-          "condition_eventually_follows(tree, 'identityCheckPerformed == true', 'End Activity')",
+          "condition_eventually_follows(tree, 'identityCheckPerformed == True', 'End Activity')",
           "data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
           "condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\") or (customerStatus == \"VIP\")', 'End Activity')"
         ]
@@ -920,7 +920,7 @@
           "R1: exists(tree, 'scan customer')",
           "R2: activity_receives(tree, 'scan customer', 'identityDatabase')",
           "R3: leads_to(tree, 'scan customer', 'record identityCheck')",
-          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == true or customerType == \"VIP\")', 'End Activity')"
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approval == True or customerType == \"VIP\")', 'End Activity')"
         ]
       }
     ],
@@ -931,14 +931,14 @@
           "R1: exists(tree, 'scan identity')",
           "R2: condition_eventually_follows(tree, 'scan identity', 'identityCheckPerformed')",
           "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'maintain account')",
-          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP == true)', 'maintain account')"
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approvedByManager or isVIP == True)', 'maintain account')"
         ]
       },
       {
         "timestamp": "20260304_141344",
         "data": [
           "R1: leads_to(tree, 'scan identity', 'identity verified')",
-          "R2: condition_eventually_follows(tree, 'true', 'retain history')",
+          "R2: condition_eventually_follows(tree, 'True', 'retain history')",
           "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
           "R4: condition_eventually_follows(tree, '(accountBalance < 0) and (approvalStatus == \"approved\")', 'End Activity')",
           "R5: condition_eventually_follows(tree, '(accountBalance < 0) and (customerStatus == \"VIP\")', 'End Activity')"
@@ -950,7 +950,7 @@
           "R1: leads_to(tree, 'scan customer', 'identity check')",
           "R2: executed_by(tree, 'retain history', 'system')",
           "R3: data_leads_to_absence(tree, 'accountBalance < 0', 'End Activity')",
-          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and (isVIP == false)', 'manager approval')"
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and (isVIP == False)', 'manager approval')"
         ]
       },
       {
@@ -959,7 +959,7 @@
           "R1: exists(tree, 'scan identity')",
           "R2: executed_by(tree, 'scan identity', 'system')",
           "R3: leads_to(tree, 'scan identity', 'record identity check')",
-          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approved == true or customerStatus == \"VIP\")', 'End Activity')"
+          "R4: condition_eventually_follows(tree, '(accountBalance < 0) and not (approved == True or customerStatus == \"VIP\")', 'End Activity')"
         ]
       },
       {
@@ -978,7 +978,7 @@
         "data": [
           "R1: leads_to(tree, 'scan identity', 'identity checked')",
           "R2: exists(tree, 'record identity checks')",
-          "R3: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvedByManager == true or customerStatus == \"VIP\")', 'End Activity')"
+          "R3: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvedByManager == True or customerStatus == \"VIP\")', 'End Activity')"
         ]
       },
       {
@@ -1001,7 +1001,7 @@
       {
         "timestamp": "20260304_141714",
         "data": [
-          "R1: condition_eventually_follows(tree, 'newCustomer == true', 'scan identity')",
+          "R1: condition_eventually_follows(tree, 'newCustomer == True', 'scan identity')",
           "R2: exists(tree, 'retain identityCheckHistory')",
           "R3: condition_eventually_follows(tree, 'accountBalance < 0', 'manager approves')",
           "R4: condition_eventually_follows(tree, 'accountBalance < 0', 'accountStatus == \"VIP\"')"
@@ -1013,7 +1013,7 @@
           "R1: exists(tree, 'perform identity scan')",
           "R2: executed_by(tree, 'perform identity scan', 'system')",
           "R3: send_exist(tree, 'identityCheckHistory')",
-          "R4: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvalProvided == true or customerStatus == \"VIP\")', 'End Activity')"
+          "R4: data_leads_to_absence(tree, 'accountBalance < 0 and not (approvalProvided == True or customerStatus == \"VIP\")', 'End Activity')"
         ]
       }
     ]
@@ -1212,7 +1212,7 @@
           "R3: leads_to(tree, 'perform quality check', 'delivery')",
           "R4: precedence(tree, 'close order', 'record payments')",
           "R5: precedence(tree, 'close order', 'record order rejection')",
-          "R6: condition_eventually_follows(tree, 'paymentReceived == true', 'report payment')",
+          "R6: condition_eventually_follows(tree, 'paymentReceived == True', 'report payment')",
           "R7: leads_to(tree, 'fill order', 'ship product')",
           "R8: leads_to(tree, 'fill order', 'send invoice')"
         ]
@@ -1261,7 +1261,7 @@
         "timestamp": "20260304_141228",
         "data": [
           "R1: recurring(tree, 'check document uploaded', 10368000)",
-          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsAvailable == true)', 'analyse reports')",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (reportsAvailable == True)', 'analyse reports')",
           "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
         ]
       },
@@ -1269,7 +1269,7 @@
         "timestamp": "20260304_141229",
         "data": [
           "R1: recurring(tree, 'check document upload', 10368000)",
-          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (CBReportAvailable == True) and (LDReportAvailable == True)', 'analyse reports')",
           "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
         ]
       },
@@ -1296,7 +1296,7 @@
         "data": [
           "R1: recurring(tree, 'check document upload', 10368000)",
           "R2: executed_by(tree, 'analyze reports', 'creator of resolution proposal')",
-          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyze reports')"
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (CBReportAvailable == True) and (LDReportAvailable == True)', 'analyze reports')"
         ]
       }
     ],
@@ -1323,7 +1323,7 @@
           "recurring(tree, 'check document', 10368000)",
           "executed_by(tree, 'sign checklist', 'Tax Manager')",
           "executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "condition_eventually_follows(tree, 'reportsAvailable == true', 'analyse reports')",
+          "condition_eventually_follows(tree, 'reportsAvailable == True', 'analyse reports')",
           "executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
         ]
       },
@@ -1341,7 +1341,7 @@
         "timestamp": "20260304_141549",
         "data": [
           "R1: recurring(tree, 'check document uploaded', 10368000)",
-          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsAvailable == true)', 'analyse reports')",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (reportsAvailable == True)', 'analyse reports')",
           "R3: executed_by(tree, 'analyse reports', 'creator of resolution proposal')"
         ]
       }
@@ -1352,14 +1352,14 @@
         "data": [
           "R1: recurring(tree, 'check document uploaded', 10368000)",
           "R2: executed_by(tree, 'analyze reports', 'creator of resolution proposal')",
-          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyze reports')"
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (CBReportAvailable == True) and (LDReportAvailable == True)', 'analyze reports')"
         ]
       },
       {
         "timestamp": "20260304_141409",
         "data": [
           "R1: recurring(tree, 'check document upload', 10368000)",
-          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')",
+          "R2: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (CBReportAvailable == True) and (LDReportAvailable == True)', 'analyse reports')",
           "R3: executed_by(tree, 'analyse reports', 'resolutionProposalCreator')"
         ]
       },
@@ -1386,7 +1386,7 @@
         "data": [
           "R1: recurring(tree, 'check document upload', 10368000)",
           "R2: executed_by(tree, 'analyse reports', 'resolution proposal creator')",
-          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (CBReportAvailable == true) and (LDReportAvailable == true)', 'analyse reports')"
+          "R3: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (CBReportAvailable == True) and (LDReportAvailable == True)', 'analyse reports')"
         ]
       }
     ],
@@ -1426,7 +1426,7 @@
           "R1: recurring(tree, 'upload document', 10368000)",
           "R2: executed_by(tree, 'sign checklist', 'Tax Manager')",
           "R3: executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R4: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (reportsFromCBAvailable == true) and (reportsFromLDAvailable == true)', 'analyze reports')",
+          "R4: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (reportsFromCBAvailable == True) and (reportsFromLDAvailable == True)', 'analyze reports')",
           "R5: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
         ]
       },
@@ -1435,7 +1435,7 @@
         "data": [
           "R1: recurring(tree, 'check document upload', 10368000)",
           "R2: condition_eventually_follows(tree, \"(documentType == 'checklist') and (status == 'completed and signed')\", 'upload document', 'global')",
-          "R3: condition_eventually_follows(tree, \"(proposalCreated == true) and (CBreportAvailable == true) and (LDreportAvailable == true)\", 'analyze reports', 'global')",
+          "R3: condition_eventually_follows(tree, \"(proposalCreated == True) and (CBreportAvailable == True) and (LDreportAvailable == True)\", 'analyze reports', 'global')",
           "R4: executed_by(tree, 'analyze reports', executed_by_return(tree, 'create resolution proposal'))"
         ]
       }
@@ -1669,7 +1669,7 @@
           "R2: executed_by(tree, 'provide brochures', 'customerAdvisor')",
           "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
           "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
-          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == true', 'check suspectedMoneyLaundering', scope='global')",
+          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == True', 'check suspectedMoneyLaundering', scope='global')",
           "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
           "R7: recurring(tree, 'update customerInformation', 'future customerContact')"
         ]
@@ -1800,7 +1800,7 @@
           "R2: executed_by(tree, 'provide obligatoryBrochures', 'customerAdvisor')",
           "R3: leads_to(tree, 'conclude custodyAccountContract', 'send accountDocuments')",
           "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor')",
-          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == true', 'resolve suspectedMoneyLaundering')",
+          "R5: condition_eventually_follows(tree, 'suspectedMoneyLaundering == True', 'resolve suspectedMoneyLaundering')",
           "R6: precedence(tree, 'resolve suspectedMoneyLaundering', 'conclude custodyAccountContract')",
           "R7: loop(tree, 'update customerInformation')"
         ]
@@ -1851,7 +1851,7 @@
         "timestamp": "20260304_141812",
         "data": [
           "R1: precedence(tree, 'receive customerData', 'assess individualRisk')",
-          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor') and condition_eventually_follows(tree, '(brochuresProvided == true)', 'process continues')",
+          "R2: executed_by(tree, 'provide brochures', 'customerAdvisor') and condition_eventually_follows(tree, '(brochuresProvided == True)', 'process continues')",
           "R3: leads_to(tree, 'conclude custodyAccountContract', 'send legitimation and accountDocuments') and executed_by(tree, 'send legitimation and accountDocuments', 'marketSupport')",
           "R4: executed_by(tree, 'conduct investmentAdvice', 'customerAdvisor') and condition_eventually_follows(tree, '(securitiesCompetenceLevel >= \"C\")', 'conduct investmentAdvice')",
           "R5: executed_by(tree, 'handle customerIdentification and legitimation', 'customerAdvisor') and executed_by(tree, 'check moneyLaunderingCase', 'antiMoneyLaunderingOfficer')",

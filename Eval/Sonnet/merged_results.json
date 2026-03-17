@@ -10,7 +10,7 @@
           "R4: condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence study')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence study')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -21,9 +21,9 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel != \"low\"', 'End Activity')",
-          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R7: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -34,12 +34,12 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+          "R7: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
-          "R9: condition_eventually_follows(tree, 'certificateValid == true', 'open account')",
+          "R9: condition_eventually_follows(tree, 'certificateValid == True', 'open account')",
           "R10: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
       },
@@ -49,12 +49,12 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist', scope='global')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist', scope='global')",
           "R5: condition_eventually_follows(tree, 'accountRisk != \"low\"', 'End Activity', scope='global')",
-          "R6: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence', scope='global')",
+          "R6: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence', scope='global')",
           "R7: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'open account', 'validate respondent bank certificate')",
-          "R9: condition_eventually_follows(tree, 'certificateValid == false', 'End Activity', scope='global')"
+          "R9: condition_eventually_follows(tree, 'certificateValid == False', 'End Activity', scope='global')"
         ]
       },
       {
@@ -66,7 +66,7 @@
           "R4: condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence study')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence study')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -79,10 +79,10 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to black list')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to black list')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence study')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence study')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -93,14 +93,14 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist', scope='global')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist', scope='global')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account', scope='global')",
           "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence', scope='global')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence', scope='global')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')",
-          "R10: condition_eventually_follows(tree, 'certificateValid == true', 'open account', scope='global')",
-          "R11: data_leads_to_absence(tree, 'certificateValid == false', 'open account')"
+          "R10: condition_eventually_follows(tree, 'certificateValid == True', 'open account', scope='global')",
+          "R11: data_leads_to_absence(tree, 'certificateValid == False', 'open account')"
         ]
       },
       {
@@ -109,9 +109,9 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R7: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -122,10 +122,10 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+          "R7: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -136,11 +136,11 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: executed_by(tree, 'add to blacklist', 'system') or exists(tree, 'add to blacklist')",
           "R6: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R7: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R8: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+          "R8: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence')",
           "R9: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R10: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -156,7 +156,7 @@
           "R4: condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence study')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence study')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -167,13 +167,13 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+          "R7: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
-          "R9: condition_eventually_follows(tree, 'certificateValid == true', 'open account')",
-          "R10: data_leads_to_absence(tree, 'certificateValid == false', 'open account')",
+          "R9: condition_eventually_follows(tree, 'certificateValid == True', 'open account')",
+          "R10: data_leads_to_absence(tree, 'certificateValid == False', 'open account')",
           "R11: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
       },
@@ -186,7 +186,7 @@
           "R4: condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')",
           "R10: condition_eventually_follows(tree, 'respondentBankCertificate == \"valid\"', 'open account')"
@@ -198,9 +198,9 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist', scope='global')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist', scope='global')",
           "R5: condition_eventually_follows(tree, 'accountRisk != \"low\"', 'End Activity', scope='global')",
-          "R6: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence', scope='global')",
+          "R6: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence', scope='global')",
           "R7: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -211,11 +211,11 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: executed_by(tree, 'add to blacklist', 'system') or exists(tree, 'add to blacklist')",
           "R6: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R7: data_leads_to_absence(tree, 'riskLevel != \"low\"', 'open account')",
-          "R8: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence')",
+          "R8: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence')",
           "R9: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R10: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -228,10 +228,10 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist', scope='global')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist', scope='global')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account', scope='global')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'firstTimeDeal == true', 'conduct advanced due diligence', scope='global')",
+          "R7: condition_eventually_follows(tree, 'firstTimeDeal == True', 'conduct advanced due diligence', scope='global')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -242,10 +242,10 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: executed_by(tree, 'add to blacklist', 'system') or exists(tree, 'add to blacklist')",
           "R6: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R8: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -256,9 +256,9 @@
           "R1: exists(tree, 'obtain respondent bank report')",
           "R2: exists(tree, 'analyze respondent bank report')",
           "R3: leads_to(tree, 'obtain respondent bank report', 'analyze respondent bank report')",
-          "R4: condition_eventually_follows(tree, 'evaluationFailed == true', 'add to blacklist')",
+          "R4: condition_eventually_follows(tree, 'evaluationFailed == True', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel != \"low\"', 'End Activity')",
-          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R6: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R7: data_leads_to_absence(tree, 'rating == \"rejected\"', 'open account')",
           "R8: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -272,7 +272,7 @@
           "R4: condition_eventually_follows(tree, 'evaluationResult == \"failed\"', 'add to blacklist')",
           "R5: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R6: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence study')",
+          "R7: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence study')",
           "R8: data_leads_to_absence(tree, 'respondentBankRating == \"rejected\"', 'open account')",
           "R9: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -287,7 +287,7 @@
           "R5: executed_by(tree, 'add to blacklist', 'system') or exists(tree, 'add to blacklist')",
           "R6: condition_eventually_follows(tree, 'riskLevel == \"low\"', 'open account')",
           "R7: data_leads_to_absence(tree, 'riskLevel not \"low\"', 'open account')",
-          "R8: condition_eventually_follows(tree, 'isFirstTimeDeal == true', 'conduct advanced due diligence')",
+          "R8: condition_eventually_follows(tree, 'isFirstTimeDeal == True', 'conduct advanced due diligence')",
           "R9: data_leads_to_absence(tree, 'bankRating == \"rejected\"', 'open account')",
           "R10: precedence(tree, 'open account', 'validate respondent bank certificate')"
         ]
@@ -304,7 +304,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') and precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk') and no condition_eventually_follows(tree, 'customerStatus == \"gold\"', 'check customer bank privilege')"
         ]
       },
@@ -340,7 +340,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, 'loanCredit > 1000000', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, 'loanCredit > 1000000', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk') and condition_eventually_follows(tree, 'status == \"gold\"', 'check customer bank privilege') or absence(tree, 'check customer bank privilege')"
         ]
       },
@@ -352,7 +352,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and (executed_by(tree, 'check credit worthiness', 'post-processing clerk')) and not (executed_by(tree, 'check customer bank privilege', 'post-processing clerk')) and not (executed_by(tree, 'check credit worthiness', 'credit broker') or executed_by(tree, 'check credit worthiness', 'supervisor'))",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check banking privileges', 'global') and data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk')"
         ]
       }
@@ -366,7 +366,7 @@
           "R3: (executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and condition_eventually_follows(tree, '(loanCredit > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file') and directly_follows(tree, 'check credit worthiness by supervisor', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and condition_eventually_follows(tree, '(loanCredit > 1000000) and (supervisorCheckPerformed == False)', 'create suspense file') and directly_follows(tree, 'check credit worthiness by supervisor', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, 'customerStatus == \"gold\"', 'check bank privilege') == False and data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -378,7 +378,7 @@
           "R3: (executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'End Activity', 604800, 'close offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and data_leads_to_absence(tree, 'customerStatus == \"gold\"', 'check bank privilege') == False"
         ]
       },
@@ -390,7 +390,7 @@
           "R3: (executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'End Activity', 604800, 'close offer')",
-          "R6: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and data_leads_to_absence(tree, '(loanAmount > 1000000)', 'End Activity') and condition_directly_follows(tree, '(loanAmount > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and data_leads_to_absence(tree, '(loanAmount > 1000000)', 'End Activity') and condition_directly_follows(tree, '(loanAmount > 1000000) and (supervisorCheckPerformed == False)', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and condition_eventually_follows(tree, 'status == \"gold\"', 'check bank privilege') == False"
         ]
       },
@@ -402,7 +402,7 @@
           "R3: executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close offer', 604800, 'close offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check bank privilege', scope='branch') == False and condition_eventually_follows(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk', scope='branch') == False"
         ]
       },
@@ -414,7 +414,7 @@
           "R3: (executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') and precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'clerk supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and no condition_eventually_follows(tree, 'customerStatus == \"gold\"', 'check customer bank privilege')"
         ]
       }
@@ -428,7 +428,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'check customer bank privilege', 'global') == False and data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -440,7 +440,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check customer bank privilege', 'branch') and data_leads_to_absence(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -464,7 +464,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_eventually_follows(tree, '(loanCredit > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file') and directly_follows(tree, 'check credit worthiness', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_eventually_follows(tree, '(loanCredit > 1000000) and (supervisorCheckPerformed == False)', 'create suspense file') and directly_follows(tree, 'check credit worthiness', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(customerStatus == \"gold\")', 'check customer bank privilege') and data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -476,7 +476,7 @@
           "R3: (executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor')) and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') and leads_to_absence(tree, 'check credit worthiness', 'check bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and leads_to_absence(tree, 'check credit worthiness', 'create suspense file') and condition_eventually_follows(tree, '(loanAmount > 1000000) and (supervisorCheckPerformed == false)', 'create suspense file') and directly_follows(tree, 'check credit worthiness', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanAmount > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and leads_to_absence(tree, 'check credit worthiness', 'create suspense file') and condition_eventually_follows(tree, '(loanAmount > 1000000) and (supervisorCheckPerformed == False)', 'create suspense file') and directly_follows(tree, 'check credit worthiness', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, 'status == \"gold\"', 'check bank privilege', 'branch') and data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk')"
         ]
       }
@@ -490,7 +490,7 @@
           "R3: executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') == False and not parallel(tree, 'check bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(customerStatus == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and no condition_eventually_follows(tree, 'customerStatus == \"gold\"', 'check bank privilege')"
         ]
       },
@@ -502,7 +502,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and (executed_by(tree, 'check credit worthiness', 'post-processing clerk')) and not parallel(tree, 'check customer bank privilege', 'check credit worthiness') and not directly_follows(tree, 'check customer bank privilege', 'check credit worthiness')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', 604800, 'close loan contract')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and leads_to_absence(tree, 'check credit worthiness by supervisor', 'create suspense file') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and leads_to_absence(tree, 'check credit worthiness by supervisor', 'create suspense file') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check customer bank privilege') and data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -514,7 +514,7 @@
           "R3: executed_by(tree, 'check bank privilege', 'credit broker') or executed_by(tree, 'check bank privilege', 'supervisor') and (executed_by(tree, 'check credit worthiness', 'post-processing clerk')) and leads_to_absence(tree, 'check bank privilege', 'check credit worthiness') and precedence_absence(tree, 'check credit worthiness', 'check bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', '7 working days')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness') and executed_by(tree, 'check credit worthiness', 'supervisor') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(status == \"gold\") and (loanAmount < 1000000)', 'evaluate loan risk') and no condition_eventually_follows(tree, 'status == \"gold\"', 'check bank privilege')"
         ]
       },
@@ -526,7 +526,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan contract', '7 working days')",
-          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, '(loanCredit > 1000000)', 'check credit worthiness by supervisor') and executed_by(tree, 'check credit worthiness by supervisor', 'supervisor') and data_leads_to_absence(tree, '(loanCredit > 1000000)', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: condition_eventually_follows(tree, '(status == \"gold\")', 'check customer bank privilege', 'branch') and data_leads_to_absence(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk')"
         ]
       },
@@ -538,7 +538,7 @@
           "R3: executed_by(tree, 'check customer bank privilege', 'credit broker') or executed_by(tree, 'check customer bank privilege', 'supervisor') and executed_by(tree, 'check credit worthiness', 'post-processing clerk') and leads_to_absence(tree, 'check customer bank privilege', 'check credit worthiness') or precedence_absence(tree, 'check credit worthiness', 'check customer bank privilege')",
           "R4: executed_by(tree, 'check risk acceptability', 'branch office manager') and leads_to(tree, 'check risk acceptability', 'approve request') and leads_to(tree, 'check risk acceptability', 'reject request') and exists(tree, 'approve request') and exists(tree, 'reject request')",
           "R5: max_time_between(tree, 'sign loan contract', 'close loan offer', 604800, 'close loan offer')",
-          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness supervisor') and executed_by(tree, 'check credit worthiness supervisor', 'supervisor') and data_leads_to_absence(tree, 'loanCredit > 1000000', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == true', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
+          "R6: condition_eventually_follows(tree, 'loanCredit > 1000000', 'check credit worthiness supervisor') and executed_by(tree, 'check credit worthiness supervisor', 'supervisor') and data_leads_to_absence(tree, 'loanCredit > 1000000', 'End Activity') and condition_directly_follows(tree, 'supervisorCheckAbsent == True', 'create suspense file') and failure_eventually_follows(tree, 'create suspense file', 'notify manager')",
           "R7: data_leads_to_absence(tree, '(status == \"gold\") and (loanCredit < 1000000)', 'evaluate loan risk') and condition_eventually_follows(tree, 'status == \"gold\"', 'check customer bank privilege') == False"
         ]
       }
@@ -551,9 +551,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -561,9 +561,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -571,9 +571,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -581,9 +581,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -591,9 +591,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       }
     ],
@@ -603,9 +603,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -613,9 +613,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -623,9 +623,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -633,9 +633,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -643,9 +643,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       }
     ],
@@ -655,9 +655,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -665,9 +665,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -675,9 +675,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -685,9 +685,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -695,9 +695,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       }
     ],
@@ -707,9 +707,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -717,9 +717,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -727,9 +727,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -737,9 +737,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       },
       {
@@ -747,9 +747,9 @@
         "data": [
           "R1: leads_to_absence(tree, 'reject job', 'End Activity')",
           "R2: precedence(tree, 'close case', 'translate segment')",
-          "R3: data_leads_to_absence(tree, 'alignmentVerified == false', 'update TM automatically')",
+          "R3: data_leads_to_absence(tree, 'alignmentVerified == False', 'update TM automatically')",
           "R4: leads_to_absence(tree, 'start translation', 'create segment')",
-          "R5: condition_eventually_follows(tree, 'caseAccepted == true', 'update TM')"
+          "R5: condition_eventually_follows(tree, 'caseAccepted == True', 'update TM')"
         ]
       }
     ]
@@ -761,7 +761,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       },
       {
@@ -770,7 +770,7 @@
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and loop(tree, 'perform identity check')",
           "R3: send_exist(tree, 'identityCheckHistory')",
-          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity')"
+          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity')"
         ]
       },
       {
@@ -787,7 +787,7 @@
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and loop(tree, 'perform identity check')",
           "R3: send_exist(tree, 'identityCheckHistory')",
-          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity')"
+          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity')"
         ]
       },
       {
@@ -795,7 +795,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       }
     ],
@@ -821,7 +821,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       },
       {
@@ -829,7 +829,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       },
       {
@@ -837,7 +837,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == false) and (customerType != \"VIP\")', 'terminate'))"
+          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == False) and (customerType != \"VIP\")', 'terminate'))"
         ]
       }
     ],
@@ -863,7 +863,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       },
       {
@@ -871,7 +871,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity')"
         ]
       },
       {
@@ -891,7 +891,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity') and data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity'))"
+          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity') and data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity'))"
         ]
       },
       {
@@ -899,7 +899,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'retain identity check history') and leads_to(tree, 'scan customer against database', 'retain identity check history')",
-          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity') and data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity'))"
+          "R3: no condition_eventually_follows(tree, 'accountBalance <= 0', 'End Activity') or (condition_eventually_follows(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity') and data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity'))"
         ]
       },
       {
@@ -907,7 +907,7 @@
         "data": [
           "R1: executed_by(tree, 'scan customer against database', 'system') and exists(tree, 'scan customer against database')",
           "R2: exists(tree, 'perform identity check') and send_exist(tree, 'identityCheckRecord')",
-          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == false) and (vipCustomer == false)', 'End Activity')"
+          "R3: data_leads_to_absence(tree, '(accountBalance < 0) and (managerApproved == False) and (vipCustomer == False)', 'End Activity')"
         ]
       },
       {
@@ -924,7 +924,7 @@
           "R1: executed_by(tree, 'scan customer against databases', 'system') and exists(tree, 'scan customer against databases')",
           "R2: exists(tree, 'perform identity check') and loop(tree, 'perform identity check')",
           "R3: send_exist(tree, 'identityCheckHistory')",
-          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == false) and (vipStatus == false)', 'End Activity')"
+          "R4: data_leads_to_absence(tree, '(accountBalance <= 0) and (managerApproved == False) and (vipStatus == False)', 'End Activity')"
         ]
       }
     ]
@@ -1150,7 +1150,7 @@
           "R4: executed_by(tree, 'sign checklist', 'Tax Manager')",
           "R5: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R6: executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R8: executed_by(tree, 'create resolution proposal', executed_by_return(tree, 'analyse reports'))"
         ]
       },
@@ -1161,7 +1161,7 @@
           "R2: executed_by(tree, 'check document upload', 'Tax Manager')",
           "R3: executed_by(tree, 'check document upload', 'Financial Controller')",
           "R4: receive_exist(tree, 'checklistDocument')",
-          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports')",
           "R6: executed_by(tree, 'create resolution proposal', executed_by_return(tree, 'analyse reports'))"
         ]
       },
@@ -1174,7 +1174,7 @@
           "R4: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R5: executed_by(tree, 'sign checklist', 'Financial Controller')",
           "R6: receive_exist(tree, 'checklistDocument')",
-          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports', scope='global')",
+          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports', scope='global')",
           "R8: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')"
         ]
       },
@@ -1185,7 +1185,7 @@
           "R2: executed_by(tree, 'check document upload', 'Tax Manager')",
           "R3: executed_by(tree, 'check document upload', 'Financial Controller')",
           "R4: receive_exist(tree, 'checklistDocument')",
-          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports')",
           "R6: executed_by(tree, 'create resolution proposal', executed_by_return(tree, 'analyse reports'))"
         ]
       },
@@ -1196,7 +1196,7 @@
           "R2: activity_receives(tree, 'check document upload', 'checklistDocument')",
           "R3: executed_by(tree, 'sign checklist', 'Tax Manager')",
           "R4: executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
         ]
       }
@@ -1222,7 +1222,7 @@
           "R2: activity_receives(tree, 'check document upload', 'checklistDocument')",
           "R3: executed_by(tree, 'complete checklist', 'Tax Manager') or executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R4: executed_by(tree, 'sign checklist', 'Tax Manager') or executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
         ]
       },
@@ -1235,7 +1235,7 @@
           "R4: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R5: executed_by(tree, 'sign checklist', 'Financial Controller')",
           "R6: receive_exist(tree, 'checklistDocument')",
-          "R7: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports', scope='global')",
+          "R7: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports', scope='global')",
           "R8: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')"
         ]
       },
@@ -1246,7 +1246,7 @@
           "R2: executed_by(tree, 'check document upload', 'Tax Manager')",
           "R3: executed_by(tree, 'check document upload', 'Financial Controller')",
           "R4: activity_receives(tree, 'check document upload', 'checklistDocument')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by(tree, 'create resolution proposal', 'proposalAuthor')",
           "R7: executed_by(tree, 'analyse reports', 'proposalAuthor')"
         ]
@@ -1258,7 +1258,7 @@
           "R2: activity_receives(tree, 'check document upload', 'checklistDocument')",
           "R3: executed_by(tree, 'complete checklist', 'Tax Manager') or executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R4: executed_by(tree, 'sign checklist', 'Tax Manager') or executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')"
         ]
       }
@@ -1271,7 +1271,7 @@
           "R2: activity_receives(tree, 'check document upload', 'documentChecklist')",
           "R3: executed_by(tree, 'complete checklist', 'Tax Manager')",
           "R4: executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')",
           "R7: leads_to(tree, 'create resolution proposal', 'analyse reports')",
           "R8: leads_to(tree, 'receive CB report', 'analyse reports')",
@@ -1305,7 +1305,7 @@
           "{\"R2\": \"receive_exist(tree, 'checklistDocument')\"}",
           "{\"R3\": \"executed_by(tree, 'complete checklist', 'Tax Manager')\"}",
           "{\"R4\": \"executed_by(tree, 'sign checklist', 'Financial Controller')\"}",
-          "{\"R5\": \"condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')\"}",
+          "{\"R5\": \"condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports')\"}",
           "{\"R6\": \"executed_by(tree, 'analyse reports', 'resolutionProposalCreator')\"}",
           "{\"R7\": \"precedence(tree, 'analyse reports', 'create resolution proposal')\"}}"
         ]
@@ -1316,8 +1316,8 @@
           "R1: recurring(tree, 'check document upload', '10368000s')",
           "R2: executed_by(tree, 'check document upload', 'Tax Manager') or executed_by(tree, 'check document upload', 'Financial Controller')",
           "R3: receive_exist(tree, 'checklistDocument')",
-          "R4: condition_eventually_follows(tree, 'checklistSigned == true', 'check document upload')",
-          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+          "R4: condition_eventually_follows(tree, 'checklistSigned == True', 'check document upload')",
+          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports')",
           "R6: executed_by(tree, 'create resolution proposal', executed_by_return(tree, 'analyse reports'))"
         ]
       },
@@ -1330,7 +1330,7 @@
           "R4: executed_by(tree, 'sign checklist', 'Tax Manager')",
           "R5: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R6: executed_by(tree, 'sign checklist', 'Financial Controller')",
-          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R8: executed_by(tree, 'create resolution proposal', executed_by_return(tree, 'analyse reports'))"
         ]
       }
@@ -1345,7 +1345,7 @@
           "R4: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R5: executed_by(tree, 'sign checklist', 'Financial Controller')",
           "R6: receive_exist(tree, 'checklistDocument')",
-          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R8: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse reports')"
         ]
       },
@@ -1358,8 +1358,8 @@
           "R4: executed_by(tree, 'complete checklist', 'Financial Controller')",
           "R5: executed_by(tree, 'sign checklist', 'Financial Controller')",
           "R6: receive_exist(tree, 'checklistDocument')",
-          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse CB report')",
-          "R8: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse LD report')",
+          "R7: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse CB report')",
+          "R8: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse LD report')",
           "R9: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse CB report')",
           "R10: executed_by_return(tree, 'create resolution proposal') == executed_by_return(tree, 'analyse LD report')"
         ]
@@ -1371,7 +1371,7 @@
           "R2: activity_receives(tree, 'check document upload', 'documentChecklist')",
           "R3: executed_by(tree, 'sign checklist', 'taxManager')",
           "R4: executed_by(tree, 'sign checklist', 'financialController')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by(tree, 'analyse reports', 'resolutionProposalCreator')"
         ]
       },
@@ -1382,7 +1382,7 @@
           "R2: executed_by(tree, 'check document upload', 'Tax Manager')",
           "R3: executed_by(tree, 'check document upload', 'Financial Controller')",
           "R4: receive_exist(tree, 'checklistDocument')",
-          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == true) and (cbReportAvailable == true) and (ldReportAvailable == true)', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, '(resolutionProposalCreated == True) and (cbReportAvailable == True) and (ldReportAvailable == True)', 'analyse reports')",
           "R6: executed_by(tree, 'analyse reports', executed_by_return(tree, 'create resolution proposal'))"
         ]
       },
@@ -1393,7 +1393,7 @@
           "R2: executed_by(tree, 'check document upload', 'Tax Manager')",
           "R3: executed_by(tree, 'check document upload', 'Financial Controller')",
           "R4: activity_receives(tree, 'check document upload', 'checklistDocument')",
-          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == true and cbReportAvailable == true and ldReportAvailable == true', 'analyse reports')",
+          "R5: condition_eventually_follows(tree, 'resolutionProposalCreated == True and cbReportAvailable == True and ldReportAvailable == True', 'analyse reports')",
           "R6: executed_by(tree, 'analyse reports', 'resolutionProposalCreator')"
         ]
       }
@@ -1612,7 +1612,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve anti-money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1624,7 +1624,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='branch')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='branch')"
         ]
       },
       {
@@ -1636,7 +1636,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract') and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1654,7 +1654,7 @@
           "R5a: executed_by(tree, 'identify and legitimate customer', 'customer advisor')",
           "R5b: executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to_absence(tree, 'conclude custody account contract', 'resolve money laundering suspicion') == False and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
-          "R7: condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='global')"
+          "R7: condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1673,7 +1673,7 @@
           "R5b: executed_by(tree, 'legitimate customer', 'customer advisor')",
           "R5c: executed_by(tree, 'check money laundering case', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve anti-money laundering case', 'conclude custody account contract')",
-          "R7: condition_eventually_follows(tree, 'customerContactOccurred == true', 'update customer information', 'global')"
+          "R7: condition_eventually_follows(tree, 'customerContactOccurred == True', 'update customer information', 'global')"
         ]
       }
     ],
@@ -1694,7 +1694,7 @@
           "R5b: executed_by(tree, 'legitimate customer', 'customer advisor')",
           "R5c: executed_by(tree, 'check money laundering case', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve anti-money laundering case', 'conclude custody account contract')",
-          "R7: condition_eventually_follows(tree, 'customerContactOccurred == true', 'update customer information', 'global')"
+          "R7: condition_eventually_follows(tree, 'customerContactOccurred == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1706,7 +1706,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve anti-money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1718,7 +1718,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='branch')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='branch')"
         ]
       },
       {
@@ -1730,7 +1730,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: precedence(tree, 'conclude custody account contract', 'resolve anti-money laundering suspicion')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1751,7 +1751,7 @@
           "R5b: executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to_absence(tree, 'resolve money laundering suspicion', 'conclude custody account contract')",
           "R6b: precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
-          "R7: condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       }
     ],
@@ -1772,7 +1772,7 @@
           "R5b: executed_by(tree, 'legitimate customer', 'customer advisor')",
           "R5c: executed_by(tree, 'check money laundering case', 'anti-money-laundering officer')",
           "R6: leads_to_absence(tree, 'conclude custody account contract', 'resolve anti-money-laundering case') == False and precedence(tree, 'conclude custody account contract', 'resolve anti-money-laundering case')",
-          "R7: condition_eventually_follows(tree, 'customerContactOccurred == true', 'update customer information', scope='global')"
+          "R7: condition_eventually_follows(tree, 'customerContactOccurred == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1796,7 +1796,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract') and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1808,7 +1808,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: precedence(tree, 'conclude custody account contract', 'resolve anti-money-laundering suspicion') and leads_to(tree, 'check money laundering suspicion', 'resolve anti-money-laundering suspicion')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', 'global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', 'global')"
         ]
       },
       {
@@ -1841,7 +1841,7 @@
           "R5a: executed_by(tree, 'identify and legitimate customer', 'customer advisor')",
           "R5b: executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract')",
-          "R7: condition_eventually_follows(tree, 'customerContactOccurred == true', 'update customer information', scope='global')"
+          "R7: condition_eventually_follows(tree, 'customerContactOccurred == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1853,7 +1853,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve anti-money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='branch')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='branch')"
         ]
       },
       {
@@ -1865,7 +1865,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract') and precedence(tree, 'conclude custody account contract', 'resolve money laundering suspicion')",
-          "R7: condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='global')"
+          "R7: condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1877,7 +1877,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate')",
           "R5: executed_by(tree, 'identify customer', 'customer advisor') and executed_by(tree, 'legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering case', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering case', 'conclude custody account contract') and precedence(tree, 'conclude custody account contract', 'resolve money laundering case')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='global')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='global')"
         ]
       },
       {
@@ -1889,7 +1889,7 @@
           "R4: executed_by(tree, 'conduct investment advice', 'customer advisor') and condition_eventually_follows(tree, 'securitiesCompetence < \"C\"', 'terminate', scope='global')",
           "R5: executed_by(tree, 'identify and legitimate customer', 'customer advisor') and executed_by(tree, 'check money laundering suspicion', 'anti-money-laundering officer')",
           "R6: leads_to(tree, 'resolve money laundering suspicion', 'conclude custody account contract')",
-          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == true', 'update customer information', scope='branch')"
+          "R7: loop(tree, 'update customer information') and condition_eventually_follows(tree, 'customerContact == True', 'update customer information', scope='branch')"
         ]
       }
     ]

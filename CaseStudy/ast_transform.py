@@ -63,7 +63,7 @@ def main() -> None:
 		print(f"Comparing AST requirement {translated_asts[i]} with NL requirement {data['NL_requirements'][i]}:")
 		simil = cos_sim(astembeddings[i], nlembeddings[i])
 		print(simil)
-		if simil > 0.7:
+		if simil > 0.6898: ## Threshold calculated using userStudyast_transform.py
 			print(f"AST and NL requirement {i} are similar based on semantic string comparison.")
 		else:
 			print(f"AST and NL requirement {i} are NOT similar based on semantic string comparison.")
