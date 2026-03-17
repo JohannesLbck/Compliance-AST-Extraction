@@ -32,7 +32,7 @@ def parse_args() -> argparse.Namespace:
         "-v",
         "--verbose",
         action="store_true",
-        help="Print detailed per-comparison outputs.",
+        help="Print only failed AST/NL comparisons.",
     )
     return parser.parse_args()
 
@@ -96,14 +96,19 @@ def evaluate_file(path: Path, model: SentenceTransformer, threshold: float, verb
     diagonal = cos_sim(ast_embeddings, nl_embeddings).diagonal()
 
     if verbose:
-        print(f"\nDetailed comparisons for {path.name}:")
+        printed_header = False
         for index, (ast_text, nl_text) in enumerate(zip(translated_asts, transformed_nl), start=1):
             score = float(diagonal[index - 1].item())
             is_similar = score > threshold
+            if is_similar:
+                continue
+            if not printed_header:
+                print(f"\nFailed comparisons for {path.name}:")
+                printed_header = True
             print(f"  Comparison {index}:")
             print(f"    AST: {ast_text}")
             print(f"    NL : {nl_text}")
-            print(f"    Similarity: {score:.4f} -> {'SIMILAR' if is_similar else 'NOT SIMILAR'}")
+            print(f"    Similarity: {score:.4f} -> NOT SIMILAR")
 
     similar_count = int((diagonal > threshold).sum().item())
     percentage = (similar_count / len(translated_asts)) * 100
