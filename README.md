@@ -1,6 +1,6 @@
 # Compliance Pattern Extraction from Natural Language
 
-This repository contains experiments and analysis code for extracting compliance requirements from natural language, encoding them as AST-like rules, and evaluating these encodings with automated and user-study-based methods.
+This repository contains experiments and analysis code for extracting compliance requirements from natural language, encoding them as AST-like rules, and evaluating these encodings.
 
 ## Directory Overview
 
