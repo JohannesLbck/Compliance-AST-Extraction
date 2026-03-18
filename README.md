@@ -66,7 +66,7 @@ Notes:
 - `UserStudy/Results/eval.py` expects semicolon-separated CSV files.
 - Ground-truth type mapping (which answer is humanmade, which answers are generated) is read from `UserStudy/Results/GroupBGT.csv`.
 
-## Replicat: Empirical Evaluation
+## Empirical Evaluation
 
 Main folder: `Eval/`
 
@@ -119,7 +119,7 @@ python eval_ml.py --file Gemini/merged_results.json --threshold 0.70
 python eval_ml_all.py --threshold 0.70
 ```
 
-## Replicate: Case Study
+## Case Study
 
 Main folder: `CaseStudy/`
 
