@@ -1,91 +1,166 @@
 # Compliance Pattern Extraction from Natural Language
 
-This project extracts compliance patterns and requirements from natural language text using various AI models (GPT, Gemini, Llama, and Claude Sonnet). The extracted patterns are then evaluated against ground truth data to assess extraction accuracy and consistency.
+This repository contains experiments and analysis code for extracting compliance requirements from natural language, encoding them as AST-like rules, and evaluating these encodings with automated and user-study-based methods.
 
-## Folder Structure
+## Directory Overview
 
-### `/Eval`
-Main evaluation directory containing:
-- **`gt/`** - Ground truth data in JSON format for each process model:
-  - `bpmq.json`, `crl.json`, `dcr.json`, `haar.json`, `lyn.json`, `pcl.json`, `ppsl.json`, `status.json`, `sun.json`, `winter.json`, `zasada.json`
-  
-- **`Gemini/`** - Extraction results using Google's Gemini model
-  - `extract.py` - Script to run Gemini-based extraction
-  - `*_output.json` - Output files from Gemini extraction
-  
-- **`GPT/`** - Extraction results using OpenAI's GPT model
-  - `extract.py` - Script to run GPT-based extraction
-  
-- **`Llama/`** - Extraction results using Meta's Llama model
-  - `extract.py` - Script to run Llama-based extraction
-  
-- **`Sonnet/`** - Extraction results using Anthropic's Claude Sonnet model
-  - `extract.py` - Script to run Sonnet-based extraction
-  
-- **`UserStudyPrep/`** - Prepared data for user study evaluation with ground truth annotations
-  
-- **`outputs/`** - Directory for storing extraction results
+Top-level folders:
 
-- **`eval.py`** - Main evaluation script to compare extractions against ground truth
-- **`methods_doc.md`** - Detailed documentation of extraction methods
-- **`methods_doc_concise.md`** - Concise summary of extraction methods
-- **`annotated_verification_methods.md`** - Documentation of verification methods with annotations
+- `Application/`
+  - BPMN/PNML examples and specification artifacts used for testing the extracted ASTs.
+- `CaseStudy/`
+  - Case-study pipeline: process description prompting, file-search-store setup/upload helpers, AST-to-text transformation, and similarity-based case-study evaluation.
+- `Eval/`
+  - Extraction scripts and benchmark evaluation pipeline (Gemini, GPT, Sonnet), plus merged outputs and ground truth.
+- `UserStudy/`
+  - User-study materials, generated encodings, and result analysis scripts.
 
-## How to Use
+## Dependencies
 
-### Running Extraction Scripts
+Use Python 3.10+.
 
-Each AI model has its own `extract.py` script in its respective folder. To run extraction:
-
+Optional:
 ```bash
-cd Eval/<MODEL>/
-python extract.py
+python -m venv .venv
+source .venv/bin/activate
+```
+Required:
+```bash
+pip install -U pip
+pip install openai google-genai anthropic pydantic sentence-transformers torch textdistance fuzzywuzzy pandas numpy matplotlib prompt-toolkit
 ```
 
-Replace `<MODEL>` with one of: `Gemini`, `GPT`, `Llama`, or `Sonnet`
+API keys (as needed by the scripts):
 
-**Prerequisites:**
-- Required API keys or model access configured for the respective service
-- Python 3.x with necessary dependencies installed
-- Input data (natural language text to extract patterns from)
+- `OPENAI_API_KEY` for `Eval/GPT/*.py`
+- `GEMINI_API_KEY` for `Eval/Gemini/*.py` and `CaseStudy/*.py`
+- `ANTHROPIC_API_KEY` for `Eval/Sonnet/*.py`
 
-**Output:**
-- JSON files with extracted compliance patterns and requirements
-- Results stored in `Eval/<MODEL>/<model>_output.json` or similar
+Define these as enviroment variables (i.e., add to .bashrc), or modify the extraction scripts to directly use your own keys.
 
-### Run Evaluation
+## User Study
 
-To evaluate the extraction results against ground truth:
+The links to the actual 3 Studies will be posted after double blind.
+
+Main folder: `UserStudy/`
+
+- `GeneratedEncodings/`: generated JSON encodings used in study preparation.
+- `Results/`: CSV survey exports, GT mapping files, and analysis scripts.
+
+Typical workflow:
+
+1. Place or update CSV result files in `UserStudy/Results/` (for example `GroupA.csv`, `GroupB.csv`, `GroupC.csv`).
+2. Run the analysis script:
 
 ```bash
-cd Eval/
+cd UserStudy/Results
 python eval.py
 ```
 
-This will compare all model outputs against the ground truth data in `Eval/gt/` and generate evaluation metrics.
+3. The script computes per-question averages and writes files such as:
+   - `GroupA.csv_averages.csv`
+   - `GroupB.csv_averages.csv`
+   - `GroupC.csv_averages.csv`
 
-### Generate Comparison Reports
+Notes:
+- `UserStudy/Results/eval.py` expects semicolon-separated CSV files.
+- Ground-truth type mapping (which answer is humanmade, which answers are generated) is read from `UserStudy/Results/GroupBGT.csv`.
 
-To analyze differences between model extractions:
+## Replicat: Empirical Evaluation
+
+Main folder: `Eval/`
+
+- `gt/`: benchmark ground truth JSONs (`bpmq`, `crl`, `pcl`, `ppsl`, `status`, `sun`, `zasada`, etc.).
+- `Gemini/`, `GPT/`, `Sonnet/`: model-specific extraction, dataset generation, and merge scripts.
+- `eval.py`, `eval_ml.py`, `eval_ml_all.py`: evaluation scripts over merged outputs. 
+- `eval_ml_all.py` is the script used for the final results in the Paper
+
+### 1) Run a single extraction
+
+Example (Gemini):
 
 ```bash
-python differences_summary.py
-python substantial_differences_analysis.py
+cd Eval/Gemini
+python extract.py bpmq --temperature 0.3 --range 1
 ```
 
-These scripts generate comparative analysis of how different models extracted the same compliance patterns.
+Equivalent scripts exist for:
 
-## Data Format
+- `Eval/GPT/extract.py`
+- `Eval/Sonnet/extract.py`
 
-- **Ground truth** (`Eval/gt/*.json`): Contains verified compliance patterns and requirements
-- **Model outputs** (`Eval/<MODEL>/*_output.json`): Contains patterns extracted by each AI model
-- **Format**: JSON files with structured compliance pattern information
+Each writes timestamped JSON outputs in the current model folder.
 
-## Workflow
+### 2) Run full dataset generation (all temperatures / datasets)
 
-1. Process natural language text through each model's extraction script
-2. Each model generates JSON output with extracted patterns
-3. Run `eval.py` to evaluate accuracy against ground truth
-4. Use analysis scripts to identify differences and discrepancies
-5. Prepare data for user study in `UserStudyPrep/` for human validation
+From a model folder:
+
+```bash
+python generate_dataset.py
+```
+
+This creates multiple timestamped files (typically moved/stored under `raws/`).
+
+### 3) Merge raw outputs per model
+
+```bash
+python merge.py
+```
+
+This creates `merged_results.json` in the model folder, by reading all the files generated in raws.
+
+### 4) Evaluate merged outputs
+
+From `Eval/`:
+
+```bash
+python eval.py --file Gemini/merged_results.json
+python eval_ml.py --file Gemini/merged_results.json --threshold 0.70
+python eval_ml_all.py --threshold 0.70
+```
+
+## Replicate: Case Study
+
+Main folder: `CaseStudy/`
+
+- `ProcessDescription.py`: generate NL + AST requirements from a process description using Gemini and optional file-search-store grounding.
+- `upload.py` / `create.py`: helper scripts for creating and populating a Gemini file search store.
+- `case_study_eval.py`: evaluate AST↔NL semantic consistency for all JSON files in `Outputs/`.
+- `ast_transform.py`: inspect AST-to-text transformation + similarity for a single JSON file.
+- `TransASTParser.py`, `translation.py`, `translationsimple.py`: AST translation internals.
+
+### 1) Create and populate a file search store
+
+```bash
+cd CaseStudy
+python create.py
+python upload.py /path/to/source.pdf exam_regulation.pdf
+```
+
+### 2) Generate case-study requirements from process text
+
+```bash
+python ProcessDescription.py "Your process description text" 0.3
+```
+Process description can also just be questions regarding a process or similar as can be seen from the Ouput files in CaseStudy/Outputs.
+
+Output is written to `CaseStudy/Outputs/<temperature>_<timestamp>.json` and includes:
+
+- `input_text`
+- `NL_requirements`
+- `AST_requirements`
+- `citations`
+
+### 3) Evaluate generated outputs in bulk
+
+```bash
+python case_study_eval.py --input-dir Outputs --threshold 0.6898
+```
+
+### 4) Inspect a single output file
+
+```bash
+python ast_transform.py Outputs/<your_file>.json
+```
+
 
