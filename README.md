@@ -40,7 +40,10 @@ Define these as enviroment variables (i.e., add to .bashrc), or modify the extra
 
 ## User Study
 
-The links to the actual 3 Studies will be posted after double blind.
+The 3 User Studies:
+Group A: https://forms.office.com/r/aDPzaxaeXw
+Group B: https://forms.office.com/r/dwqTjC6qM8
+Group C: https://forms.office.com/r/8Jx78QzCVU
 
 Main folder: `UserStudy/`
 
