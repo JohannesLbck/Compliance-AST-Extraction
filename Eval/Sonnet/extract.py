@@ -232,7 +232,13 @@ TEXT_MAPPING = {
         "The customer identification and legitimation must be handled by the customer advisor, while suspected cases of money laundering must be checked by an anti-money-laundering officer.\n"
         "Before concluding a custody-account contract, the customer advisor needs to wait until the suspected case of anti-money laundering is resolved.\n"
         "The customer information must be updated with every future customer contact."
-    )
+    ),
+    "Voter": (
+            "The antiseptic solution should be allowed to dry completely before venepuncture. \n"
+            "The collected blood should be mixed with the anticoagulant every 10 seconds during the donation to prevent clot formation. \n"
+            "The maximum collection time for acceptance of the donation should be specified and controlled. \n"
+            "If manual mixing is used, the blood container should be inverted every 30 seconds. "
+            )
 }
 
 

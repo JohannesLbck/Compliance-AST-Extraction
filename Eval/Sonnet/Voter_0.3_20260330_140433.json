@@ -1,0 +1,9 @@
+[
+  "R1: leads_to(tree, 'apply antiseptic solution', 'perform venepuncture')",
+  "R2: precedence(tree, 'perform venepuncture', 'dry antiseptic solution')",
+  "R3: recurring(tree, 'mix blood with anticoagulant', 10)",
+  "R4: exists(tree, 'specify maximum collection time')",
+  "R5: exists(tree, 'control maximum collection time')",
+  "R6: condition_eventually_follows(tree, 'mixingMethod == \"manual\"', 'invert blood container')",
+  "R7: condition_eventually_follows(tree, 'mixingMethod == \"manual\"', 'invert blood container') and recurring(tree, 'invert blood container', 30)"
+]
