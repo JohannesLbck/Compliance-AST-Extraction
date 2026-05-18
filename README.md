@@ -4,7 +4,7 @@ This repository contains experiments and analysis code for extracting compliance
 
 ## Directory Overview
 
-Top-level folders:
+Top-level folders/files:
 
 - `Application/`
   - BPMN/PNML examples and specification artifacts used for testing the extracted ASTs.
@@ -14,6 +14,8 @@ Top-level folders:
   - Extraction scripts and benchmark evaluation pipeline (Gemini, GPT, Sonnet), plus merged outputs and ground truth.
 - `UserStudy/`
   - User-study materials, generated encodings, and result analysis scripts.
+- [MAPPING.md](MAPPING.md)
+  - Mapping between compliance patterns used for this Project and in Related Work.
 
 ## Dependencies
 
