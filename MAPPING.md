@@ -1,9 +1,5 @@
 As [1] covers the other identified patterns, this file maps the project patterns to the patterns proposed in [1].
 
-Notes:
-- The mapping expressions below are preserved as provided.
-- This document focuses on readability and quick lookup.
-
 ## Order Patterns
 
 | Pattern | Mapping |
