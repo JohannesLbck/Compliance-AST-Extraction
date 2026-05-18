@@ -48,7 +48,7 @@ This mapping does not distinguish resources from related concepts (for example r
 | PerformedBy(a,r) | r in resources(a) |  |
 | segregatedFrom(a,b) | for r in resources(a): if r in resources(b): return false | If a 1:1 mapping between resources and activities is assumed, this becomes resources(a) != resources(b). |
 
-Composition example:
+All other patterns can also be composed accordinglly. Other Composition example:
 - resources(a) != resources(b) == resources(c)
 
 ## Timed Pattern
@@ -57,11 +57,11 @@ Composition example:
 | --- | --- | --- |
 | MinDur(a,t) | min\_time\_between(a.start(), a.end(), t) |  |
 | MaxDur(a,t) | max\_time\_between(a.start(), a.end(), t) |  |
-| ExactDur(a,t) | MinDur(a,t) and MaxDur(a, t) | Long expression; semantically redundant by construction. |
+| ExactDur(a,t) | MinDur(a,t) and MaxDur(a, t) | Practically impossible |
 | Every | recurring |  |
 | Within(a,b,t) | max\_time\_between(a,b,t) |  |
 | AtLeastAfter(a,b,t) | min\_time\_between(a,b,t) |  |
 | ExactlyAt(a,t) | exactly\_at(a, t) |  |
-| ExactlyAfter | max\_time\_between(a,b,t) and min\_time\_between(a,b,t) | Long expression; semantically redundant by construction. |
+| ExactlyAfter | max\_time\_between(a,b,t) and min\_time\_between(a,b,t) | Practically impossible |
 
 [1] Elgammal, A., Turetken, O. (2022). CRL and the Design-Time Compliance Management Framework. In: Polyvyanyy, A. (eds) Process Querying Methods. Springer, Cham. [doi](https://doi.org/10.1007/978-3-030-92875-9_10)
